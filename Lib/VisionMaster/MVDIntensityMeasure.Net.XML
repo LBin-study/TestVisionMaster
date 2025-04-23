@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDIntensityMeasure.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.IntensityMeasure.CIntensityMeasureResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.IntensityMeasure.CIntensityMeasureResult.MinLum">
+            <summary>
+            the minimal grey level
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.IntensityMeasure.CIntensityMeasureResult.MaxLum">
+            <summary>
+            the maximal grey level
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.IntensityMeasure.CIntensityMeasureResult.MeanLum">
+            <summary>
+            the mean grey level
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.IntensityMeasure.CIntensityMeasureResult.StdLum">
+            <summary>
+            the luminance standard deviation
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.IntensityMeasure.CIntensityMeasureResult.HistContrast">
+            <summary>
+            the contrast of histogram
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.IntensityMeasure.CIntensityMeasureResult.LumHist">
+            <summary>
+            histogram
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.IntensityMeasure.CIntensityMeasureTool">
+            <summary>
+            the class for the IntensityMeasureTool
+            </summary>
+            <remarks>The IntensityMeasureTool encapsulates all of the classes required to perform a IntensityMeasure analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            反序列化调用该构造函数
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.AddMask(VisionDesigner.CMvdShape)">
+             <summary>
+            .Add a mask region to excluded
+             </summary>
+             <remarks> Adds a new uninterested region in the InputImage to the end of mask list. 
+             MasksNum will be increased by one.Only IMvdPolygon type supported in current version. 
+             Support up to 8 polygons at the same time. </remarks>
+             <param name="cMask"> The mask region on the input image </param>
+        </member>
+        <member name="M:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.ClearMasks">
+            <summary>
+            Removes all masks already added.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.RemoveMaskAt(System.Int32)">
+            <summary>
+            Removes the mask at the given index from the mask list.
+            </summary>
+            <remarks>Masks with higher indices are shifted to the next lower index, and NumPoints is decreased by one.</remarks>
+            <param name="nIndex">index of the target mask shape according to the order of addition </param>
+        </member>
+        <member name="M:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.GetNumOfMasks">
+            <summary>
+            Gets the number of masks already added.
+            </summary>
+            <returns>the number of masks</returns>
+        </member>
+        <member name="M:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.ROI">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.RegionImage">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.IntensityMeasure.CIntensityMeasureTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

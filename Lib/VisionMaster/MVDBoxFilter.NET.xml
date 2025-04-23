@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDBoxFilter.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.BoxFilter.CBoxFilterBasicParam">
+            <summary>
+            Box过滤基本参数类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxFilter.CBoxFilterBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxFilter.CBoxFilterBasicParam.InputBoxList">
+            <summary>
+            需要过滤的box列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxFilter.CBoxFilterBasicParam.MinOverlap">
+            <summary>
+            最小重叠率（0~1）
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.BoxFilter.CBoxFilterBoxInfo">
+            <summary>
+            结果Box信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxFilter.CBoxFilterBoxInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxFilter.CBoxFilterBoxInfo.Box">
+            <summary>
+            过滤后保留的box
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxFilter.CBoxFilterBoxInfo.BoxIndex">
+            <summary>
+            保留box的编号，如0,2为保留第1和第3个输入的box
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.BoxFilter.CBoxFilterResult">
+            <summary>
+            Box过滤结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxFilter.CBoxFilterResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxFilter.CBoxFilterResult.OutputBoxList">
+            <summary>
+            过滤后保留的box列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.BoxFilter.CBoxFilterTool">
+             <summary>
+            Box过滤工具类
+             </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxFilter.CBoxFilterTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxFilter.CBoxFilterTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxFilter.CBoxFilterTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxFilter.CBoxFilterTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxFilter.CBoxFilterTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxFilter.CBoxFilterTool.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxFilter.CBoxFilterTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxFilter.CBoxFilterTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxFilter.CBoxFilterTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxFilter.CBoxFilterTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

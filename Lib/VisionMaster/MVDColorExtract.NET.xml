@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDColorExtract.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ColorExtract.MVD_COLOR_SPACE_TYPE">
+            <summary>
+            颜色空间类型定义
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ColorExtract.MVD_COLOR_SPACE_TYPE.MVD_COLOR_SPACE_RGB">
+            <summary>
+            RGB颜色空间
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ColorExtract.MVD_COLOR_SPACE_TYPE.MVD_COLOR_SPACE_HSV">
+            <summary>
+            HSV颜色空间
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ColorExtract.MVD_COLOR_SPACE_TYPE.MVD_COLOR_SPACE_HSI">
+            <summary>
+            HSI颜色空间
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ColorExtract.MVD_COLOR_SPACE_TYPE.MVD_COLOR_SPACE_YUV">
+            <summary>
+            YUV颜色空间（暂不支持）
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ColorExtract.CColorExtractRange">
+            <summary>
+            颜色抽取基本参数类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorExtract.CColorExtractRange.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractRange.C1LowTolerance">
+            <summary>
+            第一通道低容忍值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractRange.C1HighTolerance">
+            <summary>
+            第一通道高容忍值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractRange.C2LowTolerance">
+            <summary>
+            第二通道低容忍值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractRange.C2HighTolerance">
+            <summary>
+            第二通道高容忍值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractRange.C3LowTolerance">
+            <summary>
+            第三通道低容忍值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractRange.C3HighTolerance">
+            <summary>
+            第三通道高容忍值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractRange.ReverseEnable">
+            <summary>
+            ReverseEnable
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractRange.ColorSpace">
+            <summary>
+            颜色空间
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ColorExtract.CColorExtractBasicParam">
+            <summary>
+            颜色抽取结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorExtract.CColorExtractBasicParam.#ctor">
+            <summary>
+            颜色抽取基本参数类
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractBasicParam.ExtractRangeList">
+            <summary>
+            Output Image
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ColorExtract.CColorExtractResult">
+            <summary>
+            颜色抽取结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorExtract.CColorExtractResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractResult.OutputImage">
+            <summary>
+            输出图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractResult.TotalArea">
+            <summary>
+            总面积
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ColorExtract.CColorExtractTool">
+            <summary>
+            颜色抽取算子工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorExtract.CColorExtractTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorExtract.CColorExtractTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorExtract.CColorExtractTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorExtract.CColorExtractTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorExtract.CColorExtractTool.Run">
+            <summary>
+            执行算法处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorExtract.CColorExtractTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractTool.ROI">
+            <summary>
+            检测区域,默认值NULL(全区)，支持矩形、圆、扇环、多边形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractTool.RegionImageAssistant">
+            <summary>
+            运行区域图像ROI配置
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractTool.RegionImage">
+            <summary>
+             掩膜图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractTool.BasicParam">
+            <summary>
+             基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorExtract.CColorExtractTool.Result">
+            <summary>
+            处理结果
+            </summary>
+        </member>
+    </members>
+</doc>

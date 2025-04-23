@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCircleFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CircleFind.MVD_EDGEPOINT_STATUS">
+            <summary>
+            几何边缘点状态
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CircleFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_USED">
+            <summary>
+            查找成功并使用
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CircleFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_NO_USED">
+            <summary>
+            查找成功，放弃使用
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CircleFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_NO_FIND">
+            <summary>
+            查找失败
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CircleFind.MVD_EDGE_POLARITY">
+            <summary>
+            边缘极性类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CircleFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_DARK_TO_BRIGHT">
+            <summary>
+            由黑到白边
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CircleFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BRIGHT_TO_DARK">
+            <summary>
+            由白到黑边
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CircleFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BOTH">
+            <summary>
+            两种类型边
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CircleFind.MVD_RUNNING_MODE">
+            <summary>
+            运行模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CircleFind.MVD_RUNNING_MODE.MVD_RUNNING_MODE_CALCULATE_AND_FIND">
+            <summary>
+            计算ROI相关并执行查找 0
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CircleFind.MVD_RUNNING_MODE.MVD_RUNNING_MODE_ONLY_CALCULATE">
+            <summary>
+            仅计算ROI相关输出 1
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CircleFind.MVD_RUNNING_MODE.MVD_RUNNING_MODE_ONLY_FIND">
+            <summary>
+            仅执行查找(输出中ROI相关已知)2
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CircleFind.CCircleFindEdgePointInfo">
+            <summary>
+            圆查找边缘点
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindEdgePointInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindEdgePointInfo.EdgePoint">
+            <summary>
+            边缘点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindEdgePointInfo.Score">
+            <summary>
+            边缘得分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindEdgePointInfo.Distance">
+            <summary>
+            边缘距离
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindEdgePointInfo.Polarity">
+            <summary>
+            边缘极性
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindEdgePointInfo.Status">
+            <summary>
+            边缘点查找状态
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CircleFind.CCircleFindBasicParam">
+            <summary>
+            圆查找基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindBasicParam.CoarseCenter">
+            <summary>
+            初始圆中心(坐标数值int类型)
+            </summary>
+            <remarks>V3.3.5之后废弃使用，设置不生效</remarks>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindBasicParam.CoarseCenterF">
+            <summary>
+            初始圆中心(坐标数值float类型)
+            </summary>
+            <remarks>V3.3.5之后废弃使用，设置不生效</remarks>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindBasicParam.CaliperList">
+            <summary>
+            卡尺框列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindBasicParam.RunningMode">
+            <summary>
+            卡尺框列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindBasicParam.InitFlag">
+            <summary>
+            初定位开关 (关闭（默认值）：HKA_TRUE，初中心为roi_rect中心;开启：HKA_FALSE，自适应查找)
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CircleFind.CCircleFindResult">
+            <summary>
+            圆查找结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindResult.Status">
+            <summary>
+            查找状态
+            </summary>
+            <remarks>0:查找圆失败；1:查找圆成功并输出；2:查找成功但半径不满足参数要求</remarks>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindResult.CircleCenter">
+            <summary>
+            结果圆中心
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindResult.CircleRadius">
+            <summary>
+            结果圆半径
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindResult.Circleness">
+            <summary>
+            结果圆率
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindResult.Arc">
+            <summary>
+            拟合圆弧
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindResult.Circle">
+            <summary>
+            拟合圆
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindResult.EdgePointInfo">
+            <summary>
+            边缘点列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindResult.CaliperBoxList">
+            <summary>
+            卡尺列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindResult.CircleRate">
+            <summary>
+            圆度,参与拟合点占总点数比率
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindResult.CircleAreaRate">
+            <summary>
+            圆面积度，参与拟合点与圆心所形成面积占总面积比
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CircleFind.CCircleFindTool">
+            <summary>
+            圆查找工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.AddMask(VisionDesigner.CMvdShape)">
+            <summary>
+            添加屏蔽区
+            </summary>
+            <param name="maskShape"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.ClearMasks">
+            <summary>
+            移除所有屏蔽区
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.RemoveMaskAt(System.Int32)">
+            <summary>
+            根据索引移除屏蔽区
+            </summary>
+            <param name="index">屏蔽区图形索引</param>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.GetNumOfMasks">
+            <summary>
+            获取屏蔽区个数
+            </summary>
+            <returns>屏蔽区个数</returns>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="runParamBufferBytes">要保存运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+            <param name="runParamBufferLength">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="runParamBufferBytes">导入的运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.Run">
+            <summary>
+            执行找圆操作
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFind.CCircleFindTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus"></param>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindTool.ROI">
+            <summary>
+            ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindTool.RegionImage">
+            <summary>
+            处理区域图
+            </summary>
+            <remarks>通常由ROI+Masks计算所得的处理区域标识；若非全区ROI，需配合调用SetROI接口再传入ROI位置</remarks>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFind.CCircleFindTool.VMControlBase">
+            <summary>
+            VM控件对象
+            </summary>
+        </member>
+    </members>
+</doc>

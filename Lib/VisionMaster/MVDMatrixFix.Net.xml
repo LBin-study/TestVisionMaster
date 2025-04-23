@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDMatrixFix.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.MatrixFix.CMatrixFixBasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixFix.CMatrixFixBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MatrixFix.CMatrixFixBasicParam.HomoMatrix">
+            <summary>
+            待修正矩阵参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MatrixFix.CMatrixFixBasicParam.ImagePoint">
+            <summary>
+            基准点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MatrixFix.CMatrixFixBasicParam.WorldPoint">
+            <summary>
+            运行点
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MatrixFix.CMatrixFixResult">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixFix.CMatrixFixResult.#ctor">
+            <summary>
+            矩阵修正结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MatrixFix.CMatrixFixResult.HomoFixMatrix">
+            <summary>
+            homo矩阵修正结果
+            </summary> 
+        </member>
+        <member name="T:VisionDesigner.MatrixFix.CMatrixFixTool">
+            <summary>
+            矩阵修正Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixFix.CMatrixFixTool.#ctor">
+            <summary>
+            矩阵修正Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixFix.CMatrixFixTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixFix.CMatrixFixTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixFix.CMatrixFixTool.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixFix.CMatrixFixTool.ExportCalibFile(System.String)">
+            <summary>
+            导出标定文件
+            </summary>
+            <param name="filePath">标定文件</param>
+            <remarks>iwcal文件</remarks>
+        </member>
+        <member name="M:VisionDesigner.MatrixFix.CMatrixFixTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixFix.CMatrixFixTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixFix.CMatrixFixTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixFix.CMatrixFixTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.MatrixFix.CMatrixFixTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MatrixFix.CMatrixFixTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

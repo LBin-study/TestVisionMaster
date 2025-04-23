@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCNNUnsupervisedSegment.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CMVDROIAssistant">
+            <summary>
+            ROI配置列表，用于多ROI数据管理。
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.#ctor(System.UInt32)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.SetSupportROI(VisionDesigner.MVD_SHAPE_TYPE,System.Boolean)">
+            <summary>
+            设置支持的ROI类型，不设置则默认支持矩形、圆、扇环、多边形
+            </summary>
+            <param name="enShapeType"></param>
+            <param name="bIsSupport"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.AddROI(VisionDesigner.CMvdShape)">
+            <summary>
+            添加ROI,仅支持矩形、圆、扇环和多边形
+            </summary>
+            <param name="cROI"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.GetROI(System.UInt32)">
+            <summary>
+            根据索引查询已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <returns>ROI信息</returns>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.UpdateROI(System.UInt32,VisionDesigner.CMvdShape)">
+            <summary>
+            根据索引更新已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <param name="cROI">[IN] 拟更新为的ROI信息</param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.RemoveROI(System.UInt32)">
+            <summary>
+            根据索引移除已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] 图形索引，范围[0, ROICount)</param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.ClearROIs">
+            <summary>
+            清理所有已添加ROI信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.SetROIAssociatedData(System.UInt32,System.Object)">
+            <summary>
+            设置ROI关联数据
+            </summary>
+            <param name="nIndex"></param>
+            <param name="pData"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.GetROIAssociatedData(System.UInt32,System.Object@)">
+            <summary>
+            获取ROI关联数据
+            </summary>
+            <param name="nIndex"></param>
+            <param name="pData"></param>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentBasicParam">
+            <summary>
+            Classes for describing information of CNNUnsupervisedSegment BasicParam.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentBasicParam.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentBasicParam.LoadModel(System.String)">
+            <summary>
+            Load model from local file.
+            </summary>
+            <param name="filePath">file path of the model</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentBasicParam.LoadModelData(System.Byte[],System.Int64)">
+            <summary>
+            Load model from local data.
+            </summary>
+            <param name="modeldata">data of the model</param>
+            <param name="modelsize">size of the model</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentBasicParam.ModelData">
+            <summary>
+            Model data.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentBasicParam.UpdateStatus">
+            <summary>
+            Update Status.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentResult">
+            <summary>
+            Classes for describing information of CNNUnsupervisedSegment result.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentResult.OutputImage">
+            <summary>
+            输出图像
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentTool">
+            <summary>
+            CNNUnsupervisedSegmentTool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentTool.#ctor(VisionDesigner.MVD_ALGORITHM_PLATFORM_TYPE)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentTool.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentTool.Dispose">
+            <summary>
+            Release
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentTool.Dispose(System.Boolean)">
+            <summary>
+            Release resources
+            </summary>
+            <param name="bDisposeStatus">Flag of whether to release managed and unmanaged resource.</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedSegment.CNNUnsupervisedSegmentTool.ROIAssistant">
+            <summary>
+            多ROI配置
+            </summary>
+        </member>
+    </members>
+</doc>

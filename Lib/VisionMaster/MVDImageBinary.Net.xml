@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDImageBinary.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ImageBinary.CImageBinaryResult">
+            <summary>
+            Class for describing ImageBinary Result
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryResult.#ctor">
+            <summary>
+            CImageBinaryResult constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageBinary.CImageBinaryResult.OutputImage">
+            <summary>
+            Output Image
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageBinary.CImageBinaryTool">
+            <summary>
+            Class of the ImageBinaryTool
+            </summary>
+            <remarks>The ImageBinaryTool encapsulates all of the classes required to perform an image binaring process.</remarks>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.AddMask(VisionDesigner.CMvdShape)">
+            <summary>
+            Add a mask region to excluded
+            </summary>
+            <remarks> Adds a new uninterested region in the InputImage to the end of mask list. 
+            MasksNum will be increased by one.Only IMvdPolygon type supported in current version. 
+            Support up to 8 polygons at the same time. </remarks>
+            <param name="cMask"> The mask region on the input image </param>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.ClearMasks">
+            <summary>
+            Removes all masks already added.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.RemoveMaskAt(System.Int32)">
+            <summary>
+            Removes the mask at the given index from the mask list.
+            </summary>
+            <remarks>Masks with higher indices are shifted to the next lower index, and NumPoints is decreased by one.</remarks>
+            <param name="nIndex">index of the target mask shape according to the order of addition </param>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.GetNumOfMasks">
+            <summary>
+            Gets the number of masks already added.
+            </summary>
+            <returns>the number of masks</returns>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this ImageBinary tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this ImageBinary tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this ImageBinary tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this ImageBinary tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageBinary.CImageBinaryTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageBinary.CImageBinaryTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageBinary.CImageBinaryTool.ROI">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageBinary.CImageBinaryTool.RegionImage">
+            <summary>
+             掩膜图
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageBinary.CImageBinaryTool.Result">
+            <summary>
+            Result
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageBinary.CImageBinaryTool.RegionImageAssistant">
+            <summary>
+            运行区域图像ROI配置
+            </summary>
+        </member>
+    </members>
+</doc>

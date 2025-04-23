@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDLineFit.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.LineFit.CLineFitBasicParam">
+            <summary>
+            Class of the basic parameter information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineFit.CLineFitBasicParam.PointsToFit">
+            <summary>
+            List of Points to fit a FitLine
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineFit.CLineFitResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineFit.CLineFitResult.FitError">
+            <summary>
+            Fitting error
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineFit.CLineFitResult.FitStatus">
+            <summary>
+            the status of fit line(NG/OK)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineFit.CLineFitResult.NumOfPointsUsed">
+            <summary>
+            the number of used point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineFit.CLineFitResult.FitLine">
+            <summary>
+            the fitted line
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineFit.CLineFitResult.PointStatusList">
+            <summary>
+            输入点是否用于拟合;0:未使用 1:使用
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineFit.CLineFitResult.PointFitDistanceList">
+            <summary>
+            输入点的拟合距离
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineFit.CLineFitTool">
+            <summary>
+            the class for the LineFitTool
+            </summary>
+            <remarks>The LineFitTool encapsulates all of the classes required to perform a LineFit analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.LineFit.CLineFitTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineFit.CLineFitTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineFit.CLineFitTool.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            反序列化调用该构造函数
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:VisionDesigner.LineFit.CLineFitTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineFit.CLineFitTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineFit.CLineFitTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this LineFit tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.LineFit.CLineFitTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this LineFit tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.LineFit.CLineFitTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this LineFit tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.LineFit.CLineFitTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this LineFit tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.LineFit.CLineFitTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineFit.CLineFitTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineFit.CLineFitTool.BasicParam">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+            <summary>
+            The basic parameter information of this tool.
+            </summary>
+        </member>
+    </members>
+</doc>

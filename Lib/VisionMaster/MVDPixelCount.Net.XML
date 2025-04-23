@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDPixelCount.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.PixelCount.CPixelCountResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCount.CPixelCountResult.PixelNum">
+            <summary>
+            Pixel count number
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCount.CPixelCountResult.Ratio">
+            <summary>
+            radius of the circle that has been found
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PixelCount.CPixelCountTool">
+            <summary>
+            the class for the PixelCountTool
+            </summary>
+            <remarks>The PixelCountTool encapsulates all of the classes required to perform a circle finding analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountTool.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            反序列化调用该构造函数
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this PixelCount tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this PixelCount tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this PixelCount tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this PixelCount tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCount.CPixelCountTool.Init">
+            <summary>
+            Init
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCount.CPixelCountTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCount.CPixelCountTool.ROI">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCount.CPixelCountTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

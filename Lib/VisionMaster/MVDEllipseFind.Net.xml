@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDEllipseFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.EllipseFind.CEllipseFindBasicParam">
+            <summary>
+            椭圆查找基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindBasicParam.ScaleInside">
+            <summary>
+            内椭圆缩放系数(范围:[0.1,0.9],默认0.1)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindBasicParam.ScaleOutside">
+            <summary>
+            外椭圆缩放系数(范围:[1,2],默认1.0)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindResult.FindStatus">
+            <summary>
+            椭圆是否存在状态
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindResult.Ellipse">
+            <summary>
+            椭圆信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindResult.FitError">
+            <summary>
+            椭圆拟合误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindResult.EdgePointList">
+            <summary>
+            边缘点列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindResult.InsideEllipseRingROI">
+            <summary>
+            内椭圆环ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindResult.OutsideEllipseRingROI">
+            <summary>
+            外椭圆环ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindResult.EdgePointStatusList">
+            <summary>
+            边缘点状态
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EllipseFind.CEllipseFindTool">
+            <summary>
+            椭圆查找工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="runParamBufferBytes">要保存运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+            <param name="runParamBufferLength">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="runParamBufferBytes">导入的运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.Run">
+            <summary>
+            执行找椭圆操作
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.Init">
+            <summary>
+            Init
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFind.CEllipseFindTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus"></param>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindTool.ROIShape">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindTool.MaskImage">
+            <summary>
+            MaskImage
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFind.CEllipseFindTool.BasicParam">
+            <summary>
+            Basic param
+            </summary>
+        </member>
+    </members>
+</doc>

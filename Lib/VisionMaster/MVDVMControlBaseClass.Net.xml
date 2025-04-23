@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDVMControlBaseClass.Net</name>
+    </assembly>
+    <members>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_PATMATCH_TOOL_GRAY_MATCH">
+            <summary>
+            灰度特征匹配
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_PATMATCH_TOOL_KEYPNT_MATCH">
+            <summary>
+            高精度特征匹配
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_PATMATCH_TOOL_FAST_KEYPNT_MATCH">
+            <summary>
+            快速特征匹配
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_CALIB_TOOL_IMAGE_STITCH">
+            <summary>
+            图像拼接
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_ALIGN_TOOL_CameraMap">
+            <summary>
+            相机映射
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_ALIGN_TOOL_LineAlign">
+            <summary>
+            线对位
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_ALIGN_TOOL_PointSetAlign">
+            <summary>
+            点集对位
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_ALIGN_TOOL_SinglePointAlign">
+            <summary>
+            单点对位
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_CALIB_TOOL_CalibBoardCalib">
+            <summary>
+            标定板标定
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_CALIB_TOOL_ImageCalib">
+            <summary>
+            畸变标定
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_CALIB_TOOL_ImageCorrectCalib">
+            <summary>
+            畸变矫正
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_CALIB_TOOL_MapCalib">
+            <summary>
+            映射标定
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_CALIB_TOOL_NImageCalib">
+            <summary>
+            N图标定
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_CALIB_TOOL_NPointCalib">
+            <summary>
+            N图标定V2
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_EDGEFLAW_TOOL_BeadGuide">
+            <summary>
+            路径提取
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_BlobFind">
+            <summary>
+            blob查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_Caliper">
+            <summary>
+            卡尺工具
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_CircleFind">
+            <summary>
+            圆查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_CrossPointFind">
+            <summary>
+            边缘交点检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_EdgeFind">
+            <summary>
+            边缘查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_EdgeWidth">
+            <summary>
+            宽度检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_LineFind">
+            <summary>
+            线查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_MarkFind">
+            <summary>
+            图形定位
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_MultiCategoryBlobFind">
+            <summary>
+            多类别blob
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_MultiLineFind">
+            <summary>
+            多线查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_PairLineFind">
+            <summary>
+            平行线查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_PeakFind">
+            <summary>
+            顶点检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_QuadrangleFind">
+            <summary>
+            四边形查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_GEOFIND_TOOL_RectangleFind">
+            <summary>
+            矩形查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_RECOGNITION_TOOL_Code1DReader">
+            <summary>
+            一维码识别
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_RECOGNITION_TOOL_Code2DReader">
+            <summary>
+            二维码识别
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_RECOGNITION_TOOL_OCR">
+            <summary>
+            OCR
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES.MVD_ALG_PATMATCH_TOOL_GRAY_MATCH_V2">
+            <summary>
+            灰度匹配V2
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.VMControlBaseClass.MyEventArgs._runParamName">
+            <summary>
+            运行参数名称
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.VMControlBaseClass.MyEventArgs._modelName">
+            <summary>
+            模型相关接口名称
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.VMControlBaseClass.MyEventArgs._runPatamVal">
+            <summary>
+            运行参数值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.VMControlBaseClass.MyEventArgs._modelVal">
+            <summary>
+            模型相关接口值
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.VMControlBaseClass.CVMControlBaseClass">
+            <summary>
+            VM配置控件基类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.VMControlBaseClass.CVMControlBaseClass.#ctor(VisionDesigner.VMControlBaseClass.MVD_TOOL_TYPES)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.VMControlBaseClass.CVMControlBaseClass.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.VMControlBaseClass.CVMControlBaseClass.onSetRunParamEvent">
+            <summary>
+            运行参数设置事件
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.VMControlBaseClass.CVMControlBaseClass.onGetRunParamEvent">
+            <summary>
+            运行参数获取事件
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.VMControlBaseClass.CVMControlBaseClass.onSetModelParamEvent">
+            <summary>
+            模型数据相关接口设置事件
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.VMControlBaseClass.CVMControlBaseClass.onGetModelParamEvent">
+            <summary>
+            模型数据相关接口获取事件
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.VMControlBaseClass.CVMControlBaseClass.XmlPath">
+            <summary>
+            VM控件xml路径
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.VMControlBaseClass.CVMControlBaseClass.Item(System.String)">
+            <summary>
+            运行参数名
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.VMControlBaseClass.CVMControlBaseClass.VMControls#BaseInterface#IParamsConfig#TimeOut">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.VMControlBaseClass.CVMControlBaseClass.EventHander">
+            <summary>
+            定义委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+    </members>
+</doc>

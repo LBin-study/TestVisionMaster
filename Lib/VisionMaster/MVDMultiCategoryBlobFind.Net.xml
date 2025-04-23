@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDMultiCategoryBlobFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.MultiCategoryBlobFind.CBlobInfo">
+            <summary>
+            Blob信息描述类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.DomainIndex">
+            <summary>
+            已连通域中Blob的位置索引
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.Perimeter">
+            <summary>
+            周长
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.Circularity">
+            <summary>
+            圆形度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.ShortAxis">
+            <summary>
+            最小外接矩形短轴
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.LongAxis">
+            <summary>
+            最小外接矩形长轴
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.AxisRatio">
+            <summary>
+            轴比（短轴/长轴）
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.Angle">
+            <summary>
+            角度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.Rectangularity">
+            <summary>
+            矩形度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.CenterBias">
+            <summary>
+            质心点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.Score">
+            <summary>
+            Blob得分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.BoxInfo">
+            <summary>
+            最小面积外接矩形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.RectInfo">
+            <summary>
+            连通域的边界框
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.Centroid">
+            <summary>
+            连通域中心（质心）
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.ContourPointList">
+            <summary>
+            轮廓点集合
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.AreaF">
+            <summary>
+            面积
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CBlobInfo.LabelID">
+            <summary>
+            标签值，即当前blob的灰度值
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindBasicParam">
+            <summary>
+            多类别Blob基本参数类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindBasicParam.ShowOutlineStatus">
+            <summary>
+            是否显示轮廓
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindBasicParam.ShowBlobImageStatus">
+            <summary>
+            是否输出Blob图像, true为输出, false为放弃输出,可加速
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindBasicParam.MinAreaThresHold">
+            <summary>
+            输入[0-255]对应的的最小面积阈值数组
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindBasicParam.MaxAreaThresHold">
+            <summary>
+            输入[0-255]对应的的最大面积阈值数组
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindResult">
+            <summary>
+            多类别Blob结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindResult.BlobInfoList">
+            <summary>
+            Blob信息集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindResult.BinaryImage">
+            <summary>
+            二值化图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindResult.BlobImage">
+            <summary>
+            获取Blob图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindResult.TotalArea">
+            <summary>
+            Blob总面积
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool">
+            <summary>
+            多类别Blob算子工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.#ctor">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取运行参数值
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置运行参数值
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存配置信息
+            </summary>
+            <param name="arrFileBuf">存储文件buffer的地址</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">实际写入的文件流长度</param>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载配置信息
+            </summary>
+            <param name="arrFileBuf">存储文件buffer的地址</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.Run">
+            <summary>
+            执行算子处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="bDisposeStatus">Flag of whether to release managed and unmanaged resource.</param>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.ROI">
+            <summary>
+            检测区域
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.RegionImage">
+            <summary>
+            检测区域图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.Result">
+            <summary>
+            检测结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.PerformanceAssistant">
+            <summary>
+            性能配置
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiCategoryBlobFind.CMultiCategoryBlobFindTool.RegionImageAssistant">
+            <summary>
+            运行区域图像ROI配置
+            </summary>
+        </member>
+    </members>
+</doc>

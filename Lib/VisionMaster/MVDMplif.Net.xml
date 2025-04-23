@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDMplif.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.Mplif.MVD_MPLIF_IMAGE">
+            <summary>
+            多相位图像结构体
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_IMAGE.LightImage">
+            <summary>
+            输入的多角度光图像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_IMAGE.Direction">
+            <summary>
+            多相位光方向（0为X方向，1为Y方向）
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_IMAGE.Index">
+            <summary>
+            多项位光序号(1-8)
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_IMAGE.Slants">
+            <summary>
+            相机光轴与照明方向之间的夹角（以度为单位）（建议在30到60之间），范围[0,90]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_IMAGE.Tilts">
+            <summary>
+            物体平面内照明方向投影与自定义起始线的夹角（以度为单位），范围[-180,180]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_OUTPUTIMAGE_FLAG.MVD_MPLIF_OUTPUTIMAGE_NORMAL">
+            <summary>
+            输出标准图像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_OUTPUTIMAGE_FLAG.MVD_MPLIF_OUTPUTIMAGE_SPECREF">
+            <summary>
+            输出镜面反射图像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_OUTPUTIMAGE_FLAG.MVD_MPLIF_OUTPUTIMAGE_DIFFREF">
+            <summary>
+            输出漫反射图像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_OUTPUTIMAGE_FLAG.MVD_MPLIF_OUTPUTIMAGE_GLOSRATIO">
+            <summary>
+            输出光泽比图像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_OUTPUTIMAGE_FLAG.MVD_MPLIF_OUTPUTIMAGE_PHASEX">
+            <summary>
+            输出X相位图像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_OUTPUTIMAGE_FLAG.MVD_MPLIF_OUTPUTIMAGE_PHASEY">
+            <summary>
+            输出Y相位图像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_OUTPUTIMAGE_FLAG.MVD_MPLIF_OUTPUTIMAGE_SHAPE1">
+            <summary>
+            输出形状图像1
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_OUTPUTIMAGE_FLAG.MVD_MPLIF_OUTPUTIMAGE_SHAPE2">
+            <summary>
+            输出形状图像2
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_OUTPUTIMAGE_FLAG.MVD_MPLIF_OUTPUTIMAGE_SHAPE3">
+            <summary>
+            输出形状图像3
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.MVD_MPLIF_OUTPUTIMAGE_FLAG.MVD_MPLIF_OUTPUTIMAGE_ALL">
+            <summary>
+            全部输出
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Mplif.CMplifBasicParam">
+            <summary>
+            多相位图像融合基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifBasicParam.ImageInfo">
+            <summary>
+            输入图像信息
+            </summary>
+            <remarks>运行所需数量为3-8</remarks>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifBasicParam.OutputImageFlag">
+            <summary>
+            输出图像标记
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Mplif.CMplifResult">
+            <summary>
+            图像融合结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Mplif.CMplifResult.OutputFlag">
+            <summary>
+            输出图像标记
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifResult.NormalImage">
+            <summary>
+            标准图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifResult.SpecRefImage">
+            <summary>
+            镜面反射图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifResult.DiffRefImage">
+            <summary>
+            漫反射图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifResult.GlosRatioImage">
+            <summary>
+            光泽比图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifResult.PhaseXImage">
+            <summary>
+            X相位图
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifResult.PhaseYImage">
+            <summary>
+            Y相位图
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifResult.ShapeImage1">
+            <summary>
+            形状图像1
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifResult.ShapeImage2">
+            <summary>
+            形状图像2
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifResult.ShapeImage3">
+            <summary>
+            形状图像3
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Mplif.CMplifTool">
+            <summary>
+            图像融合工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="runParamBufferBytes">要保存运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+            <param name="runParamBufferLength">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="runParamBufferBytes">导入的运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifTool.Run">
+            <summary>
+            执行操作
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Mplif.CMplifTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus"></param>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifTool.ROI">
+            <summary>
+            输入ROI
+            </summary>
+            <remarks>只支持0°矩形，NULL表示全图</remarks>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Mplif.CMplifTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

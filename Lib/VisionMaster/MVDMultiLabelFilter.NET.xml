@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDMultiLabelFilter.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.MultiLabelFilter.CMultiLabelFilterBasicParam">
+            <summary>
+            多标签过滤基本参数类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLabelFilter.CMultiLabelFilterBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLabelFilter.CMultiLabelFilterBasicParam.FilterLabelList">
+            <summary>
+            类别编号
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MultiLabelFilter.CMultiLabelFilterResult">
+            <summary>
+            多标签过滤结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLabelFilter.CMultiLabelFilterResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLabelFilter.CMultiLabelFilterResult.OutputImage">
+            <summary>
+            输出图像
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MultiLabelFilter.CMultiLabelFilterTool">
+            <summary>
+            多标签过滤工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLabelFilter.CMultiLabelFilterTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLabelFilter.CMultiLabelFilterTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLabelFilter.CMultiLabelFilterTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLabelFilter.CMultiLabelFilterTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLabelFilter.CMultiLabelFilterTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLabelFilter.CMultiLabelFilterTool.Run">
+            <summary>
+            执行算法处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLabelFilter.CMultiLabelFilterTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLabelFilter.CMultiLabelFilterTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLabelFilter.CMultiLabelFilterTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLabelFilter.CMultiLabelFilterTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVD2DArrayCorrect.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.Correct2DArray.C2DArrayCorrectResult">
+            <summary>
+            二维阵列结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectResult.#ctor">
+            <summary>
+            C2DArrayCorrectResult constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Correct2DArray.C2DArrayCorrectResult.ArrayBoxList">
+            <summary>
+            修正后匹配框，角度为角度制， 修正后匹配数量为ArrayBoxList.Count
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Correct2DArray.C2DArrayCorrectResult.RowBoxList">
+            <summary>
+            最小包围行的box，角度为角度制, 阵列行数为BoxList.Count
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Correct2DArray.C2DArrayCorrectBasicParam">
+            <summary>
+            二维阵列基本参数类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Correct2DArray.C2DArrayCorrectBasicParam.MatchBoxList">
+            <summary>
+            匹配框，角度为角度制
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Correct2DArray.C2DArrayCorrectTool">
+            <summary>
+            二维阵列工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.Run">
+            <summary>
+            执行算法.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Correct2DArray.C2DArrayCorrectTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCNNFewShotDetect.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CMVDROIAssistant">
+            <summary>
+            ROI配置列表，用于多ROI数据管理。
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.#ctor(System.UInt32)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.SetSupportROI(VisionDesigner.MVD_SHAPE_TYPE,System.Boolean)">
+            <summary>
+            设置支持的ROI类型，不设置则默认支持矩形、圆、扇环、多边形
+            </summary>
+            <param name="enShapeType"></param>
+            <param name="bIsSupport"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.AddROI(VisionDesigner.CMvdShape)">
+            <summary>
+            添加ROI,仅支持矩形、圆、扇环和多边形
+            </summary>
+            <param name="cROI"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.GetROI(System.UInt32)">
+            <summary>
+            根据索引查询已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <returns>ROI信息</returns>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.UpdateROI(System.UInt32,VisionDesigner.CMvdShape)">
+            <summary>
+            根据索引更新已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <param name="cROI">[IN] 拟更新为的ROI信息</param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.RemoveROI(System.UInt32)">
+            <summary>
+            根据索引移除已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] 图形索引，范围[0, ROICount)</param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.ClearROIs">
+            <summary>
+            清理所有已添加ROI信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.SetROIAssociatedData(System.UInt32,System.Object)">
+            <summary>
+            设置ROI关联数据
+            </summary>
+            <param name="nIndex"></param>
+            <param name="pData"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.GetROIAssociatedData(System.UInt32,System.Object@)">
+            <summary>
+            获取ROI关联数据
+            </summary>
+            <param name="nIndex"></param>
+            <param name="pData"></param>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectPredInfo">
+            <summary>
+            fewShot目标检测结果信息类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectPredInfo.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectPredInfo.Label">
+            <summary>
+            Label.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectPredInfo.Confidence">
+            <summary>
+            Confidence.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectPredInfo.Box">
+            <summary>
+            Box.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectPredInfo.LabelName">
+            <summary>
+            LabelName.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectPredInfo.Area">
+            <summary>
+            LabelName.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectResult">
+            <summary>
+            fewShot目标检测结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectResult.PredInfoList">
+            <summary>
+            Prediction information list.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectBasicParam">
+            <summary>
+            fewShot目标检测基本参数类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectBasicParam.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectBasicParam.LoadModel(System.String)">
+            <summary>
+            Load model from local file.
+            </summary>
+            <param name="filePath">file path of the model</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectBasicParam.LoadModelData(System.Byte[],System.Int64)">
+            <summary>
+            Load model from local data.
+            </summary>
+            <param name="modeldata">data of the model</param>
+            <param name="modelsize">size of the model</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectBasicParam.LoadGallery(System.String)">
+            <summary>
+            Load gallery from local file.
+            </summary>
+            <param name="filePath">file path of the gallery</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectBasicParam.LoadGalleryData(System.Byte[],System.Int64)">
+            <summary>
+            Load gallery from local data.
+            </summary>
+            <param name="gallerydata">data of the gallery</param>
+            <param name="gallerysize">size of the gallery</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectBasicParam.ModelData">
+            <summary>
+            Model data.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectBasicParam.UpdateStatus">
+            <summary>
+            Update Status.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectBasicParam.GalleryData">
+            <summary>
+            Gallery Model data.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectBasicParam.GalleryUpdateStatus">
+            <summary>
+            Gallery Update Status.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool">
+            <summary>
+            fewShot目标检测工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.#ctor(VisionDesigner.MVD_ALGORITHM_PLATFORM_TYPE)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.Dispose">
+            <summary>
+            Release
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this CNNFewShotDetect tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this CNNFewShotDetect tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this CNNFewShotDetect tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this CNNFewShotDetect tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.Dispose(System.Boolean)">
+            <summary>
+            Release resources
+            </summary>
+            <param name="bDisposeStatus">Flag of whether to release managed and unmanaged resource.</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.ROIAssistant">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.RegionImage">
+            <summary>
+             Region to process.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotDetect.CNNFewShotDetectTool.PerformanceAssistant">
+            <summary>
+            性能配置
+            </summary>
+        </member>
+    </members>
+</doc>

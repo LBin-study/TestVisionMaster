@@ -1,0 +1,573 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCNNHPRegisterDetect.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CMVDROIAssistant">
+            <summary>
+            ROI配置列表，用于多ROI数据管理。
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.#ctor(System.UInt32)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.SetSupportROI(VisionDesigner.MVD_SHAPE_TYPE,System.Boolean)">
+            <summary>
+            设置支持的ROI类型，不设置则默认支持矩形、圆、扇环、多边形
+            </summary>
+            <param name="enShapeType"></param>
+            <param name="bIsSupport"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.AddROI(VisionDesigner.CMvdShape)">
+            <summary>
+            添加ROI,仅支持矩形、圆、扇环和多边形
+            </summary>
+            <param name="cROI"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.GetROI(System.UInt32)">
+            <summary>
+            根据索引查询已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <returns>ROI信息</returns>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.UpdateROI(System.UInt32,VisionDesigner.CMvdShape)">
+            <summary>
+            根据索引更新已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <param name="cROI">[IN] 拟更新为的ROI信息</param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.RemoveROI(System.UInt32)">
+            <summary>
+            根据索引移除已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] 图形索引，范围[0, ROICount)</param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.ClearROIs">
+            <summary>
+            清理所有已添加ROI信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.SetROIAssociatedData(System.UInt32,System.Object)">
+            <summary>
+            设置ROI关联数据
+            </summary>
+            <param name="nIndex"></param>
+            <param name="pData"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.GetROIAssociatedData(System.UInt32,System.Object@)">
+            <summary>
+            获取ROI关联数据
+            </summary>
+            <param name="nIndex"></param>
+            <param name="pData"></param>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectPredInfo">
+            <summary>
+            高精度注册检测预测信息类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectPredInfo.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectPredInfo.Label">
+            <summary>
+            Label.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectPredInfo.Confidence">
+            <summary>
+            Confidence.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectPredInfo.Box">
+            <summary>
+            Box.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectPredInfo.LabelName">
+            <summary>
+            LabelName.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectPredInfo.Area">
+            <summary>
+            LabelName.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectResult">
+            <summary>
+            高精度注册检测结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectResult.PredInfoList">
+            <summary>
+            Prediction information list.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectBasicParam">
+            <summary>
+            高精度注册检测基本参数类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectBasicParam.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectBasicParam.LoadModel(System.String)">
+            <summary>
+            Load model from local file.
+            </summary>
+            <param name="filePath">file path of the model</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectBasicParam.LoadModelData(System.Byte[],System.Int64)">
+            <summary>
+            Load model from local data.
+            </summary>
+            <param name="modeldata">data of the model</param>
+            <param name="modelsize">size of the model</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectBasicParam.LoadWeight(System.String)">
+            <summary>
+            Load gallery from local file.
+            </summary>
+            <param name="filePath">file path of the gallery</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectBasicParam.LoadWeightData(System.Byte[],System.Int64)">
+            <summary>
+            Load gallery from local data.
+            </summary>
+            <param name="data">data of the gallery</param>
+            <param name="size">size of the gallery</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectBasicParam.ModelData">
+            <summary>
+            Model data.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectBasicParam.UpdateStatus">
+            <summary>
+            Update Status.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectBasicParam.WeightData">
+            <summary>
+            Gallery Model data.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectBasicParam.WeightUpdateStatus">
+            <summary>
+            Gallery Update Status.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool">
+            <summary>
+            高精度注册检测工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.#ctor(VisionDesigner.MVD_ALGORITHM_PLATFORM_TYPE)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.Dispose">
+            <summary>
+            Release
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this CNNHPRegisterDetect tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this CNNHPRegisterDetect tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this CNNHPRegisterDetect tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this CNNHPRegisterDetect tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.Dispose(System.Boolean)">
+            <summary>
+            Release resources
+            </summary>
+            <param name="bDisposeStatus">Flag of whether to release managed and unmanaged resource.</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.ROIAssistant">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.RegionImage">
+            <summary>
+             Region to process.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTool.PerformanceAssistant">
+            <summary>
+            性能配置
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNHPRegisterDetect.MVD_CNN_HPREGISTER_DETECT_ANGLE_MODE">
+            <summary>
+            角度模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNHPRegisterDetect.MVD_CNN_HPREGISTER_DETECT_ANGLE_MODE.HPREGISTER_DETECT_ROTATE">
+            <summary>
+            斜框模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNHPRegisterDetect.MVD_CNN_HPREGISTER_DETECT_ANGLE_MODE.HPREGISTER_DETECT_RECT">
+            <summary>
+            正框模式
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainSample">
+            <summary>
+            训练样本
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainSample.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainSample.AddROI(VisionDesigner.CMvdShape,System.String)">
+            <summary>
+            添加类别ROI，深拷贝, 仅支持多边形，每张图片最多支持500个ROI
+            </summary>
+            <param name="cROIShape">[IN] ROI,仅支持多边形</param>
+            <param name="strLabelName">[IN] 类别名，每一个ROI对应一个类别名</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainSample.GetROI(System.Int32,System.String@)">
+            <summary>
+            根据索引查询已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, NumOfROIs)</param>
+            <param name="strLabelName">[OUT] 类别名</param>
+            <returns>指定索引处ROI的信息</returns>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainSample.ClearROIs">
+            <summary>
+            清理所有已添加ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainSample.TrainImage">
+            <summary>
+            训练图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainSample.ROINum">
+            <summary>
+            ROI个数
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainBasicParam">
+            <summary>
+            基本参数类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainBasicParam.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainBasicParam.AddSample(VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainSample)">
+            <summary>
+            增加样本，所有样本的类别总和不能超过10，样本总数最大为10。
+            </summary>
+            <param name="cSample">[IN] 样本</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainBasicParam.GetSample(System.Int32)">
+            <summary>
+            获取样本
+            </summary>
+            <param name="nIndex">[IN] 样本索引，从0开始计数</param>
+            <returns>样本</returns>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainBasicParam.RemoveSample(System.Int32)">
+            <summary>
+            移除指定的样本
+            </summary>
+            <param name="nIndex">[IN] 样本索引，nIndex从0开始计数</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainBasicParam.ClearSamples">
+            <summary>
+            清除所有样本
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainBasicParam.LoadModel(System.String)">
+            <summary>
+            通过模型文件路径从本地加载模型，必须设置
+            </summary>
+            <param name="filePath">[IN] 模型文件路径</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainBasicParam.LoadModelData(System.Byte[],System.Int64)">
+            <summary>
+            通过模型数据的指针和模型大小从本地加载模型
+            </summary>
+            <param name="modeldata">[IN] 模型文件</param>
+            <param name="modelsize">[IN] 模型文件大小</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainBasicParam.LoadWeight(System.String)">
+            <summary>
+            通过路径从本地加载权重文件
+            </summary>
+            <param name="filePath">[IN] 文件路径</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainBasicParam.LoadWeightData(System.Byte[],System.Int64)">
+            <summary>
+            通过指针和大小从本地加载权重数据
+            </summary>
+            <param name="gallerydata">数据</param>
+            <param name="gallerysize">数据大</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainBasicParam.SampleNum">
+            <summary>
+            样本数量，最大10
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainBasicParam.AngleMode">
+            <summary>
+            角度模式
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainResult">
+            <summary>
+            训练结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainResult.GetWeightData">
+            <summary>
+            获取权重文件内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrainResult.SaveWeightData(System.String)">
+            <summary>
+            保存数据
+            </summary>
+            <param name="filePath">[IN] 模型文件路径，模型文件路径中含有非英文字符时,建议使用UTF-8编码</param>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectModelInfo">
+            <summary>
+            模型描述类，用以描述训练生成的模型信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectModelInfo.AngleMode">
+            <summary>
+            角度模式
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectModelInfo.TotalImageNum">
+            <summary>
+            总的图片数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectModelInfo.TotalInstanceNum">
+            <summary>
+            总的实例数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectModelInfo.ClassLabelList">
+            <summary>
+            类别标签列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectModelInfo.ImageNumList">
+            <summary>
+            每个类别对应的图片数列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectModelInfo.InstanceNumList">
+            <summary>
+            每个类别对应的实例数列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectModelInfo.Epoch">
+            <summary>
+            迭代次数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectModelInfo.ColorJitterEnable">
+            <summary>
+            颜色增强
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectModelInfo.ImageFlipEnable">
+            <summary>
+            翻转增强
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectModelInfo.ImageRotateEnable">
+            <summary>
+            旋转增强
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectModelInfo.ImageResizeEnable">
+            <summary>
+            缩放增强
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain">
+            <summary>
+            训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.#ctor(VisionDesigner.MVD_ALGORITHM_PLATFORM_TYPE)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.Train">
+            <summary>
+            训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.UnTrain">
+            <summary>
+            重置训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.ParseModel(System.String)">
+            <summary>
+            通过路径解析训练生成的模型
+            </summary>
+            <param name="strFilePath">[IN] 文件路径</param>
+            <returns>模型信息</returns>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.ParseModel(System.Byte[],System.Int64)">
+            <summary>
+            通过指针和大小解析训练生成的模型
+            </summary>
+            <param name="modeldata">[IN] 数据</param>
+            <param name="modelsize">[IN] 数据大小</param>
+            <returns>模型信息</returns>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this CNNHPRegisterDetect tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this CNNHPRegisterDetect tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this CNNHPRegisterDetect tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this CNNHPRegisterDetect tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.Dispose(System.Boolean)">
+            <summary>
+            Release resources
+            </summary>
+            <param name="bDisposeStatus">Flag of whether to release managed and unmanaged resource.</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNHPRegisterDetect.CNNHPRegisterDetectTrain.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+    </members>
+</doc>

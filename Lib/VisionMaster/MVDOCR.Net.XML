@@ -1,0 +1,706 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDOCR.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.OCR.MVDOCR_FILTER_TYPE">
+            <summary>
+            字符过滤类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.OCR.MVDOCR_FILTER_TYPE.MVDOCR_FILTER_NO">
+            <summary>
+            不过滤
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.OCR.MVDOCR_FILTER_TYPE.MVDOCR_FILTER_NUMBERONLY">
+            <summary>
+            只允许数字
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.OCR.MVDOCR_FILTER_TYPE.MVDOCR_FILTER_UPPERLOWERCASEBOTH">
+            <summary>
+            只允许字母
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.OCR.MVDOCR_FILTER_TYPE.MVDOCR_FILTER_UPPERCASEONLY">
+            <summary>
+            只允许大写字母
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.OCR.MVDOCR_FILTER_TYPE.MVDOCR_FILTER_LOWERCASEONLY">
+            <summary>
+            只允许小写字母
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.OCR.MVDOCR_FILTER_TYPE.MVDOCR_FILTER_SPECIALONLY">
+            <summary>
+            只允许特殊字符
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.OCR.MVDOCR_FILTER_TYPE.MVDOCR_FILTER_SPACE">
+            <summary>
+            只允许空格，CNNOCR只要过滤类型设为空格，识别结果强制转为空格，传统OCR如果识别结果不为空格，则返回问号
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.OCR.MVDOCR_FILTER_TYPE.MVDOCR_FILTER_CUSTOM">
+            <summary>
+            自定义过滤字符
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.OCRFiledHelper.GetFiled(System.Int32)">
+            <summary>
+            根据单个字符Label获取Filed
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.OCRFiledHelper.GetFiledArray(System.Collections.Generic.List{VisionDesigner.OCR.MVDOCR_FILTER})">
+            <summary>
+            根据filterList获取Filed数组
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.OCRFiledHelper.Instance">
+            <summary>
+            单例对象
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.COCRCharacter">
+            <summary>
+            字符类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRCharacter.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRCharacter.Clone">
+            <summary>
+            字符Clone
+            </summary>
+            <returns>新字符对象</returns>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRCharacter.GrayImage">
+            <summary>
+            字符灰度图
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRCharacter.BinaryImage">
+            <summary>
+            字符二值图
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRCharacter.Label">
+            <summary>
+            字符对应ASCII码
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRCharacterFiled.LowValue">
+            <summary>
+            校验低位
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRCharacterFiled.HighValue">
+            <summary>
+            校验高位
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.COCREnhanceBasicParam">
+            <summary>
+            字符增强基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCREnhanceBasicParam.CharacterList">
+            <summary>
+            字符list
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.COCREnhanceResult">
+            <summary>
+            字符增强结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCREnhanceResult.CharacterList">
+            <summary>
+            字符list
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.COCREnhanceTool">
+            <summary>
+            字符增强工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceTool.Run">
+            <summary>
+            字符增强
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCREnhanceTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCREnhanceTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCREnhanceTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.COCRFont">
+            <summary>
+            字库训练Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFont.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFont.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFont.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFont.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFont.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFont.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFont.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFont.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFont.Train">
+            <summary>
+            训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFont.ImportFont(System.String)">
+            <summary>
+            导入模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFont.ImportFont(System.Byte[])">
+            <summary>
+            从内存中导入模板
+            </summary>
+            <param name="bytearr">导入的字库内存块</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFont.ExportFont(System.String)">
+            <summary>
+            导出模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRFont.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRFont.RunStatus">
+            <summary>
+            执行状态
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.COCRFontBasicParam">
+            <summary>
+            字库基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFontBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRFontBasicParam.CharacterList">
+            <summary>
+            字符list
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFontExtractTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFontExtractTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRFontExtractTool.Run">
+            <summary>
+            字库提取
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRFontExtractTool.FontData">
+            <summary>
+            V310字库数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRFontExtractTool.FontSize">
+            <summary>
+            V310字库大小
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRFontExtractTool.InnerCharacterList">
+            <summary>
+            训练字符列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.OCRFontHelper">
+            <summary>
+            字库文件互通助手
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.OCRFontHelper.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.OCRFontHelper.TransferSDKFontToBytes(System.Collections.Generic.List{VisionDesigner.OCR.COCRCharacter},System.Byte[])">
+            <summary>
+            将SDK字库数据转换成VM字库文件buffer
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.OCRFontHelper.TransferBytesToSDKFont(System.Byte[],System.Collections.Generic.List{VisionDesigner.OCR.COCRCharacter}@,System.Byte[]@)">
+            <summary>
+            将VM字库文件buffer转换成SDK字库数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.OCRFontHelper.GetFontFileVersion(System.Byte[])">
+            <summary>
+            获取字库文件版本号
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.COCRBasicParam">
+            <summary>
+            OCR基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRBasicParam.FilterList">
+            <summary>
+            过滤器列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.MVDOCR_FILTER">
+            <summary>
+            OCR过滤器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.MVDOCR_FILTER.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.MVDOCR_FILTER.#ctor(VisionDesigner.OCR.MVDOCR_FILTER_TYPE,System.String)">
+            <summary>
+            构造函数2
+            </summary>
+            <param name="filterType">字符过滤类型</param>
+            <param name="customFilterString">自定义过滤字符串</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.MVDOCR_FILTER.#ctor(System.String)">
+            <summary>
+            构造函数3
+            </summary>
+            <param name="customFilterString"></param>
+        </member>
+        <member name="F:VisionDesigner.OCR.MVDOCR_FILTER.FilterType">
+            <summary>
+            字符过滤类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.OCR.MVDOCR_FILTER.CustomFilterString">
+            <summary>
+            自定义过滤字符串
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.COCRPredictInfo">
+            <summary>
+            字符识别检测结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRPredictInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRPredictInfo.Box">
+            <summary>
+            字符分割box
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRPredictInfo.Label">
+            <summary>
+            字符识别结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRPredictInfo.AlternativeLabel">
+            <summary>
+            字符识别备选结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRPredictInfo.LabelScore">
+            <summary>
+            字符标签得分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRPredictInfo.AlternativeLabelScore">
+            <summary>
+            备选字符标签得分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRPredictInfo.Confidence">
+            <summary>
+            置信度
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.COCRResult">
+            <summary>
+            字符识别结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRResult.PredictInfoList">
+            <summary>
+            字符识别结果list
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.COCRSegmenter">
+            <summary>
+            字符分割Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRSegmenter.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRSegmenter.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRSegmenter.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRSegmenter.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRSegmenter.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRSegmenter.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRSegmenter.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRSegmenter.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRSegmenter.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRSegmenter.Run">
+            <summary>
+            字符分割
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRSegmenter.InputImage">
+            <summary>
+            分割图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRSegmenter.ROI">
+            <summary>
+            ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRSegmenter.Result">
+            <summary>
+            分割结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.COCRSegmentResult">
+            <summary>
+            字符分割结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRSegmentResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRSegmentResult.CharacterBoxList">
+            <summary>
+            字符分割Boxlist
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRSegmentResult.CharacterList">
+            <summary>
+            字符List
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.OCR.COCRTool">
+            <summary>
+            字符分割Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.OnRunning">
+            <summary>
+            抛出算子前置事件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.OnRan">
+            <summary>
+            抛出算子结束事件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.OCR.COCRTool.CheckRunParam(System.String,System.Int32@)">
+            <summary>
+            判断输入的运行参数是否合法，不合法返回0，合法则判断是属于tool还是segment  Status  0表示无该运行参数  1表示tool独有运行参数  2表示tool和segment均有 对于两者均有相同名称的运行参数时VM采取的逻辑为两者均设置（tool包含segment内所有内容）  但是tool内无segment成员变量  因此不需设置segment运行参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRTool.InputImage">
+            <summary>
+            识别图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRTool.ROI">
+            <summary>
+            ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRTool.BasicParam">
+            <summary>
+            字符识别基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRTool.Font">
+            <summary>
+            字库
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRTool.RunStatus">
+            <summary>
+            执行状态
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.OCR.COCRTool.VMControlBase">
+            <summary>
+            VM控件对象
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.OCR.COCRTool.Running">
+            <summary>
+            算子前置事件
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.OCR.COCRTool.Ran">
+            <summary>
+            算子结束事件
+            </summary>
+        </member>
+    </members>
+</doc>

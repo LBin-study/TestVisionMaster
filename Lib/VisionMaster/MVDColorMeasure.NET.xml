@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDColorMeasure.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ColorMeasure.CColorMeasureHistInfo">
+            <summary>
+            颜色测量结果直方图信息类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureHistInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureHistInfo.HistDataList">
+            <summary>
+            直方图数据列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureHistInfo.LevelDataList">
+            <summary>
+            每个bin的统计区间上限列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureHistInfo.MinVal">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureHistInfo.MaxVal">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureHistInfo.MeanVal">
+            <summary>
+            均值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureHistInfo.StandardDeviation">
+            <summary>
+            标准差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureHistInfo.ExtractHighThreshold">
+            <summary>
+            颜色抽取高建议阈值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureHistInfo.ExtractLowThreshold">
+            <summary>
+            颜色抽取低建议阈值
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ColorMeasure.CColorMeasureResult">
+            <summary>
+            颜色测量结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureResult.HistInfo">
+            <summary>
+            直方图信息集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureResult.ChromaticDiagramImage">
+            <summary>
+            可视化色品图背景
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureResult.LightnessBarImage">
+            <summary>
+            可视化明度轴背景
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureResult.ChromaticDiagramPoints">
+            <summary>
+            获取色品图颜色分布点坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureResult.LightnessBarPoints">
+            <summary>
+            获取明度轴颜色分布点坐标
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ColorMeasure.CColorMeasureTool">
+            <summary>
+            颜色测量算子工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureTool.#ctor">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取运行参数
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置运行参数
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数配置
+            </summary>
+            <param name="arrFileBuf">保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的尺寸</param>
+            <param name="nConfigDataLen">运行参数的实际长度</param>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数配置
+            </summary>
+            <param name="arrFileBuf">待加载运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的尺寸</param>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureTool.Run">
+            <summary>
+            执行算法处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorMeasure.CColorMeasureTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureTool.ROI">
+            <summary>
+            检测区域,默认值NULL(全区)，支持矩形、圆、扇环、多边形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureTool.RegionImage">
+            <summary>
+             运行区域图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureTool.RegionImageAssistant">
+            <summary>
+            运行区域图像ROI配置
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorMeasure.CColorMeasureTool.Result">
+            <summary>
+            处理结果
+            </summary>
+        </member>
+    </members>
+</doc>

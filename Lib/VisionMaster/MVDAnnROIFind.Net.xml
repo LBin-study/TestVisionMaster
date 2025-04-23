@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDAnnROIFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.AnnROIFind.CAnnROIFindBasicParam">
+            <summary>
+            AnnROI查找基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.AnnROIFind.CAnnROIFindBasicParam.CenterPoint">
+            <summary>
+            中心点
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.AnnROIFind.CAnnROIFindResult">
+            <summary>
+            AnnROI查找结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.AnnROIFind.CAnnROIFindResult.Status">
+            <summary>
+            查找状态
+            </summary>
+            <remarks>0:查找AnnROI失败；1:查找AnnROI成功并输出</remarks>
+        </member>
+        <member name="P:VisionDesigner.AnnROIFind.CAnnROIFindResult.AnnROI">
+            <summary>
+            AnnROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.AnnROIFind.CAnnROIFindResult.FindCircle">
+            <summary>
+            FindCircle
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.AnnROIFind.CAnnROIFindTool">
+            <summary>
+            AnnROI查找工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="runParamBufferBytes">要保存运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+            <param name="runParamBufferLength">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="runParamBufferBytes">导入的运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindTool.Run">
+            <summary>
+            执行操作
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.AnnROIFind.CAnnROIFindTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus"></param>
+        </member>
+        <member name="P:VisionDesigner.AnnROIFind.CAnnROIFindTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.AnnROIFind.CAnnROIFindTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.AnnROIFind.CAnnROIFindTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

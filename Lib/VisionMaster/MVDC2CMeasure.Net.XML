@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDC2CMeasure.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.C2CMeasure.MVD_MEASURE_C2C_TYPES">
+            <summary>
+            Positional relationship between circle and circle
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.C2CMeasure.MVD_MEASURE_C2C_TYPES.MVD_MEASURE_C2C_UNDEFINED">
+            <summary>
+            Undefined
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.C2CMeasure.MVD_MEASURE_C2C_TYPES.MVD_MEASURE_C2C_CONTAIN">
+            <summary>
+            Contain
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.C2CMeasure.MVD_MEASURE_C2C_TYPES.MVD_MEASURE_C2C_INSCRIBE">
+            <summary>
+            Inscribe
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.C2CMeasure.MVD_MEASURE_C2C_TYPES.MVD_MEASURE_C2C_INTERSECT">
+            <summary>
+            Intersect
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.C2CMeasure.MVD_MEASURE_C2C_TYPES.MVD_MEASURE_C2C_EXCIRCLE">
+            <summary>
+            External cutting
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.C2CMeasure.MVD_MEASURE_C2C_TYPES.MVD_MEASURE_C2C_DEVIATION">
+            <summary>
+            Deviation
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.C2CMeasure.CC2CMeasureBasicParam">
+            <summary>
+            Class for describing basic parameter of C2CMeasure
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.C2CMeasure.CC2CMeasureBasicParam.Circle1">
+            <summary>
+            circle 1
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.C2CMeasure.CC2CMeasureBasicParam.Circle2">
+            <summary>
+            circle 2
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.C2CMeasure.CC2CMeasureBasicParam.AngleType">
+            <summary>
+            输出角度范围
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.C2CMeasure.CC2CMeasureResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.C2CMeasure.CC2CMeasureResult.Angle">
+            <summary>
+            angle of two circles
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.C2CMeasure.CC2CMeasureResult.Dist">
+            <summary>
+            distance of two circles
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.C2CMeasure.CC2CMeasureResult.C2CType">
+            <summary>
+            position relation of two circles
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.C2CMeasure.CC2CMeasureResult.InterPoint1">
+            <summary>
+            intersection point 1 of two circles
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.C2CMeasure.CC2CMeasureResult.InterPoint2">
+            <summary>
+            intersection point 2 of two circles
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.C2CMeasure.CC2CMeasureTool">
+            <summary>
+            the class for the C2CMeasureTool
+            </summary>
+            <remarks>The C2CMeasureTool encapsulates all of the classes required to perform a C2C measurement analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.C2CMeasure.CC2CMeasureTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.C2CMeasure.CC2CMeasureTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.C2CMeasure.CC2CMeasureTool.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            反序列化调用该构造函数
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:VisionDesigner.C2CMeasure.CC2CMeasureTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.C2CMeasure.CC2CMeasureTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.C2CMeasure.CC2CMeasureTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.C2CMeasure.CC2CMeasureTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.C2CMeasure.CC2CMeasureTool.BasicParam">
+            <summary>
+            basic parameter for C2CMeasure
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.C2CMeasure.CC2CMeasureTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

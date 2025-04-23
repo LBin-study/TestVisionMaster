@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDImageFixture.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ImageFixture.MVD_IMGFIX_MODE">
+            <summary>
+            Image Fix Mode
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageFixture.MVD_IMGFIX_MODE.MVD_IMGFIX_MODE_NONE">
+            <summary>
+            Do not make fixture
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageFixture.MVD_IMGFIX_MODE.MVD_IMGFIX_MODE_HORI">
+            <summary>
+            Fixture horizontally
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageFixture.MVD_IMGFIX_MODE.MVD_IMGFIX_MODE_VERT">
+            <summary>
+            Fixture vertically
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageFixture.MVD_IMGFIX_MODE.MVD_IMGFIX_MODE_HV">
+            <summary>
+            Fixture both horizontally and vertically
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageFixture.MVD_IMGFIX_MODE.MVD_IMGFIX_MODE_HVA">
+            <summary>
+            Angle fixture both horizontally and vertically
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageFixture.MVD_IMGFIX_MODE.MVD_IMGFIX_MODE_HVAS">
+            <summary>
+             Angle fixture both horizontally and vertically, support scale
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageFixture.MVD_FIDUCIAL_POINT_F">
+            <summary>
+            fiducial pose point info with 'float' type
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageFixture.CImageFixtureBasicParam">
+            <summary>
+            Class for describing ImageFixture Basic Param
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageFixture.CImageFixtureBasicParam.#ctor">
+            <summary>
+            CImageFixtureBasicParam constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageFixture.CImageFixtureBasicParam.BasePoint">
+            <summary>
+            the posion of the basis point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageFixture.CImageFixtureBasicParam.RunningPoint">
+            <summary>
+            the running point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageFixture.CImageFixtureBasicParam.FixMode">
+            <summary>
+            Fixture mode
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageFixture.CImageFixtureResult">
+            <summary>
+            Class for describing ImageFixture Result
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageFixture.CImageFixtureResult.#ctor">
+            <summary>
+            CImageFixtureResult constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageFixture.CImageFixtureResult.OutputImage">
+            <summary>
+            the mean grey level
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageFixture.CImageFixtureResult.Status">
+            <summary>
+            ch: 输出是否有效标志 | en: Whether the output is valid.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageFixture.CImageFixtureTool">
+            <summary>
+            Class for CImageFixtureTool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageFixture.CImageFixtureTool.#ctor">
+            <summary>
+            CImageFixtureTool Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageFixture.CImageFixtureTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageFixture.CImageFixtureTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageFixture.CImageFixtureTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageFixture.CImageFixtureTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageFixture.CImageFixtureTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageFixture.CImageFixtureTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageFixture.CImageFixtureTool.BasicParam">
+            <summary>
+            BasicParam
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageFixture.CImageFixtureTool.Result">
+            <summary>
+            Result
+            </summary>
+        </member>
+    </members>
+</doc>

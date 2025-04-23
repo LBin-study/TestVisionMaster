@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDPixelCountV3.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.PixelCountV3.MVD_PIXEL_COUNT_THRESHOLD">
+            <summary>
+            像素阈值区间
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PixelCountV3.CPixelCountV3BasicParam">
+            <summary>
+            像素统计V3基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCountV3.CPixelCountV3BasicParam.ThresholdList">
+            <summary>
+            阈值列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PixelCountV3.CPixelCountV3Result">
+            <summary>
+            像素统计V3结果类
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PixelCountV3.CPixelCountV3Result._PixelNumList">
+            <summary>
+            像素个数列表
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PixelCountV3.CPixelCountV3Result._RatioList">
+            <summary>
+            像素比率列表
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCountV3.CPixelCountV3Result.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCountV3.CPixelCountV3Result.PixelNumList">
+            <summary>
+            像素个数列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCountV3.CPixelCountV3Result.RatioList">
+            <summary>
+            像素比率列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PixelCountV3.CPixelCountV3Tool">
+            <summary>
+            the class for the PixelCountV3Tool
+            </summary>
+            <remarks>The PixelCountV3Tool encapsulates all of the classes required to perform a circle finding analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.PixelCountV3.CPixelCountV3Tool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCountV3.CPixelCountV3Tool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCountV3.CPixelCountV3Tool.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            反序列化调用该构造函数
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:VisionDesigner.PixelCountV3.CPixelCountV3Tool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCountV3.CPixelCountV3Tool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCountV3.CPixelCountV3Tool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCountV3.CPixelCountV3Tool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PixelCountV3.CPixelCountV3Tool.Init">
+            <summary>
+            Init
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCountV3.CPixelCountV3Tool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCountV3.CPixelCountV3Tool.ROI">
+            <summary>
+            输入ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCountV3.CPixelCountV3Tool.RegionImage">
+            <summary>
+            输入掩膜
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCountV3.CPixelCountV3Tool.Result">
+            <summary>
+            执行结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCountV3.CPixelCountV3Tool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PixelCountV3.CPixelCountV3Tool.RegionImageAssistant">
+            <summary>
+            运行区域图像ROI配置
+            </summary>
+        </member>
+    </members>
+</doc>

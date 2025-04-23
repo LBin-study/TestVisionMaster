@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDBoxOverlap.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.BoxOverlap.CBoxOverlapResult">
+            <summary>
+            Class for describing BoxOverlap Result
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxOverlap.CBoxOverlapResult.#ctor">
+            <summary>
+            CBoxOverlapResult constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxOverlap.CBoxOverlapResult.Overlap">
+            <summary>
+            Output Overlap
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.BoxOverlap.CBoxOverlapTool">
+            <summary>
+            Class of the BoxOverlapTool
+            </summary>
+            <remarks>The BoxOverlapTool encapsulates all of the classes required to perform an box overlap process.</remarks>
+        </member>
+        <member name="M:VisionDesigner.BoxOverlap.CBoxOverlapTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxOverlap.CBoxOverlapTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxOverlap.CBoxOverlapTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxOverlap.CBoxOverlapTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxOverlap.CBoxOverlapTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxOverlap.CBoxOverlapTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxOverlap.CBoxOverlapTool.ROI1">
+            <summary>
+            输入Box0
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxOverlap.CBoxOverlapTool.ROI2">
+            <summary>
+            输入Box1
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxOverlap.CBoxOverlapTool.Result">
+            <summary>
+            Result
+            </summary>
+        </member>
+    </members>
+</doc>

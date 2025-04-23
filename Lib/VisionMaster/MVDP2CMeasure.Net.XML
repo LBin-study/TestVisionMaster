@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDP2CMeasure.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.P2CMeasure.CP2CMeasureBasicParam">
+            <summary>
+            Class for describing basic parameter of P2CMeasure
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2CMeasure.CP2CMeasureBasicParam.Point">
+            <summary>
+            point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2CMeasure.CP2CMeasureBasicParam.Circle">
+            <summary>
+            circle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2CMeasure.CP2CMeasureBasicParam.AngleType">
+            <summary>
+            输出角度范围
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.P2CMeasure.CP2CMeasureResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2CMeasure.CP2CMeasureResult.Angle">
+            <summary>
+            angle of point and circle center
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2CMeasure.CP2CMeasureResult.CenterDist">
+            <summary>
+            perpend distance of point and circle center
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2CMeasure.CP2CMeasureResult.ClosestDist">
+            <summary>
+            closest distance of point and circle center
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2CMeasure.CP2CMeasureResult.FarthestDist">
+            <summary>
+            farthest distance of point and circle center
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.P2CMeasure.CP2CMeasureTool">
+            <summary>
+            the class for the P2CMeasureTool
+            </summary>
+            <remarks>The P2CMeasureTool encapsulates all of the classes required to perform a P2C measurement analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.P2CMeasure.CP2CMeasureTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2CMeasure.CP2CMeasureTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2CMeasure.CP2CMeasureTool.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            反序列化调用该构造函数
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:VisionDesigner.P2CMeasure.CP2CMeasureTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2CMeasure.CP2CMeasureTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2CMeasure.CP2CMeasureTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2CMeasure.CP2CMeasureTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2CMeasure.CP2CMeasureTool.BasicParam">
+            <summary>
+            basic parameter for P2CMeasure
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2CMeasure.CP2CMeasureTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

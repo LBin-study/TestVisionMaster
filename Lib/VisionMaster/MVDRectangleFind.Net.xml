@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDRectangleFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.RectangleFind.MVD_EDGEPOINT_STATUS">
+            <summary>
+            Find status of the edge point
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.RectangleFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_USED">
+            <summary>
+            Successfully found and used, default value
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.RectangleFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_NO_USED">
+            <summary>
+            Successfully found but not used
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.RectangleFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_NO_FIND">
+            <summary>
+            Fail to find
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.RectangleFind.MVD_EDGE_POLARITY">
+            <summary>
+            Type of the polarity of the edge point
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.RectangleFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_DARK_TO_BRIGHT">
+            <summary>
+            From black to white, default value
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.RectangleFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BRIGHT_TO_DARK">
+            <summary>
+            From white to black
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.RectangleFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BOTH">
+            <summary>
+            both
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.RectangleFind.CRectangleFindEdgePointInfo">
+            <summary>
+            Class for describing edge points Information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RectangleFind.CRectangleFindEdgePointInfo.EdgePoint">
+            <summary>
+            边缘点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RectangleFind.CRectangleFindEdgePointInfo.Score">
+            <summary>
+            边缘得分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RectangleFind.CRectangleFindEdgePointInfo.Distance">
+            <summary>
+            边缘距离
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RectangleFind.CRectangleFindEdgePointInfo.Polarity">
+            <summary>
+            边缘极性
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RectangleFind.CRectangleFindEdgePointInfo.Status">
+            <summary>
+            边缘点查找状态
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.RectangleFind.CRectangleFindResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RectangleFind.CRectangleFindResult.Status">
+            <summary>
+            ch: 查找状态 | en: finding status
+            </summary>
+            <remarks>0:查找失败；1:查找成功</remarks>
+        </member>
+        <member name="P:VisionDesigner.RectangleFind.CRectangleFindResult.EdgePointInfo">
+            <summary>
+            Gets the list of edge points of the rectangle that has been found
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RectangleFind.CRectangleFindResult.RectangleBox">
+            <summary>
+            Gets the rectbox of the rectangle that has been found
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.RectangleFind.CRectangleFindTool">
+            <summary>
+            the class for the RectangleFindTool
+            </summary>
+            <remarks>The RectangleFindTool encapsulates all of the classes required to perform a rectangle finding analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.RectangleFind.CRectangleFindTool.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RectangleFind.CRectangleFindTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RectangleFind.CRectangleFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RectangleFind.CRectangleFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RectangleFind.CRectangleFindTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RectangleFind.CRectangleFindTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this RectangleFind tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.RectangleFind.CRectangleFindTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this RectangleFind tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.RectangleFind.CRectangleFindTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this RectangleFind tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.RectangleFind.CRectangleFindTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this RectangleFind tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.RectangleFind.CRectangleFindTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RectangleFind.CRectangleFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RectangleFind.CRectangleFindTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RectangleFind.CRectangleFindTool.ROI">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RectangleFind.CRectangleFindTool.RegionImage">
+            <summary>
+             region image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RectangleFind.CRectangleFindTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

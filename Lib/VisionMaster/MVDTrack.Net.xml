@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDTrack.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.Track.CTrackBasicParam">
+            <summary>
+            目标跟踪基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackBasicParam.InitInput">
+            <summary>
+            初始化输入
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackBasicParam.Contours">
+            <summary>
+            输入轮廓，只支持矩形和多边形
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Track.MVD_TRACK_COUNT_DIRECTION">
+            <summary>
+            目标跟踪计数方向
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Track.MVD_TRACK_COUNT_DIRECTION.MVD_TRACK_COUNT_DIR_Y">
+            <summary>
+            沿图像竖直方向跟踪计数，默认值
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Track.MVD_TRACK_COUNT_DIRECTION.MVD_TRACK_COUNT_DIR_X">
+            <summary>
+            沿图像水平方向跟踪计数
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Track.MVD_TRACK_COUNT_LINE">
+            <summary>
+            目标跟踪计数线
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Track.MVD_TRACK_COUNT_LINE.stCountDir">
+            <summary>
+            计数线方向
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Track.MVD_TRACK_COUNT_LINE.fLinePos">
+            <summary>
+            计数线位置
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Track.CTrackInitInput">
+            <summary>
+            初始化流程的输入
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackInitInput.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackInitInput.IsSetLine">
+            <summary>
+            用户是否设置检测线
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackInitInput.TrackRect">
+            <summary>
+            跟踪区域，仅支持0度矩形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackInitInput.SpeedY">
+            <summary>
+            y方向的运行速度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackInitInput.SpeedX">
+            <summary>
+            x方向的运行速度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackInitInput.MaxProcNum">
+            <summary>
+            单次处理能检测的最多目标个数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackInitInput.TrackCountLine">
+            <summary>
+            目标跟踪计数线
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Track.CTrackObjectOutputInfo">
+            <summary>
+            输出目标轮廓信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackObjectOutputInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackObjectOutputInfo.Contour">
+            <summary>
+            输出轮廓，多边形
+            当用户输入矩形时，输出轮廓与输出Box均有值；当用户输入多边形时，仅仅此接口有值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackObjectOutputInfo.ID">
+            <summary>
+            目标ID
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackObjectOutputInfo.Box">
+            <summary>
+            输出矩形
+            当用户输入矩形时，输出轮廓与输出Box均有值；当用户输入多边形时，此接口返回null
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackObjectOutputInfo.IsCounted">
+            <summary>
+            当前轮廓是否用于计数
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Track.CTrackResult">
+            <summary>
+            目标跟踪结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Track.CTrackResult._AlgOutput">
+            <summary>
+            算法输出结构体
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Track.CTrackResult._FlagRect">
+            <summary>
+            为0表示输出多边形，为1表示输出矩形
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackResult.ResetMember">
+            <summary>
+            必须保留着，用作清空计数功能
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackResult.OutputInfo">
+            <summary>
+            输出目标轮廓信息
+            </summary>
+            <remarks>范围[0, OutputNum)</remarks>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackResult.OutputNum">
+            <summary>
+            输出轮廓的数量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackResult.TotalNum">
+            <summary>
+            累计检测出的目标总数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackResult.IncreasedNum">
+            <summary>
+            本次处理新检测出的目标数量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackResult.TargetOutputInfo">
+            <summary>
+            目标计数值对应的轮廓信息，
+            根据配置的运行参数“TargetValue”数值，获取对应的目标轮廓信息，若未跟踪到目标计数值，则默认返回NULL
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Track.CTrackTool">
+            <summary>
+            目标跟踪工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.ClearCounts">
+            <summary>
+            用于清空结果中的计数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="runParamBufferBytes">要保存运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+            <param name="runParamBufferLength">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="runParamBufferBytes">导入的运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.Run">
+            <summary>
+            执行操作
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Track.CTrackTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus"></param>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Track.CTrackTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,924 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDContourPatMatch.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ContourPatMatch.CPatMatchEdgePoint">
+            <summary>
+            边缘点
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CPatMatchEdgePoint.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CPatMatchEdgePoint.Position">
+            <summary>
+            坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CPatMatchEdgePoint.Score">
+            <summary>
+            边缘点得分(0:重要； 1:一般； 2:弱);只在匹配输出时有效
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CPatMatchEdgePoint.Weight">
+            <summary>
+            边缘点权重 (0:重要； 1:一般； 2:弱);只在匹配输出时有效
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.CPatMatchOutline">
+            <summary>
+            模板匹配轮廓
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CPatMatchOutline.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CPatMatchOutline.EdgePointList">
+            <summary>
+            边缘点集合
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CPatMatchOutline.EdgePointListOrigin">
+            <summary>
+            边缘点集合(相对于原图)
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.CPatMatchRegion">
+            <summary>
+            模板匹配Region
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CPatMatchRegion.#ctor">
+            <summary>
+            构造函数1
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CPatMatchRegion.#ctor(VisionDesigner.CMvdShape,System.Boolean)">
+            <summary>
+            构造函数2
+            </summary>
+            <param name="shape">图形</param>
+            <param name="sign">ROI\屏蔽区标志</param>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CPatMatchRegion.Shape">
+            <summary>
+            ROI图形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CPatMatchRegion.Sign">
+            <summary>
+            屏蔽区标志
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.CContourPattern">
+            <summary>
+            模板匹配模型类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.Train">
+            <summary>
+            训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.UnTrain">
+            <summary>
+            取消训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.ImportPattern(System.String)">
+            <summary>
+            导入模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.ImportPattern(System.Byte[])">
+            <summary>
+            导入模板
+            </summary>
+            <param name="xmlData">xml模板字节数据</param>
+        </member>
+        <!-- 对于成员“M:VisionDesigner.ContourPatMatch.CContourPattern.ImportPattern(System.Byte[],System.UInt64)”忽略有格式错误的 XML 注释 -->
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.ExportPattern(System.String)">
+            <summary>
+            导出模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.ExportPattern(System.Byte[]@)">
+            <summary>
+            导出模板
+            </summary>
+            <param name="xmlData">导出模型的字节数组</param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.ReleaseAlgorithmCache">
+            <summary>
+            释放算法缓存
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.BuildPreCondition">
+            <summary>
+            前置条件检查与算法句柄ReInit
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPattern.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPattern.Name">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPattern.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPattern.RegionList">
+            <summary>
+            建模Region列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPattern.RegionImage">
+            <summary>
+            建模掩膜图像(最终算法输入掩膜，不可与图形叠加)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPattern.MaskImage">
+            <summary>
+            建模掩膜图像(可与图形叠加)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPattern.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPattern.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPattern.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPattern.ModelSize">
+            <summary>
+            模型大小
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPattern.ReTrainStatus">
+            <summary>
+            重新训练标志
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPattern.RunStatus">
+            <summary>
+            是否可以获取结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.MVD_CP_OPTIMIZE_FLAG_TYPE">
+            <summary>
+            轮廓匹配模型导出优化选项
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ContourPatMatch.MVD_CP_OPTIMIZE_FLAG_TYPE.MVD_CP_OPTIMIZE_NONE">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ContourPatMatch.MVD_CP_OPTIMIZE_FLAG_TYPE.MVD_CP_OPTIMIZE_IMG">
+            <summary>
+            优化导出不附带原图
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.CContourPatternBasicParam">
+            <summary>
+            建模基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatternBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternBasicParam.FixPoint">
+            <summary>
+            基准点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternBasicParam.OptimizedFlag">
+            <summary>
+            导出模板优化选项
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.CContourPatternData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatternData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternData.FixPoint">
+            <summary>
+            基准点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternData.Size">
+            <summary>
+            模型大小
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternData.TrainedImage">
+            <summary>
+            模型图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternData.TrainedImageMask">
+            <summary>
+            模型掩膜
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternData.VersionCode">
+            <summary>
+            模板版本号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternData.PyramidScaleLevel">
+            <summary>
+            金字塔模板模型层数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternData.PyramidScaleReturnLevel">
+            <summary>
+            金字塔模板模型返回层
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternData.HighThreshold">
+            <summary>
+            建模高阈值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternData.LowThreshold">
+            <summary>
+            建模低阈值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternData.MinChainLen">
+            <summary>
+            最小链长长度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternData.OutLineBufSize">
+            <summary>
+            轮廓获取所需申请缓存
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.CContourPatternResult">
+            <summary>
+            模型结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatternResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternResult.Data">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatternResult.OutlineList">
+            <summary>
+            模型轮廓
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CompressDataHelper.CompressToNormalMask(System.Byte[],System.Int32)">
+            <summary>
+            压缩Mask转主Mask
+            </summary>
+            <param name="compressMask"></param>
+            <param name="flagNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CompressDataHelper.NormalToCompressMask(System.Byte[],System.Int32)">
+            <summary>
+            压缩Mask转正常Mask
+            </summary>
+            <param name="otherMask"></param>
+            <param name="flagNum">标记种类个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.PMAlignPatternModule.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.PMAlignPatternModule.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.PMAlignPatternModule.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.PMAlignPatternModule.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.PMAlignPatternModule.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.PMAlignPatternModule.TrainPattern(System.UInt64@)">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.PMAlignPatternModule.GetPatternData(System.Byte[],System.UInt64)">
+            <summary>
+            获取模型数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.PMAlignPatternModule.GetPatternDataOptimize(System.Byte[],System.UInt64)">
+            <summary>
+            获取模型数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.PMAlignPatternModule.GetOutline(System.Byte[],System.UInt64)">
+            <summary>
+            获取轮廓
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.PMAlignPatternModule.InputImage">
+            <summary>
+            建模输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.PMAlignPatternModule.InputMask">
+            <summary>
+            建模输入掩膜
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.PMAlignPatternModule.BasicParam">
+            <summary>
+            基本参数(基准点)
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.CContourMatchInfo">
+            <summary>
+            匹配结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourMatchInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourMatchInfo.MatchBox">
+            <summary>
+            匹配框
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourMatchInfo.MatchPoint">
+            <summary>
+            匹配点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourMatchInfo.Scale">
+            <summary>
+            匹配尺度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourMatchInfo.ScaleX">
+            <summary>
+            匹配尺度X
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourMatchInfo.ScaleY">
+            <summary>
+            匹配尺度Y
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourMatchInfo.Score">
+            <summary>
+            相似分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourMatchInfo.Rms">
+            <summary>
+            结果拟合误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourMatchInfo.SkewX">
+            <summary>
+            模板匹配横切值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourMatchInfo.SkewY">
+            <summary>
+            模板匹配纵切值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourMatchInfo.PatternIndex">
+            <summary>
+            匹配结果对应的模板索引
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourMatchInfo.BoundingBox">
+            <summary>
+            结果拟合误差
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.CContourPatMatchBasicParam">
+            <summary>
+            匹配基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatMatchBasicParam.ShowOutlineStatus">
+            <summary>
+            是否显示匹配轮廓
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.CContourPatMatchResult">
+            <summary>
+            匹配结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatMatchResult.MatchInfoList">
+            <summary>
+            匹配结果列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatMatchResult.OutlineList">
+            <summary>
+            轮廓列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.CContourPatMatchTool">
+            <summary>
+            模板匹配Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.OnRunning">
+            <summary>
+            抛出算子前置事件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.OnRan">
+            <summary>
+            抛出算子结束事件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.SetCoreBinding(System.UInt64)">
+            <summary>
+            设置核数绑定CPU
+            </summary>
+            <param name="coreBinding"></param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.GetCoreBinding">
+            <summary>
+            获取核数绑定CPU
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.AddMask(VisionDesigner.CMvdShape)">
+            <summary>
+            添加屏蔽区
+            </summary>
+            <param name="maskShape"></param>
+            <remarks>当前只支持多边形屏蔽区,且最多8个屏蔽区</remarks>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.ClearMasks">
+            <summary>
+            移除屏蔽区
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.RemoveMaskAt(System.Int32)">
+            <summary>
+            根据索引移除屏蔽区
+            </summary>
+            <param name="nIndex"></param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.GetNumOfMasks">
+            <summary>
+            获取屏蔽区个数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.Run">
+            <summary>
+            执行匹配操作
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.AddPattern(VisionDesigner.ContourPatMatch.CContourPattern)">
+            <summary>
+            添加轮廓匹配的模板
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.ClearPatterns">
+            <summary>
+            清理AddPattern添加的数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.GetPatternNum">
+            <summary>
+            获取已添加匹配模板的数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.RemovePattern(System.Int32)">
+            <summary>
+            根据索引移除模板
+            </summary>
+            <param name="nIndex"></param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.CalcMaskFlag">
+            <summary>
+            计算是否使用掩膜
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.CContourPatMatchTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatMatchTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatMatchTool.RegionImage">
+            <summary>
+            输入掩膜
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatMatchTool.ROI">
+            <summary>
+            ROI;默认值NULL(全区)，支持矩形、多边形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatMatchTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatMatchTool.Pattern">
+            <summary>
+            模板
+            </summary>
+            <remarks>V441及以后版本废弃，推荐调用AddPattern接口设置</remarks>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatMatchTool.Result">
+            <summary>
+            匹配结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatMatchTool.ThreadNum">
+            <summary>
+            线程数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.CContourPatMatchTool.RunStatus">
+            <summary>
+            执行状态
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.ContourPatMatch.CContourPatMatchTool.Running">
+            <summary>
+            算子前置事件
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.ContourPatMatch.CContourPatMatchTool.Ran">
+            <summary>
+            算子结束事件
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMControlModel.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMControlModel.ModelPath">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMControlModel.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.VMConfigData">
+            <summary>
+            VM模型XML 数据结构
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.VMConfigData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ContourPatMatch.VMConfigData.IsModelContainImg">
+            <summary>
+            模型数据是否包含图像数据
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ContourPatMatch.VMConfigData.PointsData">
+            <summary>
+            特征点数据
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ContourPatMatch.VMConfigData.PointsNums">
+            <summary>
+            特征点数据个数
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ContourPatMatch.VMConfigData.OptimizedFlag">
+            <summary>
+            特征点数据个数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMConfigData.RegionList">
+            <summary>
+            ROI链表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMConfigData.VisionMasterVersion">
+            <summary>
+            VM版本
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMConfigData.PatternVersion">
+            <summary>
+            模板文件版本号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMConfigData.FixPoint">
+            <summary>
+            基准点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMConfigData.CurImage">
+            <summary>
+            当前图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMConfigData.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMConfigData.RunParam">
+            <summary>
+            算法参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMConfigData.MaskImage">
+            <summary>
+            掩模图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMConfigData.RegionImage">
+            <summary>
+            运行区域图像
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ContourPatMatch.MVBPATMATCH_EDGEPOINT_OUT">
+            <summary>
+            特征点结构体
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.VMConfigHelper.CreatePatternXml(System.Xml.XmlDocument,VisionDesigner.ContourPatMatch.VMConfigData)">
+            <summary>
+            创建模板Xml
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.VMConfigHelper.CreatePatternXmlFile(System.String,VisionDesigner.ContourPatMatch.VMConfigData)">
+            <summary>
+            创建模板xml文件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.VMConfigHelper.CreatePatternXmlByte(System.Byte[]@,VisionDesigner.ContourPatMatch.VMConfigData)">
+            <summary>
+            创建模板Xml字节数组
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.VMConfigHelper.CreatePatternXmlSDK(System.Xml.XmlDocument@,VisionDesigner.ContourPatMatch.VMConfigData)">
+            <summary>
+            创建模板Xml
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.VMConfigHelper.ParsePatternXml(System.String,VisionDesigner.ContourPatMatch.VMConfigData@)">
+            <summary>
+            解析模板Xml
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.VMConfigHelper.ParsePatternXml(System.Byte[],VisionDesigner.ContourPatMatch.VMConfigData@)">
+            <summary>
+            解析字节模板Xml
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.VMConfigHelper.ParsePatternDocumentNodeEx(System.Xml.XmlNode,VisionDesigner.ContourPatMatch.VMConfigData@)">
+            <summary>
+            兼容平台SDK解析节点
+            </summary>
+            <param name="rootNode"></param>
+            <param name="vmConfigData"></param>
+        </member>
+        <member name="M:VisionDesigner.ContourPatMatch.VMConfigHelper.ParsePatternDocumentNode(System.Xml.XmlNode,VisionDesigner.ContourPatMatch.VMConfigData@)">
+            <summary>
+            解析Document数据节点
+            </summary>
+            <param name="rootNode"></param>
+            <param name="vmConfigData"></param>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMHPPatternRunParam.PyramidScaleMode">
+            <summary>
+            模型金字塔尺度标记
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMHPPatternRunParam.PyramidScaleLevel">
+            <summary>
+            模型速度金字塔尺度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMHPPatternRunParam.PyramidScaleRLevel">
+            <summary>
+            模型精度金字塔尺度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMHPPatternRunParam.ThresholdMode">
+            <summary>
+            阈值模式
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMHPPatternRunParam.Threshold">
+            <summary>
+            边缘阈值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMHPPatternRunParam.ChainFlag">
+            <summary>
+            最小链长标记
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMHPPatternRunParam.MinChainLen">
+            <summary>
+            最小链长
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ContourPatMatch.VMHPPatternRunParam.IncludeImageFlag">
+            <summary>
+            是否包含图像
+            </summary>
+        </member>
+    </members>
+</doc>

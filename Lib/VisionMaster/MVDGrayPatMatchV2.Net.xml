@@ -1,0 +1,665 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDGrayPatMatchV2.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.GrayPatMatchV2.CPatMatchRegionV2">
+            <summary>
+            模板匹配Region
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CPatMatchRegionV2.#ctor">
+            <summary>
+            构造函数1
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CPatMatchRegionV2.#ctor(VisionDesigner.CMvdShape,System.Boolean)">
+            <summary>
+            构造函数2
+            </summary>
+            <param name="shape">图形</param>
+            <param name="sign">ROI\屏蔽区标志</param>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CPatMatchRegionV2.Shape">
+            <summary>
+            ROI图形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CPatMatchRegionV2.Sign">
+            <summary>
+            屏蔽区标志
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.GrayPatMatchV2.CGrayPatternV2">
+            <summary>
+            模板匹配模型类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存配置信息
+            </summary>
+            <param name="arrFileBuf">输入内存地址buffer</param>
+            <param name="nConfigDataSize">输入内存大小</param>
+            <param name="nConfigDataLen">内部运行参数实际占用内存大小</param>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载配置信息
+            </summary>
+            <param name="arrFileBuf">输入内存地址</param>
+            <param name="nConfigDataSize">输入内存大小</param>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.Train">
+            <summary>
+            训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.UnTrain">
+            <summary>
+            取消训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.ImportPattern(System.String)">
+            <summary>
+            导入模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.ImportPattern(System.Byte[])">
+            <summary>
+            导入模板
+            </summary>
+            <param name="xmlData">xml模板字节数据</param>
+        </member>
+        <!-- 对于成员“M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.ImportPattern(System.Byte[],System.UInt64)”忽略有格式错误的 XML 注释 -->
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.ExportPattern(System.String)">
+            <summary>
+            导出模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.ExportPattern(System.Byte[]@)">
+            <summary>
+            导出模板
+            </summary>
+            <param name="xmlData">导出模型的字节数组</param>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.Name">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.RegionList">
+            <summary>
+            建模Region列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.RegionImage">
+            <summary>
+            建模掩膜图像(最终算法输入掩膜，不可与图形叠加)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.MaskImage">
+            <summary>
+            建模掩膜图像(可与图形叠加)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2.ModelSize">
+            <summary>
+            模型大小
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.GrayPatMatchV2.MVD_GP_OPTIMIZE_FLAG_TYPE">
+            <summary>
+            灰度匹配模型导出优化选项
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.GrayPatMatchV2.MVD_GP_OPTIMIZE_FLAG_TYPE.MVD_GP_OPTIMIZE_NONE">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.GrayPatMatchV2.MVD_GP_OPTIMIZE_FLAG_TYPE.MVD_GP_OPTIMIZE_IMG">
+            <summary>
+            优化导出不附带原图
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.GrayPatMatchV2.CGrayPatternV2BasicParam">
+            <summary>
+            建模基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2BasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2BasicParam.FixPoint">
+            <summary>
+            基准点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2BasicParam.OptimizedFlag">
+            <summary>
+            导出模板优化选项
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Data">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Data.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Data.FixPoint">
+            <summary>
+            基准点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Data.Size">
+            <summary>
+            模型大小
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Data.TrainedImage">
+            <summary>
+            模型图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Data.TrainedImageMask">
+            <summary>
+            模型掩膜
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Data.AngleStart">
+            <summary>
+            模型起始角度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Data.AngleEnd">
+            <summary>
+            模型终止角度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Data.AngleStep">
+            <summary>
+            模型角度步长
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Data.NumLevel">
+            <summary>
+            金字塔层数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Data.UsePolarity">
+            <summary>
+            极性
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Result">
+            <summary>
+            模型结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Result.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatternV2Result.Data">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CompressDataHelper.CompressToNormalMask(System.Byte[],System.Int32)">
+            <summary>
+            压缩Mask转主Mask
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CompressDataHelper.NormalToCompressMask(System.Byte[],System.Int32)">
+            <summary>
+            压缩Mask转正常Mask
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.PMAlignPatternModule.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.PMAlignPatternModule.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.PMAlignPatternModule.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.PMAlignPatternModule.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.PMAlignPatternModule.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.PMAlignPatternModule.TrainPattern(System.UInt64@,VisionDesigner.MVD_RECT_I@)">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.PMAlignPatternModule.GetPatternData(System.Byte[],System.UInt64,VisionDesigner.MVD_RECT_I)">
+            <summary>
+            获取模型数据
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.GrayPatMatchV2.CGrayMatchV2Info">
+            <summary>
+            匹配结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayMatchV2Info.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayMatchV2Info.MatchBox">
+            <summary>
+            匹配框
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayMatchV2Info.MatchPoint">
+            <summary>
+            匹配点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayMatchV2Info.Score">
+            <summary>
+            相似分数
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Result">
+            <summary>
+            匹配结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Result.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Result.MatchInfoList">
+            <summary>
+            匹配结果列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool">
+            <summary>
+            模板匹配Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.OnRunning">
+            <summary>
+            抛出算子前置事件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.OnRan">
+            <summary>
+            抛出算子结束事件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.SetCoreBinding(System.UInt64)">
+            <summary>
+            设置核数绑定CPU
+            </summary>
+            <param name="coreBinding"></param>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.GetCoreBinding">
+            <summary>
+            获取核数绑定CPU
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.AddMask(VisionDesigner.CMvdShape)">
+            <summary>
+            添加屏蔽区
+            </summary>
+            <param name="maskShape"></param>
+            <remarks>V440及以后版本不支持</remarks>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.ClearMasks">
+            <summary>
+            移除屏蔽区
+            </summary>
+            <remarks>V440及以后版本不支持</remarks>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.RemoveMaskAt(System.Int32)">
+            <summary>
+            根据索引移除屏蔽区
+            </summary>
+            <param name="nIndex"></param>
+            <remarks>V440及以后版本不支持</remarks>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.GetNumOfMasks">
+            <summary>
+            获取屏蔽区个数
+            </summary>
+            <returns></returns>
+            <remarks>V440及以后版本不支持</remarks>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">输入内存地址</param>
+            <param name="nConfigDataSize">输入内存大小</param>
+            <param name="nConfigDataLen">内部运行参数实际占用内存大小</param>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载配置信息
+            </summary>
+            <param name="arrFileBuf">输入内存地址</param>
+            <param name="nConfigDataSize">输入内存大小</param>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.Run">
+            <summary>
+            执行匹配操作
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.RegionImage">
+            <summary>
+            输入掩膜
+            </summary>
+            <remarks>V440及以后版本不支持</remarks>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.ROI">
+            <summary>
+            检测区域;只支持0度矩形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.Pattern">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.Result">
+            <summary>
+            匹配结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.ThreadNum">
+            <summary>
+            线程数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.VMControlBase">
+            <summary>
+            VM控件基类
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.Running">
+            <summary>
+            算子前置事件
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.GrayPatMatchV2.CGrayPatMatchV2Tool.Ran">
+            <summary>
+            算子结束事件
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMControlModel.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMControlModel.ModelPath">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMControlModel.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.GrayPatMatchV2.VMConfigData">
+            <summary>
+            VM模型XML 数据结构
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.VMConfigData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.GrayPatMatchV2.VMConfigData.OptimizedFlag">
+            <summary>
+            标记模板文件是否存建模原图
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMConfigData.RegionList">
+            <summary>
+            ROI链表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMConfigData.VisionMasterVersion">
+            <summary>
+            VM版本
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMConfigData.PatternVersion">
+            <summary>
+            模板文件版本号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMConfigData.FixPoint">
+            <summary>
+            基准点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMConfigData.CurImage">
+            <summary>
+            当前图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMConfigData.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMConfigData.RunParam">
+            <summary>
+            算法参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMConfigData.MaskImage">
+            <summary>
+            掩模图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMConfigData.RegionImage">
+            <summary>
+            运行区域图像
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.VMConfigHelper.CreatePatternXmlFile(System.String,VisionDesigner.GrayPatMatchV2.VMConfigData)">
+            <summary>
+            创建模板xml文件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.VMConfigHelper.CreatePatternXmlByte(System.Byte[]@,VisionDesigner.GrayPatMatchV2.VMConfigData)">
+            <summary>
+            创建模板Xml字节数组
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.VMConfigHelper.CreatePatternXml(System.Xml.XmlDocument,VisionDesigner.GrayPatMatchV2.VMConfigData)">
+            <summary>
+            创建模板Xml
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.VMConfigHelper.ParsePatternXml(System.String,VisionDesigner.GrayPatMatchV2.VMConfigData@)">
+            <summary>
+            解析模板Xml
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GrayPatMatchV2.VMConfigHelper.ParsePatternXml(System.Byte[],VisionDesigner.GrayPatMatchV2.VMConfigData@)">
+            <summary>
+            解析模板Xml
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMGrayPatternV2RunParam.NumLevelFlag">
+            <summary>
+            自动金字塔标记
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMGrayPatternV2RunParam.NumLevel">
+            <summary>
+            金字塔层数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMGrayPatternV2RunParam.AngleStep">
+            <summary>
+            建模角度步长
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMGrayPatternV2RunParam.AngleStart">
+            <summary>
+            建模起始角度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.GrayPatMatchV2.VMGrayPatternV2RunParam.AngleEnd">
+            <summary>
+            建模终止角度
+            </summary>
+        </member>
+    </members>
+</doc>

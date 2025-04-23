@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDDefectInspect.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.DefectInspect.CDefectInspectPatternNoiseRestrainParam">
+            <summary>
+            建模背景噪声抑制参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPatternNoiseRestrainParam.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPatternNoiseRestrainParam._Regions_CollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            _Regions修改事件，仅支持矩形，传入其他时，抛异常
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectPatternNoiseRestrainParam.Regions">
+            <summary>
+            背景区域，目前仅支持矩形。当背景噪声抑制类型为自动时，至少传入一个抑制区域；背景噪声参数为手动时，不传入
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.DefectInspect.CDefectInspectPattern">
+            <summary>
+            模板匹配模型类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.Train">
+            <summary>
+            训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.UnTrain">
+            <summary>
+            清除训练结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.LoadModel(System.String)">
+            <summary>
+            加载模型
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="F:VisionDesigner.DefectInspect.CDefectInspectPattern.m_bIsDisposed">
+            <summary>
+            对象是否已经调用Dispose()
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.UpdateBackNoiseRegionCfg(System.IntPtr@,System.Int32,System.IntPtr[]@,System.Collections.ObjectModel.ObservableCollection{VisionDesigner.CMvdShape})">
+            <summary>
+            更新背景噪声抑制区域配置
+            </summary>
+            <param name="RoiParamListPtr"></param>
+            <param name="nROIParamNum"></param>
+            <param name="arrPolygonPtr"></param>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPattern.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectPattern.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectPattern.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectPattern.RunStatus">
+            <summary>
+            是否可以获取结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.DefectInspect.CDefectInspectPatternBasicParam">
+            <summary>
+            建模基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPatternBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectPatternBasicParam.InputSampleList">
+            <summary>
+            需要训练的样本列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.DefectInspect.CDefectInspectPatternResult">
+            <summary>
+            匹配结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPatternResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.DefectInspect.CDefectInspectPatternResult._PatternBuffer">
+            <summary>
+            算法直接输出的模型，无加密
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPatternResult.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPatternResult.SaveModelData(System.String)">
+            <summary>
+            保存模型数据
+            </summary>
+            <param name="strModelFilePath">模型文件路径(全路径,后缀.bin)</param>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectPatternResult.PatternBuffer">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CBoxDefectInspectInfo.#ctor">
+            <summary>
+            CBoxMergeDataInfo constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CBoxDefectInspectInfo.ROIshape">
+            <summary>
+            Box信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CBoxDefectInspectInfo.Label">
+            <summary>
+            Box标签
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.DefectInspect.CDefectInspectPatternSample">
+            <summary>
+            缺陷检测训练样本
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPatternSample.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectPatternSample.ItemSourceCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            操作InputBoxList后，触发事件
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectPatternSample.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectPatternSample.RegionImage">
+            <summary>
+            运行区域图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectPatternSample.InputBoxList">
+            <summary>
+            样本检测区域Box列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectPatternSample.NoiseRestrainParam">
+            <summary>
+            背景噪声参数，内部管理，获取后更新设置
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.DefectInspect.CDefectInfo">
+            <summary>
+            缺陷信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInfo.DefectLoc">
+            <summary>
+            缺陷位置位置框信息
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.DefectInspect.CDefectInspectResult">
+            <summary>
+            缺陷对比结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectResult.ResultInfoList">
+            <summary>
+            匹配结果列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.DefectInspect.CDefectInspectInfo">
+            <summary>
+            缺陷对比信息类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectInfo.Label">
+            <summary>
+            Box标签 
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectInfo.Score">
+            <summary>
+            比对分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectInfo.DefectInfo">
+            <summary>
+            缺陷信息
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.DefectInspect.CDefectInspectTool">
+            <summary>
+            模板匹配Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectTool.#ctor(System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.DefectInspect.CDefectInspectTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectTool.RegionImage">
+            <summary>
+            运行区域图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectTool.BoxList">
+            <summary>
+            检测区域列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectTool.Pattern">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.DefectInspect.CDefectInspectTool.RunStatus">
+            <summary>
+            执行状态
+            </summary>
+        </member>
+    </members>
+</doc>

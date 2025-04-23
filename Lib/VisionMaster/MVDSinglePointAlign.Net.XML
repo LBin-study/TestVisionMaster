@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDSinglePointAlign.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.SinglePointAlign.CSinglePointAlignBasicParam">
+            <summary>
+            Class for describing basic parameter of SinglePointAlign
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.SinglePointAlign.CSinglePointAlignBasicParam.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.SinglePointAlign.CSinglePointAlignBasicParam.ObjectPoint">
+            <summary>
+            object point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.SinglePointAlign.CSinglePointAlignBasicParam.ObjectAngle">
+            <summary>
+            object angle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.SinglePointAlign.CSinglePointAlignBasicParam.TargetPoint">
+            <summary>
+            target point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.SinglePointAlign.CSinglePointAlignBasicParam.TargetAngle">
+            <summary>
+            target angle
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.SinglePointAlign.CSinglePointAlignResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.SinglePointAlign.CSinglePointAlignResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.SinglePointAlign.CSinglePointAlignResult.DeltaTheta">
+            <summary>
+            theta direction offset
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.SinglePointAlign.CSinglePointAlignResult.DeltaX">
+            <summary>
+            x direction offset
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.SinglePointAlign.CSinglePointAlignResult.DeltaY">
+            <summary>
+            y direction offset
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.SinglePointAlign.CSinglePointAlignResult.AlignError">
+            <summary>
+            error of single point align
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.SinglePointAlign.CSinglePointAlignTool">
+            <summary>
+            the class for the CSinglePointAlignTool
+            </summary>
+            <remarks>The CSinglePointAlignTool encapsulates all of the classes required to perform a SinglePointAlign analysis.</remarks>
+        </member>
+        <member name="F:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.m_bIsDisposed">
+            对象是否已经调用Dispose()
+        </member>
+        <member name="F:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.m_stAlgorithm">
+            算法句柄
+        </member>
+        <member name="F:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.m_pstInput">
+            输入指针
+        </member>
+        <member name="F:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.m_pstOutput">
+            输出指针
+        </member>
+        <member name="F:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.m_stProcInput">
+            输入结构体
+        </member>
+        <member name="F:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.m_stProcOutput">
+            输出结构体
+        </member>
+        <member name="M:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.Dispose">
+            <summary>
+            release resource
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.Init">
+            初始化
+        </member>
+        <member name="M:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.Dispose(System.Boolean)">
+            <summary>
+            release resource
+            </summary>
+            <param name="bDisposeStatus">Flag of whether release managed and unmanaged resource</param>
+        </member>
+        <member name="P:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.BasicParam">
+            <summary>
+            basic parameter for SinglePointAlign
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.SinglePointAlign.CSinglePointAlignTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

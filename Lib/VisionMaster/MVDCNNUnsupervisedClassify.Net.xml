@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCNNUnsupervisedClassify.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CMVDROIAssistant">
+            <summary>
+            ROI配置列表，用于多ROI数据管理。
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.#ctor(System.UInt32)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.SetSupportROI(VisionDesigner.MVD_SHAPE_TYPE,System.Boolean)">
+            <summary>
+            设置支持的ROI类型，不设置则默认支持矩形、圆、扇环、多边形
+            </summary>
+            <param name="enShapeType"></param>
+            <param name="bIsSupport"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.AddROI(VisionDesigner.CMvdShape)">
+            <summary>
+            添加ROI,仅支持矩形、圆、扇环和多边形
+            </summary>
+            <param name="cROI"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.GetROI(System.UInt32)">
+            <summary>
+            根据索引查询已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <returns>ROI信息</returns>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.UpdateROI(System.UInt32,VisionDesigner.CMvdShape)">
+            <summary>
+            根据索引更新已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <param name="cROI">[IN] 拟更新为的ROI信息</param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.RemoveROI(System.UInt32)">
+            <summary>
+            根据索引移除已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] 图形索引，范围[0, ROICount)</param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.ClearROIs">
+            <summary>
+            清理所有已添加ROI信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.SetROIAssociatedData(System.UInt32,System.Object)">
+            <summary>
+            设置ROI关联数据
+            </summary>
+            <param name="nIndex"></param>
+            <param name="pData"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.GetROIAssociatedData(System.UInt32,System.Object@)">
+            <summary>
+            获取ROI关联数据
+            </summary>
+            <param name="nIndex"></param>
+            <param name="pData"></param>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyBasicParam">
+            <summary>
+            Classes for describing information of CNNUnsupervisedClassify BasicParam.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyBasicParam.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyBasicParam.LoadModel(System.String)">
+            <summary>
+            Load model from local file.
+            </summary>
+            <param name="filePath">file path of the model</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyBasicParam.LoadModelData(System.Byte[],System.Int64)">
+            <summary>
+            Load model from local data.
+            </summary>
+            <param name="modeldata">data of the model</param>
+            <param name="modelsize">size of the model</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyBasicParam.ModelData">
+            <summary>
+            Model data.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyBasicParam.UpdateStatus">
+            <summary>
+            Update Status.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyBasicParam.Threshold">
+            <summary>
+            Result confidence threshold.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyResult">
+            <summary>
+            Classes for describing information of CNNUnsupervisedClassify result.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyResult.ResultItem">
+            <summary>
+            预测结果信息列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyResultItem">
+            <summary>
+            Classes for describing information of CNNUnsupervisedClassify result.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyResultItem.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyResultItem.Confidence">
+            <summary>
+            置信度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyResultItem.Status">
+            <summary>
+            结果状态
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyTool">
+            <summary>
+            CNNUnsupervisedClassifyTool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyTool.#ctor(VisionDesigner.MVD_ALGORITHM_PLATFORM_TYPE)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyTool.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyTool.Dispose">
+            <summary>
+            Release
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyTool.Dispose(System.Boolean)">
+            <summary>
+            Release resources
+            </summary>
+            <param name="bDisposeStatus">Flag of whether to release managed and unmanaged resource.</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNUnsupervisedClassify.CNNUnsupervisedClassifyTool.ROIAssistant">
+            <summary>
+            多ROI配置
+            </summary>
+        </member>
+    </members>
+</doc>

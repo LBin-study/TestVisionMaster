@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDQuadrangleFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.QuadrangleFind.MVD_EDGEPOINT_STATUS">
+            <summary>
+            边缘点状态
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.QuadrangleFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_USED">
+            <summary>
+            成功，使用
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.QuadrangleFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_NO_USED">
+            <summary>
+            成功，未使用
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.QuadrangleFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_NO_FIND">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.QuadrangleFind.MVD_EDGE_POLARITY">
+            <summary>
+            边缘极性
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.QuadrangleFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_DARK_TO_BRIGHT">
+            <summary>
+            从黑到白
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.QuadrangleFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BRIGHT_TO_DARK">
+            <summary>
+            从白到黑
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.QuadrangleFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BOTH">
+            <summary>
+            两者
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.QuadrangleFind.MVD_POSITION">
+            <summary>
+            方位
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.QuadrangleFind.MVD_POSITION.MVD_POSITION_TOP">
+            <summary>
+            Top
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.QuadrangleFind.MVD_POSITION.MVD_POSITION_RIGHT">
+            <summary>
+            Right
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.QuadrangleFind.MVD_POSITION.MVD_POSITION_BOTTOM">
+            <summary>
+            Bottom
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.QuadrangleFind.MVD_POSITION.MVD_POSITION_LEFT">
+            <summary>
+            Left
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.QuadrangleFind.CQuadrangleFindEdgePointInfo">
+            <summary>
+            边缘点信息描述类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindEdgePointInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindEdgePointInfo.EdgePoint">
+            <summary>
+            边缘点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindEdgePointInfo.Score">
+            <summary>
+            得分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindEdgePointInfo.Distance">
+            <summary>
+            距离
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindEdgePointInfo.Polarity">
+            <summary>
+            边缘极性
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindEdgePointInfo.Status">
+            <summary>
+            边缘点查找状态
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.QuadrangleFind.CQuadrangleFindLineInfo">
+            <summary>
+            四边形查找边缘线信息描述类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindLineInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindLineInfo.EdgePointInfoList">
+            <summary>
+            边缘点集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindLineInfo.Line">
+            <summary>
+            边缘线
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindLineInfo.FitError">
+            <summary>
+            拟合误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindLineInfo.Status">
+            <summary>
+            直线检测状态；0:查找失败；1:查找成功
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.QuadrangleFind.CQuadrangleFindResult">
+            <summary>
+            四边形查找结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.Status">
+            <summary>
+            检测状态
+            1：有效，其他：无效
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.LineInfo">
+            <summary>
+            获取四边形四条边所在直线的直线段信息;
+            线的索引值,取值范围[0,3],依次为top/right/bottom/left边
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.Vertex">
+            <summary>
+            获取四边形四个顶点;
+            顶点的索引值,取值范围[0,3],依次为top/right、right/bottom、bottom/left、left/top边交点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.Angle">
+            <summary>
+            获取四边形四个相邻边的夹角;
+            夹角的索引值,取值范围[0,3],依次为top/right、right/bottom、bottom/left、left/top边夹角
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.DiagonalLine">
+            <summary>
+            获取对角线;
+            对角线的索引值, 取值范围[0,1],依次为left/top和right/bottom顶点连线、top/right和bottom/left顶点连线
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.MedianLine">
+            <summary>
+            获取中点线;
+            中点线的索引值, 取值范围[0,1],依次为top/bottom边中点连线、right/left边中点连线
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.AngleBisectorLine">
+            <summary>
+            获取四边形对边角平分线,即四边形对边延长线的角平分线;
+            角平分线的索引值, 取值范围[0,1],依次为top/bottom对边角平分线、right/left对边角平分线
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.Center">
+            <summary>
+            中点(重心点)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.DiagonalLineIntersection">
+            <summary>
+            对角线间的交点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.MedianLineIntersection">
+            <summary>
+            获取中点线间的交点（即四个顶点坐标均值）
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.AngleBisectorIntersection">
+            <summary>
+            对边角平分线交点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindResult.CaliperBoxTopList">
+            <summary>
+            卡尺列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.QuadrangleFind.CQuadrangleFindTool">
+            <summary>
+            四边形查找算子工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取运行参数值
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置运行参数值
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存配置信息
+            </summary>
+            <param name="arrFileBuf">存储文件buffer的地址</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">实际写入的文件流长度</param>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载配置信息
+            </summary>
+            <param name="arrFileBuf">存储文件buffer的地址</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.SetROI(VisionDesigner.CMvdShape,VisionDesigner.QuadrangleFind.MVD_POSITION)">
+            <summary>
+            设置ROI区域，默认值NULL，支持矩形
+            </summary>
+             <param name="cROIShape">检测区域</param>
+            <param name="enROIPosition">ROI位置</param>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.GetROI(VisionDesigner.QuadrangleFind.MVD_POSITION)">
+            <summary>
+            获取ROI区域
+            </summary>
+            <param name="enROIPosition">ROI位置</param>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.Run">
+            <summary>
+            执行算子处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.MaskImage">
+            <summary>
+            设置屏蔽区图像，只包含屏蔽区信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.QuadrangleFind.CQuadrangleFindTool.Result">
+            <summary>
+            查找结果，未执行或执行失败返回NULL
+            </summary>
+        </member>
+    </members>
+</doc>

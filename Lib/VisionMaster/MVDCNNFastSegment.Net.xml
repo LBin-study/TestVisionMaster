@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCNNFastSegment.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CMVDROIAssistant">
+            <summary>
+            ROI配置列表，用于多ROI数据管理。
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.#ctor(System.UInt32)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.SetSupportROI(VisionDesigner.MVD_SHAPE_TYPE,System.Boolean)">
+            <summary>
+            设置支持的ROI类型，不设置则默认支持矩形、圆、扇环、多边形
+            </summary>
+            <param name="enShapeType"></param>
+            <param name="bIsSupport"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.AddROI(VisionDesigner.CMvdShape)">
+            <summary>
+            添加ROI,仅支持矩形、圆、扇环和多边形
+            </summary>
+            <param name="cROI"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.GetROI(System.UInt32)">
+            <summary>
+            根据索引查询已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <returns>ROI信息</returns>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.UpdateROI(System.UInt32,VisionDesigner.CMvdShape)">
+            <summary>
+            根据索引更新已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <param name="cROI">[IN] 拟更新为的ROI信息</param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.RemoveROI(System.UInt32)">
+            <summary>
+            根据索引移除已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] 图形索引，范围[0, ROICount)</param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.ClearROIs">
+            <summary>
+            清理所有已添加ROI信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.SetROIAssociatedData(System.UInt32,System.Object)">
+            <summary>
+            设置ROI关联数据
+            </summary>
+            <param name="nIndex"></param>
+            <param name="pData"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.GetROIAssociatedData(System.UInt32,System.Object@)">
+            <summary>
+            获取ROI关联数据
+            </summary>
+            <param name="nIndex"></param>
+            <param name="pData"></param>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFastSegment.MVD_CNNFASTSEGMENT_MODEL_TYPE">
+            <summary>
+            图像分割模型类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNFastSegment.MVD_CNNFASTSEGMENT_MODEL_TYPE.MVD_CNNFASTSEGMENT_MODEL_TYPE_UNCERTAIN">
+            <summary>
+            不确定模型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNFastSegment.MVD_CNNFASTSEGMENT_MODEL_TYPE.MVD_CNNFASTSEGMENT_MODEL_TYPE_COMPARE">
+            <summary>
+            图像对比模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNFastSegment.MVD_CNNFASTSEGMENT_MODEL_TYPE.MVD_CNNFASTSEGMENT_MODEL_TYPE_TEMPLATE">
+            <summary>
+            自学习模板对比模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNFastSegment.MVD_CNNFASTSEGMENT_MODEL_TYPE.MVD_CNNFASTSEGMENT_MODEL_TYPE_SEG">
+            <summary>
+            单图像分割模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNFastSegment.MVD_CNNFASTSEGMENT_MODEL_TYPE.MVD_CNNSEGMENT_MODEL_TYPE_SEMANTIC">
+            <summary>
+            语义分割模式
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentResult">
+            <summary>
+            Classes for describing information of CNNFastSegment result.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentResult.ClassNum">
+            <summary>
+            缺陷类别数量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentResult.ClassMap">
+            <summary>
+            缺陷图
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentModelInfo">
+            <summary>
+            图像分割模型信息类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentModelInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentModelInfo.ModelType">
+            <summary>
+            模型类别
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentModelInfo.LabelList">
+            <summary>
+            标签列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentModelInfo.LabelNameList">
+            <summary>
+            标签名称列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentModelInfo.MultiResult">
+            <summary>
+            是否带后处理层
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentBasicParam">
+            <summary>
+            图像分割基本参数类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentBasicParam.LoadModel(System.String)">
+            <summary>
+            从本地加载模型
+            </summary>
+            <param name="filePath">模型文件路径</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentBasicParam.LoadModelData(System.Byte[],System.Int64)">
+            <summary>
+            Load model from local data.
+            </summary>
+            <param name="modeldata">data of the model</param>
+            <param name="modelsize">size of the model</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentBasicParam.ModelData">
+            <summary>
+            Model data.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentBasicParam.UpdateStatus">
+            <summary>
+            Update Status.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentBasicParam.RoiCropType">
+            <summary>
+            ROI裁剪模式
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentBasicParam.BatchSizeEnable">
+            <summary>
+            批处理等级使能
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentBasicParam.BatchSize">
+            <summary>
+            批处理等级,批处理等级，范围[1,32], 该参数只生效于GPU算子，CPU算子不建议设置
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool">
+            <summary>
+            图像分割算子类
+            </summary>        
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.#ctor(VisionDesigner.MVD_ALGORITHM_PLATFORM_TYPE)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.Dispose">
+            <summary>
+            Dispose接口
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取运行参数
+            </summary>
+            <param name="strKeyName">参数键</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置运行参数
+            </summary>
+            <param name="strKeyName">参数键</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数信息
+            </summary>
+            <param name="arrFileBuf">保存运行参数内存</param>
+            <param name="nConfigDataSize">内存大小</param>
+            <param name="nConfigDataLen">实际有效数据长度</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数信息
+            </summary>
+            <param name="arrFileBuf">加载运行参数内存</param>
+            <param name="nConfigDataSize">实际有效数据长度</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.ParseModel">
+            <summary>
+            解析模型
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.Run">
+            <summary>
+            执行图像分割算法
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="bDisposeStatus">是否释放托管和非托管资源的标识</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.ROI">
+            <summary>
+            ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.RegionImage">
+            <summary>
+             Region to process.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.Result">
+            <summary>
+            图像分割算法结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFastSegment.CNNFastSegmentTool.ROIAssistant">
+            <summary>
+            多ROI配置
+            </summary>
+        </member>
+    </members>
+</doc>

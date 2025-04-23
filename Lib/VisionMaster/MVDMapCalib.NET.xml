@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDMapCalib.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.MapCalib.CTwoImageMapCalibBasicParam">
+            <summary>
+            基于图像的映射标定基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CTwoImageMapCalibBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibBasicParam.CalibBoardType">
+            <summary>
+            标定板类型
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibBasicParam.SourceImage">
+            <summary>
+            源标定图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibBasicParam.SourceROI">
+            <summary>
+            源标定图像ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibBasicParam.SourceRegionImage">
+            <summary>
+            源标定图像掩膜
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibBasicParam.TargetImage">
+            <summary>
+            目标标定图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibBasicParam.TargetROI">
+            <summary>
+            目标标定图像ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibBasicParam.TargetRegionImage">
+            <summary>
+            目标标定图像掩膜
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MapCalib.CTwoFileMapCalibBasicParam">
+            <summary>
+            基于文件的映射标定基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CTwoFileMapCalibBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CTwoFileMapCalibBasicParam.SetSourceCalibFile(System.String)">
+            <summary>
+            源标定文件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CTwoFileMapCalibBasicParam.SetTargetCalibFile(System.String)">
+            <summary>
+            目标标定文件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CTwoFileMapCalibBasicParam.LoadCalibData(System.String)">
+            <summary>
+            加载iwcal数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CTwoFileMapCalibBasicParam.LoadXmlCalibData(System.String)">
+            <summary>
+            加载xml数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CTwoFileMapCalibBasicParam.FloatBufferToByteBuffer(System.Single[])">
+            <summary>
+            float[] 转 byte[]
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoFileMapCalibBasicParam.SourceCalibFileData">
+            <summary>
+            源标定文件数据, iwcal格式文件使用（已废弃）
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoFileMapCalibBasicParam.TargetCalibFileData">
+            <summary>
+            目标标定文件数据, iwcal格式文件使用（已废弃）
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MapCalib.CMapCalibBasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CMapCalibBasicParam.MapCalibMode">
+            <summary>
+            映射标定类型
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CMapCalibBasicParam.TwoImageMapBasicParam">
+            <summary>
+            图像映射标定基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CMapCalibBasicParam.TwoFileMapBasicParam">
+            <summary>
+            文件映射标定基本参数
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MapCalib.CTwoImageMapCalibPoints">
+            <summary>
+            基于图像的映射标定点信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CTwoImageMapCalibPoints.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibPoints.ImageCoordinateList">
+            <summary>
+            角点图像坐标集合
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibPoints.WorldCoordinateList">
+            <summary>
+            角点世界坐标集合
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MapCalib.CTwoImageMapCalibExtraInfo">
+            <summary>
+            基于图像的映射标定额外信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CTwoImageMapCalibExtraInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibExtraInfo.SourceImageCalibStatus">
+            <summary>
+            源图像的标定状态
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibExtraInfo.SourceImageScale">
+            <summary>
+            目标图像的单像素精度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibExtraInfo.TargetImageCalibStatus">
+            <summary>
+            源图像的标定状态
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibExtraInfo.TargetImageScale">
+            <summary>
+            目标图像的单像素精度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibExtraInfo.MapError">
+            <summary>
+            映射误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibExtraInfo.SourceImagePoints">
+            <summary>
+            当前图像的角点集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibExtraInfo.TargetImagePoints">
+            <summary>
+            目标图像的角点集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CTwoImageMapCalibExtraInfo.ProjectionPoints">
+            <summary>
+            当前图像角点映射到目标图像内的角点集
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MapCalib.CMapCalibResult">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibResult.#ctor">
+            <summary>
+            N点标定结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CMapCalibResult.XRatio">
+            <summary>
+            X方向比例
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CMapCalibResult.YRatio">
+            <summary>
+            Y方向比例
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CMapCalibResult.TwoImageMapCalibExtraInfo">
+            <summary>
+            基于图像的映射标定额外输出信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CMapCalibResult.HomoMatrix">
+            <summary>
+            homo矩阵
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MapCalib.CMapCalibTool">
+            <summary>
+            N点标定Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.#ctor(System.Boolean)">
+            <summary>
+            N点标定Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this PMAlign Pattern.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this PMAlign Pattern.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this PMAlign Pattern
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this PMAlign Pattern
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.ExportCalibFile(System.String)">
+            <summary>
+            导出标定文件
+            </summary>
+            <param name="filePath">标定文件</param>
+            <remarks>xml文件或iwcal文件</remarks>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MapCalib.CMapCalibTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CMapCalibTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CMapCalibTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MapCalib.CMapCalibTool.VMControlBase">
+            <summary>
+            VM控件对象
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MapCalib.MVD_CALIBBOARD_TYPE">
+            <summary>
+            标定板类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MapCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_SPARSE_I">
+            <summary>
+            海康I型标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MapCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_DENSE_II">
+            <summary>
+            海康II型标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MapCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_SPARSE_I_V2">
+            <summary>
+            海康I型标定板V2
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MapCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_DENSE_II_V2">
+            <summary>
+            海康II型标定板V2
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MapCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_CHECKER">
+            <summary>
+            棋盘格标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MapCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_CIRCLE">
+            <summary>
+            圆形标定板
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MapCalib.MVD_MAP_CALIB_MODE">
+            <summary>
+            映射标定类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MapCalib.MVD_MAP_CALIB_MODE.MVD_MAP_CALIB_MODE_TWO_IMAGE">
+            <summary>
+            基于图像标定
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MapCalib.MVD_MAP_CALIB_MODE.MVD_MAP_CALIB_MODE_TWO_FILE">
+            <summary>
+            基于文件标定
+            </summary>
+        </member>
+    </members>
+</doc>

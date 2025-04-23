@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDImageResize.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ImageResize.CImageResizeBasicParam">
+            <summary>
+            Class for describing ImageResize BasicParam
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeBasicParam.#ctor">
+            <summary>
+            CImageResizeBasicParam constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageResize.CImageResizeBasicParam.OutputImageWidthParam">
+            <summary>
+            输出图像宽度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageResize.CImageResizeBasicParam.OutputImageHeightParam">
+            <summary>
+            输出图像高度
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageResize.CImageResizeResult">
+            <summary>
+            Class for describing ImageResize Result
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeResult.#ctor">
+            <summary>
+            CImageResizeResult constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageResize.CImageResizeResult.OutputImage">
+            <summary>
+            Output Image
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageResize.CImageResizeTool">
+            <summary>
+            Class of the ImageResizeTool
+            </summary>
+            <remarks>The ImageResizeTool encapsulates all of the classes required to perform ImageResize process.</remarks>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeTool.#ctor">
+            <summary>
+            Construct
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this ImageResize tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this ImageResize tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this ImageResize tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this ImageResize tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageResize.CImageResizeTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageResize.CImageResizeTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageResize.CImageResizeTool.ROIShape">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageResize.CImageResizeTool.Result">
+            <summary>
+            Result
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageResize.CImageResizeTool.BasicParam">
+            <summary>
+            BasicParam
+            </summary>
+        </member>
+    </members>
+</doc>

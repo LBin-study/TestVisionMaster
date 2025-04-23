@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDImageMirror.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ImageMirror.CImageMirrorResult">
+            <summary>
+            Class for describing ImageMirror Result
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageMirror.CImageMirrorResult.#ctor">
+            <summary>
+            CImageMirrorResult constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageMirror.CImageMirrorResult.MirrorImage">
+            <summary>
+            Output Image
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageMirror.CImageMirrorTool">
+            <summary>
+            Class of the ImageMirrorTool
+            </summary>
+            <remarks>The ImageMirrorTool encapsulates all of the classes required to perform an image binaring process.</remarks>
+        </member>
+        <member name="M:VisionDesigner.ImageMirror.CImageMirrorTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageMirror.CImageMirrorTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageMirror.CImageMirrorTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageMirror.CImageMirrorTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageMirror.CImageMirrorTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this ImageMirror tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.ImageMirror.CImageMirrorTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this ImageMirror tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.ImageMirror.CImageMirrorTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this ImageMirror tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.ImageMirror.CImageMirrorTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this ImageMirror tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.ImageMirror.CImageMirrorTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageMirror.CImageMirrorTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageMirror.CImageMirrorTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageMirror.CImageMirrorTool.Result">
+            <summary>
+            Result
+            </summary>
+        </member>
+    </members>
+</doc>

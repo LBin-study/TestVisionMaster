@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDImageCalib.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ImageCalib.CErrorEvaluationInfo">
+            <summary>
+            畸变标定误差评估结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CErrorEvaluationInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CErrorEvaluationInfo.EvaluationError">
+            <summary>
+            评估误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CErrorEvaluationInfo.CalibPointNum">
+            <summary>
+            标定误差点数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CErrorEvaluationInfo.CorrectPoint">
+            <summary>
+            理想状态下矫正点的坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CErrorEvaluationInfo.CalibPointError">
+            <summary>
+            对应点的误差信息
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageCalib.CImageCalibBasicParam">
+            <summary>
+            畸变标定基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibBasicParam.CalibBoardType">
+            <summary>
+            畸变标定标定板类型
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibBasicParam.PerspectiveCenterPoint">
+            <summary>
+            畸变标定透视中心点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibBasicParam.ErrorEvaluationStatus">
+            <summary>
+            是否进行误差评估, true为评估, false为不评估,可加速;默认为false
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageCalib.CImageCalibResult">
+            <summary>
+            畸变标定结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibResult.LocateInfo">
+            <summary>
+            角点定位信息,渲染UI使用
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibResult.CorrectLocateInfo">
+            <summary>
+            矫正后角点定位信息,渲染UI使用
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibResult.HomoEstInfo">
+            <summary>
+            畸变标定文件计算模块
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibResult.ErrorEvaluationInfo">
+            <summary>
+            误差评估信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibResult.CorrectErrorEvaluationInfo">
+            <summary>
+            校正后误差评估信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibResult.CorrectImage">
+            <summary>
+            矫正后图像
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageCalib.CImageCalibTool">
+            <summary>
+            畸变标定Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.Run">
+            <summary>
+            执行畸变标定
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.ExportCalibFile(System.String)">
+            <summary>
+            导出畸变标定文件
+            </summary>
+            <param name="filePath">畸变标定文件</param>
+            <remarks>iccal文件</remarks>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibTool.ROI">
+            <summary>
+            标定ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibTool.RegionImage">
+            <summary>
+            角点提取Region图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageCalib.CImageCalibHomoEstInfo">
+            <summary>
+            畸变标定矩阵计算结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibHomoEstInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibHomoEstInfo.EstimationError">
+            <summary>
+            估计误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibHomoEstInfo.WarpMatrix">
+            <summary>
+            畸变标定矩阵
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageCalib.CImageCalibLocateInfo">
+            <summary>
+            畸变标定角点提取结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageCalib.CImageCalibLocateInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibLocateInfo.CalibBoardSize">
+            <summary>
+            标定板行列数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibLocateInfo.CalibPointNum">
+            <summary>
+            标定点数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibLocateInfo.CalibPointImageCoordinate">
+            <summary>
+            标定点图像坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageCalib.CImageCalibLocateInfo.CalibPointObjectCoordinate">
+            <summary>
+            标定板点行列坐标
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageCalib.MVD_CALIBBOARD_TYPE">
+            <summary>
+            标定板类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_CHECKER">
+            <summary>
+            棋盘格标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_CIRCLE">
+            <summary>
+            圆形标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_SPARSE_I">
+            <summary>
+            海康I型标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_DENSE_II">
+            <summary>
+            海康II型标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_DENSE_II_V2">
+            <summary>
+            海康II型标定板V2
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_SPARSE_I_V2">
+            <summary>
+            海康I型标定板v2
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_RSCODE_SIGN_FOUR">
+            <summary>
+            V3.3后定义更新为MVD_CALIBBOARD_TYPE_HKA_SPARSE_I
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_RSCODE_SIGN">
+            <summary>
+            V3.3后定义更新为MVD_CALIBBOARD_TYPE_HKA_DENSE_II
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDLineEdgePairFlawInsp.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CMVDROIAssistant">
+            <summary>
+            ROI配置列表，用于多ROI数据管理。
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.#ctor(System.UInt32)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.SetSupportROI(VisionDesigner.MVD_SHAPE_TYPE,System.Boolean)">
+            <summary>
+            设置支持的ROI类型，不设置则默认支持矩形、圆、扇环、多边形
+            </summary>
+            <param name="enShapeType"></param>
+            <param name="bIsSupport"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.AddROI(VisionDesigner.CMvdShape)">
+            <summary>
+            添加ROI,仅支持矩形、圆、扇环和多边形
+            </summary>
+            <param name="cROI"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.GetROI(System.UInt32)">
+            <summary>
+            根据索引查询已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <returns>ROI信息</returns>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.UpdateROI(System.UInt32,VisionDesigner.CMvdShape)">
+            <summary>
+            根据索引更新已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <param name="cROI">[IN] 拟更新为的ROI信息</param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.RemoveROI(System.UInt32)">
+            <summary>
+            根据索引移除已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] 图形索引，范围[0, ROICount)</param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.ClearROIs">
+            <summary>
+            清理所有已添加ROI信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.SetROIAssociatedData(System.UInt32,System.Object)">
+            <summary>
+            设置ROI关联数据
+            </summary>
+            <param name="nIndex"></param>
+            <param name="pData"></param>
+        </member>
+        <member name="M:VisionDesigner.CMVDROIAssistant.GetROIAssociatedData(System.UInt32,System.Object@)">
+            <summary>
+            获取ROI关联数据
+            </summary>
+            <param name="nIndex"></param>
+            <param name="pData"></param>
+        </member>
+        <member name="T:VisionDesigner.LineEdgePairFlawInsp.MVD_LINE_PAIR_EDGEINSP_ROI_ASSO_DATA">
+            <summary>
+            1、本结构体是多ROI中每个ROI的关联数据，通过ROIAssistant接口传入
+            2、对本算子来说关联数据为标准直线1、2，不启用标准直线时，采用算法内部自动拟合直线
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineEdgePairFlawInsp.MVD_EDGEINSP_FLAW_DEFECT_TYPE">
+            <summary>
+            直线对边缘缺陷类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.LineEdgePairFlawInsp.MVD_EDGEINSP_FLAW_DEFECT_TYPE.MVD_EDGEINSP_FLAW_DEFECT_TYPE_NONE">
+            <summary>
+            非缺陷
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.LineEdgePairFlawInsp.MVD_EDGEINSP_FLAW_DEFECT_TYPE.MVD_EDGEINSP_FLAW_DEFECT_TYPE_FLAW">
+            <summary>
+            缺陷
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.LineEdgePairFlawInsp.MVD_EDGEINSP_FLAW_DEFECT_TYPE.MVD_EDGEINSP_FLAW_DEFECT_TYPE_GAP">
+            <summary>
+            断裂
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineEdgePairFlawInsp.MVD_EDGEPOINT_POLARITY">
+            <summary>
+            边缘点极性
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.LineEdgePairFlawInsp.MVD_EDGEPOINT_POLARITY.MVD_EDGE_POLARITY_DARK_TO_BRIGHT">
+            <summary>
+            白到黑，默认值
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.LineEdgePairFlawInsp.MVD_EDGEPOINT_POLARITY.MVD_EDGE_POLARITY_BRIGHT_TO_DARK">
+            <summary>
+            黑到白
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.LineEdgePairFlawInsp.MVD_EDGEPOINT_POLARITY.MVD_EDGE_POLARITY_BOTH">
+            <summary>
+            两者均有
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineEdgePairFlawInsp.MVD_EDGEPOINT_FIND_STATUS">
+            <summary>
+            边缘点查找状态
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.LineEdgePairFlawInsp.MVD_EDGEPOINT_FIND_STATUS.MVD_EDGEPOINT_STATUS_USED">
+            <summary>
+            查找到并使用，默认值
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.LineEdgePairFlawInsp.MVD_EDGEPOINT_FIND_STATUS.MVD_EDGEPOINT_STATUS_NO_USED">
+            <summary>
+            查找到并未使用
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.LineEdgePairFlawInsp.MVD_EDGEPOINT_FIND_STATUS.MVD_EDGEPOINT_STATUS_NO_FIND">
+            <summary>
+            查找失败
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspBasicParam">
+            <summary>
+            直线对边缘缺陷检测基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspBasicParam.StandardLineFlag">
+            <summary>
+            设置是否打开外部标准直线输入;true:打开; false:关闭,采用算法内部自动拟合直线.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspBasicParam.StandardLine0">
+            <summary>
+            标准直线0
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspBasicParam.StandardLine1">
+            <summary>
+            标准直线1
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspBasicParam.ShowEdgeMidPointStatus">
+            <summary>
+            边缘对查找结果是否输出边缘对中点的状态，为true表示正常输出，可获取边缘中点；为false，获取边缘中点个数为0，默认false
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspEdgePointInfo">
+            <summary>
+            直线对边缘缺陷检测边缘点信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspEdgePointInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspEdgePointInfo.EdgePoint">
+            <summary>
+            边缘点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspEdgePointInfo.Status">
+            <summary>
+            边缘点状态
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInfo">
+            <summary>
+            直线对边缘缺陷检测缺陷信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInfo.FlawBox">
+            <summary>
+            缺陷包围框
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInfo.FlawLength">
+            <summary>
+            缺陷长度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInfo.FlawArea">
+            <summary>
+            缺陷面积
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInfo.CaliperStartIndex">
+            <summary>
+            缺陷卡尺起始索引
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInfo.CaliperEndIndex">
+            <summary>
+            缺陷卡尺终止索引
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInfo.FlawType">
+            <summary>
+            缺陷类型
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineEdgePairFlawInsp.CGeoWidthEdgePair">
+            <summary>
+            最大最小宽度对应的边缘对信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CGeoWidthEdgePair.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CGeoWidthEdgePair.EdgePoint0">
+            <summary>
+            边缘点0
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CGeoWidthEdgePair.EdgePoint1">
+            <summary>
+            边缘点1
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CGeoWidthEdgePair.Score">
+            <summary>
+            边缘得分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CGeoWidthEdgePair.Polarity0">
+            <summary>
+            边缘0极性
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CGeoWidthEdgePair.Polarity1">
+            <summary>
+            边缘1极性
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CGeoWidthEdgePair.Distance">
+            <summary>
+            边缘对距离
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CGeoWidthEdgePair.Status">
+            <summary>
+            边缘点查找状态
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem">
+            <summary>
+            直线对边缘缺陷检测结果子项
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.FlawInfoList">
+            <summary>
+            缺陷信息集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.Edge0PointInfoList">
+            <summary>
+            边缘0边缘点信息集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.Edge1PointInfoList">
+            <summary>
+            边缘1边缘点信息集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.CaliperBoxList">
+            <summary>
+            卡尺信息集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.MinWidth">
+            <summary>
+            最小宽度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.MaxWidth">
+            <summary>
+            最大宽度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.AverageWidth">
+            <summary>
+            平均宽度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.ApproximateArea">
+            <summary>
+            近似面积
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.InnerFitLine">
+            <summary>
+            内部拟合输出的直线
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.MinWidthEdgePair">
+            <summary>
+            最小宽度对应的边缘对信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.MaxWidthEdgePair">
+            <summary>
+            最大宽度对应的边缘对信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResultItem.EdgeMidPointInfoList">
+            <summary>
+            边缘对中点信息集
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult">
+            <summary>
+            直线对边缘缺陷检测结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.FlawInfoList">
+            <summary>
+            缺陷信息集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.Edge0PointInfoList">
+            <summary>
+            边缘0边缘点信息集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.Edge1PointInfoList">
+            <summary>
+            边缘1边缘点信息集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.CaliperBoxList">
+            <summary>
+            卡尺信息集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.MinWidth">
+            <summary>
+            最小宽度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.MaxWidth">
+            <summary>
+            最大宽度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.AverageWidth">
+            <summary>
+            平均宽度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.ApproximateArea">
+            <summary>
+            近似面积
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.InnerFitLine">
+            <summary>
+            内部拟合输出的直线
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.MinWidthEdgePair">
+            <summary>
+            最小宽度对应的边缘对信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.MaxWidthEdgePair">
+            <summary>
+            最大宽度对应的边缘对信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.EdgeMidPointInfoList">
+            <summary>
+            边缘对中点信息集
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspResult.ResultList">
+            <summary>
+            多ROI对应的结果列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool">
+            <summary>
+            直线对边缘缺陷检测工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数配置
+            </summary>
+            <param name="arrFileBuf">输入内存地址</param>
+            <param name="nConfigDataSize">输入内存大小</param>
+            <param name="nConfigDataLen">内部运行参数实际占用内存大小</param>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数配置
+            </summary>
+            <param name="arrFileBuf">输入内存地址</param>
+            <param name="nConfigDataSize">输入内存大小</param>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.Run">
+            <summary>
+            执行算法处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.UpdateRoiCfg(System.IntPtr@,System.IntPtr@,System.IntPtr@,System.IntPtr@,System.Int32@,System.IntPtr[]@)">
+            <summary>
+            更新ROI配置、标准直线
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.UpdateLineData(VisionDesigner.MVD_LINE_F[]@,VisionDesigner.MVD_LINE_F[]@,System.Byte[]@,System.Int32)">
+            <summary>
+            从ROI关联数据，赋值给MVD_LINE_F[]、Int32[]
+            </summary>
+            <param name="line1List"></param>
+            <param name="line2List"></param>
+            <param name="lineFlagList"></param>
+            <param name="nRoiNum"></param>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.CalcLineAngle(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            计算直线角度
+            </summary>
+            <param name="fStartX"></param>
+            <param name="fStartY"></param>
+            <param name="fEndX"></param>
+            <param name="fEndY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.MaskImage">
+            <summary>
+            掩膜图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.ROI">
+            <summary>
+            检测区域
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineEdgePairFlawInsp.CLineEdgePairFlawInspTool.ROIAssistant">
+            <summary>
+            ROI配置工具
+            <remarks> 
+            1、该接口与ROI接口互斥，且优先级高于ROI，当用户使用此接口传入ROI时，ROI接口不生效；当用户只使用ROI时，ROI生效
+            2、需要通过IMVDROIAssistant中的SetROIAssociatedData设置每个ROI的标准直线，标准直线数据其类型为MVD_LINE_PAIR_EDGEINSP_ROI_ASSO_DATA
+            </remarks>
+            </summary>
+        </member>
+    </members>
+</doc>

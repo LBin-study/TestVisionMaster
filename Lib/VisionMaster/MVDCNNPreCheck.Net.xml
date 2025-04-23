@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCNNPreCheck.Net</name>
+    </assembly>
+    <members>
+        <member name="M:VisionDesigner.MVDCNNPreCheck.CNNPreCheckModel.GetROINum">
+            <summary>
+            获取ROI数量
+            </summary>
+            <returns>返回ROI数量</returns>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNPreCheck.CNNPreCheckModel.GetROI(System.Int32)">
+            <summary>
+            通过序号获取ROI
+            </summary>
+            <param name="nIndex">[IN] 序号</param>
+            <returns>返回指定序号的ROI</returns>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNPreCheck.CNNPreCheckModel.SubType">
+            <summary>
+            获取模型子类型
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNPreCheck.CNNPreCheckModel.Width">
+            <summary>
+            获取模型输入宽度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNPreCheck.CNNPreCheckModel.Height">
+            <summary>
+            获取模型输入高度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNPreCheck.CNNPreCheckModel.ModelFlag">
+            <summary>
+            获取模型标识
+            </summary>
+        </member>
+    </members>
+</doc>

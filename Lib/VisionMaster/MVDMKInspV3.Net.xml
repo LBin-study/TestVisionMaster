@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDMKInspV3.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.MKInspV3.MVD_MKSEGMENT_MODE">
+            <summary>
+            分割方式
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MKInspV3.MVD_TEXT_POLARITY_TYPE">
+            <summary>
+            文本极性
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.PatternHelper.Instance">
+            <summary>
+            单例对象
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3PatternBasicParam.InspMarkBoxList">
+            <summary>
+            字符分割图形框
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3PatternBasicParam.BaseImg">
+            <summary>
+            基准图
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3PatternBasicParam.RegionImg">
+            <summary>
+            掩膜图
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3PatternBasicParam.RegionImgChange">
+            <summary>
+            掩膜图是否发生改变
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3PatternBasicParam.PatternObj">
+            <summary>
+            模型对象
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3PatternResult.InspBaseImgs">
+            <summary>
+            训练字符模型图
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MKInspV3.MVD_INSP_LOC_POS_INFO">
+            <summary>
+            基准点状态
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MKInspV3.MVD_DYNAMIC_MEM_DATA">
+            <summary>
+            动态内存数据
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MKInspV3.FLAW_MODEL_BASIC_INFO">
+            <summary>
+            模型基本信息
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MKInspV3.TEXT_FLAW_MODEL_DATA">
+            <summary>
+            字符缺陷检测模型
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.Train">
+            <summary>
+            模型训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.UnTrain">
+            <summary>
+            停止训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.ImportPattern(System.String)">
+            <summary>
+            导入模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.ExportPattern(System.String)">
+            <summary>
+            导出模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Pattern.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3Pattern.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3Pattern.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3Pattern.InputImage">
+            <summary>
+            基准图
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3Pattern.RegionImage">
+            <summary>
+             掩膜图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3Pattern.RegionImageChanged">
+            <summary>
+             是否修改过掩膜
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3Result.FlawImg">
+            <summary>
+            缺陷图
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3Result.FlawBoxList">
+            <summary>
+            缺陷框
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3Result.InspBoxList">
+            <summary>
+            检测框
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Tool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Tool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Tool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Tool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Tool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Tool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Tool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Tool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Tool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Tool.Run">
+            <summary>
+            缺陷检测
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKInspV3Tool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3Tool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3Tool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKInspV3Tool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKSegmentV3BasicParam.SegmentMode">
+            <summary>
+            分割方式
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKSegmentV3BasicParam.PolarityType">
+            <summary>
+            文本极性
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKSegmentV3Result.BinaryImage">
+            <summary>
+            字符分割二值图
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKSegmentV3Result.SegShapes">
+            <summary>
+            字符分割图形框
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKSegmentV3.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKSegmentV3.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKSegmentV3.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKSegmentV3.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKSegmentV3.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKSegmentV3.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKSegmentV3.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKSegmentV3.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKSegmentV3.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKSegmentV3.Run">
+            <summary>
+            字符分割
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV3.CMKSegmentV3.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKSegmentV3.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKSegmentV3.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKSegmentV3.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV3.CMKSegmentV3.ROI">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+    </members>
+</doc>

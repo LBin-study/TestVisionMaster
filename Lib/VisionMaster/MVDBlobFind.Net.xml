@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDBlobFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.BlobFind.CBlobSequentialContour">
+            <summary>
+            Classes for describing sequential of each blob.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobSequentialContour.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobSequentialContour.ContourPoints">
+            <summary>
+            Single connected domain contour
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.BlobFind.CBlobInfo">
+            <summary>
+            Classes for describing information of each blob.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobInfo.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.Area">
+            <summary>
+            Area. It is recommended to use overloaded floating point types after V3.2.0.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.AreaF">
+            <summary>
+            Area.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.DomainIndex">
+            <summary>
+            The location index of the blob in the connected domain
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.Perimeter">
+            <summary>
+            Perimeter
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.Circularity">
+            <summary>
+            Circularity
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.ShortAxis">
+            <summary>
+            Short axis length
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.LongAxis">
+            <summary>
+            Long axis length
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.AxisRatio">
+            <summary>
+            Axis Ratio
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.Angle">
+            <summary>
+            Angle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.Rectangularity">
+            <summary>
+            Rectangularity
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.CenterBias">
+            <summary>
+            The offset of the centroid relative to the center of the circumscribed rectangle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.Score">
+            <summary>
+            Score
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.BoxInfo">
+            <summary>
+            Minimum circumscribed rectangle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.RectInfo">
+            <summary>
+            Bounding box of connected domains
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.Centroid">
+            <summary>
+            Connected domain center (centroid)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.ContourPoints">
+            <summary>
+            Single connected domain contour
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.MinGrayValue">
+            <summary>
+            输入图像区域中最小灰度值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.MaxGrayValue">
+            <summary>
+            输入图像区域中最大灰度值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.GrayContrast">
+            <summary>
+            输入图像区域中灰度值的对比度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.InscribedBox">
+            <summary>
+            最大面积内接矩形(所有内接矩形中面积最大者)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobInfo.SequentialContours">
+            <summary>
+            sequential contour
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.BlobFind.CBlobFindBasicParam">
+            <summary>
+            Classes of the basic param of the CBlobFindTool.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindBasicParam.ShowOutlineStatus">
+            <summary>
+            已弃用，推荐使用BlobContourType运行参数设置是否输出轮廓点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindBasicParam.ShowBlobImageStatus">
+            <summary>
+            是否输出Blob图像, true为输出, false为放弃输出,可加速;默认为false
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindBasicParam.ShowBinaryImageStatus">
+            <summary>
+            是否输出二值化图像, true为输出, false为放弃输出,可加速;默认为true
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.BlobFind.CBlobFindResult">
+            <summary>
+            Classes of the result of the CBlobFindTool.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindResult.BlobInfo">
+            <summary>
+            Set of the blobs information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindResult.BinaryImage">
+            <summary>
+            One of the results binary image.
+            Input image binarization result.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindResult.BlobImage">
+            <summary>
+            The other binary image
+            Target connected domain drawing result
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindResult.BlobTotalArea">
+            <summary>
+            Blob总面积
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.BlobFind.CBlobFindTool">
+            <summary>
+            blob tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.#ctor(System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.Dispose">
+            <summary>
+            Release
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.AddMask(VisionDesigner.CMvdShape)">
+             <summary>
+            .Add a mask region to excluded
+             </summary>
+             <remarks> Adds a new uninterested region in the InputImage to the end of mask list. 
+             MasksNum will be increased by one.Only IMvdPolygon type supported in current version. 
+             Support up to 8 polygons at the same time. </remarks>
+             <param name="cMask"> The mask region on the input image </param>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.ClearMasks">
+            <summary>
+            Removes all masks already added.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.RemoveMaskAt(System.Int32)">
+            <summary>
+            Removes the mask at the given index from the mask list.
+            </summary>
+            <remarks>Masks with higher indices are shifted to the next lower index, and NumPoints is decreased by one.</remarks>
+            <param name="nIndex">index of the target mask shape according to the order of addition </param>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.GetNumOfMasks">
+            <summary>
+            Gets the number of masks already added.
+            </summary>
+            <returns>the number of masks</returns>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this BlobFind tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this BlobFind tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this BlobFind tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this BlobFind tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BlobFind.CBlobFindTool.Dispose(System.Boolean)">
+            <summary>
+            Release resources
+            </summary>
+            <param name="bDisposeStatus">Flag of whether to release managed and unmanaged resource.</param>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindTool.ROI">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindTool.RegionImage">
+            <summary>
+             Region to process.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindTool.PerformanceAssistant">
+            <summary>
+            性能配置
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindTool.RegionImageAssistant">
+            <summary>
+            运行区域图像ROI配置
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BlobFind.CBlobFindTool.VMControlBase">
+            <summary>
+            VM控件对象
+            </summary>
+        </member>
+    </members>
+</doc>

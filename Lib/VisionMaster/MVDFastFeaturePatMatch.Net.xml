@@ -1,0 +1,947 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDFastFeaturePatMatch.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.CPatMatchEdgePoint">
+            <summary>
+            边缘点
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CPatMatchEdgePoint.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CPatMatchEdgePoint.Position">
+            <summary>
+            坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CPatMatchEdgePoint.Score">
+            <summary>
+            分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CPatMatchEdgePoint.Weight">
+            <summary>
+            权重
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.CPatMatchOutline">
+            <summary>
+            模板匹配轮廓
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CPatMatchOutline.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CPatMatchOutline.EdgePointList">
+            <summary>
+            边缘点集合
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CPatMatchOutline.EdgePointListOrigin">
+            <summary>
+            边缘点集合(相对于原图)
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.CPatMatchRegion">
+            <summary>
+            模板匹配Region
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CPatMatchRegion.#ctor">
+            <summary>
+            构造函数1
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CPatMatchRegion.#ctor(VisionDesigner.CMvdShape,System.Boolean)">
+            <summary>
+            构造函数2
+            </summary>
+            <param name="shape">图形</param>
+            <param name="sign">ROI\屏蔽区标志</param>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CPatMatchRegion.Shape">
+            <summary>
+            ROI图形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CPatMatchRegion.Sign">
+            <summary>
+            屏蔽区标志
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern">
+            <summary>
+            模板匹配模型类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.Train">
+            <summary>
+            训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.UnTrain">
+            <summary>
+            取消训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.ImportPattern(System.String)">
+            <summary>
+            导入模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <!-- 对于成员“M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.ImportPattern(System.Byte[],System.UInt64)”忽略有格式错误的 XML 注释 -->
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.ImportPattern(System.Byte[])">
+            <summary>
+            导入模板
+            </summary>
+            <param name="xmlData">xml模板字节数据</param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.ExportPattern(System.String)">
+            <summary>
+            导出模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.ExportPattern(System.Byte[]@)">
+            <summary>
+            导出模板
+            </summary>
+            <param name="xmlData">导出模型的字节数组</param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.ReleaseAlgorithmCache">
+            <summary>
+            释放算法缓存
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.BuildPreCondition">
+            <summary>
+            前置条件检查与算法句柄ReInit
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.RegionList">
+            <summary>
+            建模Region列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.RegionImage">
+            <summary>
+            建模掩膜图像(最终算法输入掩膜，不可与图形叠加)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.MaskImage">
+            <summary>
+            建模掩膜图像(可与图形叠加)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.ModelSize">
+            <summary>
+            模型大小
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.ReTrainStatus">
+            <summary>
+            重新训练标志
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePattern.RunStatus">
+            <summary>
+            是否可以获取结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.MVD_FP_OPTIMIZE_FLAG_TYPE">
+            <summary>
+            快速模板模型导出优化选项
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.FastFeaturePatMatch.MVD_FP_OPTIMIZE_FLAG_TYPE.MVD_FP_OPTIMIZE_NONE">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.FastFeaturePatMatch.MVD_FP_OPTIMIZE_FLAG_TYPE.MVD_FP_OPTIMIZE_IMG">
+            <summary>
+            优化导出不附带原图
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternBasicParam">
+            <summary>
+            建模基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternBasicParam.FixPoint">
+            <summary>
+            基准点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternBasicParam.OptimizedFlag">
+            <summary>
+            导出模板优化选项
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternData.FixPoint">
+            <summary>
+            基准点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternData.Size">
+            <summary>
+            模型大小
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternData.TrainedImage">
+            <summary>
+            模型图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternData.TrainedImageMask">
+            <summary>
+            模型掩膜
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternData.VersionCode">
+            <summary>
+            模板版本号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternData.Rough">
+            <summary>
+            速度特征尺度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternData.HighThreshold">
+            <summary>
+            建模高阈值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternData.LowThreshold">
+            <summary>
+            建模低阈值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternData.OutLineBufSize">
+            <summary>
+            轮廓获取所需申请缓存
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternResult">
+            <summary>
+            模型结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternResult.Data">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatternResult.OutlineList">
+            <summary>
+            模型轮廓
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CompressDataHelper.CompressToNormalMask(System.Byte[],System.Int32)">
+            <summary>
+            压缩Mask转主Mask
+            </summary>
+            <param name="compressMask"></param>
+            <param name="flagNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CompressDataHelper.NormalToCompressMask(System.Byte[],System.Int32)">
+            <summary>
+            压缩Mask转正常Mask
+            </summary>
+            <param name="otherMask"></param>
+            <param name="flagNum">标记种类个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.PMAlignPatternModule.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.PMAlignPatternModule.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.PMAlignPatternModule.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.PMAlignPatternModule.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.PMAlignPatternModule.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.PMAlignPatternModule.TrainPattern(System.UInt64@)">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.PMAlignPatternModule.GetPatternData(System.Byte[],System.UInt64)">
+            <summary>
+            获取模型数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.PMAlignPatternModule.GetPatternDataOptimize(System.Byte[],System.UInt64)">
+            <summary>
+            获取模型数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.PMAlignPatternModule.GetOutline(System.Byte[],System.UInt64)">
+            <summary>
+            获取轮廓
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.PMAlignPatternModule.InputImage">
+            <summary>
+            建模输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.PMAlignPatternModule.InputMask">
+            <summary>
+            建模输入掩膜
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.PMAlignPatternModule.BasicParam">
+            <summary>
+            基本参数(基准点)
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchBasicParam">
+            <summary>
+            匹配基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchBasicParam.ShowOutlineStatus">
+            <summary>
+            是否显示匹配轮廓
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.CFastFeatureMatchInfo">
+            <summary>
+            匹配结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeatureMatchInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeatureMatchInfo.MatchBox">
+            <summary>
+            匹配框
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeatureMatchInfo.MatchPoint">
+            <summary>
+            匹配点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeatureMatchInfo.Scale">
+            <summary>
+            匹配尺度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeatureMatchInfo.ScaleX">
+            <summary>
+            匹配尺度X（V3.4.0后废弃）
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeatureMatchInfo.ScaleY">
+            <summary>
+            匹配尺度Y（V3.4.0后废弃）
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeatureMatchInfo.Score">
+            <summary>
+            相似分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeatureMatchInfo.Rms">
+            <summary>
+            结果拟合误差
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchResult">
+            <summary>
+            匹配结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchResult.MatchInfoList">
+            <summary>
+            匹配结果列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchResult.OutlineList">
+            <summary>
+            轮廓列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool">
+            <summary>
+            模板匹配Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.#ctor(System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.OnRunning">
+            <summary>
+            抛出算子前置事件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.OnRan">
+            <summary>
+            抛出算子结束事件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.SetCoreBinding(System.UInt64)">
+            <summary>
+            设置核数绑定CPU
+            </summary>
+            <param name="coreBinding"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.GetCoreBinding">
+            <summary>
+            获取核数绑定CPU
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.AddMask(VisionDesigner.CMvdShape)">
+            <summary>
+            添加屏蔽区
+            </summary>
+            <param name="maskShape"></param>
+            <remarks>当前只支持多边形屏蔽区,且最多8个屏蔽区</remarks>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.ClearMasks">
+            <summary>
+            移除屏蔽区
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.RemoveMaskAt(System.Int32)">
+            <summary>
+            根据索引移除屏蔽区
+            </summary>
+            <param name="nIndex"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.GetNumOfMasks">
+            <summary>
+            获取屏蔽区个数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.CalcMaskFlag">
+            <summary>
+            计算是否使用掩膜
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.RegionImage">
+            <summary>
+            输入掩膜
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.ROI">
+            <summary>
+            ROI;默认值NULL(全区)，支持矩形、多边形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.Pattern">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.VMControlBase">
+            <summary>
+            VM控件对象
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.ThreadNum">
+            <summary>
+            线程数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.RunStatus">
+            <summary>
+            执行状态
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.Running">
+            <summary>
+            算子前置事件
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.FastFeaturePatMatch.CFastFeaturePatMatchTool.Ran">
+            <summary>
+            算子结束事件
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMControlModel.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMControlModel.ModelPath">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMControlModel.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.VMFastPatternRunParam">
+            <summary>
+            VM 模型XML算法参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMFastPatternRunParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMFastPatternRunParam.PyramidScaleMode">
+            <summary>
+            模型金字塔尺度标记
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMFastPatternRunParam.RoughPyramidScale">
+            <summary>
+            模型速度金字塔尺度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMFastPatternRunParam.FinePyramidScale">
+            <summary>
+            模型精度金字塔尺度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMFastPatternRunParam.PyramidScale">
+            <summary>
+            模型精度金字塔尺度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMFastPatternRunParam.ThresholdMode">
+            <summary>
+            阈值模式
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMFastPatternRunParam.HighThreshold">
+            <summary>
+            边缘高阈值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMFastPatternRunParam.LowThreshold">
+            <summary>
+            边缘低阈值
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.VMConfigData">
+            <summary>
+            VM模型XML 数据结构
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.FastFeaturePatMatch.VMConfigData.PointsData">
+            <summary>
+            特征点数据
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.FastFeaturePatMatch.VMConfigData.PointsNums">
+            <summary>
+            特征点数据个数
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.FastFeaturePatMatch.VMConfigData.OptimizedFlag">
+            <summary>
+            导出模型优化标记
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMConfigData.RegionList">
+            <summary>
+            ROI链表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMConfigData.VisionMasterVersion">
+            <summary>
+            VM版本
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMConfigData.PatternVersion">
+            <summary>
+            模板文件版本号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMConfigData.FixPoint">
+            <summary>
+            基准点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMConfigData.CurImage">
+            <summary>
+            当前图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMConfigData.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMConfigData.RunParam">
+            <summary>
+            算法参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMConfigData.MaskImage">
+            <summary>
+            掩模图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.FastFeaturePatMatch.VMConfigData.RegionImage">
+            <summary>
+            运行区域图像
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.MVBPATMATCH_EDGEPOINT_OUT">
+            <summary>
+            特征点结构体
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.FastFeaturePatMatch.VMConfigHelper">
+            <summary>
+            XML相关操作类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.CreatePatternXml(System.Xml.XmlDocument,VisionDesigner.FastFeaturePatMatch.VMConfigData)">
+            <summary>
+            创建模板Xml
+            </summary>
+            <param name="filePath"></param>
+            <param name="xmlData"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.CreatePatternXmlFile(System.String,VisionDesigner.FastFeaturePatMatch.VMConfigData)">
+            <summary>
+            创建模板xml文件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.CreatePatternXmlByte(System.Byte[]@,VisionDesigner.FastFeaturePatMatch.VMConfigData)">
+            <summary>
+            创建模板Xml字节数组
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.CreatePatternXmlSDK(System.Xml.XmlDocument@,VisionDesigner.FastFeaturePatMatch.VMConfigData)">
+            <summary>
+            创建SDK模板Xml
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.ParsePatternXml(System.String,VisionDesigner.FastFeaturePatMatch.VMConfigData@)">
+            <summary>
+            解析模板Xml
+            </summary>
+            <param name="filePath"></param>
+            <param name="xmlData"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.ParsePatternXml(System.Byte[],VisionDesigner.FastFeaturePatMatch.VMConfigData@)">
+            <summary>
+            解析字节模板Xml
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.CreateBoxROIModuleXml(System.Xml.XmlDocument@,System.Xml.XmlElement@,VisionDesigner.FastFeaturePatMatch.CPatMatchRegion)">
+            <summary>
+            创建BoxROI
+            </summary>
+            <param name="xDoc"></param>
+            <param name="boxROIElement"></param>
+            <param name="regionInfo"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.CreateAnnuROIModuleXml(System.Xml.XmlDocument@,System.Xml.XmlElement@,VisionDesigner.FastFeaturePatMatch.CPatMatchRegion)">
+            <summary>
+            创建AnnuROI
+            </summary>
+            <param name="xDoc"></param>
+            <param name="annuROIElement"></param>
+            <param name="regionInfo"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.CreatePolygonROIModuleXml(System.Xml.XmlDocument@,System.Xml.XmlElement@,VisionDesigner.FastFeaturePatMatch.CPatMatchRegion)">
+            <summary>
+            创建PolygonROI
+            </summary>
+            <param name="xDoc"></param>
+            <param name="polygonROIElement"></param>
+            <param name="regionInfo"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.CreateCurImageModuleXml(System.Xml.XmlDocument@,System.Xml.XmlElement@,VisionDesigner.CMvdImage)">
+            <summary>
+            创建CurImage
+            </summary>
+            <param name="xDoc"></param>
+            <param name="curImageElement"></param>
+            <param name="curImage"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.ParsePatternDocumentNodeEx(System.Xml.XmlNode,VisionDesigner.FastFeaturePatMatch.VMConfigData@)">
+            <summary>
+            兼容平台SDK解析节点
+            </summary>
+            <param name="rootNode"></param>
+            <param name="vmConfigData"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.ParsePatternDocumentNode(System.Xml.XmlNode,VisionDesigner.FastFeaturePatMatch.VMConfigData@)">
+            <summary>
+            解析Document数据节点
+            </summary>
+            <param name="rootNode"></param>
+            <param name="vmConfigData"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.ParseItemsDataModule(System.Xml.XmlNode,System.Collections.Generic.List{VisionDesigner.FastFeaturePatMatch.CPatMatchRegion}@)">
+            <summary>
+            解析ItemsData节点
+            </summary>
+            <param name="itemDataNode"></param>
+            <param name="RegionList"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.ParseBoxROIModule(System.Xml.XmlNode,VisionDesigner.FastFeaturePatMatch.CPatMatchRegion@)">
+            <summary>
+            解析Box节点
+            </summary>
+            <param name="boxROINode"></param>
+            <param name="boxRegion"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.ParseAnnuROIModule(System.Xml.XmlNode,VisionDesigner.FastFeaturePatMatch.CPatMatchRegion@)">
+            <summary>
+            解析Anuulus节点
+            </summary>
+            <param name="annuROINode"></param>
+            <param name="annuRegion"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.ParsePolygonROIModule(System.Xml.XmlNode,VisionDesigner.FastFeaturePatMatch.CPatMatchRegion@)">
+            <summary>
+            解析Polygon节点
+            </summary>
+            <param name="polygonROINode"></param>
+            <param name="polygonRegion"></param>
+        </member>
+        <member name="M:VisionDesigner.FastFeaturePatMatch.VMConfigHelper.ParseCurImageModuleXml(System.Xml.XmlNode,VisionDesigner.CMvdImage@,System.Byte[])">
+            <summary>
+            解析CurImage节点
+            </summary>
+            <param name="curImageNode"></param>
+            <param name="curImage"></param>
+        </member>
+    </members>
+</doc>

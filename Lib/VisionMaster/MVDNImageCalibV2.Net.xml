@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDNImageCalibV2.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.NImageCalibV2.CNImageCalibV2MechTransErrInfo">
+            <summary>
+            机构平移运动误差
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2MechTransErrInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2MechTransErrInfo.Trans">
+            <summary>
+            平移过程中图像移动量与机够移动量之间的偏差(距离误差)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2MechTransErrInfo.Scale">
+            <summary>
+            平移过程中的图像尺度变化
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2MechTransErrInfo.Rotate">
+            <summary>
+            平移过程中的图像之间旋转变化量
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.CNImageCalibV2BaseErrInfo">
+            <summary>
+            估计误差
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2BaseErrInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2BaseErrInfo.ErrAverage">
+            <summary>
+            像素平均误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2BaseErrInfo.ErrMax">
+            <summary>
+            像素最大误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2BaseErrInfo.ErrMaxPtsNum">
+            <summary>
+            像素最大误差对应点数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2BaseErrInfo.ErrWorldAverage">
+            <summary>
+            真实平均误差，单位和输入的平台移动量单位相同
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2BaseErrInfo.ErrWorldMax">
+            <summary>
+            真实最大误差，单位和输入的平台移动量单位相同
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.CNImageCalibV2TransMotionErrInfo">
+            <summary>
+            机构平移误差（相对误差，百分比）
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2TransMotionErrInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2TransMotionErrInfo.TransMotionErrAverage">
+            <summary>
+            平均误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2TransMotionErrInfo.TransMotionErrMax">
+            <summary>
+            最大误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2TransMotionErrInfo.MaxErrPicIndex">
+            <summary>
+            最大误差所在图片索引
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.CNImageCalibV2RotMotionErrInfo">
+            <summary>
+            机构旋转误差（相对误差，百分比）
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2RotMotionErrInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2RotMotionErrInfo.RotMotionErrAverage">
+            <summary>
+            平均误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2RotMotionErrInfo.RotMotionErrMax">
+            <summary>
+            最大误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2RotMotionErrInfo.MaxErrPicIndex">
+            <summary>
+            最大误差所在图片索引
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.CNImageCalibV2ErrInfo">
+            <summary>
+            标定误差信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2ErrInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2ErrInfo.TransEstErr">
+            <summary>
+            平移估计误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2ErrInfo.RotEstErr">
+            <summary>
+            旋转估计误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2ErrInfo.TransMotionErr">
+            <summary>
+            机构平移误差（相对误差，百分比）
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2ErrInfo.RotMotionErr">
+            <summary>
+            机构旋转误差（相对误差，百分比）
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_TYPE">
+            <summary>
+            标定板类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_CHECKER">
+            <summary>
+            Checker Board
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_CIRCLE">
+            <summary>
+            Circle Board
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_SPARSE_I">
+            <summary>
+            海康I型标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_DENSE_II">
+            <summary>
+            海康II型标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_DENSE_II_V2">
+            <summary>
+            海康II型标定板V2
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_SPARSE_I_V2">
+            <summary>
+            海康I型标定板V2
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_RSCODE_SIGN_FOUR">
+            <summary>
+            海康I型标定板(V3.3后定义更新为MVD_CALIBBOARD_TYPE_HKA_SPARSE_I)
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_RSCODE_SIGN">
+            <summary>
+            海康II型标定板(V3.3后定义更新为MVD_CALIBBOARD_TYPE_HKA_DENSE_II)
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_IMAGE_TYPE">
+            <summary>
+            图像类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_IMAGE_TYPE.MVD_CALIBBOARD_OFFSET_IMAGE">
+            <summary>
+            平移图像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_IMAGE_TYPE.MVD_CALIBBOARD_ROTATE_IMAGE">
+            <summary>
+            旋转图像
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_STATUS_TYPE">
+            <summary>
+            标定状态类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_STATUS_TYPE.MVD_ERR_CHECK_NORMAL">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_STATUS_TYPE.MVD_TRANS_ERR_MAX_BEYOND">
+            <summary>
+            平移估计最大误差过大
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_STATUS_TYPE.MVD_TRANS_ERR_AVG_BEYOND">
+            <summary>
+            平移估计平均误差过大
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_STATUS_TYPE.MVD_ROT_ERR_MAX_BEYOND">
+            <summary>
+            旋转估计最大误差过大
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_STATUS_TYPE.MVD_ROT_ERR_AVG_BEYOND">
+            <summary>
+            旋转误差平均误差过大
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_STATUS_TYPE.MVD_TRANS_MOT_ERR_MAX_BEYOND">
+            <summary>
+            机构最大平移误差率过大
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_STATUS_TYPE.MVD_ROT_MOT_ERR_MAX_BEYOND">
+            <summary>
+            机构最大旋转误差率过大
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_STATUS_TYPE.MVD_IMG_MAP_ERR_MAX_BEYOND">
+            <summary>
+            映射标定误差过大
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.MVD_CALIB_IMAGE">
+            <summary>
+            标定图像相关信息类
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIB_IMAGE.pcInputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIB_IMAGE.pcInputROI">
+            <summary>
+            输入ROI
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIB_IMAGE.pcRegionImage">
+            <summary>
+            掩膜图像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIB_IMAGE.enCalibImageType">
+            <summary>
+            标定图像类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIB_IMAGE.stMovePoint">
+            <summary>
+            移动物理点 (实际上的物理坐标点)
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NImageCalibV2.MVD_CALIB_IMAGE.fRotateAngle">
+            <summary>
+            旋转角度
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.CNImageCalibV2BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2BasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2BasicParam.AddCalibImageData(VisionDesigner.CMvdImage,VisionDesigner.CMvdShape,VisionDesigner.CMvdImage,VisionDesigner.NImageCalibV2.MVD_CALIBBOARD_IMAGE_TYPE,VisionDesigner.MVD_POINT_F,System.Single)">
+            <summary>
+            添加标定图像信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2BasicParam.GetCalibImageDataAt(System.Int32)">
+            <summary>
+            获取指定标定图像信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2BasicParam.RemoveCalibImageDataAt(System.Int32)">
+            <summary>
+            删除指定标定图像信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2BasicParam.ClearCalibImageData">
+            <summary>
+            清空所有标定图像信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2BasicParam.CalibImageData">
+            <summary>
+            图像集列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2BasicParam.CalibBoardType">
+            <summary>
+            标定板类型
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2BasicParam.OffsetNum">
+            <summary>
+            平移图像数目
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2BasicParam.RotateNum">
+            <summary>
+            旋转图像数目
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.CNImageCalibV2Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Result.#ctor">
+            <summary>
+            N点标定结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Result.CalibStatus">
+            <summary>
+            每张图像的标定状态
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Result.RotDirectState">
+            <summary>
+            旋转方向  1表示旋转计算角度与输入角度方向相同，-1表示旋转计算角度与输入角度相反
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Result.HomoMatrix">
+            <summary>
+            homo矩阵 float*9
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Result.RotImageCenter">
+            <summary>
+            轴心在旋转图像中的图像坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Result.CalibErr">
+            <summary>
+            标定误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Result.CornerPairs">
+            <summary>
+            指定棋盘格物理角点在N张输入图像中的位置
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Result.Direction">
+            <summary>
+            机构移动方向信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Result.Status">
+            <summary>
+            评估标定误差状态
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.CNImageCalibV2CornerPairsInfo">
+            <summary>
+            棋盘格物理角点在图像中的位置
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2CornerPairsInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2CornerPairsInfo.Corners">
+            <summary>
+            物理角点在指定图像中的角点坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2CornerPairsInfo.CornersWorld">
+            <summary>
+            当前角点物理坐标
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.CNImageCalibV2Direction">
+            <summary>
+            机构移动方向信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Direction.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Direction.XVector">
+            <summary>
+            机构坐标系x方向向量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Direction.YVector">
+            <summary>
+            机构坐标系y方向向量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Direction.MoveDirec">
+            <summary>
+            y方向和x方向移动比
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool">
+            <summary>
+            N点标定Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.#ctor">
+            <summary>
+            N点标定Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this PMAlign Pattern.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this PMAlign Pattern.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this PMAlign Pattern
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this PMAlign Pattern
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.ExportCalibFile(System.String)">
+            <summary>
+            导出标定文件
+            </summary>
+            <param name="filePath">标定文件</param>
+            <remarks>iwcal文件或xml文件</remarks>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NImageCalibV2.CNImageCalibV2Tool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

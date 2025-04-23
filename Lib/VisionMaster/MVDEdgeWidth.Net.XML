@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDEdgeWidth.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.EdgeWidth.MVD_EDGE_POLARITY">
+            <summary>
+            Type of the polarity of the edge point
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.EdgeWidth.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_DARK_TO_BRIGHT">
+            <summary>
+            From black to white, default value
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.EdgeWidth.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BRIGHT_TO_DARK">
+            <summary>
+            From white to black
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.EdgeWidth.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BOTH">
+            <summary>
+            both
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EdgeWidth.CEdgeWidthSingleEdgeInfo">
+            <summary>
+            Class for describing single edge information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthSingleEdgeInfo.EdgePoint">
+            <summary>
+            coordinate of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthSingleEdgeInfo.Bias">
+            <summary>
+            relevant distance of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthSingleEdgeInfo.Polarity">
+            <summary>
+            polarity of the edge point
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EdgeWidth.CEdgeWidthEdgePairInfo">
+            <summary>
+            Class for describing edge pair information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthEdgePairInfo.Edge0Info">
+            <summary>
+            information of the one of the edge points
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthEdgePairInfo.Edge1Info">
+            <summary>
+            information of the other of the edge points
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthEdgePairInfo.Center">
+            <summary>
+            center point of edge pair
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthEdgePairInfo.Position">
+            <summary>
+            position of edge pair
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthEdgePairInfo.Distance">
+            <summary>
+            distance of edge pair
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthEdgePairInfo.Score">
+            <summary>
+            score of edge pair
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EdgeWidth.CEdgeWidthResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthResult.EdgePairInfo">
+            <summary>
+            Gets the list of edge pair information
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EdgeWidth.CEdgeWidthTool">
+            <summary>
+            the class for the EdgeWidthTool
+            </summary>
+            <remarks>The EdgeWidthTool encapsulates all of the classes required to perform a edge width analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.EdgeWidth.CEdgeWidthTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeWidth.CEdgeWidthTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeWidth.CEdgeWidthTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeWidth.CEdgeWidthTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeWidth.CEdgeWidthTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this EdgeWidth tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.EdgeWidth.CEdgeWidthTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this EdgeWidth tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.EdgeWidth.CEdgeWidthTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this EdgeWidth tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.EdgeWidth.CEdgeWidthTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this EdgeWidth tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.EdgeWidth.CEdgeWidthTool.Run">
+            <summary>
+            Run the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeWidth.CEdgeWidthTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthTool.ROI">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeWidth.CEdgeWidthTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

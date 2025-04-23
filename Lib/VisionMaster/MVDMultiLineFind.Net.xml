@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDMultiLineFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.MultiLineFind.MVD_EDGE_POLARITY">
+            <summary>
+            Type of the polarity of the edge point
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MultiLineFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_DARK_TO_BRIGHT">
+            <summary>
+            From black to white, default value
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MultiLineFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BRIGHT_TO_DARK">
+            <summary>
+            From white to black
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MultiLineFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_MIXED">
+            <summary>
+            mixed
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MultiLineFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_EITHER">
+            <summary>
+            either
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MultiLineFind.CMultiLineFindEdgePointInfo">
+            <summary>
+            Class for describing edge points Information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindEdgePointInfo.EdgePoint">
+            <summary>
+            边缘点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindEdgePointInfo.Magnitude">
+            <summary>
+            梯度幅值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindEdgePointInfo.Orientation">
+            <summary>
+            梯度方向
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindEdgePointInfo.Distance">
+            <summary>
+            边缘距离
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindEdgePointInfo.Polarity">
+            <summary>
+            边缘极性
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindEdgePointInfo.Status">
+            <summary>
+            边缘点查找状态 0:失败;1:成功
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindEdgePointInfo.CaliperIndex">
+            <summary>
+            投影区域索引
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindEdgePointInfo.LineIndex">
+            <summary>
+            所属线段索引
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MultiLineFind.CMultiLineFindLineInfo">
+            <summary>
+            Class for describing edge points Information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindLineInfo.Line">
+            <summary>
+            直线段
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindLineInfo.FitErr">
+            <summary>
+            拟合误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindLineInfo.Intensity">
+            <summary>
+            对比度强度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindLineInfo.CoverageScore">
+            <summary>
+            覆盖率分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindLineInfo.InliersNum">
+            <summary>
+            在群点数量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindLineInfo.LineIndex">
+            <summary>
+            线段索引
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MultiLineFind.CMultiLineFindResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindResult.Status">
+            <summary>
+            ch: 查找状态 | en: finding status
+            </summary>
+            <remarks>0:查找失败；1:查找成功</remarks>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindResult.EdgePointInfo">
+            <summary>
+            Gets the list of edge points of the rectangle that has been found
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindResult.LineInfo">
+            <summary>
+            Gets the list of lineinfo of the rectangle that has been found
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MultiLineFind.CMultiLineFindTool">
+            <summary>
+            the class for the MultiLineeFindTool
+            </summary>
+            <remarks>The MultiLineFindTool encapsulates all of the classes required to perform a MultiLine finding analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.MultiLineFind.CMultiLineFindTool.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLineFind.CMultiLineFindTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLineFind.CMultiLineFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLineFind.CMultiLineFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLineFind.CMultiLineFindTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLineFind.CMultiLineFindTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this RectangleFind tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.MultiLineFind.CMultiLineFindTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this RectangleFind tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.MultiLineFind.CMultiLineFindTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this RectangleFind tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.MultiLineFind.CMultiLineFindTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this RectangleFind tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.MultiLineFind.CMultiLineFindTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MultiLineFind.CMultiLineFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindTool.ROI">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindTool.RegionImage">
+            <summary>
+             region image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MultiLineFind.CMultiLineFindTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

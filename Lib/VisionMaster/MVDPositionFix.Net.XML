@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDPositionFix.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.PositionFix.MVD_POSFIX_MODE">
+            <summary>
+            Position Fix Mode
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PositionFix.MVD_POSFIX_MODE.MVD_POSFIX_MODE_NONE">
+            <summary>
+            Do not make fixture
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PositionFix.MVD_POSFIX_MODE.MVD_POSFIX_MODE_HORI">
+            <summary>
+            Fixture horizontally
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PositionFix.MVD_POSFIX_MODE.MVD_POSFIX_MODE_VERT">
+            <summary>
+            Fixture vertically
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PositionFix.MVD_POSFIX_MODE.MVD_POSFIX_MODE_HV">
+            <summary>
+            Fixture both horizontally and vertically
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PositionFix.MVD_POSFIX_MODE.MVD_POSFIX_MODE_HVA">
+            <summary>
+            Angle fixture both horizontally and vertically
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PositionFix.MVD_POSFIX_MODE.MVD_POSFIX_MODE_HVAS">
+            <summary>
+            Angle fixture both horizontally and vertically, supported scale
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PositionFix.MVD_FIDUCIAL_POINT_F">
+            <summary>
+            fiducial pose point info with 'float' type
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PositionFix.CPositionFixBasicParam">
+            <summary>
+            Class for describing PositionFix Basic Param
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PositionFix.CPositionFixBasicParam.#ctor">
+            <summary>
+            CPositionFixBasicParam constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PositionFix.CPositionFixBasicParam.RunImageSize">
+            <summary>
+            the dependent background image size
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PositionFix.CPositionFixBasicParam.BasePoint">
+            <summary>
+            the posion of the basis point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PositionFix.CPositionFixBasicParam.RunningPoint">
+            <summary>
+            the running point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PositionFix.CPositionFixBasicParam.FixMode">
+            <summary>
+            the mode to finishing fixture
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PositionFix.CPositionFixBasicParam.InitialShape">
+            <summary>
+            the pre-fixed shape properties. Default value is null.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PositionFix.CPositionFixResult">
+            <summary>
+            Class for describing PositionFix Result
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PositionFix.CPositionFixResult.#ctor">
+            <summary>
+            CPositionFixResult constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PositionFix.CPositionFixResult.CorrectedShape">
+            <summary>
+            the fixed shape properties. Default value is null.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PositionFix.CPositionFixResult.Status">
+            <summary>
+            ch: 输出是否有效标志 | en: Whether the output is valid. Default value is false.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PositionFix.CPositionFixTool">
+            <summary>
+            Class for CPositionFixTool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PositionFix.CPositionFixTool.#ctor">
+            <summary>
+            CPositionFixTool Constructor.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PositionFix.CPositionFixTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PositionFix.CPositionFixTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PositionFix.CPositionFixTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PositionFix.CPositionFixTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PositionFix.CPositionFixTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PositionFix.CPositionFixTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PositionFix.CPositionFixTool.BasicParam">
+            <summary>
+            BasicParam
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PositionFix.CPositionFixTool.Result">
+            <summary>
+            Result
+            </summary>
+        </member>
+    </members>
+</doc>

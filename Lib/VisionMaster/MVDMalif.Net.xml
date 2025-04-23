@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDMalif.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.Malif.MVD_MALIF_IMAGE">
+            <summary>
+            多角度局部光照图像结构体
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Malif.MVD_MALIF_IMAGE.LightImage">
+            <summary>
+            输入的多角度光图像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Malif.MVD_MALIF_IMAGE.Slants">
+            <summary>
+            相机光轴与照明方向之间的夹角（以度为单位）（建议在30到60之间），范围[0,90]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Malif.MVD_MALIF_IMAGE.Tilts">
+            <summary>
+            物体平面内照明方向投影与自定义起始线的夹角（以度为单位），范围[-180,180]
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Malif.CMalifBasicParam">
+            <summary>
+            图像融合基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Malif.CMalifBasicParam.ImageInfo">
+            <summary>
+            输入图像信息
+            </summary>
+            <remarks>运行所需数量为3-8</remarks>
+        </member>
+        <member name="T:VisionDesigner.Malif.CMalifResult">
+            <summary>
+            图像融合结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Malif.CMalifResult.AlbedoImage">
+            <summary>
+            反射图像（纹理图像）
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Malif.CMalifResult.ShadingImage">
+            <summary>
+            形状图像(光照图像、轮廓图像)
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Malif.CMalifTool">
+            <summary>
+            图像融合工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="runParamBufferBytes">要保存运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+            <param name="runParamBufferLength">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="runParamBufferBytes">导入的运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifTool.Run">
+            <summary>
+            执行操作
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Malif.CMalifTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus"></param>
+        </member>
+        <member name="P:VisionDesigner.Malif.CMalifTool.ROI">
+            <summary>
+            输入ROI
+            </summary>
+            <remarks>只支持0°矩形，NULL表示全图</remarks>
+        </member>
+        <member name="P:VisionDesigner.Malif.CMalifTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Malif.CMalifTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

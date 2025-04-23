@@ -8,7 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="TemplateMaching\" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.10.0.20241108" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MVDContourPatMatch.Net">
+      <HintPath>Lib\VisionMaster\MVDContourPatMatch.Net.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

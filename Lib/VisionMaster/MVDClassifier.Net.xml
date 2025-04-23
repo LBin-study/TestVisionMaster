@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDClassifier.Net</name>
+    </assembly>
+    <members>
+        <member name="M:VisionDesigner.Classifier.CClassifierBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierBasicParam.LoadModel(System.String)">
+            <summary>
+            从本地文件加载模型
+            </summary>
+            <param name="filePath">模型路径</param>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierBasicParam.LoadModelData(System.Byte[],System.Int64)">
+            <summary>
+            加载模型数据
+            </summary>
+            <param name="modeldata">data of the model</param>
+            <param name="modelsize">size of the model</param>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierBasicParam.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierBasicParam.ModelSize">
+            <summary>
+            数据大小
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierBasicParam.UpdateStatus">
+            <summary>
+            更新状态
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Classifier.CClassifierPattern">
+            <summary>
+            分类器模型类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.Train">
+            <summary>
+            训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.UnTrain">
+            <summary>
+            取消训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.SaveModelData(System.String)">
+            <summary>
+            保存模型为.bin文件
+            </summary>
+            <param name="strModelFilePath">模型文件路径,后缀名为 .bin</param>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPattern.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierPattern.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierPattern.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierPattern.ModelSize">
+            <summary>
+            模型大小
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Classifier.CClassifierPatternBasicParam">
+            <summary>
+            训练基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPatternBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPatternBasicParam.AddSample(VisionDesigner.Classifier.CClassifierPatternSample)">
+            <summary>
+            
+            </summary>
+            <param name="sample">训练样本</param>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPatternBasicParam.GetSampleNum">
+            <summary>
+            获取样本数量
+            </summary>
+            <returns>返回样本数量</returns>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPatternBasicParam.RemoveSample(System.UInt32)">
+            <summary>
+            清理所有已添加样本
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPatternBasicParam.GetSample(System.UInt32)">
+            <summary>
+            清理所有已添加样本
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPatternBasicParam.ClearSamples">
+            <summary>
+            清理所有已添加样本
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Classifier.CClassifierPatternSample">
+            <summary>
+            分类器训练样本
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPatternSample.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierPatternSample.TrainImage">
+            <summary>
+            训练图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierPatternSample.LabelIndex">
+            <summary>
+            标签索引 
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierPatternSample.LabelName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierPredictInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierPredictInfo.LabelIndex">
+            <summary>
+            标签索引 
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierPredictInfo.LabelName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Classifier.CClassifierResult">
+            <summary>
+            匹配结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierResult.PredictInfoList">
+            <summary>
+            预测信息列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Classifier.CClassifierTool">
+            <summary>
+            分类器工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierTool.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.CClassifierTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.CClassifierTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Classifier.VMConfigData">
+            <summary>
+            VM模型XML 数据结构
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.VMConfigData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.VMConfigData.TrainSampleList">
+            <summary>
+            训练数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.VMConfigData.BasicParam">
+            <summary>
+            模型训练基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.VMConfigData.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Classifier.VMConfigData.CategoriesNum">
+            <summary>
+            类别数量
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Classifier.VMConfigHelper">
+            <summary>
+            VM 模型文件互通
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.VMConfigHelper.CreatePatternXmlFile(System.String,VisionDesigner.Classifier.VMConfigData)">
+            <summary>
+            创建模板xml文件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.VMConfigHelper.CreatePatternXmlByte(VisionDesigner.Classifier.VMConfigData)">
+            <summary>
+            创建模板Xml字节数组
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.VMConfigHelper.CreatePatternXml(System.Xml.XmlDocument,VisionDesigner.Classifier.VMConfigData)">
+            <summary>
+            创建模板Xml
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Classifier.VMConfigHelper.ParsePatternXml(System.Byte[],VisionDesigner.Classifier.VMConfigData@)">
+            <summary>
+            解析字节模板Xml
+            </summary>
+        </member>
+    </members>
+</doc>

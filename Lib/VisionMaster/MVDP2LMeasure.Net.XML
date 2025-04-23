@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDP2LMeasure.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.P2LMeasure.CP2LMeasureBasicParam">
+            <summary>
+            Class for describing basic parameter of P2LMeasure
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2LMeasure.CP2LMeasureBasicParam.Point">
+            <summary>
+            point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2LMeasure.CP2LMeasureBasicParam.Line">
+            <summary>
+            line
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2LMeasure.CP2LMeasureBasicParam.AngleType">
+            <summary>
+            输出角度范围
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.P2LMeasure.CP2LMeasureResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2LMeasure.CP2LMeasureResult.Angle">
+            <summary>
+            angle of point and line
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2LMeasure.CP2LMeasureResult.VerticalDist">
+            <summary>
+            perpend distance of point and line
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2LMeasure.CP2LMeasureResult.ClosestDist">
+            <summary>
+            minimal distance of point and line
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2LMeasure.CP2LMeasureResult.FarthestDist">
+            <summary>
+            maximal distance of point and line
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2LMeasure.CP2LMeasureResult.ProjectPoint">
+            <summary>
+            project point of point being on line
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.P2LMeasure.CP2LMeasureTool">
+            <summary>
+            the class for the P2LMeasureTool
+            </summary>
+            <remarks>The P2LMeasureTool encapsulates all of the classes required to perform a P2L measurement analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.P2LMeasure.CP2LMeasureTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2LMeasure.CP2LMeasureTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2LMeasure.CP2LMeasureTool.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            反序列化调用该构造函数
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:VisionDesigner.P2LMeasure.CP2LMeasureTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2LMeasure.CP2LMeasureTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2LMeasure.CP2LMeasureTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2LMeasure.CP2LMeasureTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2LMeasure.CP2LMeasureTool.BasicParam">
+            <summary>
+            basic parameter for P2LMeasure
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2LMeasure.CP2LMeasureTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

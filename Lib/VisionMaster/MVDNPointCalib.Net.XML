@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDNPointCalib.Net</name>
+    </assembly>
+    <members>
+        <member name="P:VisionDesigner.NPointCalib.CCalibMatrixToParamInfo.Scale">
+            <summary>
+            尺度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CCalibMatrixToParamInfo.OffsetX">
+            <summary>
+            X偏移
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CCalibMatrixToParamInfo.OffsetY">
+            <summary>
+            Y偏移
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CCalibMatrixToParamInfo.Rotate">
+            <summary>
+            旋转角度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CCalibMatrixToParamInfo.Aspect">
+            <summary>
+            Y方向和X方向的比例
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CCalibMatrixToParamInfo.Skew">
+            <summary>
+            倾斜量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CCalibMatrixToParamInfo.PixelPrecision">
+            <summary>
+            像素精度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.COffsetPointCalibInfo.HomoEstStatus">
+            <summary>
+            HOMO估计状态
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.COffsetPointCalibInfo.OffsetError">
+            <summary>
+            平移误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.COffsetPointCalibInfo.HomoMatrix">
+            <summary>
+            HOMO矩阵
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NPointCalib.CPlatformCalibInfo">
+            <summary>
+            平台标定信息类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CPlatformCalibInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.OffsetError">
+            <summary>
+            N点标定中平移估计误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.RotateError">
+            <summary>
+            N点标定中旋转估计误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.RotCenterImageCoord">
+            <summary>
+            旋转中心图像坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.RotCenterWorldCoord">
+            <summary>
+            旋转中心物理坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.HomoMatrix">
+            <summary>
+            HOMO矩阵
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.RotDirectionState">
+            <summary>
+            角度旋转方向一致性状态
+            </summary>
+            <remarks>1表示计算角度与输入角度旋转方向相同，-1表示计算角度与输入角度旋转方向相反</remarks>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.OffsetMaxError">
+            <summary>
+            N点标定中平移估计像素最大误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.OffsetMaxErrorPointNum">
+            <summary>
+            N点标定中平移估计像素最大误差对应点数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.OffsetWorldError">
+            <summary>
+            N点标定中平移估计真实平均误差,单位和输入的平台移动量单位相同
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.OffsetWorldMaxError">
+            <summary>
+            N点标定中平移估计真实最大误差,单位和输入的平台移动量单位相同
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.RotateMaxError">
+            <summary>
+            N点标定中旋转估计像素最大误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.RotateMaxErrorPointNum">
+            <summary>
+            N点标定中旋转估计像素最大误差对应点数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.RotateWorldError">
+            <summary>
+            N点标定中旋转估计真实平均误差,单位和输入的平台移动量单位相同
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.RotateWorldMaxError">
+            <summary>
+            N点标定中旋转估计真实最大误差,单位和输入的平台移动量单位相同
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CPlatformCalibInfo.Status">
+            <summary>
+            评估标定状态，0表示正常，其他表示异常
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NPointCalib.MVD_CAMERA_MODE">
+            <summary>
+            MVD_CAMERA_MODE
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NPointCalib.MVD_CAMERA_MODE.MVD_CAMERA_MODE_STATIC_UP">
+            <summary>
+            Camera Static Up
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NPointCalib.MVD_CAMERA_MODE.MVD_CAMERA_MODE_STATIC_DOWN">
+            <summary>
+            Camera Static Down
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.NPointCalib.MVD_CAMERA_MODE.MVD_CAMERA_MODE_MOVE">
+            <summary>
+            Camera Move
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NPointCalib.MVD_CALIB_POINT_F">
+            <summary>
+            calib point info with 'float' type
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NPointCalib.CNPointCalibBasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CNPointCalibBasicParam.OffsetPointList">
+            <summary>
+            平移点列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CNPointCalibBasicParam.RotatePointList">
+            <summary>
+            旋转点列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CNPointCalibBasicParam.OriginPoint">
+            <summary>
+            标定原点坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CNPointCalibBasicParam.CameraMode">
+            <summary>
+            相机模式
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NPointCalib.CNPointCalibResult">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibResult.#ctor">
+            <summary>
+            N点标定结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CNPointCalibResult.OffsetPointCalibInfo">
+            <summary>
+            OffsetPointCalib结果
+            </summary> 
+            <remarks>推荐使用PlatformCalib结果，本属性为保持历史版本兼容性而保留</remarks>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CNPointCalibResult.PlatformCalibInfo">
+            <summary>
+            PlatformCalib结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CNPointCalibResult.CalibMatrixToParamInfo">
+            <summary>
+            N点标定homo矩阵转参数
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NPointCalib.CNPointCalibTool">
+            <summary>
+            N点标定Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.#ctor">
+            <summary>
+            N点标定Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this PMAlign Pattern.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this PMAlign Pattern.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this PMAlign Pattern
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this PMAlign Pattern
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.ExportCalibFile(System.String)">
+            <summary>
+            导出标定文件
+            </summary>
+            <param name="filePath">标定文件</param>
+            <remarks>xml文件或iwcal文件</remarks>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NPointCalib.CNPointCalibTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CNPointCalibTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NPointCalib.CNPointCalibTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

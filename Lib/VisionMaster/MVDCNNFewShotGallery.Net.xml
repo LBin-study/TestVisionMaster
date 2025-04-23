@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCNNFewShotGallery.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.MVDCNNFewShotGallery.MVD_CNN_REGION_TYPE">
+            <summary>
+            区域类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNFewShotGallery.MVD_CNN_REGION_TYPE.MVD_REGION_NEGATIVE">
+            <summary>
+            负向区域
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNFewShotGallery.MVD_CNN_REGION_TYPE.MVD_REGION_POSITIVE">
+            <summary>
+            正向区域
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFewShotGallery.MVD_CNN_FEWSHOT_MODEL_TYPE">
+            <summary>
+            使用的建模模型类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNFewShotGallery.MVD_CNN_FEWSHOT_MODEL_TYPE.FEWSHOT_INVALID_MODELING">
+            <summary>
+            无效类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNFewShotGallery.MVD_CNN_FEWSHOT_MODEL_TYPE.FEWSHOT_DETECT_MODELING">
+            <summary>
+            FewShot目标检测建模模型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNFewShotGallery.MVD_CNN_FEWSHOT_MODEL_TYPE.FEWSHOT_DETECT_ANGLE_MODELING">
+            <summary>
+            FewShot目标检测建模模型，开启角度
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNFewShotGallery.MVD_CNN_FEWSHOT_MODEL_TYPE.FEWSHOT_INSSEG_MODELING">
+            <summary>
+            FewShot实例分割模型建模
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVDCNNFewShotGallery.MVD_CNN_FEWSHOT_MODEL_TYPE.FEWSHOT_INSSEG_ANGLE_MODELING">
+            <summary>
+            FewShot实例分割模型建模，开启角度(暂不支持)
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySample">
+            <summary>
+            Gallery样本类，用户可通过接口创建其实例向Gallery注册e.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySample.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySample.GetImage(System.Int32)">
+            <summary>
+            获取注册图像，浅拷贝
+            </summary>
+            <param name="nImageIndex">[IN] 注册图像索引，范围[0, GetImageNum())</param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySample.AddImage(VisionDesigner.CMvdImage)">
+            <summary>
+            添加注册图像，浅拷贝
+            </summary>
+            <param name="cRegisterImage">[IN] 注册图像，浅拷贝</param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySample.ClearImages">
+            <summary>
+            清理所有已添加的注册图像,清空图像会同步清空图片所对应的ROI
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySample.AddPositiveROI(System.Int32,VisionDesigner.CMvdShape,System.String)">
+            <summary>
+            设置注册图像正类别ROI，深拷贝, 仅支持多边形,每个注册图像最大支持十个ROI,ROI和标签名一一对应。
+            </summary>
+            <param name="nImageIndex">[IN] 注册图像索引，范围[0, GetImageNum())</param>
+            <param name="cROIShape">[IN] ROI,仅支持多边形</param>
+            <param name="strLabelName">[IN] 标签名，每一个ROI对应一个类别名></param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySample.AddNegativeROI(System.Int32,VisionDesigner.CMvdShape)">
+            <summary>
+            设置注册图像负类别ROI，深拷贝, 仅支持多边形,每个注册图像最大支持十个ROI,不需要设置类别名,内部指定
+            </summary>
+            <param name="nImageIndex"> [IN] 注册图像索引，范围[0, GetImageNum())</param>
+            <param name="cROIShape">[IN] ROI,仅支持多边形</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySample.GetROINum(System.Int32)">
+            <summary>
+            获取已添加ROI数量
+            </summary>
+            <param name="nImageIndex">[IN] 注册图像索引，范围[0, GetImageNum())</param>
+            <returns>已添加ROI数量</returns>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySample.GetROI(System.Int32,System.Int32,VisionDesigner.MVDCNNFewShotGallery.MVD_CNN_REGION_TYPE@,System.String@)">
+            <summary>
+            根据索引查询已添加ROI信息
+            </summary>
+            <param name="nImageIndex">[IN] 注册图像索引，范围[0, GetImageNum())</param>
+            <param name="nRoiIndex">[IN] ROI索引，范围[0, NumOfROIs)</param>
+            <param name="enRoiType">[OUT] ROI类型，参见MVD_CNN_REGION_TYPE</param>
+            <param name="szLabelName">[OUT] 类别名</param>
+            <returns>指定索引处ROI的信息，出错时抛出异常</returns>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySample.ClearROIs(System.Int32)">
+            <summary>
+            清理所有已添加ROI
+            </summary>
+            <param name="nImageIndex">[IN] 注册图像索引，范围[0, GetImageNum())</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySample.ImageNum">
+            <summary>
+            获取已添加注册图像数量
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySampleSet">
+            <summary>
+            Gallery样本集类，用于管理样本。
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySampleSet.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySampleSet.AddSample(VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySample)">
+            <summary>
+            增加样本，浅拷贝
+            </summary>
+            <param name="pSample">[IN] 样本</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySampleSet.GetSample(System.Int32)">
+            <summary>
+            获取样本
+            </summary>
+            <param name="nIndex">[IN] 样本索引，从0开始计数</param>
+            <returns>样本</returns>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySampleSet.RemoveSample(System.Int32)">
+            <summary>
+            移除指定的样本
+            </summary>
+            <param name="nIndex">[IN] 样本索引，从0开始计数</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySampleSet.ClearSamples">
+            <summary>
+            清除所有样本
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGallerySampleSet.SampleNum">
+            <summary>
+            获取样本数量
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicInfo">
+            <summary>
+            Gallery类别基本信息类，用户可通过Gallery管理类的查询接口获取类别的具体信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicInfo.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicInfo.ClassNum">
+            <summary>
+            类别数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicInfo.InstanceNumList">
+            <summary>
+            每个类别所对应的实例数,InstanceNumList数组长度与ClassNum一致,列表索引对应类别索引
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicInfo.LabelNameList">
+            <summary>
+            每个类别所对应的类别名,LabelNameList数组长度与ClassNum一致,列表索引对应类别索引
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicInfo.ClassImageSizeList">
+            <summary>
+            当前类别建模分辨率,ClassImageSizeList数组长度与ClassNum一致,列表索引对应类别索引
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicInfo.ClassAreaList">
+            <summary>
+            当前类别的最大面积,ClassAreaList数组长度与ClassNum一致,列表索引对应类别索引
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicInfo.ModelType">
+            <summary>
+            建模时模型类型
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryInstanceInfo">
+            <summary>
+            实例信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryInstanceInfo.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryInstanceInfo.InstanceImage">
+            <summary>
+            实例缩略图
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryInstanceInfo.InstanceContour">
+            <summary>
+            实例轮廓
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicParam">
+            <summary>
+            Classes for describing basic param of CNNGalleryBasicParam.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicParam.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicParam.LoadModel(System.String)">
+            <summary>
+            Load model from local file.
+            </summary>
+            <param name="filePath">file path of the model</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicParam.LoadModelData(System.Byte[],System.Int64)">
+            <summary>
+            Load model from local data.
+            </summary>
+            <param name="modeldata">data of the model</param>
+            <param name="modelsize">size of the model</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicParam.LoadGallery(System.String)">
+            <summary>
+            Load gallery from local file.
+            </summary>
+            <param name="filePath">file path of the gallery</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryBasicParam.LoadGalleryData(System.Byte[],System.Int64)">
+            <summary>
+            Load gallery from local data.
+            </summary>
+            <param name="gallerydata">data of the gallery</param>
+            <param name="gallerysize">size of the gallery</param>
+        </member>
+        <member name="T:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager">
+            <summary>
+            CNNGalleryManager
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.#ctor(VisionDesigner.MVD_ALGORITHM_PLATFORM_TYPE)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.Dispose">
+            <summary>
+            Release
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this CNNFewShotGallery tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this CNNFewShotGallery tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this CNNFewShotGallery tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this CNNFewShotGallery tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.QueryBasicInfo">
+            <summary>
+            查询基本信息.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.QueryInstanceInfo(System.Int32,System.Int32)">
+            <summary>
+            查询实例信息
+            </summary>
+            <param name="nClassIndex">[IN] 类别索引，范围[0, 类别数)</param>
+            <param name="nInstanceIndex">[IN] 实例索引，范围[0, 实例数),可通过基本信息获取实例数</param>
+            <returns>实例信息</returns>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.RegisterSampleSet">
+            <summary>
+            注册
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.DeleteClass(System.Int32)">
+            <summary>
+            删除类别
+            </summary>
+            <param name="nClassIndex">[IN] 类别索引，范围[0, 类别数)</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.DeleteInstance(System.Int32,System.Int32)">
+            <summary>
+            删除实例
+            </summary>
+            <param name="nClassIndex">[IN] 类别索引，范围[0, 类别数)</param>
+            <param name="nInstanceIndex">[IN] 实例索引，范围[0, 实例数),可通过基本信息获取实例数</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.ClearGallery">
+            <summary>
+            Clear gallery data.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.SaveGalleryData(System.String)">
+            <summary>
+            Save gallery to local file.
+            </summary>
+            <param name="filePath">file path</param>
+        </member>
+        <member name="M:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.Dispose(System.Boolean)">
+            <summary>
+            Release resources
+            </summary>
+            <param name="bDisposeStatus">Flag of whether to release managed and unmanaged resource.</param>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDCNNFewShotGallery.CNNFewShotGalleryManager.PerformanceAssistant">
+            <summary>
+            性能配置
+            </summary>
+        </member>
+    </members>
+</doc>

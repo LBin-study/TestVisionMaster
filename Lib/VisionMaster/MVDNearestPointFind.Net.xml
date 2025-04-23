@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDNearestPointFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.NearestPointFind.CNearestPointFindBasicParam">
+            <summary>
+            NearestPoint查找基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NearestPointFind.CNearestPointFindBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NearestPointFind.CNearestPointFindBasicParam.Distance">
+            <summary>
+            查找距离
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NearestPointFind.CNearestPointFindBasicParam.Point">
+            <summary>
+            查找中心点
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NearestPointFind.CNearestPointFindResult">
+            <summary>
+            NearestPoint查找结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NearestPointFind.CNearestPointFindResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NearestPointFind.CNearestPointFindResult.Status">
+            <summary>
+            查找状态
+            </summary>
+            <remarks>0:查找NearestPoint失败；1:查找NearestPoint成功并输出</remarks>
+        </member>
+        <member name="P:VisionDesigner.NearestPointFind.CNearestPointFindResult.OutPoint">
+            <summary>
+            OutPoint
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NearestPointFind.CNearestPointFindResult.OutBox">
+            <summary>
+            OutBox
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.NearestPointFind.CNearestPointFindTool">
+            <summary>
+            NearestPoint查找工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NearestPointFind.CNearestPointFindTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NearestPointFind.CNearestPointFindTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NearestPointFind.CNearestPointFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NearestPointFind.CNearestPointFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NearestPointFind.CNearestPointFindTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NearestPointFind.CNearestPointFindTool.Run">
+            <summary>
+            执行操作
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NearestPointFind.CNearestPointFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.NearestPointFind.CNearestPointFindTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus"></param>
+        </member>
+        <member name="P:VisionDesigner.NearestPointFind.CNearestPointFindTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NearestPointFind.CNearestPointFindTool.RegionImage">
+            <summary>
+            掩膜图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NearestPointFind.CNearestPointFindTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.NearestPointFind.CNearestPointFindTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

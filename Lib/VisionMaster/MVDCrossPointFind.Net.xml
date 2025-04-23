@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCrossPointFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CrossPointFind.MVD_EDGEPOINT_STATUS">
+            <summary>
+            几何边缘点状态
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CrossPointFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_USED">
+            <summary>
+            查找成功并使用
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CrossPointFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_NO_USED">
+            <summary>
+            查找成功，放弃使用
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CrossPointFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_NO_FIND">
+            <summary>
+            查找失败
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CrossPointFind.MVD_EDGE_POLARITY">
+            <summary>
+            边缘极性类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CrossPointFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_DARK_TO_BRIGHT">
+            <summary>
+            由黑到白边
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CrossPointFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BRIGHT_TO_DARK">
+            <summary>
+            由白到黑边
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CrossPointFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BOTH">
+            <summary>
+            两种类型边
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CrossPointFind.CCrossPointFindEdgePointInfo">
+            <summary>
+            边缘交点边缘点信息类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindEdgePointInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindEdgePointInfo.EdgePoint">
+            <summary>
+            边缘点坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindEdgePointInfo.Score">
+            <summary>
+            边缘点得分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindEdgePointInfo.Distance">
+            <summary>
+            边缘点距离
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindEdgePointInfo.Polarity">
+            <summary>
+            边缘点极性
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindEdgePointInfo.Status">
+            <summary>
+            边缘点状态
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CrossPointFind.CCrossPointFindLineInfo">
+            <summary>
+            边缘交点边缘线信息类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindLineInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindLineInfo.Line">
+            <summary>
+            直线位置
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindLineInfo.EdgePointInfoList">
+            <summary>
+            边缘点信息列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CrossPointFind.CCrossPointFindResult">
+            <summary>
+            边缘交点检测结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindResult.Status">
+            <summary>
+            检测状态,1:有效、其他:无效
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindResult.IntersectionPoint">
+            <summary>
+            交叉点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindResult.IntersectionAngle">
+            <summary>
+            交叉角度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindResult.Line0Info">
+            <summary>
+            获取结果线0信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindResult.Line1Info">
+            <summary>
+            获取结果线1信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindResult.CaliperBox0List">
+            <summary>
+            卡尺列表0
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindResult.CaliperBox1List">
+            <summary>
+            卡尺列表1
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CrossPointFind.CCrossPointFindTool">
+            <summary>
+            边缘交点工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindTool.#ctor">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取运行参数
+            </summary>
+            <param name="strKeyName">参数名称</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置运行参数
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存算法运行参数配置
+            </summary>
+            <param name="arrFileBuf">参数信息保存buffer</param>
+            <param name="nConfigDataSize">传入buffer的大小</param>
+            <param name="nConfigDataLen">实际所需buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载算法运行参数配置
+            </summary>
+            <param name="arrFileBuf">参数信息加载buffer</param>
+            <param name="nConfigDataSize">传入buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindTool.Run">
+            <summary>
+            执行算法处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CrossPointFind.CCrossPointFindTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindTool.InputImage">
+            <summary>
+            算法处理输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindTool.MaskImage">
+            <summary>
+            算法处理掩膜图像(只包含屏蔽区信息)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindTool.ROI0">
+            <summary>
+            输入ROI0
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindTool.ROI1">
+            <summary>
+            输入ROI1
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CrossPointFind.CCrossPointFindTool.Result">
+            <summary>
+            算法处理结果
+            </summary>
+        </member>
+    </members>
+</doc>

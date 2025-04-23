@@ -1,0 +1,559 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDMarkFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.MarkFind.MVD_MARKFIND_PAT_TYPE">
+            <summary>
+            特征匹配类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MarkFind.MVD_MARKFIND_PAT_TYPE.MVD_MARK_PAT_TYPE_FAST">
+            <summary>
+            快速特征匹配
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MarkFind.MVD_MARKFIND_PAT_TYPE.MVD_MARK_PAT_TYPE_HP">
+            <summary>
+            高精度特征匹配
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MarkFind.MVD_MARKFIND_ROI_TYPE">
+            <summary>
+            ROI类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MarkFind.MVD_MARKFIND_ROI_TYPE.MVD_MARK_TYPE_CROSS">
+            <summary>
+            空心十字
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MarkFind.MVD_MARKFIND_ROI_TYPE.MVD_MARK_TYPE_RECT">
+            <summary>
+            空心矩形
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MarkFind.CPatMatchEdgePoint">
+            <summary>
+            边缘点
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CPatMatchEdgePoint.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CPatMatchEdgePoint.Position">
+            <summary>
+            坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CPatMatchEdgePoint.Score">
+            <summary>
+            分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CPatMatchEdgePoint.Weight">
+            <summary>
+            权重
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MarkFind.CPatMatchOutline">
+            <summary>
+            模板匹配轮廓
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CPatMatchOutline.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CPatMatchOutline.EdgePointList">
+            <summary>
+            边缘点集合
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MarkFind.CMarkFindPattern">
+            <summary>
+            模板匹配模型类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.Train">
+            <summary>
+            训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.ImportPattern(System.String)">
+            <summary>
+            导入模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.ImportPattern(System.Byte[])">
+            <summary>
+            导入模板
+            </summary>
+            <param name="xmlData">xml模板字节数据</param>
+        </member>
+        <!-- 对于成员“M:VisionDesigner.MarkFind.CMarkFindPattern.ImportPattern(System.Byte[],System.UInt64)”忽略有格式错误的 XML 注释 -->
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.ExportPattern(System.String)">
+            <summary>
+            导出模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.ExportPattern(System.Byte[]@)">
+            <summary>
+            导出模板
+            </summary>
+            <param name="xmlData">导出模型的字节数组</param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.ParseItemsDataModule(System.Xml.XmlNode)">
+            <summary>
+            解析ItemsData节点
+            </summary>
+            <param name="itemDataNode"></param>
+            <param name="RegionListEx"></param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.ParsePointSetModule(System.Xml.XmlNode)">
+            <summary>
+            解析Polygon节点
+            </summary>
+            <param name="polygonROINode"></param>
+            <param name="polygonRegion"></param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.CreateCurImageModuleXml(System.Xml.XmlDocument@,System.Xml.XmlElement@,VisionDesigner.CMvdImage)">
+            <summary>
+            创建CurImage
+            </summary>
+            <param name="xDoc"></param>
+            <param name="curImageElement"></param>
+            <param name="curImage"></param>
+        </member>
+        <member name="F:VisionDesigner.MarkFind.CMarkFindPattern.m_bIsDisposed">
+            <summary>
+            对象是否已经调用Dispose()
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.BuildPreCondition">
+            <summary>
+            前置条件检查与算法句柄ReInit
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPattern.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPattern.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPattern.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPattern.ROIParam">
+            <summary>
+            ROI参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPattern.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPattern.MaskImage">
+            <summary>
+            建模掩膜图像(可与图形叠加)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPattern.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPattern.ModelSize">
+            <summary>
+            模型大小
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPattern.PatModelData">
+            <summary>
+            特征匹配模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPattern.PatModelSize">
+            <summary>
+            特征匹配模型大小
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPattern.RunStatus">
+            <summary>
+            是否可以获取结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MarkFind.CMarkFindPatternBasicParam">
+            <summary>
+            建模基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPatternBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPatternBasicParam.SetPatType(System.Int32)">
+            <summary>
+            使用数值设置特征匹配类型 nPatType:MVD_MARKFIND_PAT_TYPE的枚举值  当前为0和1
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPatternBasicParam.PatType">
+            <summary>
+            特征匹配类型  默认高精度特征匹配
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MarkFind.CMarkFindPatternData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPatternData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPatternData.MatchPoint">
+            <summary>
+            模板中的匹配点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPatternData.OutputLine">
+            <summary>
+            输出直线
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MarkFind.CMarkFindPatternResult">
+            <summary>
+            模型结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindPatternResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPatternResult.Data">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindPatternResult.OutlineList">
+            <summary>
+            模型轮廓
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MarkFind.CMarkROIParam">
+            <summary>
+            模型结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkROIParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkROIParam.SetMarkType(System.Int32)">
+            <summary>
+            使用数值设置ROI类型 nMarkType:MVD_MARKFIND_ROI_TYPE的枚举值  当前为0和1
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkROIParam.MarkType">
+            <summary>
+            ROI类型  默认十字矩形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkROIParam.Center">
+            <summary>
+            ROI中心点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkROIParam.Angle">
+            <summary>
+            旋转角度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkROIParam.OutterWidth">
+            <summary>
+            外圈宽度 默认十字矩形
+            在十字矩形模式下 nIndex：[0,1]，其中索引值为0的为旋转前宽度最大的矩形 空心矩形模式下 nIndex仅为0
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkROIParam.OutterHeight">
+            <summary>
+            外圈高度 默认十字矩形
+            在十字矩形模式下 nIndex：[0,1]，其中索引值为0的为旋转前宽度最大的矩形 空心矩形模式下 nIndex仅为0
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkROIParam.InnerWidth">
+            <summary>
+            内圈宽度 默认十字矩形
+            在十字矩形模式下 nIndex：[0,1]，其中索引值为0的为旋转前宽度次大的矩形 空心矩形模式下 nIndex仅为0
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkROIParam.InnerHeight">
+            <summary>
+            内圈高度 默认十字矩形
+            在十字矩形模式下 nIndex：[0,1]，其中索引值为0的为旋转前宽度次大的矩形 空心矩形模式下 nIndex仅为0
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MarkFind.CMarkFindBasicParam">
+            <summary>
+            匹配基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindBasicParam.ShowOutlineStatus">
+            <summary>
+            是否显示匹配轮廓
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MarkFind.CMarkFindResultInfo">
+            <summary>
+            匹配结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindResultInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindResultInfo.MatchBox">
+            <summary>
+            匹配框
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindResultInfo.MatchPoint">
+            <summary>
+            匹配点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindResultInfo.ScaleX">
+            <summary>
+            匹配尺度X
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindResultInfo.ScaleY">
+            <summary>
+            匹配尺度Y
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindResultInfo.MatchScore">
+            <summary>
+            相似分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindResultInfo.OutputLine">
+            <summary>
+            匹配尺度 索引值[0,3]
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MarkFind.CMarkFindResult">
+            <summary>
+            匹配结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindResult.ResultInfoList">
+            <summary>
+            匹配结果列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindResult.OutlineList">
+            <summary>
+            轮廓列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MarkFind.CMarkFindTool">
+            <summary>
+            模板匹配Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindTool.#ctor(System.Boolean)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MarkFind.CMarkFindTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindTool.RegionImage">
+            <summary>
+            输入掩膜
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindTool.ROI">
+            <summary>
+            ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindTool.Pattern">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MarkFind.CMarkFindTool.VMControlBase">
+            <summary>
+            VM控件对象
+            </summary>
+        </member>
+    </members>
+</doc>

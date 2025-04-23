@@ -1,0 +1,405 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDEdgeFlawInsp.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.EdgeFlawInsp.CEdgeFlawResultBase">
+            <summary>
+            边缘结果基类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawResultBase.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawResultBase.CaliperBoxList">
+            <summary>
+            边缘检测的卡尺Box列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawResultBase.EdgePointList">
+            <summary>
+            边缘信息列表
+            </summary>
+            <remarks>T1 点坐标, T2 点状态</remarks>
+            <remarks>点状态: 0正常, 1缺陷</remarks>
+        </member>
+        <member name="T:VisionDesigner.EdgeFlawInsp.MVD_SINGLE_EDGE_FLAW_TYPE">
+            <summary>
+            边缘缺陷类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.EdgeFlawInsp.MVD_SINGLE_EDGE_FLAW_TYPE.MVD_EDGEINSP_FLAW_TYPE_EDGE_OFFSET">
+            <summary>
+            边缘位置偏移
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.EdgeFlawInsp.MVD_SINGLE_EDGE_FLAW_TYPE.MVD_EDGEINSP_FLAW_TYPE_EDGE_ROUGH">
+            <summary>
+            边缘凸起或凹坑缺陷
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.EdgeFlawInsp.MVD_SINGLE_EDGE_FLAW_TYPE.MVD_EDGEINSP_FLAW_TYPE_EDGE_CRACK">
+            <summary>
+            边缘断裂缺陷
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.EdgeFlawInsp.MVD_SINGLE_EDGE_FLAW_TYPE.MVD_EDGEINSP_FLAW_TYPE_EDGE_GRAD">
+            <summary>
+            边缘阶梯差缺陷
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CompressDataHelper.CompressToNormalMask(System.Byte[],System.Int32)">
+            <summary>
+            压缩Mask转主Mask
+            </summary>
+            <param name="compressMask"></param>
+            <param name="flagNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CompressDataHelper.NormalToCompressMask(System.Byte[],System.Int32)">
+            <summary>
+            压缩Mask转正常Mask
+            </summary>
+            <param name="otherMask"></param>
+            <param name="flagNum">标记种类个数</param>
+            <returns></returns>
+        </member>
+        <member name="T:VisionDesigner.EdgeFlawInsp.CEdgeFlawInfo">
+            <summary>
+            缺陷信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInfo.FlawBox">
+            <summary>
+            缺陷包围框
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInfo.FlawLength">
+            <summary>
+            缺陷长度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInfo.FlawType">
+            <summary>
+            缺陷类型
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInfo.CaliperStartIndex">
+            <summary>
+            缺陷卡尺起始索引
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInfo.CaliperEndIndex">
+            <summary>
+            缺陷卡尺终止索引
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspBasicParam">
+            <summary>
+            边缘缺陷检测基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspBasicParam.BasePoint">
+            <summary>
+            检测基准点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspBasicParam.RunningPoint">
+            <summary>
+            检测运行点
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspResult">
+            <summary>
+            边缘缺陷检测结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspResult.FlawInfoList">
+            <summary>
+            缺陷信息列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspResult.CaliperBoxList">
+            <summary>
+            边缘检测的卡尺Box列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspResult.EdgePointList">
+            <summary>
+            边缘信息列表
+            </summary>
+            <remarks>T1 点坐标, T2 点状态</remarks>
+            <remarks>点状态: 0正常, 1缺陷</remarks>
+        </member>
+        <member name="T:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool">
+            <summary>
+            边缘缺陷检测Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.Run">
+            <summary>
+            执行检测
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.MaskImage">
+            <summary>
+            掩膜图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.Pattern">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawInspTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EdgeFlawInsp.MVD_EDGEINSP_PATTERN_TRAIN_MODE">
+            <summary>
+            模型训练模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.EdgeFlawInsp.MVD_EDGEINSP_PATTERN_TRAIN_MODE.MVD_EDGEINSP_PATTERN_TRAIN_I">
+            <summary>
+            模型创建失败时，不输出临时结果，像边缘点、卡尺等
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.EdgeFlawInsp.MVD_EDGEINSP_PATTERN_TRAIN_MODE.MVD_EDGEINSP_PATTERN_TRAIN_II">
+            <summary>
+            模型创建失败时，输出临时结果，像边缘点、卡尺等
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern">
+            <summary>
+            边缘缺陷检测模型
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.Train">
+            <summary>
+            训练
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.ImportPattern(System.String)">
+            <summary>
+            导入模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.ExportPattern(System.String)">
+            <summary>
+            导出模板
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.RegionImage">
+            <summary>
+            输入掩摸图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawPattern.TrainMode">
+            <summary>
+            模型训练模式;默认为MVD_EDGEINSP_PATTERN_TRAIN_I
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EdgeFlawInsp.CEdgeFlawPatternBasicParam">
+            <summary>
+            边缘缺陷模型基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPatternBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawPatternBasicParam.TrajList">
+            <summary>
+            边缘模型建模轨迹列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EdgeFlawInsp.CEdgeFlawPatternResult">
+            <summary>
+            边缘模型训练结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EdgeFlawInsp.CEdgeFlawPatternResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EdgeFlawInsp.CEdgeFlawPatternResult.Data">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+    </members>
+</doc>

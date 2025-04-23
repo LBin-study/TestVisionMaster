@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCaliper.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.Caliper.MVD_EDGE_POLARITY">
+            <summary>
+            Type of the polarity of the edge point
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Caliper.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_DARK_TO_BRIGHT">
+            <summary>
+            From black to white, default value
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Caliper.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BRIGHT_TO_DARK">
+            <summary>
+            From white to black
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Caliper.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BOTH">
+            <summary>
+            both
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Caliper.MVD_CALIPERTOOL_EDGEMODE.MVD_CALIPERTOOL_EDGEMODE_SINGLE_EDGE">
+            <summary>
+            Caliper Tool Work mode : SingleEdge, default value
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Caliper.MVD_CALIPERTOOL_EDGEMODE.MVD_CALIPERTOOL_EDGEMODE_EDGE_PAIR">
+            <summary>
+            Caliper Tool Work mode : EdgePair
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Caliper.CCaliperSingleEdgeInfo">
+            <summary>
+            Class for describing single edge Information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperSingleEdgeInfo.EdgePoint">
+            <summary>
+            coordinate of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperSingleEdgeInfo.Bias">
+            <summary>
+            bias of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperSingleEdgeInfo.Polarity">
+            <summary>
+            polarity of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperSingleEdgeInfo.Score">
+            <summary>
+            score of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperSingleEdgeInfo.Shape">
+            <summary>
+            获取边缘点拟合图形(直线或者圆弧）
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Caliper.CCaliperSingleEdgeFindResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperSingleEdgeFindResult.SingleEdgeInfo">
+            <summary>
+            Gets the list of single edge information
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Caliper.CCaliperEdgeInfoForEdgePair">
+            <summary>
+            Class for describing single edge information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperEdgeInfoForEdgePair.EdgePoint">
+            <summary>
+            coordinate of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperEdgeInfoForEdgePair.Bias">
+            <summary>
+            relevant distance of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperEdgeInfoForEdgePair.Polarity">
+            <summary>
+            polarity of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperEdgeInfoForEdgePair.Shape">
+            <summary>
+            获取边缘点拟合图形(直线或者圆弧）
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Caliper.CCaliperEdgePairInfo">
+            <summary>
+            Class for describing edge pair information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperEdgePairInfo.Edge0Info">
+            <summary>
+            information of the one of the edge points
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperEdgePairInfo.Edge1Info">
+            <summary>
+            information of the other of the edge points
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperEdgePairInfo.Center">
+            <summary>
+            center point of edge pair
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperEdgePairInfo.Position">
+            <summary>
+            position of edge pair
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperEdgePairInfo.Distance">
+            <summary>
+            distance of edge pair
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperEdgePairInfo.Score">
+            <summary>
+            score of edge pair
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperEdgePairInfo.EdgePairLine">
+            <summary>
+            获取边缘点拟合图形(直线或者圆弧）
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Caliper.CCaliperEdgePairResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperEdgePairResult.EdgePairInfo">
+            <summary>
+            Gets the list of edge pair information
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Caliper.CCaliperResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperResult.SingleEdgeFindResult">
+            <summary>
+            Result of single edge find
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperResult.EdgePairResult">
+            <summary>
+            Result of edge pair
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Caliper.CCaliperBasicParam">
+            <summary>
+            Classes for describing Caliper basic param information
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Caliper.CCaliperBasicParam.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperBasicParam.EdgeMode">
+            <summary>
+            Aspect ratio
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Caliper.CCaliperTool">
+            <summary>
+            the class for the CaliperTool
+            </summary>
+            <remarks>The CaliperTool encapsulates all of the classes required to perform a edge width analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.Caliper.CCaliperTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Caliper.CCaliperTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Caliper.CCaliperTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Caliper.CCaliperTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Caliper.CCaliperTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this Caliper tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.Caliper.CCaliperTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this Caliper tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.Caliper.CCaliperTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this Caliper tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.Caliper.CCaliperTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this Caliper tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.Caliper.CCaliperTool.Run">
+            <summary>
+            Run the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Caliper.CCaliperTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Caliper.CCaliperTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperTool.BasicParam">
+            <summary>
+            BasicParam
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperTool.InputImage">
+            <summary>
+            InputImage
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperTool.ROI">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Caliper.CCaliperTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

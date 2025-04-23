@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDMKInspV2.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.MKInspV2.CMKInspBasicParamV2">
+            <summary>
+            字符缺陷检测基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV2.CMKInspBasicParamV2.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV2.CMKInspBasicParamV2.Method">
+            <summary>
+            检测算法
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.CMKInspResultV2">
+            <summary>
+            字符缺陷检测结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV2.CMKInspResultV2.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV2.CMKInspResultV2.MarkBoxList">
+            <summary>
+            字符定位框列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV2.CMKInspResultV2.FlawBoxList">
+            <summary>
+            字符缺陷框列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.CMKInspToolV2">
+            <summary>
+            字符缺陷检测工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV2.CMKInspToolV2.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV2.CMKInspToolV2.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV2.CMKInspToolV2.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV2.CMKInspToolV2.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV2.CMKInspToolV2.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV2.CMKInspToolV2.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="runParamBufferBytes">要保存运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+            <param name="runParamBufferLength">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV2.CMKInspToolV2.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="runParamBufferBytes">导入的运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV2.CMKInspToolV2.ImportPattern(System.String)">
+            <summary>
+            导入模型文件
+            </summary>
+            <param name="filePath">字符缺陷检测模板文件</param>
+        </member>
+        <member name="M:VisionDesigner.MKInspV2.CMKInspToolV2.Run">
+            <summary>
+            算法执行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MKInspV2.CMKInspToolV2.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus"></param>
+        </member>
+        <member name="P:VisionDesigner.MKInspV2.CMKInspToolV2.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV2.CMKInspToolV2.ROI">
+            <summary>
+            ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV2.CMKInspToolV2.RegionImage">
+            <summary>
+            掩膜图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV2.CMKInspToolV2.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MKInspV2.CMKInspToolV2.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MKInspMethod">
+            <summary>
+            字符缺陷检测算法
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MKInspV2.MKInspMethod.CoarCorre">
+            <summary>
+            相关法
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MKInspV2.MKInspMethod.FineCompare">
+            <summary>
+            字符精细比对
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVD_ALGORITHM_TOOL_ABILITY">
+            @struct MVD_ALGORITHM_TOOL_ABILITY
+            @brief  算子Tool能力集结构
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVD_BOX_F">
+            @struct MVD_BOX_F
+            @brief  感兴趣区域-浮点型
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVD_IMAGE">
+            @struct MVD_IMAGE
+            @brief  图像格式表示结构体
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVDMKINSP_COAR_CORRE_MODEL_CREATE_INPUT">
+            @struct MVDMKINSP_COAR_CORRE_MODEL_CREATE_INPUT
+            @brief  逐点灰度相关建模输入
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVDMKINSP_COAR_CORRE_MODEL_CREATE_OUTPUT">
+            @struct MVDMKINSP_COAR_CORRE_MODEL_CREATE_OUTPUT
+            @brief  逐点灰度相关建模输出
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVDMKINSP_COAR_CORRE_MODEL_INSP_INPUT">
+            @struct MVDMKINSP_COAR_CORRE_MODEL_INSP_INPUT
+            @brief  逐点灰度相关建模输入
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVDMKINSP_COAR_CORRE_MODEL_INSP_OUTPUT">
+            @struct MVDMKINSP_COAR_CORRE_MODEL_INSP_OUTPUT
+            @brief  逐点灰度检测输出
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVDMKINSP_FINE_MEAN_STD_MODEL_CREATE_INPUT">
+            @struct MVDMKINSP_FINE_MEAN_STD_MODEL_CREATE_INPUT
+            @brief  均值-标准差模型创建输入结构体
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVDMKINSP_FINE_MEAN_STD_MODEL_CREATE_OUTPUT">
+            @struct MVDMKINSP_FINE_MEAN_STD_MODEL_CREATE_OUTPUT
+            @brief  均值-标准差模型创建输出结构体
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVDMKINSP_FINE_MEAN_STD_INSP_INPUT">
+            @struct MVDMKINSP_FINE_MEAN_STD_INSP_INPUT
+            @brief  均值方差法检测输入结构体
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVDMKINSP_IMG_DATA_GROUP">
+            @struct MVDMKINSP_IMG_DATA_GROUP
+            @brief  字符图像数据组
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVDMKINSP_FINE_MEAN_STD_INSP_OUTPUT">
+            @struct MVDMKINSP_FINE_MEAN_STD_INSP_OUTPUT
+            @brief  均值方差法检测输出结构体
+        </member>
+        <member name="T:VisionDesigner.MKInspV2.MVDMKINSP_COARCORRE_CORREDATA_GROUP">
+            @struct MVDMKINSP_COARCORRE_CORREDATA_GROUP
+            @brief  基于相关性计算的粗检测模块相关系数数据组
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDLineAlign.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.LineAlign.CLineAlignBasicParam">
+            <summary>
+            Class for describing basic parameter of LineAlign
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineAlign.CLineAlignBasicParam.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineAlign.CLineAlignBasicParam.ObjectLineList">
+            <summary>
+            object line
+            </summary> the number more than 1 
+        </member>
+        <member name="P:VisionDesigner.LineAlign.CLineAlignBasicParam.TargetLineList">
+            <summary>
+            target line
+            </summary> the number more than 1 
+        </member>
+        <member name="P:VisionDesigner.LineAlign.CLineAlignBasicParam.RotateCenter">
+            <summary>
+            rotate center
+            </summary> 
+        </member>
+        <member name="P:VisionDesigner.LineAlign.CLineAlignBasicParam.ShapeFlag">
+            <summary>
+            shape flag false:open true:close
+            </summary> 
+        </member>
+        <member name="P:VisionDesigner.LineAlign.CLineAlignBasicParam.AlignLine1Index">
+            <summary>
+            align point edge 1 index 
+            </summary> 
+        </member>
+        <member name="P:VisionDesigner.LineAlign.CLineAlignBasicParam.AlignLine2Index">
+            <summary>
+            align point edge 2 index 
+            </summary> 
+        </member>
+        <member name="P:VisionDesigner.LineAlign.CLineAlignBasicParam.AlignLineIndex">
+            <summary>
+            align edge index 
+            </summary> 
+        </member>
+        <member name="T:VisionDesigner.LineAlign.CLineAlignResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineAlign.CLineAlignResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineAlign.CLineAlignResult.Theta">
+            <summary>
+            theta direction offset
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineAlign.CLineAlignResult.TransX">
+            <summary>
+            x direction offset
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineAlign.CLineAlignResult.TransY">
+            <summary>
+            y direction offset
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.LineAlign.CLineAlignTool">
+            <summary>
+            the class for the CLineAlignTool
+            </summary>
+            <remarks>The CLineAlignTool encapsulates all of the classes required to perform a LineAlign analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.LineAlign.CLineAlignTool.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineAlign.CLineAlignTool.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineAlign.CLineAlignTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineAlign.CLineAlignTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineAlign.CLineAlignTool.Dispose">
+            <summary>
+            release resource
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineAlign.CLineAlignTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.LineAlign.CLineAlignTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.LineAlign.CLineAlignTool.m_bIsDisposed">
+            对象是否已经调用Dispose()
+        </member>
+        <member name="F:VisionDesigner.LineAlign.CLineAlignTool.m_stAlgorithm">
+            算法句柄
+        </member>
+        <member name="F:VisionDesigner.LineAlign.CLineAlignTool.m_pstInput">
+            输入指针
+        </member>
+        <member name="F:VisionDesigner.LineAlign.CLineAlignTool.m_pstOutput">
+            输出指针
+        </member>
+        <member name="F:VisionDesigner.LineAlign.CLineAlignTool.m_stProcInput">
+            输入结构体
+        </member>
+        <member name="F:VisionDesigner.LineAlign.CLineAlignTool.m_stProcOutput">
+            输出结构体
+        </member>
+        <member name="F:VisionDesigner.LineAlign.CLineAlignTool.m_arrObjectLine">
+            物体对象线
+        </member>
+        <member name="F:VisionDesigner.LineAlign.CLineAlignTool.m_arrTargetLine">
+            目标线
+        </member>
+        <member name="M:VisionDesigner.LineAlign.CLineAlignTool.Init">
+            初始化
+        </member>
+        <member name="M:VisionDesigner.LineAlign.CLineAlignTool.BuildPreConditon">
+            前置条件检测
+        </member>
+        <member name="M:VisionDesigner.LineAlign.CLineAlignTool.Dispose(System.Boolean)">
+            <summary>
+            release resource
+            </summary>
+            <param name="bDisposeStatus">Flag of whether release managed and unmanaged resource</param>
+        </member>
+        <member name="P:VisionDesigner.LineAlign.CLineAlignTool.BasicParam">
+            <summary>
+            basic parameter for SinglePointAlign
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.LineAlign.CLineAlignTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

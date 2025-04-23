@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDBoxMerge.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.BoxMerge.MVD_PREPRO_FLAW_PRIORITY_SORT_TYPE">
+            <summary>
+            Type of the flaw priority sort
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.BoxMerge.MVD_PREPRO_FLAW_PRIORITY_SORT_TYPE.MVD_PREPRO_FLAW_PRIORITY_SORT_TYPE_DESCEND">
+            <summary>
+            Sort in descending
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.BoxMerge.MVD_PREPRO_FLAW_PRIORITY_SORT_TYPE.MVD_PREPRO_FLAW_PRIORITY_SORT_TYPE_AESCEND">
+            <summary>
+            Sort in aescending
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.BoxMerge.MVD_PREPRO_BOX_MERGE_TYPE">
+            <summary>
+            Type of the box merge
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.BoxMerge.MVD_PREPRO_BOX_MERGE_TYPE.MVD_PREPRO_BOX_MERGE_TYPE_FLAW_PRIORITY">
+            <summary>
+            Merge by flaw priority label
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.BoxMerge.MVD_PREPRO_BOX_MERGE_TYPE.MVD_PREPRO_BOX_MERGE_TYPE_BOX_LABEL">
+            <summary>
+            Merge by box label
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.BoxMerge.MVD_PREPRO_BOX_MERGE_TYPE.MVD_PREPRO_BOX_MERGE_TYPE_NO_BOX_LABEL">
+            <summary>
+            Not applicable to any label to merge box
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeDataInfo.#ctor">
+            <summary>
+            CBoxMergeDataInfo constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxMerge.CBoxMergeDataInfo.Box">
+            <summary>
+            Box信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxMerge.CBoxMergeDataInfo.Label">
+            <summary>
+            Box标签
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeBasicParam.#ctor">
+            <summary>
+            CBoxMergeBasicParam constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxMerge.CBoxMergeBasicParam.InputBoxDataList">
+            <summary>
+            List of boxes data to be merged
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxMerge.CBoxMergeBasicParam.FlawPriorityList">
+            <summary>
+            List of flaw priority
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxMerge.CBoxMergeBasicParam.FlawPrioritySortType">
+            <summary>
+            Type of flaw priority sort
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxMerge.CBoxMergeBasicParam.BoxMergeType">
+            <summary>
+            Type of box merge
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.BoxMerge.CBoxMergeResult">
+            <summary>
+            Class for describing BoxMerge Result
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeResult.#ctor">
+            <summary>
+            CBoxMergeResult constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxMerge.CBoxMergeResult.OutputBoxDataList">
+            <summary>
+            融合后的box列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.BoxMerge.CBoxMergeTool">
+            <summary>
+            Class of the BoxMergeTool
+            </summary>
+            <remarks>The BoxMergeTool encapsulates all of the classes required to perform an box merge process.</remarks>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this BoxMerge tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this BoxMerge tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this BoxMerge tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this BoxMerge tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxMerge.CBoxMergeTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxMerge.CBoxMergeTool.Result">
+            <summary>
+            Result
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxMerge.CBoxMergeTool.BasicParam">
+            <summary>
+            BasicParam
+            </summary>
+        </member>
+    </members>
+</doc>

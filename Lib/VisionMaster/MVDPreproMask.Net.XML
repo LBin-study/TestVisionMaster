@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDPreproMask.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.PreproMask.CPreproMaskTool">
+            <summary>
+            掩膜算子
+            </summary>
+        </member>
+        <!-- 对于成员“F:VisionDesigner.PreproMask.CPreproMaskTool.m_nImageHeight”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“F:VisionDesigner.PreproMask.CPreproMaskTool.m_info”忽略有格式错误的 XML 注释 -->
+        <member name="M:VisionDesigner.PreproMask.CPreproMaskTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PreproMask.CPreproMaskTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PreproMask.CPreproMaskTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PreproMask.CPreproMaskTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PreproMask.CPreproMaskTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PreproMask.CPreproMaskTool.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PreproMask.CPreproMaskTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PreproMask.CPreproMaskTool.MaskImage">
+            <summary>
+            掩膜图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PreproMask.CPreproMaskTool.RegionList">
+            <summary>
+            RegionList
+            </summary>
+            <remarks>T1, 图形信息;T2, 是否感兴趣区域</remarks>
+            <remarks>图形仅支持矩形(支持带角度),扇环,圆,多边形</remarks>
+        </member>
+        <member name="P:VisionDesigner.PreproMask.CPreproMaskTool.RegionListEx">
+            <summary>
+            RegionListEx
+            </summary>
+            <remarks>T1, 图形信息;T2, 检测类型</remarks>
+            <remarks>图形仅支持矩形(支持带角度),扇环,圆,多边形</remarks>
+        </member>
+        <member name="P:VisionDesigner.PreproMask.CPreproMaskTool.OutputImage">
+            <summary>
+            输出图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PreproMask.CPreproMaskTool.InputImageWidth">
+            <summary>
+            输入图像宽
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PreproMask.CPreproMaskTool.InputImageHeight">
+            <summary>
+            输入图像高
+            </summary>
+        </member>
+    </members>
+</doc>

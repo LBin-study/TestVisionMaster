@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCode1DReader.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.Code1DReader.C1DCodeInfo">
+            <summary>
+            1D Code detail information
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeInfo.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeInfo.Type">
+            <summary>
+            Type of 1D code
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeInfo.Position">
+            <summary>
+            Position of 1D code,[0,3600],Clockwise
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeInfo.Angle">
+            <summary>
+            Angle of 1D code
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeInfo.Content">
+            <summary>
+            Content of 1D code
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeInfo.CharaterIndex">
+            <summary>
+            Charater Index of 1D code
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeInfo.Estppm">
+            <summary>
+            Estppm of 1D code
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code1DReader.C1DCodeQualityInfo">
+            <summary>
+            一维码等级信息描述类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeQualityInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfo.CodeQualityInfoType">
+            <summary>
+            一维码评级质量信息类型
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416">
+            <summary>
+            二维码等级信息描述类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.OverQuality">
+            <summary>
+            总体质量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.DecodeGrade">
+            <summary>
+            译码等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.EdgDeterminGrade">
+            <summary>
+            边缘确定度质量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.SymbolContrastGrade">
+            <summary>
+            对比度质量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.MinmumReflectGrade">
+            <summary>
+            最小反射率质量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.MinEdgeContrastGrade">
+            <summary>
+            最小边缘对比度质量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.ModulationGrade">
+            <summary>
+            模块均匀性等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.DecodabilityGrade">
+            <summary>
+            可译码性质量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.DefectsGrade">
+            <summary>
+            缺陷质量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.QuietZoneGrade">
+            <summary>
+            静区质量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.EdgDeterminScore">
+            <summary>
+            边缘确定度分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.SymbolContrastScore">
+            <summary>
+            对比度质量评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.MinmumReflectScore">
+            <summary>
+            最小反射率分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.MinEdgeContrastScore">
+            <summary>
+            最小边缘对比度分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.ModulationScore">
+            <summary>
+            模块均匀性分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.DecodabilityScore">
+            <summary>
+            可译码性分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.DefectsScore">
+            <summary>
+            缺陷分数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeQualityInfoByISO15416.QuietZoneScore">
+            <summary>
+            静区分数
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code1DReader.C1DCodeReaderResult">
+            <summary>
+            1D Code recognition result information
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeReaderResult.CodeInfoList">
+            <summary>
+            1D Code info list
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeReaderResult.CodeRegionList">
+            <summary>
+            1D Code region list
+            </summary>
+            <remarks>当前版本尚未支持,CodeRegionList.Count == 0</remarks>
+        </member>
+        <member name="T:VisionDesigner.Code1DReader.C1DCodeReaderTool">
+            <summary>
+            1D Code Tool
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.C1DCodeReaderTool.m_bIsDisposed">
+            <summary>
+            对象是否已经调用Dispose()
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.C1DCodeReaderTool.m_stAlgorithm">
+            <summary>
+            N点标定算法句柄
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.C1DCodeReaderTool.m_pstInput">
+            <summary>
+            输入指针
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.C1DCodeReaderTool.m_pstOutput">
+            <summary>
+            输出指针
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.C1DCodeReaderTool.m_stProcInput">
+            <summary>
+            输入结构体
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.C1DCodeReaderTool.m_stProcOutput">
+            <summary>
+            输出结构体
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.#ctor">
+            <summary>
+            Contructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.Finalize">
+            <summary>
+            DeContructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this PMAlign Pattern.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this PMAlign Pattern.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this PMAlign Pattern
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this PMAlign Pattern
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.BuildPreCondition">
+            <summary>
+            前置条件处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.MVD_IsTextUTF8(System.Byte[])">
+            <summary>
+            二维码识别结果编码类型判断
+            </summary>
+            <param name="pText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.GetCodeType(MVD.Internal.Comm.MVDBCR_TYPE)">
+            <summary>
+            一维码类型转换
+            </summary>
+            <param name="enCodeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeReaderTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeReaderTool.InputImage">
+            <summary>
+            InputImage
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeReaderTool.ROI">
+            <summary>
+            ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeReaderTool.Result">
+            <summary>
+            result of 1D Code recognition
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code1DReader.C1DCodeRegion">
+            <summary>
+            1D Code region information
+            </summary>
+            <remarks>当前版本尚未支持</remarks>
+        </member>
+        <member name="M:VisionDesigner.Code1DReader.C1DCodeRegion.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeRegion.CenterPoint">
+            <summary>
+            CenterPoint Coord
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeRegion.TextureAngle">
+            <summary>
+            Texture Angle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeRegion.PhysicalAngle">
+            <summary>
+            Physical Angle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeRegion.RotateLeftBorder">
+            <summary>
+            Rotate LeftBorder
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code1DReader.C1DCodeRegion.RotateRightBorder">
+            <summary>
+            Rotate RightBorder
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code1DReader.MVD_VERIFYCODE_TYPE">
+            <summary>
+            Type of 1D Code Verify input
+            </summary>
+        </member>
+        <!-- 对于成员“F:VisionDesigner.Code1DReader.MVD_VERIFYCODE_TYPE.MVD_CODE_TYPE_NONE”忽略有格式错误的 XML 注释 -->
+        <member name="F:VisionDesigner.Code1DReader.MVD_VERIFYCODE_TYPE.MVD_CODE_TYPE_CODE128">
+            <summary>
+            code128码（一维码）
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_VERIFYCODE_TYPE.MVD_CODE_TYPE_CODE39">
+            <summary>
+            code39码（一维码）
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code1DReader.MVD_1DCODE_TYPE">
+            <summary>
+            Type of 1D Code
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_1DCODE_TYPE.MVD_1DCODE_NONE">
+            <summary>
+            Code Undefined
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_1DCODE_TYPE.MVD_1DCODE_EAN8">
+            <summary>
+            Code EAN8
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_1DCODE_TYPE.MVD_1DCODE_UPCE">
+            <summary>
+            Code UPCE
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_1DCODE_TYPE.MVD_1DCODE_UPCA">
+            <summary>
+            Code UPCA
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_1DCODE_TYPE.MVD_1DCODE_EAN13">
+            <summary>
+            Code EAN13
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_1DCODE_TYPE.MVD_1DCODE_ISBN13">
+            <summary>
+            Code ISBN13
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_1DCODE_TYPE.MVD_1DCODE_CODABAR">
+            <summary>
+            Code CodaBar
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_1DCODE_TYPE.MVD_1DCODE_ITF25">
+            <summary>
+            Code ITF25
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_1DCODE_TYPE.MVD_1DCODE_39">
+            <summary>
+            Code 39
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_1DCODE_TYPE.MVD_1DCODE_93">
+            <summary>
+            Code 93
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_1DCODE_TYPE.MVD_1DCODE_128">
+            <summary>
+            Code 128
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code1DReader.MVD_SYMBOL_VERIFY_STANDARD">
+            <summary>
+            一维码等级评级标准
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_SYMBOL_VERIFY_STANDARD.MVD_SYMBOL_VERIFY_ISO_STANDARD_15416">
+            <summary>
+            iso 15416标准
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code1DReader.MVD_SYMBOL_VERIFY_LABEL">
+            <summary>
+            一维码等级验证方式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code1DReader.MVD_SYMBOL_VERIFY_LABEL.MVD_SYMBOL_VERIFY_LABEL_STANDARD">
+            <summary>
+            码评级完全按照iso标准
+            </summary>
+        </member>
+    </members>
+</doc>

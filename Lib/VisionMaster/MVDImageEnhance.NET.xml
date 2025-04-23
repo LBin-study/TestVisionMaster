@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDImageEnhance.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ImageEnhance.CImageEnhanceResult">
+            <summary>
+            图像增强结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceResult.#ctor">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageEnhance.CImageEnhanceResult.OutputImage">
+            <summary>
+            输出图像
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageEnhance.CImageEnhanceTool">
+            <summary>
+            图像增强算子工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.#ctor">
+            <summary>
+            构造器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取运行参数值
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置运行参数值
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存配置信息
+            </summary>
+            <param name="arrFileBuf">存储文件buffer的地址</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">实际写入的文件流长度</param>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载配置信息
+            </summary>
+            <param name="arrFileBuf">存储文件buffer的地址</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.Run">
+            <summary>
+            执行处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageEnhance.CImageEnhanceTool.Dispose(System.Boolean)">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageEnhance.CImageEnhanceTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageEnhance.CImageEnhanceTool.ROI">
+            <summary>
+            检测区域
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageEnhance.CImageEnhanceTool.RegionImage">
+            <summary>
+             处理区域图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageEnhance.CImageEnhanceTool.RegionImageAssistant">
+            <summary>
+            运行区域图像ROI配置
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageEnhance.CImageEnhanceTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

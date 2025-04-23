@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDGlobalInit.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.GlobalInit.CMVDGlobalInitTool">
+            <summary>
+            全局初始化工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GlobalInit.CMVDGlobalInitTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GlobalInit.CMVDGlobalInitTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.GlobalInit.CMVDGlobalInitTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+    </members>
+</doc>

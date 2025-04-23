@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCalibBoardCalib.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CalibBoardCalib.CCalibBoardCalibBasicParam">
+            <summary>
+            标定板标定基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibBasicParam.CalibBoardType">
+            <summary>
+            标定板类型
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibBasicParam.CalibBoardGridSize">
+            <summary>
+            输入标定板格子的物理尺寸
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibBasicParam.OriginPoint">
+            <summary>
+            原点偏移量(物理坐标)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibBasicParam.Angle">
+            <summary>
+            坐标系x轴旋转角度 顺时针为正
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibBasicParam.CoordinateMode">
+            <summary>
+            坐标系模式
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CalibBoardCalib.CCalibBoardCalibResult">
+            <summary>
+            标定板标定结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibResult.CalibBoardLocateInfo">
+            <summary>
+            标定板位置信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibResult.CalibBoardHomoEstInfo">
+            <summary>
+            标定板Homo估计信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibResult.CalibMatrixToParamInfo">
+            <summary>
+            描述标定矩阵解析结果信息
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool">
+            <summary>
+            标定板标定Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.AddMask(VisionDesigner.CMvdShape)">
+            <summary>
+            添加屏蔽区
+            </summary>
+            <param name="cMask"></param>
+            <remarks>当前只支持多边形屏蔽区,且最多8个屏蔽区</remarks>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.ClearMasks">
+            <summary>
+            移除屏蔽区
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.RemoveMaskAt(System.Int32)">
+            <summary>
+            根据索引移除屏蔽区
+            </summary>
+            <param name="nIndex"></param>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.GetNumOfMasks">
+            <summary>
+            获取屏蔽区个数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="strKeyName">运行参数名</param>
+            <param name="strValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="arrFileBuf">要保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+            <param name="nConfigDataLen">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="arrFileBuf">导入的运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.Run">
+            <summary>
+            执行畸变标定
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.ExportCalibFile(System.String)">
+            <summary>
+            导出畸变标定文件
+            </summary>
+            <param name="filePath">畸变标定文件</param>
+            <remarks>iccal文件</remarks>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.ROIShape">
+            <summary>
+            建模ROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.RegionImage">
+            <summary>
+            角点提取Region图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardCalibTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardHomoEstInfo.EstimationError">
+            <summary>
+            估计误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardHomoEstInfo.Scale">
+            <summary>
+            放大系数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardHomoEstInfo.OriginPoint">
+            <summary>
+            原点图像坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardHomoEstInfo.XVector">
+            <summary>
+            坐标系x轴方向向量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardHomoEstInfo.YVector">
+            <summary>
+            坐标系y轴方向向量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardHomoEstInfo.HomoMatrix">
+             <summary>
+            Homo矩阵
+             </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardHomoEstInfo.WarpMatrix">
+            <summary>
+            畸变标定参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardLocateInfo.CalibBoardSize">
+            <summary>
+            获取标定板尺寸
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardLocateInfo.CalibPointNum">
+            <summary>
+            标定点数量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardLocateInfo.CalibPointImageCoordinate">
+            <summary>
+            获取标定点的图像坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibBoardLocateInfo.CalibPointObjectCoordinate">
+            <summary>
+            获取标定点的目标坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibMatrixToParamInfo.Scale">
+            <summary>
+            尺度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibMatrixToParamInfo.OffsetX">
+            <summary>
+            X方向平移量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibMatrixToParamInfo.OffsetY">
+            <summary>
+            Y方向平移量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibMatrixToParamInfo.Rotate">
+            <summary>
+            旋转弧度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibMatrixToParamInfo.Aspect">
+            <summary>
+            y方向和x方向比例
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibMatrixToParamInfo.Skew">
+            <summary>
+            倾斜量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CalibBoardCalib.CCalibMatrixToParamInfo.PixelPrecision">
+            <summary>
+            像素精度
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CalibBoardCalib.MVD_CALIBBOARD_TYPE">
+            <summary>
+            标定板类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CalibBoardCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_CHECKER">
+            <summary>
+            棋盘格标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CalibBoardCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_CIRCLE">
+            <summary>
+            圆形标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CalibBoardCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_SPARSE_I">
+            <summary>
+            海康I型标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CalibBoardCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_DENSE_II">
+            <summary>
+            海康II型标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CalibBoardCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_DENSE_II_V2">
+            <summary>
+            海康II型标定板V2
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CalibBoardCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_SPARSE_I_V2">
+            <summary>
+            海康I型标定板v2
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CalibBoardCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_RSCODE_SIGN_FOUR">
+            <summary>
+            V3.3后定义更新为MVD_CALIBBOARD_TYPE_HKA_SPARSE_I
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CalibBoardCalib.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_RSCODE_SIGN">
+            <summary>
+            V3.3后定义更新为MVD_CALIBBOARD_TYPE_HKA_DENSE_II
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CalibBoardCalib.MVD_CALIBBOARD_COORDINATE_MODE">
+            <summary>
+            坐标系模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CalibBoardCalib.MVD_CALIBBOARD_COORDINATE_MODE.MVD_COORD_MODE_LEFT_HANDED">
+            <summary>
+            左手坐标系
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CalibBoardCalib.MVD_CALIBBOARD_COORDINATE_MODE.MVD_COORD_MODE_RIGHT_HANDED">
+            <summary>
+            右手坐标系
+            </summary>
+        </member>
+    </members>
+</doc>

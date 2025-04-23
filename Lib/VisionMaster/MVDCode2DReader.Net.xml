@@ -1,0 +1,588 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCode2DReader.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.Code2DReader.C2DCodeInfo">
+            <summary>
+            二维码信息描述类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeInfo.Type">
+            <summary>
+            二维码类型
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeInfo.Position">
+            <summary>
+            二维码位置坐标，分别为:左上角、右上角、左下角、右下角顶点坐标
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeInfo.Center">
+            <summary>
+            中心点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeInfo.Angle">
+            <summary>
+            二维码角度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeInfo.Content">
+            <summary>
+            二维码内容
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeInfo.Estppm">
+            <summary>
+            估计PPM
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code2DReader.C2DCodeQualityInfo">
+            <summary>
+            二维码等级信息描述类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeQualityInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfo.CodeQualityInfoType">
+            <summary>
+            二维码评级质量信息类型
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415">
+            <summary>
+            二维码等级信息描述类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.OverQuality">
+            <summary>
+            总体质量评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.DecodeGrade">
+            <summary>
+            译码评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.SymbolContrastGrade">
+            <summary>
+            对比度质量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.ModulationGrade">
+            <summary>
+            模块均匀性等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.FixedPatternDamageGrade">
+            <summary>
+            固定模式损坏等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.AxialNonuniformityGrade">
+            <summary>
+            码轴规整性等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.GridNonuniformityGrade">
+            <summary>
+            基础网格均匀性质量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.UnusedErrorCorrectionGrade">
+            <summary>
+            未使用纠错功能等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.PrintGrowthHorizontalGrade">
+            <summary>
+            打印伸缩（水平）等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.PrintGrowthVeriticalGrade">
+            <summary>
+            打印伸缩（垂直）等级 
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.ReflectanceMarginGrade">
+            <summary>
+            反射率余量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.SymbolContrastScore">
+            <summary>
+            对比度质量评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.ModulationScore">
+            <summary>
+            模块均匀性评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.FixedPatternDamageScore">
+            <summary>
+            固定模式损坏评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.AxialNonuniformityScore">
+            <summary>
+            码轴规整性评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.GridNonuniformityScore">
+            <summary>
+            基础网格均匀性质量评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.UnusedErrorCorrectionScore">
+            <summary>
+            未使用纠错功能评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.PrintGrowthHorizontalScore">
+            <summary>
+            打印伸缩（水平）评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.PrintGrowthVeriticalScore">
+            <summary>
+            打印伸缩（垂直）评分 
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO15415.ReflectanceMarginScore">
+            <summary>
+            反射率余量评分
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158">
+            <summary>
+            二维码等级信息描述类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.OverQuality">
+            <summary>
+            总体质量评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.DecodeGrade">
+            <summary>
+            译码评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.SymbolContrastGrade">
+            <summary>
+            对比度质量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.ModulationGrade">
+            <summary>
+            模块均匀性等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.FixedPatternDamageGrade">
+            <summary>
+            固定模式损坏等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.AxialNonuniformityGrade">
+            <summary>
+            码轴规整性等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.GridNonuniformityGrade">
+            <summary>
+            基础网格均匀性质量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.UnusedErrorCorrectionGrade">
+            <summary>
+            未使用纠错功能等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.PrintGrowthHorizontalGrade">
+            <summary>
+            打印伸缩（水平）等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.PrintGrowthVeriticalGrade">
+            <summary>
+            打印伸缩（垂直）等级 
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.ReflectanceMarginGrade">
+            <summary>
+            反射率余量等级
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.SymbolContrastScore">
+            <summary>
+            对比度质量评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.ModulationScore">
+            <summary>
+            模块均匀性评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.FixedPatternDamageScore">
+            <summary>
+            固定模式损坏评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.AxialNonuniformityScore">
+            <summary>
+            码轴规整性评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.GridNonuniformityScore">
+            <summary>
+            基础网格均匀性质量评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.UnusedErrorCorrectionScore">
+            <summary>
+            未使用纠错功能评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.PrintGrowthHorizontalScore">
+            <summary>
+            打印伸缩（水平）评分
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.PrintGrowthVeriticalScore">
+            <summary>
+            打印伸缩（垂直）评分 
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeQualityInfoByISO29158.ReflectanceMarginScore">
+            <summary>
+            反射率余量评分
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code2DReader.C2DCodeReaderResult">
+            <summary>
+            二维码识别结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeReaderResult.CodeInfoList">
+            <summary>
+            二维码识别信息列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code2DReader.C2DCodeReaderTool">
+            <summary>
+            二维码识别算子工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取运行参数.
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置运行参数.
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数配置
+            </summary>
+            <param name="arrFileBuf">输入内存地址</param>
+            <param name="nConfigDataSize">输入内存大小</param>
+            <param name="nConfigDataLen">内部运行参数实际占用内存大小</param>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数配置
+            </summary>
+            <param name="arrFileBuf">输入内存地址</param>
+            <param name="nConfigDataSize">输入内存大小</param>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderTool.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeReaderTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeReaderTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeReaderTool.ROI">
+            <summary>
+            检测区域
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeReaderTool.Result">
+            <summary>
+            二维码识别结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code2DReader.C2DCodeVerifyBasicParam">
+            <summary>
+            二维码评级基本参数类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyBasicParam.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeVerifyBasicParam.VerifyStandard">
+            <summary>
+            评级标准
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeVerifyBasicParam.VerifyLabel">
+            <summary>
+            验证方式
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeVerifyBasicParam.VerifyPrcType">
+            <summary>
+            处理类型
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeVerifyBasicParam.RecognitionInfo">
+            <summary>
+            二维码识别结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code2DReader.C2DCodeVerifyResult">
+            <summary>
+            二维码评级结果描述类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeVerifyResult.QualityInfoList">
+            <summary>
+            二维码评级信息列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code2DReader.C2DCodeVerifyTool">
+            <summary>
+            二维码评级算子工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取运行参数.
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置运行参数.
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数配置
+            </summary>
+            <param name="arrFileBuf">输入内存地址</param>
+            <param name="nConfigDataSize">输入内存大小</param>
+            <param name="nConfigDataLen">内部运行参数实际占用内存大小</param>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数配置
+            </summary>
+            <param name="arrFileBuf">输入内存地址</param>
+            <param name="nConfigDataSize">输入内存大小</param>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyTool.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Code2DReader.C2DCodeVerifyTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>    
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeVerifyTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeVerifyTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Code2DReader.C2DCodeVerifyTool.Result">
+            <summary>
+            二维码评级结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code2DReader.MVD_2DCODE_TYPE">
+            <summary>
+            二维码类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code2DReader.MVD_2DCODE_TYPE.MVD_2DCODE_NONE">
+            <summary>
+            未定义
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code2DReader.MVD_2DCODE_TYPE.MVD_2DCODE_DM">
+            <summary>
+            DM 码
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code2DReader.MVD_2DCODE_TYPE.MVD_2DCODE_QR">
+            <summary>
+            QR 码
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code2DReader.MVD_SYMBOL_VERIFY_STANDARD">
+            <summary>
+            二维码等级评级标准
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code2DReader.MVD_SYMBOL_VERIFY_STANDARD.MVD_SYMBOL_VERIFY_ISO_STANDARD_15415">
+            <summary>
+            iso 15415标准
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code2DReader.MVD_SYMBOL_VERIFY_STANDARD.MVD_SYMBOL_VERIFY_ISO_STANDARD_29158">
+            <summary>
+            iso 29158标准
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code2DReader.MVD_SYMBOL_VERIFY_LABEL">
+            <summary>
+            二维码等级验证方式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code2DReader.MVD_SYMBOL_VERIFY_LABEL.MVD_SYMBOL_VERIFY_LABEL_STANDARD">
+            <summary>
+            码评级完全按照iso标准
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code2DReader.MVD_SYMBOL_VERIFY_LABEL.MVD_SYMBOL_VERIFY_LABEL_CUSTOM">
+            <summary>
+            部分指标采用定制
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Code2DReader.MVD_SYMBOL_VERIFY_PROCESS_TYPE">
+            <summary>
+            二维码等级处理类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code2DReader.MVD_SYMBOL_VERIFY_PROCESS_TYPE.MVD_SYMBOL_VERIFY_PROCESS_TYPE_I">
+            <summary>
+            只支持DM码,效果较优
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Code2DReader.MVD_SYMBOL_VERIFY_PROCESS_TYPE.MVD_SYMBOL_VERIFY_PROCESS_TYPE_II">
+            <summary>
+            支持DM码和QR码
+            </summary>
+        </member>
+    </members>
+</doc>

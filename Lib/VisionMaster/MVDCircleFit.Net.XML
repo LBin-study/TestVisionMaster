@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCircleFit.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CircleFit.CCircleFitBasicParam">
+            <summary>
+            Class of the basic parameter information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFit.CCircleFitBasicParam.PointsToFit">
+            <summary>
+            List of Points to fit a circle
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CircleFit.CCircleFitResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFit.CCircleFitResult.FitError">
+            <summary>
+            Fitting error
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFit.CCircleFitResult.FitStatus">
+            <summary>
+            the status of fit circle(NG/OK)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFit.CCircleFitResult.NumOfPointsUsed">
+            <summary>
+            the number of used points
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFit.CCircleFitResult.FitCircle">
+            <summary>
+            the fitted circle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFit.CCircleFitResult.PointFitDistanceList">
+            <summary>
+            输入点的拟合距离
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFit.CCircleFitResult.PointStatusList">
+            <summary>
+            输入点是否用于拟合;0:未使用 1:使用
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CircleFit.CCircleFitTool">
+            <summary>
+            the class for the CircleFitTool
+            </summary>
+            <remarks>The CircleFitTool encapsulates all of the classes required to perform a CircleFit analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.CircleFit.CCircleFitTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFit.CCircleFitTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFit.CCircleFitTool.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            反序列化调用该构造函数
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:VisionDesigner.CircleFit.CCircleFitTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFit.CCircleFitTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFit.CCircleFitTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this CircleFit tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.CircleFit.CCircleFitTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this CircleFit tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.CircleFit.CCircleFitTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this CircleFit tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.CircleFit.CCircleFitTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this CircleFit tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.CircleFit.CCircleFitTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CircleFit.CCircleFitTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFit.CCircleFitTool.BasicParam">
+            <summary>
+            The basic parameter information of this tool.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CircleFit.CCircleFitTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

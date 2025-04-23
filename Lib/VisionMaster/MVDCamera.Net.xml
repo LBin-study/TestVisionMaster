@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCamera.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.Camera.MVD_CAMERA_TOOL_STATUS">
+            <summary>
+            相机算子执行状态
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.MVD_CAMERA_TOOL_STATUS.MVD_DEVICE_UNDEFINE">
+            <summary>
+            未定义状态
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.MVD_CAMERA_TOOL_STATUS.MVD_DEVICE_DISCONNECTED">
+            <summary>
+            已选择且未连接
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.MVD_CAMERA_TOOL_STATUS.MVD_DEVICE_CONNECTED">
+            <summary>
+            已连接未取流
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.MVD_CAMERA_TOOL_STATUS.MVD_DEVICE_GRABING">
+            <summary>
+            取流中
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_TRANSFER_LAYER_TYPE">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_CAM_ACQUISITION_MODE">
+             <summary>
+            ch:采集模式 | en:Acquisition mode
+             </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_CAM_BALANCEWHITE_AUTO">
+            <summary>
+            平衡宽度
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_CAM_EXPOSURE_AUTO_MODE">
+            <summary>
+            曝光模式
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_CAM_EXPOSURE_MODE">
+            <summary>
+            曝光模式设置
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_CAM_GAIN_MODE">
+            <summary>
+            增益模式
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_CAM_GAMMA_SELECTOR">
+            <summary>
+            选择模式
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_CAM_TRIGGER_MODE">
+            <summary>
+            触发模式
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_CAM_TRIGGER_SOURCE">
+            <summary>
+            触发源
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_GIGE_TRANSMISSION_TYPE">
+            <summary>
+            Gige传输类型
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_XML_AccessMode">
+            <summary>
+            节点的访问模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.MVD_XML_AccessMode.AM_NI">
+            <summary>
+            不可实现
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.MVD_XML_AccessMode.AM_NA">
+            <summary>
+            不可用
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.MVD_XML_AccessMode.AM_WO">
+            <summary>
+            只写
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.MVD_XML_AccessMode.AM_RO">
+            <summary>
+            只读
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.MVD_XML_AccessMode.AM_RW">
+            <summary>
+            读写
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.MVD_XML_AccessMode.AM_Undefined">
+            <summary>
+            未定义
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.MVD_XML_AccessMode.AM_CycleDetect">
+            <summary>
+            内部用于AccessMode循环检测
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_INTVALUE">
+            <summary>
+            Int Value Ex
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_FLOATVALUE">
+            <summary>
+            Float Value
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_ENUMVALUE">
+            <summary>
+            Enumeration Value
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.MVD_STRINGVALUE">
+            <summary>
+            String Value
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.CDeviceInfo">
+             <summary>
+            设备信息类
+             </summary>
+        </member>
+        <member name="M:VisionDesigner.Camera.CDeviceInfo.Clone">
+            <summary>
+            设备信息克隆
+            </summary>
+            <returns>设备信息</returns>
+        </member>
+        <member name="P:VisionDesigner.Camera.CDeviceInfo.MajorVer">
+            <summary>
+            主版本号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CDeviceInfo.MinorVer">
+            <summary>
+            次版本号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CDeviceInfo.MacAddrHigh">
+            <summary>
+            MAC 高地址
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CDeviceInfo.MacAddrLow">
+            <summary>
+            MAC 低地址
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CDeviceInfo.TLayerType">
+            <summary>
+            设备传输协议类型
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.CGigeDeviceInfo">
+            <summary>
+            GIGE 设备信息描述类
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CGigeDeviceInfo.IpCfgOption">
+            <summary>
+            IP地址配置
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CGigeDeviceInfo.IpCfgCurrent">
+            <summary>
+            当前IP配置
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CGigeDeviceInfo.CurrentIp">
+            <summary>
+            当前Ip值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CGigeDeviceInfo.CurrentSubNetMask">
+             <summary>
+            当前子网掩膜
+             </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CGigeDeviceInfo.DefultGateWay">
+            <summary>
+            默认网关
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CGigeDeviceInfo.NetExport">
+            <summary>
+            网口IP地址 
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CGigeDeviceInfo.ManufacturerName">
+            <summary>
+            制造商名字
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CGigeDeviceInfo.DeviceVersion">
+            <summary>
+            设备版本号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CGigeDeviceInfo.ManufacturerSpecificInfo">
+            <summary>
+            制造商信息 
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CGigeDeviceInfo.ModelName">
+            <summary>
+            型号名字
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CGigeDeviceInfo.SerialNumber">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CGigeDeviceInfo.UserDefinedName">
+            <summary>
+            用户自定义名称
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.CUSBDeviceInfo">
+            <summary>
+            USB设备信息描述类
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.DeviceGUID">
+            <summary>
+            设备GUID号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.DeviceVersion">
+            <summary>
+            设备版本号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.FamilyName">
+            <summary>
+            家族名字
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.ManufacturerName">
+            <summary>
+            制造商名字
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.ModelName">
+            <summary>
+            型号名字
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.SerialNumber">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.UserDefinedName">
+            <summary>
+            用户自定义名字
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.VendorName">
+            <summary>
+            供应商名字
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.CrtlInEndPoint">
+            <summary>
+            控制输入端点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.CrtlOutEndPoint">
+            <summary>
+            控制输出端点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.EventEndPoint">
+            <summary>
+            事件端点
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.idProduct">
+            <summary>
+            产品ID号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.idVendor">
+            <summary>
+            供应商ID号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.nbcdUSB">
+            <summary>
+            支持的USB协议
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.DeviceNumber">
+            <summary>
+            设备序列号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CUSBDeviceInfo.StreamEndPoint">
+            <summary>
+            流端点
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.CCAMLDeviceInfo">
+            <summary>
+            Caml设备信息描述类
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CCAMLDeviceInfo.DeviceVersion">
+            <summary>
+            设备版本号
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CCAMLDeviceInfo.FamilyName">
+            <summary>
+            家族名字
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CCAMLDeviceInfo.ManufacturerName">
+            <summary>
+            制造商名字
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CCAMLDeviceInfo.ModelName">
+            <summary>
+            型号名字
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CCAMLDeviceInfo.PortID">
+            <summary>
+            端口ID
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CCAMLDeviceInfo.SerialNumber">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.CFrameInfo">
+            <summary>
+            帧信息
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.CFrameInfo.FrameNum">
+            <summary>
+            帧号
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Camera.CFrameInfo.CostTime">
+            <summary>
+            取图耗时,ms
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Camera.CCameraBasicParam">
+            <summary>
+            相机基础参数描述类
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CCameraBasicParam.ImageNodeNum">
+            <summary>
+            SDK内部图像缓存节点数目
+            </summary>
+            <remarks>大于等于1，设置后每台设备连接时均会生效;需在取图开始前调用</remarks>
+        </member>
+        <member name="T:VisionDesigner.Camera.CCameraGrabResult">
+            <summary>
+            相机取流结果描述类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraGrabResult.GetOneFrameTimeout(VisionDesigner.CMvdImage@,System.Int32)">
+            <summary>
+            获取一帧图像
+            </summary>
+            <param name="cImage">图像实例(为null时函数内创建，非null则直接讲当前帧填充至数据中)</param>
+            <param name="nMsecTimeout">取图超时，默认500ms</param>
+            <returns>返回当前帧的更多详细信息</returns>
+            <remarks>相机出的每帧图，仅可取一次</remarks>
+        </member>
+        <member name="T:VisionDesigner.Camera.CCameraTool">
+             <summary>
+            相机工具类
+             </summary>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.Dispose">
+            <summary>
+            Release
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.EnumDevices(System.UInt32,System.String)">
+            <summary>
+            根据传输协议和制造商名字枚举所有设备
+            </summary>
+            <param name="nTLayerType">传输协议类型</param>
+            <param name="strManufacturerName">制造商名字</param>
+            <returns>设备数量</returns>
+            <remarks>传输层类型支持MVD_TRANSFER_LAYER_TYPE的或操作</remarks>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.SelectDevice(System.Int32)">
+            <summary>
+            根据设备索引选择设备
+            </summary>
+            <param name="nDeviceIndex">设备索引. [0, DeviceNum)</param>
+            <remarks>切换失败，则保留前置选择情况</remarks>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.SelectDevice(VisionDesigner.Camera.CDeviceInfo)">
+            <summary>
+            根据设备信息选择设备
+            </summary>
+            <param name="cDeviceInfo">设备对象引用.</param>
+            <remarks>切换失败，则保留前置选择情况</remarks>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.IsDeviceAccessible(System.UInt32)">
+            <summary>
+            判断设备是否可达
+            </summary>
+            <param name="nAccessMode">设备访问权限.</param>
+            <returns>可达返回yes, 否则返回no</returns>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.OpenDevice(System.UInt32,System.UInt16)">
+            <summary>
+            打开已选择设备
+            </summary>
+            <param name="nAccessMode">设备访问权限.</param>
+            <param name="nSwitchoverKey"> 访问权限开关.</param>         
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.CloseDevice">
+            <summary>
+            关闭设备
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.StartGrab">
+            <summary>
+            开始取流,成功调用后触发StartGrabbing事件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.StopGrab">
+            <summary>
+            停止取流,执行前触发StopGrabbing事件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.GetNodeAccessMode(System.String)">
+            <summary>
+            获得当前节点的访问模式 
+            </summary>
+            <param name="strKey">节点名称 </param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.GetIntValue(System.String)">
+            <summary>
+            获取整型值
+            </summary>
+            <param name="strKey">整型值名字.</param>
+            <param name="pstValue">整型值取值.</param>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.SetIntValue(System.String,System.Int64)">
+            <summary>
+            设置整型值
+            </summary>
+            <param name="strKey">整型值名字.</param>
+            <param name="nValue"> 整型值取值.</param>      
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.GetEnumValue(System.String)">
+            <summary>
+            获取枚举值
+            </summary>
+            <param name="strKey">枚举值名字</param>
+            <param name="pstValue"> 枚举值取值.</param>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.SetEnumValue(System.String,System.UInt32)">
+            <summary>
+            设置枚举值
+            </summary>
+            <param name="strKey">枚举值名字.</param>
+            <param name="nValue"> 枚举值取值.</param>      
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.GetFloatValue(System.String)">
+            <summary>
+            获取浮点值
+            </summary>
+            <param name="strKey">浮点值名字.</param>
+            <param name="pstValue"> 浮点值取值.</param>      
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.SetFloatValue(System.String,System.Single)">
+            <summary>
+            设置浮点值
+            </summary>
+            <param name="strKey">浮点值名字.</param>
+            <param name="fValue">浮点值取值.</param>      
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.GetBoolValue(System.String)">
+            <summary>
+            获取布尔值
+            </summary>
+            <param name="strKey">布尔值名字.</param>
+            <param name="pbValue">布尔值取值.</param>      
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.SetBoolValue(System.String,System.Boolean)">
+            <summary>
+            设置布尔值
+            </summary>
+            <param name="strKey">布尔值名字.</param>
+            <param name="bValue"> 布尔值取值.</param>      
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.GetStringValue(System.String)">
+            <summary>
+            获取字符串值
+            </summary>
+            <param name="strKey">字符串名字.</param>
+            <param name="pstValue"> 字符串取值.</param>      
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.SetStringValue(System.String,System.String)">
+            <summary>
+            设置字符串值
+            </summary>
+            <param name="strKey">字符串名字.</param>
+            <param name="strValue">字符串取值.</param>      
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.SetCommandValue(System.String)">
+            <summary>
+            设置命令值
+            </summary>
+            <param name="strKey">命令名字.</param>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.OnStartGrabbed">
+            <summary>
+            抛出开始取流事件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Camera.CCameraTool.OnStopGrabbing">
+            <summary>
+            抛出结束取流事件
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CCameraTool.DeviceInfoList">
+            <summary>
+            设备信息链表，全局静态
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CCameraTool.ConnectedDeviceInfo">
+            <summary>
+            被连接的设备信息,无连接时返回null
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CCameraTool.CameraBasicParam">
+            <summary>
+            基础参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Camera.CCameraTool.CameraGrabResult">
+            <summary>
+            取流结果
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.Camera.CCameraTool.StartGrabbed">
+            <summary>
+            开始取流后事件，StartGrab方法成功执行后触发
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.Camera.CCameraTool.StopGrabbing">
+            <summary>
+            结束取流前事件，StopGrab方法开始执行前触发
+            </summary>
+        </member>
+    </members>
+</doc>

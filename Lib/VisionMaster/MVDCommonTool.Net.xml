@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCommonTool.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CMvdRegionImageAssistant">
+            <summary>
+            运行区域图像ROI配置
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionImageAssistant.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRegionImageAssistant.ROIList">
+            <summary>
+            运行区域图像ROI配置
+            </summary>
+            <remarks>
+            此处配置的ROI和运行区域图像(由RegionImage设置)生成时所使用的ROI必须一致;未设置任何ROI表示不开启优化
+            </remarks>
+        </member>
+        <member name="T:VisionDesigner.IMVDROIAssistant">
+            <summary>
+            ROI配置列表，用于多ROI数据管理。
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.IMVDROIAssistant.AddROI(VisionDesigner.CMvdShape)">
+            <summary>
+            添加ROI,默认支持矩形、圆、扇环和多边形
+            </summary>
+            <param name="cROI"></param>
+        </member>
+        <member name="M:VisionDesigner.IMVDROIAssistant.SetROIAssociatedData(System.UInt32,System.Object)">
+            <summary>
+            设置ROI关联数据
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <param name="pData">关联数据，具体参考每个算子</param>
+        </member>
+        <member name="M:VisionDesigner.IMVDROIAssistant.GetROIAssociatedData(System.UInt32,System.Object@)">
+            <summary>
+            获取ROI关联数据
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <param name="pData">关联数据，具体参考每个算子</param>
+        </member>
+        <member name="M:VisionDesigner.IMVDROIAssistant.GetROI(System.UInt32)">
+            <summary>
+            根据索引查询已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <returns>ROI信息</returns>
+        </member>
+        <member name="M:VisionDesigner.IMVDROIAssistant.UpdateROI(System.UInt32,VisionDesigner.CMvdShape)">
+            <summary>
+            根据索引更新已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] ROI索引，范围[0, ROICount)</param>
+            <param name="cROI">[IN] 拟更新为的ROI信息</param>
+        </member>
+        <member name="M:VisionDesigner.IMVDROIAssistant.RemoveROI(System.UInt32)">
+            <summary>
+            根据索引移除已添加ROI信息
+            </summary>
+            <param name="nIndex">[IN] 图形索引，范围[0, ROICount)</param>
+        </member>
+        <member name="M:VisionDesigner.IMVDROIAssistant.ClearROIs">
+            <summary>
+            清理所有已添加ROI信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CNNSODParam.Col">
+            <summary>
+            x方向滑窗数,范围[1, 16]
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CNNSODParam.Row">
+            <summary>
+            y方向滑窗数,范围[1, 16]
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CNNSODParam.Overlap">
+            <summary>
+            xy滑窗重叠率,范围[0.0, 0.6]
+            </summary>
+        </member>
+        <member name="T:MVD.InnerTool.CMvdInnerTool">
+            <summary>
+            算子公共依赖实现类
+            </summary>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.UnsafeBytes2IntPtr(System.Byte[])">
+            <summary>
+            返回托管地址(效率高，慎用)
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.Bytes2IntPtr(System.Byte[],System.Runtime.InteropServices.GCHandle@)">
+            <summary>
+            Bytes转IntPtr
+            </summary>
+            <param name="bytes"></param>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.ArrayToIntptr(System.Byte[])">
+            <summary>
+            在确保该托管内存不会被释放的情况下使用,需要释放:Marshal.FreeHGlobal(ptr);
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.Object2IntPtr(System.Object)">
+            <summary>
+            Object转IntPtr
+            </summary>
+            <param name="bytes"></param>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.IntPtr2Bytes(System.IntPtr,System.Int32)">
+            <summary>
+            IntPtr转Bytes
+            </summary>
+            <param name="ptr"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.Bytes2IntPtr(System.Byte[])">
+            <summary>
+            Bytes转IntPtr
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.FreeBytesIntPtr(System.IntPtr)">
+            <summary>
+            释放Bytes转换的指针
+            </summary>
+            <param name="ptr"></param>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.IntPtr2Ts``1(System.IntPtr,System.Int32)">
+            <summary>
+            IntPtr转数组
+            </summary>
+            <param name="ptr"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.PtrToStructure``1(System.IntPtr,``0@)">
+            <summary>
+            IntPtr转Structure
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ptr"></param>
+            <param name="structure"></param>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.PtrToStructureWithoutFree``1(System.IntPtr,``0@)">
+            <summary>
+            IntPtr转Structure
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ptr"></param>
+            <param name="structure"></param>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.StructureToPtr(System.Object,System.IntPtr@)">
+            <summary>
+            Structure转IntPtr,必须使用FreeCoTaskMem释放内存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ptr"></param>
+            <param name="structure"></param>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.StructureToPtr(System.Object)">
+            <summary>
+            Structure转IntPtr
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ptr"></param>
+            <param name="structure"></param>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.StructToBytes(System.Object,System.Int32)">
+            <summary>
+            将struct类型转换为byte[]
+            </summary>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.StructToBytes(System.Object)">
+            <summary>
+            将struct类型转换为byte[]
+            </summary>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.StructsToBytes``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            将struct类型列表转换为byte[]
+            </summary>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.BytesToStruct``1(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            将byte[]还原为指定的struct,该函数的泛型仅用于自定义结构
+            startIndex：数组中 Copy 开始位置的从零开始的索引。
+            length：要复制的数组元素的数目。
+            </summary>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.PtrToStructurs``1(System.IntPtr,System.Int32)">
+            <summary>
+            Ptr转结构体数组
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pt"></param>
+            <param name="lenth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.IntPtr2Structures``1(System.IntPtr,System.Int32)">
+            <summary>
+            IntPtr转Structure数组
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pt"></param>
+            <param name="lenth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.DeepCopyByReflection``1(``0)">
+            <summary>
+            通过反射深拷贝
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns>T</returns>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.DeepCopy``1(``0)">
+            <summary>
+            序列化深拷贝
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns>T</returns>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.ImageObjToAlgImage(VisionDesigner.CMvdImage,VisionDesigner.MVD_IMAGE@)">
+            <summary>
+            MVD图像对象转算法图像结构体
+            </summary>
+            <param name="ImageObj">MVD图像对象</param>
+            <param name="stAlgImage">算法图像结构体</param>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.InputImgObjToPtr(VisionDesigner.CMvdImage,VisionDesigner.MVD_IMAGE@,System.IntPtr@)">
+            <summary>
+            图像对象转算法图像结构体、及图像结构体指针
+            </summary>
+            <param name="InputImageObj">图像对象</param>
+            <param name="stAlgInputImg">图像结构体</param>
+            <param name="pAlgInputImgPtr">图像指针</param>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.OutputImgObjToPtr(System.UInt32,System.UInt32,VisionDesigner.MVD_PIXEL_FORMAT,VisionDesigner.CMvdImage@,VisionDesigner.MVD_IMAGE@,System.IntPtr@)">
+            <summary>
+            根据输入图像参数转输出图像对象、算法图像结构体、图像结构体指针
+            </summary>
+            <param name="nInputImgWidth">图像宽</param>
+            <param name="nInputImgHeight">图像高</param>
+            <param name="ePixelFormat">像素格式</param>
+            <param name="OutputImgObj">图像对象</param>
+            <param name="stAlgOutputImg">图像结构体</param>
+            <param name="pAlgOutputImgPtr">图像指针</param>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.OutputImgObjToPtr(VisionDesigner.CMvdImage,VisionDesigner.CMvdImage@,VisionDesigner.MVD_IMAGE@,System.IntPtr@)">
+            <summary>
+            根据输入图像对象转输出图像对象、算法图像结构体、图像结构体指针
+            </summary>
+            <param name="InputImgObj"></param>
+            <param name="OutputImgObj"></param>
+            <param name="stAlgOutputImg"></param>
+            <param name="pAlgOutputImgPtr"></param>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.IsTextUTF8(System.Byte[])">
+            <summary>
+            判断UTF-8编码
+            </summary>
+            <param name="pcText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MVD.InnerTool.CMvdInnerTool.NormalRelativeAngle(System.Double)">
+            <summary>
+            拟合角度【-90，90】
+            </summary>
+            <param name="fInputAngle"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

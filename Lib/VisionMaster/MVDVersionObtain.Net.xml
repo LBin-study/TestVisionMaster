@@ -1,0 +1,648 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDVersionObtain.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.VersionObtain.MVD_SDK_TYPE">
+            <summary>
+            SDK索引
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_SDK_TYPE_MIN">
+            <summary>
+            SDK类型最小值
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_All2DVersion">
+            <summary>
+            所有类别
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_CameraMap">
+            <summary>
+            相机映射
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ImageFixture">
+            <summary>
+            图像修正
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_LineAlign">
+            <summary>
+            线对位
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_PointSetAlign">
+            <summary>
+            点集对位
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_PositionFix">
+            <summary>
+            位置修正
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_SinglePointAlign">
+            <summary>
+            单点对位
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_CalibBoardCalib">
+            <summary>
+            标定板标定
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_CalibTrans">
+            <summary>
+            标定转换
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ImageCalib">
+            <summary>
+            畸变标定
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ImageCorrectCalib">
+            <summary>
+            畸变矫正
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_MapCalib">
+            <summary>
+            映射标定
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_MatrixFix">
+            <summary>
+            矩阵修正
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_MatrixToParam">
+            <summary>
+            矩阵转参数
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_NImageCalib">
+            <summary>
+            N图标定
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_NPointCalib">
+            <summary>
+            N点标定
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ColorConvert">
+            <summary>
+            颜色转换
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ColorExtract">
+            <summary>
+            颜色抽取
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ColorMeasure">
+            <summary>
+            颜色测量
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ColorRecognition">
+            <summary>
+            颜色识别
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ArcFlawInspCpp">
+            <summary>
+            圆弧缺陷检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ArcPairFlawInspCpp">
+            <summary>
+            圆弧对缺陷检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_BeadGuideCpp">
+            <summary>
+            路径提取
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_EdgeFlawInsp">
+            <summary>
+            边缘缺陷检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_EdgePairFlawInsp">
+            <summary>
+            边缘对缺陷检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_LineEdgeFlawInsp">
+            <summary>
+            直线边缘检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_LineEdgePairFlawInsp">
+            <summary>
+            直线对边缘检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_BlobFind">
+            <summary>
+            Blob查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_CaliperTool">
+            <summary>
+            卡尺工具
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_CircleFind">
+            <summary>
+            圆查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_CrossPointFind">
+            <summary>
+            边缘交点检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_EdgeFind">
+            <summary>
+            边缘检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_EdgeWidth">
+            <summary>
+            间距检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_LineFind">
+            <summary>
+            线查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_MultiCategoryBlobFind">
+            <summary>
+            Blob标签分析
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_MultiLineFind">
+            <summary>
+            多直线查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_PairLineFind">
+            <summary>
+            平行线查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_PeakFind">
+            <summary>
+            顶点检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_QuadrangleFindCpp">
+            <summary>
+            四边形查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_RectangleFind">
+            <summary>
+            矩形检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_BoxROIFind">
+            <summary>
+            矩形ROI获取
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_AnnROIFind">
+            <summary>
+            圆环ROI获取
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_NearestPointFind">
+            <summary>
+            最近特征点获取
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_RegionProjection">
+            <summary>
+            区域投影
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_EllipseFind">
+            <summary>
+            椭圆查找
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_PitchFind">
+            <summary>
+            节距测量
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_C2CMeasure">
+            <summary>
+            圆圆测量
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_CircleFit">
+            <summary>
+            圆拟合
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_HistTool">
+            <summary>
+            直方图工具
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_IntensityMeasure">
+            <summary>
+            亮度测量
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_L2CMeasure">
+            <summary>
+            线圆测量
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_L2LMeasure">
+            <summary>
+            线线测量
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_LineFit">
+            <summary>
+            线拟合
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_P2CMeasure">
+            <summary>
+            点圆测量
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_P2LMeasure">
+            <summary>
+            点线测量
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_P2PMeasure">
+            <summary>
+            点点测量
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_PixelCount">
+            <summary>
+            像素统计
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_MKInsp">
+            <summary>
+            字符缺陷检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_AlmightyPatMatch">
+            <summary>
+            全能特征匹配
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_FastFeaturePatMatch">
+            <summary>
+            快速特征匹配
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_GrayPatMatchCpp">
+            <summary>
+            灰度特征匹配
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_HPFeaturePatMatch">
+            <summary>
+            高精度特征匹配
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ContourPatMatch">
+            <summary>
+            金字塔匹配
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_AffineTransPrepro">
+            <summary>
+            仿射变换
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ArithmeticPrepro">
+            <summary>
+            图像运算
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_BinaryPrepro">
+            <summary>
+            图像二值化
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_EnhancePrepro">
+            <summary>
+            图像增强
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_FilterPrepro">
+            <summary>
+            图像过滤
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_FrameMeanPrepro">
+            <summary>
+            帧平均
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_MorphPrepro">
+            <summary>
+            形态学处理
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_NormalizePrepro">
+            <summary>
+            图像归一化
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_PolarWarpPrepro">
+            <summary>
+            圆环展开
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_RegionCopyPrepro">
+            <summary>
+            拷贝填充
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ShadeCorrectPrepro">
+            <summary>
+            阴影校正
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_SharpnessPrepro">
+            <summary>
+            清晰度评估
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_WarpDistortPrepro">
+            <summary>
+            图像矫正
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_BoxOverlapPrepro">
+            <summary>
+            Box重叠率
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_BoxMergePrepro">
+            <summary>
+            Box融合
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ImageResizePrepro">
+            <summary>
+            图像缩放
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_MultiLabelFilterPrepro">
+            <summary>
+            多标签筛选
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_BoxFilterPrepro">
+            <summary>
+            BOX过滤
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_MirrorPrepro">
+            <summary>
+            图像镜像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_Code1DReader">
+            <summary>
+            一维码识别
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_Code2DReader">
+            <summary>
+            二维码识别
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_CodeVerify">
+            <summary>
+            码评级（嵌在码识别中）
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_OCR">
+            <summary>
+            字符识别
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_ImageStitch">
+            <summary>
+            图像拼接
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_Track">
+             <summary>
+            目标跟踪
+             </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_FlawDetect">
+             <summary>
+            匹配滤波
+             </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_StringLocation">
+            <summary>
+            串定位 
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_CellLocation">
+            <summary>
+            栅定位
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_GridLocation">
+            <summary>
+            片定位 
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_DefectInspect">
+             <summary>
+            异常检测
+             </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_MultiImageFusion">
+            <summary>
+            多图融合 
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_Classier">
+             <summary>
+            分类器
+             </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_SDK_TYPE.MVD_SDK_TYPE_MAX">
+            <summary>
+            SDK类型最大值
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_SDK_TYPE_MIN">
+            <summary>
+            深度SDK类型最小值
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_AllVersion">
+            <summary>
+            所有类别
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_CharDetect">
+            <summary>
+            字符定位
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_CharRecog">
+            <summary>
+            字符识别
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_SingleCharDetect">
+            <summary>
+            单字符检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_Classify">
+            <summary>
+            图像分类
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_CodeReader">
+            <summary>
+            码识别
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_CodeVerify">
+            <summary>
+            码评级 嵌在码识别中
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_Detect">
+            <summary>
+            目标检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_Inspect">
+            <summary>
+            异常检测
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_InstanceSegment">
+            <summary>
+            实例分割
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_OCR">
+            <summary>
+            深度OCR
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_Retrieval">
+            <summary>
+            图像检索
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_Segment">
+            <summary>
+            图像分割
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_SegmentV2">
+            <summary>
+            图像分割
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_FastSegment">
+            <summary>
+            快速图像分割
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_FewShotGallery">
+            <summary>
+            FewShot gallery管理 
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_FewShotDetect">
+            <summary>
+            FewShot目标检测 
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_FewShotInstanceSeg">
+            <summary>
+            FewShot实例分割 
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE.MVD_DL_SDK_TYPE_MAX">
+            <summary>
+            深度SDK类型最大值
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.VersionObtain.CVersionObtainTool">
+            <summary>
+            版本信息获取算子Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.VersionObtain.CVersionObtainTool.#ctor">
+            <summary>
+            获取版本号Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.VersionObtain.CVersionObtainTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.VersionObtain.CVersionObtainTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.VersionObtain.CVersionObtainTool.Get2DIntegraLibVersion">
+            <summary>
+            获取2D集成库版本号
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.VersionObtain.CVersionObtainTool.GetDLIntegraLibVersion">
+            <summary>
+            获取深度集成库版本号
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.VersionObtain.CVersionObtainTool.Get2DAlgorithmVersion(VisionDesigner.VersionObtain.MVD_SDK_TYPE)">
+            <summary>
+            获取2D算法库版本号,输入MVD_All2DVersion时,带有算法库名称的前缀、含有换行符
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.VersionObtain.CVersionObtainTool.Get2DAlgorithmVersion(System.Int32)">
+            <summary>
+            获取2D算法库版本号(重载输入方式),输入(int)MVD_All2DVersion时,带有算法库名称的前缀、含有换行符
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.VersionObtain.CVersionObtainTool.GetDLAlgorithmVersion(VisionDesigner.VersionObtain.MVD_DL_SDK_TYPE)">
+            <summary>
+            获取深度算法库版本号,输入MVD_DL_AllVersion时,带有算法库名称的前缀、含有换行符
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.VersionObtain.CVersionObtainTool.GetDLAlgorithmVersion(System.Int32)">
+            <summary>
+            获取深度算法库版本号(重载输入方式),输入(int)MVD_DL_AllVersion时,带有算法库名称的前缀、含有换行符
+            </summary>
+        </member>
+    </members>
+</doc>

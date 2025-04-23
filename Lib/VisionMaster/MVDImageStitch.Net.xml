@@ -1,0 +1,632 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDImageStitch.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ImageStitch.CImageStitchPattern">
+            <summary>
+            图像拼接建模类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.SetImageNum(System.Int32,System.Int32)">
+            <summary>
+            设置输入图像数量
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.GetImageNum(System.Int32@,System.Int32@)">
+            <summary>
+            获取输入图像数量
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.SetInputImageAt(VisionDesigner.ImageStitch.CImageStitchPatternImageData,System.Int32)">
+            <summary>
+            设置单个标定板图像
+            </summary>
+            <param name="cInputImage">待设置输入图像</param>
+            <param name="nPosIndex">输入图像位置索引</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.GetInputImageAt(System.Int32)">
+            <summary>
+            获取指定标定板图像
+            </summary>
+            <param name="nPosIndex">输入图像位置索引</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.CornerExtractAt(System.Int32)">
+            <summary>
+            执行指定索引处角点提取处理
+            </summary>
+            <param name="nPosIndex">输入图像位置索引</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.CornerExtract">
+            <summary>
+            执行指角点提取处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.Train">
+            <summary>
+            训练模型
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.ExportPattern(System.String)">
+            <summary>
+            导出模型
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.ExportPattern(System.Byte[]@)">
+            <summary>
+            导出模板
+            </summary>
+            <param name="xmlData">导出模型的字节数组</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.ImportPattern(System.String)">
+            <summary>
+            导入模型
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.ImportPattern(System.Byte[])">
+            <summary>
+            导入模板
+            </summary>
+            <param name="xmlData">xml模板字节数据</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="runParamBufferBytes">要保存运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+            <param name="runParamBufferLength">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="runParamBufferBytes">导入的运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPattern.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPattern.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPattern.CornerExtractResult">
+            <summary>
+            角点提取结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPattern.PatternResult">
+            <summary>
+            建模结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPattern.OptImageDataList">
+            <summary>
+            建模优化图像列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.MVD_CALIBBOARD_TYPE">
+            <summary>
+            标定板类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageStitch.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_CHECKER">
+            <summary>
+            棋盘格标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageStitch.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_CIRCLE">
+            <summary>
+            圆形标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageStitch.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_SPARSE_I">
+            <summary>
+            海康I型标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageStitch.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_DENSE_II">
+            <summary>
+            海康II型标定板
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageStitch.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_DENSE_II_V2">
+            <summary>
+            海康II型扩展型标定板(稠密型)
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageStitch.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_HKA_SPARSE_I_V2">
+            <summary>
+             海康I型扩展型标定板(稀疏型)
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageStitch.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_RSCODE_SIGN_FOUR">
+            <summary>
+            V3.3后定义更新为MVD_CALIBBOARD_TYPE_HKA_SPARSE_I
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageStitch.MVD_CALIBBOARD_TYPE.MVD_CALIBBOARD_RSCODE_SIGN">
+            <summary>
+            V3.3后定义更新为MVD_CALIBBOARD_TYPE_HKA_DENSE_II
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.CImageStitchPatternBasicParam">
+            <summary>
+            图像拼接模板基础参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPatternBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternBasicParam.CalibBoardType">
+            <summary>
+            标定板类型,图像拼接仅支持海康I型和海康II型标定板
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.MVD_STITCH_CHECKERBOARD_SUBPIXEL_WIN_AUTO_TYPE">
+            <summary>
+            亚像素窗口模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageStitch.MVD_STITCH_CHECKERBOARD_SUBPIXEL_WIN_AUTO_TYPE.MVD_STITCH_CHECKERBOARD_SUBP_WIN_AUTO">
+            <summary>
+            自适应
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ImageStitch.MVD_STITCH_CHECKERBOARD_SUBPIXEL_WIN_AUTO_TYPE.MVD_STITCH_CHECKERBOARD_SUBP_WIN_MANUAL">
+            <summary>
+            设置值
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.CImageStitchPatternRunParam">
+            <summary>
+            图像拼接建模运行参数类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPatternRunParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternRunParam.FilterFlag">
+            <summary>
+            中值滤波标记, 默认值true
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternRunParam.SubPixelWinMode">
+            <summary>
+            亚像素窗口模式,默认值1
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternRunParam.SubPixelWinSize">
+            <summary>
+            亚像素窗口大小[3,100], 默认值7
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternRunParam.GrayContrast">
+            <summary>
+            灰度对比度[1,255], 默认值15
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.CImageStitchPatternImageData">
+            <summary>
+            图像拼接建模输入参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPatternImageData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPatternImageData.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPatternImageData.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPatternImageData.Dispose">
+            <summary>
+            Dispose
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternImageData.InputImage">
+            <summary>
+            建模输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternImageData.RunParam">
+            <summary>
+            每张图像对应的建模运行参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternImageData.ROI">
+            <summary>
+            检测区域,仅支持0度矩形;默认null(全区)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternImageData.RegionImage">
+            <summary>
+            建模运行区域图像
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.CImageStitchPatternOutline">
+            <summary>
+            图像拼接轮廓信息
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPatternOutline.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternOutline.CalibBoardSize">
+            <summary>
+            标定板尺寸
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternOutline.CalibPointImageCoordinateList">
+            <summary>
+            标定点的图像坐标列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternOutline.CalibPointObjectCoordinateList">
+            <summary>
+            标定点的目标坐标列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.CImageStitchPatternResult">
+            <summary>
+            图像拼接建模结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchPatternResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternResult.Data">
+            <summary>
+            模板数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternResult.StitchImageWidth">
+            <summary>
+            拼接后的图像宽
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternResult.StitchImageHeight">
+            <summary>
+            拼接后的图像高
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchPatternResult.Error">
+            <summary>
+            建模误差
+            </summary>
+        </member>
+        <!-- 对于成员“T:VisionDesigner.ImageStitch.CImageStitchCornerExtractResult”忽略有格式错误的 XML 注释 -->
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchCornerExtractResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchCornerExtractResult.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchCornerExtractResult.CalibBoardOutline">
+            <summary>
+            标定板轮廓点，未进行角点提取时返回null
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchBasicParam.OffsetList">
+            <summary>
+            偏移量
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.CImageStitchImageData">
+            <summary>
+            图像拼接输入参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchImageData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchImageData.InputImage">
+            <summary>
+            建模输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchImageData.ROI">
+            <summary>
+            检测区域,仅支持0度矩形;默认null(全区)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchImageData.PosIndex">
+            <summary>
+            输入图像在建模时的位置索引(0,1,2...)
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.CImageStitchResult">
+            <summary>
+            图像拼接结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchResult.StitchImage">
+            <summary>
+            拼接结果图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchResult.InputImagePositionList">
+            <summary>
+            每张原图在拼接结果图中的位置信息
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.MVDSTITCH_CALIBBOARD_CFG">
+            <summary>
+            标定参数
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.MVD_VM_IMAGE">
+            <summary>
+            与VM交互专用图像，不可复用MVD_IMAGE(class)
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.MVDSTITCH_MODEL_CREATE_CALIBBOARD_INPUT">
+            <summary>
+            拼接图像结构体
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.CImageStitchTool">
+            <summary>
+            图像拼接建工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="runParamBufferBytes">要保存运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+            <param name="runParamBufferLength">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="runParamBufferBytes">导入的运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.Run">
+            <summary>
+            执行算法处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.CImageStitchTool.CheckPreCondition">
+            <summary>
+            前置条件检查
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchTool.InputImageDataList">
+            <summary>
+            输入图像列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchTool.Pattern">
+            <summary>
+            拼接模板
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.CImageStitchTool.Result">
+            <summary>
+            拼接结果
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.VMConfigData">
+            <summary>
+            VM模型XML 数据结构
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.VMConfigData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.VMConfigData.InputImageData">
+            <summary>
+            输入参数列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.VMConfigData.CalibBoardType">
+            <summary>
+            标定板类型
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.VMConfigData.ModelData">
+            <summary>
+            模型数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.VMConfigData.RunParamList">
+            <summary>
+            算法运行参数列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.VMConfigData.ModelError">
+            <summary>
+            建模误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.VMConfigData.CalibBoardOutline">
+            <summary>
+            建模轮廓信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.VMConfigData.Rows">
+            <summary>
+            建模行数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageStitch.VMConfigData.Columns">
+            <summary>
+            建模列数
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageStitch.VMConfigHelper">
+            <summary>
+            VM 模型文件互通
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.VMConfigHelper.CreatePatternXmlFile(System.String,VisionDesigner.ImageStitch.VMConfigData)">
+            <summary>
+            创建模板xml文件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.VMConfigHelper.CreatePatternXmlByte(System.Byte[]@,VisionDesigner.ImageStitch.VMConfigData)">
+            <summary>
+            创建模板Xml字节数组
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.VMConfigHelper.CreatePatternXml(System.Xml.XmlDocument,VisionDesigner.ImageStitch.VMConfigData)">
+            <summary>
+            创建模板Xml
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.VMConfigHelper.ParsePatternXml(System.String,VisionDesigner.ImageStitch.VMConfigData@)">
+            <summary>
+            解析模板Xml
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.VMConfigHelper.ParsePatternXml(System.Byte[],VisionDesigner.ImageStitch.VMConfigData@)">
+            <summary>
+            解析字节模板Xml
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageStitch.VMConfigHelper.ParsePatternDocumentNode(System.Xml.XmlNode,VisionDesigner.ImageStitch.VMConfigData@)">
+            <summary>
+            解析Document数据节点
+            </summary>
+            <param name="rootNode"></param>
+            <param name="vmConfigData"></param>
+        </member>
+    </members>
+</doc>

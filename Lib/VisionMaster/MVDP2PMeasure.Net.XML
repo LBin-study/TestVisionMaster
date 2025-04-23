@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDP2PMeasure.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.P2PMeasure.CP2PMeasureBasicParam">
+            <summary>
+            Class for describing basic parameter of P2PMeasure
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2PMeasure.CP2PMeasureBasicParam.Point1">
+            <summary>
+            point 1
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2PMeasure.CP2PMeasureBasicParam.Point2">
+            <summary>
+            point 2
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2PMeasure.CP2PMeasureBasicParam.AngleType">
+            <summary>
+            输出角度范围
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.P2PMeasure.CP2PMeasureResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2PMeasure.CP2PMeasureResult.Angle">
+            <summary>
+            angle of two points
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2PMeasure.CP2PMeasureResult.Dist">
+            <summary>
+            distance of two points
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2PMeasure.CP2PMeasureResult.MidPoint">
+            <summary>
+            middle point of two points
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.P2PMeasure.CP2PMeasureTool">
+            <summary>
+            the class for the P2PMeasureTool
+            </summary>
+            <remarks>The P2PMeasureTool encapsulates all of the classes required to perform a P2P measurement analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.P2PMeasure.CP2PMeasureTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2PMeasure.CP2PMeasureTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2PMeasure.CP2PMeasureTool.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            反序列化调用该构造函数
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:VisionDesigner.P2PMeasure.CP2PMeasureTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2PMeasure.CP2PMeasureTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2PMeasure.CP2PMeasureTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.P2PMeasure.CP2PMeasureTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2PMeasure.CP2PMeasureTool.BasicParam">
+            <summary>
+            basic parameter for P2PMeasure
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.P2PMeasure.CP2PMeasureTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

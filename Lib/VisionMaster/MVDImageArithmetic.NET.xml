@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDImageArithmetic.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ImageArithmetic.CImageArithmeticBasicParam">
+            <summary>
+            Class for describing ImageArithmetic BasicParam
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageArithmetic.CImageArithmeticBasicParam.#ctor">
+            <summary>
+            CImageArithmeticBasicParam constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageArithmetic.CImageArithmeticBasicParam.Weight1">
+            <summary>
+            Weight1
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageArithmetic.CImageArithmeticBasicParam.Weight2">
+            <summary>
+            Weight2
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageArithmetic.CImageArithmeticBasicParam.Offset">
+            <summary>
+            Offset
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageArithmetic.CImageArithmeticResult">
+            <summary>
+            Class for describing ImageArithmetic Result
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageArithmetic.CImageArithmeticResult.#ctor">
+            <summary>
+            CImageArithmeticResult constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageArithmetic.CImageArithmeticResult.OutputImage">
+            <summary>
+            Output Image
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageArithmetic.CImageArithmeticTool">
+            <summary>
+            Class of the ImageArithmeticTool
+            </summary>
+            <remarks>The ImageArithmeticTool encapsulates all of the classes required to perform an image binaring process.</remarks>
+        </member>
+        <member name="M:VisionDesigner.ImageArithmetic.CImageArithmeticTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageArithmetic.CImageArithmeticTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageArithmetic.CImageArithmeticTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageArithmetic.CImageArithmeticTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageArithmetic.CImageArithmeticTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this ImageArithmetic tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.ImageArithmetic.CImageArithmeticTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this ImageArithmetic tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.ImageArithmetic.CImageArithmeticTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this ImageArithmetic tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.ImageArithmetic.CImageArithmeticTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this ImageArithmetic tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.ImageArithmetic.CImageArithmeticTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageArithmetic.CImageArithmeticTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageArithmetic.CImageArithmeticTool.InputImage1">
+            <summary>
+            input image1 to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageArithmetic.CImageArithmeticTool.InputImage2">
+            <summary>
+            input image2 to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageArithmetic.CImageArithmeticTool.ROI">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageArithmetic.CImageArithmeticTool.Result">
+            <summary>
+            Result
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageArithmetic.CImageArithmeticTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+    </members>
+</doc>

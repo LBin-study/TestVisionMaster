@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDCameraMap.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CameraMap.CCameraMapBasicParam">
+            <summary>
+            Class for describing basic parameter of CameraMap
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapBasicParam.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CameraMap.CCameraMapBasicParam.ObjectPointList">
+            <summary>
+            List of object point coordinate relative to image.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CameraMap.CCameraMapBasicParam.TargetPointList">
+            <summary>
+            List of target point coordinate relative to image.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CameraMap.CCameraMapResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CameraMap.CCameraMapResult.RatioX">
+            <summary>
+            x direction ratio
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CameraMap.CCameraMapResult.RatioY">
+            <summary>
+            y direction ratio
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CameraMap.CCameraMapResult.Matrix">
+            <summary>
+            target location matrix
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CameraMap.CCameraMapTool">
+            <summary>
+            the class for the CCameraMapTool
+            </summary>
+            <remarks>The CCameraMapTool encapsulates all of the classes required to perform a CameraMap analysis.</remarks>
+        </member>
+        <member name="F:VisionDesigner.CameraMap.CCameraMapTool.m_stAlgorithm">
+            内部算法句柄
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapTool.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this CameraMap tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this CameraMap tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this CameraMap tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this CameraMap tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapTool.ExportCalibFile(System.String)">
+            <summary>
+            导出标定文件
+            </summary>
+            <param name="filePath">标定文件</param>
+            <remarks>iwcal文件</remarks>
+        </member>
+        <member name="M:VisionDesigner.CameraMap.CCameraMapTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CameraMap.CCameraMapTool.BasicParam">
+            <summary>
+            basic parameter for CameraMap
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CameraMap.CCameraMapTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDBoxROIFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.BoxROIFind.MVD_BOXROIFIND_PROC_TYPE">
+            <summary>
+            处理类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.BoxROIFind.MVD_BOXROIFIND_PROC_TYPE.MVD_BOXROI_PROC_TYPE_LINE">
+            <summary>
+            检测直线
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.BoxROIFind.MVD_BOXROIFIND_PROC_TYPE.MVD_BOXROI_PROC_TYPE_DISTANCE">
+            <summary>
+            检测距离
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.BoxROIFind.CBoxROIFindBasicParam">
+            <summary>
+            BoxROI查找基本参数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindBasicParam.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxROIFind.CBoxROIFindBasicParam.Point1">
+            <summary>
+            点1
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxROIFind.CBoxROIFindBasicParam.Point2">
+            <summary>
+            点2
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxROIFind.CBoxROIFindBasicParam.ProcessType">
+            <summary>
+            处理类型
+            </summary>
+            <remarks>默认为MVD_BOXROI_PROC_TYPE_LINE</remarks>
+        </member>
+        <member name="T:VisionDesigner.BoxROIFind.CBoxROIFindResult">
+            <summary>
+            BoxROI查找结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxROIFind.CBoxROIFindResult.Status">
+            <summary>
+            查找状态
+            </summary>
+            <remarks>0:查找BoxROI失败；1:查找BoxROI成功并输出</remarks>
+        </member>
+        <member name="P:VisionDesigner.BoxROIFind.CBoxROIFindResult.BoxROI">
+            <summary>
+            BoxROI
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxROIFind.CBoxROIFindResult.FindLine">
+            <summary>
+            FindLine
+            </summary>
+            <remarks>当处理类型为MVD_BOXROI_PROC_TYPE_DISTANCE时，该值无效</remarks>
+        </member>
+        <member name="T:VisionDesigner.BoxROIFind.CBoxROIFindTool">
+            <summary>
+            BoxROI查找工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+            <remarks>当处理类型为MVD_BOXROI_PROC_TYPE_DISTANCE时，该函数无法调用</remarks>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+            <remarks>当处理类型为MVD_BOXROI_PROC_TYPE_DISTANCE时，该函数无法调用</remarks>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="runParamBufferBytes">要保存运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+            <param name="runParamBufferLength">buffer实际的大小</param>
+            <remarks>当处理类型为MVD_BOXROI_PROC_TYPE_DISTANCE时，该函数无法调用</remarks>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="runParamBufferBytes">导入的运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+            <remarks>当处理类型为MVD_BOXROI_PROC_TYPE_DISTANCE时，该函数无法调用</remarks>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindTool.Run">
+            <summary>
+            执行操作
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.BoxROIFind.CBoxROIFindTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus"></param>
+        </member>
+        <member name="P:VisionDesigner.BoxROIFind.CBoxROIFindTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxROIFind.CBoxROIFindTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.BoxROIFind.CBoxROIFindTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

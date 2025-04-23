@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDUndistortCorrect.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.UndistortCorrect.CUndistortCorrectTool">
+            <summary>
+            畸变矫正Tool工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.UndistortCorrect.CUndistortCorrectTool.#ctor">
+            <summary>
+            畸变矫正Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.UndistortCorrect.CUndistortCorrectTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.UndistortCorrect.CUndistortCorrectTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.UndistortCorrect.CUndistortCorrectTool.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.UndistortCorrect.CUndistortCorrectTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.UndistortCorrect.CUndistortCorrectTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.UndistortCorrect.CUndistortCorrectTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.UndistortCorrect.CUndistortCorrectTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.UndistortCorrect.CUndistortCorrectTool.BasicParam">
+            <summary>
+            基本参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.UndistortCorrect.CUndistortCorrectTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.UndistortCorrect.CUndistortCorrectTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.UndistortCorrect.CUndistortCorrectBasicParam.#ctor">
+            <summary>
+            CUndistortCorrectBasicParam constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.UndistortCorrect.CUndistortCorrectBasicParam.CameraMatrix">
+            <summary>
+            CameraMatrix
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.UndistortCorrect.CUndistortCorrectBasicParam.DistCoefs">
+            <summary>
+            DistCoefs
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.UndistortCorrect.CUndistortCorrectResult.#ctor">
+            <summary>
+            CImageBinaryResult constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.UndistortCorrect.CUndistortCorrectResult.OutputImage">
+            <summary>
+            Output Image
+            </summary>
+        </member>
+    </members>
+</doc>

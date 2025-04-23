@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDMatrixToParam.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.MatrixToParam.CMatrixToParamResult">
+            <summary>
+            矩阵转参数结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MatrixToParam.CMatrixToParamResult.Scale">
+            <summary>
+            尺度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MatrixToParam.CMatrixToParamResult.OffsetX">
+            <summary>
+            X偏移
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MatrixToParam.CMatrixToParamResult.OffsetY">
+            <summary>
+            Y偏移
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MatrixToParam.CMatrixToParamResult.Rotate">
+            <summary>
+            旋转角度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MatrixToParam.CMatrixToParamResult.Aspect">
+            <summary>
+            Y方向和X方向的比例
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MatrixToParam.CMatrixToParamResult.Skew">
+            <summary>
+            倾斜量
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MatrixToParam.CMatrixToParamTool">
+            <summary>
+            矩阵转参数Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamTool.#ctor">
+            <summary>
+            N点标定Tool
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamTool.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamTool.ImportHomoMatrixWithPath(System.String)">
+            <summary>
+            导入Homo矩阵
+            </summary>
+            <param name="filePath">文件路径</param>
+            <remarks>iwcal文件或xml文件</remarks>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamTool.ImportHomoMatrix(System.Single[])">
+            <summary>
+            导入Homo矩阵 float[9]
+            </summary>
+            <param name="homoMatrix">矩阵数据</param>
+            <remarks>iwcal文件</remarks>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamTool.Run">
+            <summary>
+            运行
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamTool.LoadCalibData(System.String)">
+            <summary>
+            加载iwcal数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamTool.LoadXmlCalibData(System.String)">
+            <summary>
+            加载xml数据
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MatrixToParam.CMatrixToParamTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus">释放托管和非托管资源标志</param>
+        </member>
+        <member name="P:VisionDesigner.MatrixToParam.CMatrixToParamTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

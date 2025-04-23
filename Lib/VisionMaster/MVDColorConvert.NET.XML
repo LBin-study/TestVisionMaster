@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDColorConvert.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ColorConvert.CColorConvertResult">
+            <summary>
+            颜色转换结果类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorConvert.CColorConvertResult.OutputImage">
+            <summary>
+            输出图像
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ColorConvert.CColorConvertTool">
+            <summary>
+            颜色转换算子工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取运行参数
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置运行参数
+            </summary>
+            <param name="strKeyName">参数名</param>
+            <param name="strValue">参数值</param>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数配置
+            </summary>
+            <param name="arrFileBuf">保存运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的尺寸</param>
+            <param name="nConfigDataLen">运行参数的实际长度</param>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数配置
+            </summary>
+            <param name="arrFileBuf">待加载运行参数的buffer</param>
+            <param name="nConfigDataSize">buffer的尺寸</param>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertTool.Run">
+            <summary>
+            执行算法处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ColorConvert.CColorConvertTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorConvert.CColorConvertTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorConvert.CColorConvertTool.ROI">
+            <summary>
+            检测区域,默认值NULL(全区),只支持0度矩形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ColorConvert.CColorConvertTool.Result">
+            <summary>
+            处理结果
+            </summary>
+        </member>
+    </members>
+</doc>

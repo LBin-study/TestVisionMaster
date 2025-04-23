@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDPairLineFind.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.PairLineFind.MVD_EDGEPOINT_STATUS">
+            <summary>
+            Find status of the edge point
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PairLineFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_USED">
+            <summary>
+            Successfully found and used, default value
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PairLineFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_NO_USED">
+            <summary>
+            Successfully found but not used
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PairLineFind.MVD_EDGEPOINT_STATUS.MVD_EDGEPOINT_STATUS_NO_FIND">
+            <summary>
+            Fail to find
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PairLineFind.MVD_EDGE_POLARITY">
+            <summary>
+            Type of the polarity of the edge point
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PairLineFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_DARK_TO_BRIGHT">
+            <summary>
+            From black to white, default value
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PairLineFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BRIGHT_TO_DARK">
+            <summary>
+            From white to black
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PairLineFind.MVD_EDGE_POLARITY.MVD_EDGE_POLARITY_BOTH">
+            <summary>
+            both
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PairLineFind.CPairLineFindEdgePointInfo">
+            <summary>
+            Class for describing edge points Information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindEdgePointInfo.EdgePoint">
+            <summary>
+            coordinate of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindEdgePointInfo.Score">
+            <summary>
+            score of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindEdgePointInfo.Distance">
+            <summary>
+            distance of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindEdgePointInfo.Polarity">
+            <summary>
+            polarity of the edge point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindEdgePointInfo.Status">
+            <summary>
+            finding status of the edge point
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PairLineFind.CPairLineFindResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindResult.Status">
+            <summary>
+            ch: 检测状态 | en:finding status
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindResult.Line0">
+            <summary>
+            Line0 of the pair line that has been found
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindResult.Line1">
+            <summary>
+            Line1 of the pair line that has been found
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindResult.LineMid">
+            <summary>
+            Middle line of the pair line that has been found
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindResult.LineWidth">
+            <summary>
+            Line  width of the pair line that has been found
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindResult.EdgePointNum">
+            <summary>
+            Line  width of the pair line that has been found
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindResult.Edge0PointList">
+             <summary>
+            Edge0Poin Info
+             </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindResult.Edge1PointList">
+             <summary>
+            Edge1Poin Info
+             </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindResult.EdgeMidPointList">
+             <summary>
+            EdgeMidPoin Info
+             </summary>
+        </member>
+        <member name="T:VisionDesigner.PairLineFind.CPairLineFindTool">
+            <summary>
+            the class for the PairLineFindTool
+            </summary>
+            <remarks>The PairLineFindTool encapsulates all of the classes required to perform a pair line finding analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.PairLineFind.CPairLineFindTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PairLineFind.CPairLineFindTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PairLineFind.CPairLineFindTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PairLineFind.CPairLineFindTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PairLineFind.CPairLineFindTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this PairLineFind tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.PairLineFind.CPairLineFindTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this PairLineFind tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.PairLineFind.CPairLineFindTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this PairLineFind tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.PairLineFind.CPairLineFindTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this PairLineFind tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.PairLineFind.CPairLineFindTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PairLineFind.CPairLineFindTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PairLineFind.CPairLineFindTool.Init">
+            <summary>
+            Init
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindTool.ROI">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindTool.MaskImage">
+            <summary>
+             region image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PairLineFind.CPairLineFindTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>

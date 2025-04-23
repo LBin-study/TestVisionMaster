@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDEllipseFit.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.EllipseFit.CEllipseFitBasicParam">
+            <summary>
+            基本参数类。用以描述椭圆拟合所需的前置输入参数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFit.CEllipseFitBasicParam.PointsToFit">
+             <summary>
+            拟合点列表
+             </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFit.CEllipseFitBasicParam.AngleType">
+            <summary>
+            输出角度范围
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EllipseFit.CEllipseFitResult">
+            <summary>
+            结果类。提供椭圆拟合所得结果信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFit.CEllipseFitResult.FindStatus">
+            <summary>
+            椭圆是否拟合成功状态，默认false
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFit.CEllipseFitResult.Ellipse">
+            <summary>
+            椭圆信息
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFit.CEllipseFitResult.FitError">
+            <summary>
+            椭圆拟合误差
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFit.CEllipseFitResult.EdgePointList">
+            <summary>
+            边缘点列表
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFit.CEllipseFitResult.StatusList">
+            <summary>
+            边缘点列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EllipseFit.CEllipseFitTool">
+            <summary>
+            工具类。封装椭圆拟合功能的分析过程，内嵌相关类。
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFit.CEllipseFitTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFit.CEllipseFitTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFit.CEllipseFitTool.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            反序列化调用该构造函数
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:VisionDesigner.EllipseFit.CEllipseFitTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFit.CEllipseFitTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFit.CEllipseFitTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取运行参数
+            </summary>
+            <param name="strKeyName">[IN] 参数名</param>
+            <param name="strValue">[IN/OUT] 参数值</param>
+        </member>
+        <member name="M:VisionDesigner.EllipseFit.CEllipseFitTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置运行参数
+            </summary>
+            <param name="strKeyName">[IN] 参数名</param>
+            <param name="strValue">[IN] 参数值</param>
+        </member>
+        <member name="M:VisionDesigner.EllipseFit.CEllipseFitTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数配置信息
+            </summary>
+            <param name="arrFileBuf">[IN] 用于保存配置信息的buffer</param>
+            <param name="nConfigDataSize">[IN] 输入buffer尺寸</param>
+            <param name="nConfigDataLen">[IN] 配置信息实际长度</param>
+        </member>
+        <member name="M:VisionDesigner.EllipseFit.CEllipseFitTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数配置信息
+            </summary>
+            <param name="arrFileBuf">[IN/OUT] 待加载配置信息所在buffer</param>
+            <param name="nConfigDataSize">[IN/OUT] 待加载配置信息buffer的长度</param>
+        </member>
+        <member name="M:VisionDesigner.EllipseFit.CEllipseFitTool.Run">
+            <summary>
+            执行算法处理
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.EllipseFit.CEllipseFitTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFit.CEllipseFitTool.BasicParam">
+            <summary>
+            基本参数，内部管理，获取后更新设置。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.EllipseFit.CEllipseFitTool.Result">
+            <summary>
+             拟合结果，未执行或执行失败时为NULL。
+            </summary>
+        </member>
+    </members>
+</doc>

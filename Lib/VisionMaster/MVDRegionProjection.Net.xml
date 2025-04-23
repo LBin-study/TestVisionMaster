@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDRegionProjection.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.RegionProjection.CRegionProjectionResult">
+            <summary>
+            RegionProjection结果
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionResult.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.RegionProjection.CRegionProjectionResult.m_stAlgOutput">
+            <summary>
+            算法输出结构
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RegionProjection.CRegionProjectionResult.OutputImage">
+            <summary>
+            输出图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RegionProjection.CRegionProjectionResult.ProjectionData">
+            <summary>
+            投影数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RegionProjection.CRegionProjectionResult.FilterData">
+            <summary>
+            滤波数据
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RegionProjection.CRegionProjectionResult.DataLen">
+            <summary>
+            数据长度
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.RegionProjection.CRegionProjectionTool">
+            <summary>
+            RegionProjection工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionTool.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            获取单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionTool.SetRunParam(System.String,System.String)">
+            <summary>
+            设置单个运行参数
+            </summary>
+            <param name="keyName">运行参数名</param>
+            <param name="keyValue">运行参数值</param>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            保存运行参数
+            </summary>
+            <param name="runParamBufferBytes">要保存运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+            <param name="runParamBufferLength">buffer实际的大小</param>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            加载运行参数
+            </summary>
+            <param name="runParamBufferBytes">导入的运行参数的buffer</param>
+            <param name="runParamBufferSize">buffer的大小</param>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionTool.Run">
+            <summary>
+            执行操作
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.RegionProjection.CRegionProjectionTool.Dispose(System.Boolean)">
+            <summary>
+            资源释放
+            </summary>
+            <param name="bDisposeStatus"></param>
+        </member>
+        <member name="P:VisionDesigner.RegionProjection.CRegionProjectionTool.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RegionProjection.CRegionProjectionTool.ROIShape">
+            <summary>
+            ROI图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.RegionProjection.CRegionProjectionTool.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+    </members>
+</doc>

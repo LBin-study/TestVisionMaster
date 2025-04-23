@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDImageRegionCopy.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.ImageRegionCopy.CImageRegionCopyResult">
+            <summary>
+            Class for describing ImageRegionCopy Result
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageRegionCopy.CImageRegionCopyResult.#ctor">
+            <summary>
+            CImageRegionCopyResult constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageRegionCopy.CImageRegionCopyResult.OutputImage">
+            <summary>
+            Output Image
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool">
+            <summary>
+            Class of the ImageRegionCopyTool
+            </summary>
+            <remarks>The ImageRegionCopyTool encapsulates all of the classes required to perform an image binaring process.</remarks>
+        </member>
+        <member name="M:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.Finalize">
+            <summary>
+            终结器
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.OnDeserialization(System.Object)">
+            <summary>
+            反序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.GetRunParam(System.String,System.String@)">
+            <summary>
+            Get the run parameters for this ImageRegionCopy tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.SetRunParam(System.String,System.String)">
+            <summary>
+            Set the run parameters for this ImageRegionCopy tool.
+            </summary>
+            <param name="strKeyName">name of the parameter</param>
+            <param name="strValue">value of the parameter</param>
+        </member>
+        <member name="M:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.SaveConfiguration(System.Byte[],System.UInt32,System.UInt32@)">
+            <summary>
+            Save the configuration information of this ImageRegionCopy tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to save</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+            <param name="nConfigDataLen">actual length of the buffer content</param>
+        </member>
+        <member name="M:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.LoadConfiguration(System.Byte[],System.UInt32)">
+            <summary>
+            Load the configuration information of this ImageRegionCopy tool
+            </summary>
+            <param name="arrFileBuf">the file buffer with parameters information to load</param>
+            <param name="nConfigDataSize">size of the buffer</param>
+        </member>
+        <member name="M:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.InputImage">
+            <summary>
+            input image to process
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.ROI">
+            <summary>
+            ROI region on the input image
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.ImageRegionCopy.CImageRegionCopyTool.Result">
+            <summary>
+            Result
+            </summary>
+        </member>
+    </members>
+</doc>

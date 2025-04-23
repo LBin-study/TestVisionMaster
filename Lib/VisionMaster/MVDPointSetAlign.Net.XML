@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDPointSetAlign.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.PointSetAlign.CPointSetAlignBasicParam">
+            <summary>
+            Class for describing basic parameter of PointSetAlign
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PointSetAlign.CPointSetAlignBasicParam.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PointSetAlign.CPointSetAlignBasicParam.ObjectPointList">
+            <summary>
+            object point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PointSetAlign.CPointSetAlignBasicParam.TargetPointList">
+            <summary>
+            target point
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PointSetAlign.CPointSetAlignResult">
+            <summary>
+            Class of the result information
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PointSetAlign.CPointSetAlignResult.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PointSetAlign.CPointSetAlignResult.DeltaTheta">
+            <summary>
+            theta direction offset
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PointSetAlign.CPointSetAlignResult.DeltaX">
+            <summary>
+            x direction offset
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PointSetAlign.CPointSetAlignResult.DeltaY">
+            <summary>
+            y direction offset
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PointSetAlign.CPointSetAlignResult.AlignError">
+            <summary>
+            error of point set align
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.PointSetAlign.CPointSetAlignTool">
+            <summary>
+            the class for the CPointSetAlignTool
+            </summary>
+            <remarks>The CPointSetAlignTool encapsulates all of the classes required to perform a PointSetAlign analysis.</remarks>
+        </member>
+        <member name="M:VisionDesigner.PointSetAlign.CPointSetAlignTool.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PointSetAlign.CPointSetAlignTool.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PointSetAlign.CPointSetAlignTool.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PointSetAlign.CPointSetAlignTool.OnDeserialization(System.Object)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PointSetAlign.CPointSetAlignTool.Dispose">
+            <summary>
+            release resource
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PointSetAlign.CPointSetAlignTool.Run">
+            <summary>
+            Runs the tool using the current parameter settings.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.PointSetAlign.CPointSetAlignTool.GetAlgRunTime">
+            <summary>
+            获取运行时间
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.PointSetAlign.CPointSetAlignTool.m_bIsDisposed">
+            对象是否已经调用Dispose()
+        </member>
+        <member name="F:VisionDesigner.PointSetAlign.CPointSetAlignTool.m_stAlgorithm">
+            算法句柄
+        </member>
+        <member name="F:VisionDesigner.PointSetAlign.CPointSetAlignTool.m_pstInput">
+            输入指针
+        </member>
+        <member name="F:VisionDesigner.PointSetAlign.CPointSetAlignTool.m_pstOutput">
+            输出指针
+        </member>
+        <member name="F:VisionDesigner.PointSetAlign.CPointSetAlignTool.m_stProcInput">
+            输入结构体
+        </member>
+        <member name="F:VisionDesigner.PointSetAlign.CPointSetAlignTool.m_stProcOutput">
+            输出结构体
+        </member>
+        <member name="F:VisionDesigner.PointSetAlign.CPointSetAlignTool.m_arrObjectPoint">
+            物体Mark点坐标
+        </member>
+        <member name="F:VisionDesigner.PointSetAlign.CPointSetAlignTool.m_arrTargetPoint">
+            目标Mark点坐标
+        </member>
+        <member name="M:VisionDesigner.PointSetAlign.CPointSetAlignTool.Init">
+            初始化
+        </member>
+        <member name="M:VisionDesigner.PointSetAlign.CPointSetAlignTool.BuildPreConditon">
+            前置条件检测
+        </member>
+        <member name="M:VisionDesigner.PointSetAlign.CPointSetAlignTool.Dispose(System.Boolean)">
+            <summary>
+            release resource
+            </summary>
+            <param name="bDisposeStatus">Flag of whether release managed and unmanaged resource</param>
+        </member>
+        <member name="P:VisionDesigner.PointSetAlign.CPointSetAlignTool.BasicParam">
+            <summary>
+            basic parameter for SinglePointAlign
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.PointSetAlign.CPointSetAlignTool.Result">
+            <summary>
+            Result from the last invocation of Run.
+            </summary>
+        </member>
+    </members>
+</doc>
