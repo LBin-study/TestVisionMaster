@@ -1,0 +1,978 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDMask.Controls</name>
+    </assembly>
+    <members>
+        <member name="M:VisionDesigner.Controls.EraserForm.ChangeLanguage">
+            <summary>
+            改变语言
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.EraserForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.EraserForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.EraserForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.EraserForm.EarserWidth">
+            <summary>
+            橡皮擦宽度
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.EraserForm.ControlLanguage">
+            <summary>
+            控件语言
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVDMaskControl">
+            <summary>
+            掩膜生成控件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskInterface.MVD_SetInputImage(System.Int32,System.Int32,System.Int32,System.Int64)">
+            <summary>
+            设置输入图像
+            </summary>
+            <remarks>本接口仅限C++调用，C#请使用控件InputImage属性进行设置</remarks>
+            <param name="nWidth">[IN]图像宽</param>
+            <param name="nHeight">[IN]图像高</param>
+            <param name="nPixelFormat">[IN]图像格式，对应枚举：MVD_PIXEL_FORMAT</param>
+            <param name="pData">[IN]图像数据的地址，对应MVD_ImageParamDefine.h中的C++结构体MVD_IMAGE_DATA_INFO</param>
+            <returns>非0表示设置失败</returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskInterface.MVD_GetOutputImage(System.Int32@,System.Int32@,System.Int32@,System.Int64@)">
+            <summary>
+            获取生成的掩膜图像，本接口仅限C++调用，C#请使用控件OutputImage属性进行设置
+            </summary>
+            <param name="nWidth">[INOUT]图像宽</param>
+            <param name="nHeight">[INOUT]图像高</param>
+            <param name="nPixelFormat">[INOUT]图像格式</param>
+            <param name="pData">[INOUT]图像数据的地址，对应MVD_ImageParamDefine.h中的C++结构体MVD_IMAGE_DATA_INFO，未生成掩膜图则返回0</param>
+            <returns>0表示获取成功，非0表示未成功</returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskInterface.MVD_SetControlLanguage(System.Int32)">
+            <summary>
+            设置控件语言类型
+            </summary>
+            <param name="nLangType">[IN]语言类型，默认中文，1：中文，2：英文</param>
+            <returns>0表示获取成功，非0表示未成功</returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.DestroyControl">
+            <summary>
+            销毁控件时自己调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.InitRenderControl">
+            <summary>
+            初始化渲染控件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.InitControl">
+            <summary>
+            初始化控件，做一些事件绑定等
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.InitROIControl">
+            <summary>
+            初始化ROI类的控件
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.InitToolTips(VisionDesigner.Controls.MVDMaskControl.LanguageType)">
+            <summary>
+            初始化ToolTips
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.GeneMaskImage">
+            <summary>
+            生成掩膜图，给GetOutputImage和OutputImage属性调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.ChangeLanguage(VisionDesigner.Controls.MVDMaskControl.LanguageType)">
+            <summary>
+            修改语言资源
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.ShowMessage(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            展示MSG
+            </summary>
+            <param name="text"></param>
+            <param name="caption"></param>
+            <param name="btn"></param>
+            <param name="icon"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnLoadImg_Click(System.Object,System.EventArgs)">
+            <summary>
+            加载图片
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnArrow_Click(System.Object,System.EventArgs)">
+            <summary>
+            箭头
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnRect_Click(System.Object,System.EventArgs)">
+            <summary>
+            绘制矩形
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnAnnulus_Click(System.Object,System.EventArgs)">
+            <summary>
+            绘制扇环
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnCircle_Click(System.Object,System.EventArgs)">
+            <summary>
+            绘制圆
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnPolygon_Click(System.Object,System.EventArgs)">
+            <summary>
+            绘制多边形
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnEraser_Click(System.Object,System.EventArgs)">
+            <summary>
+            橡皮擦点击事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnRun_Click(System.Object,System.EventArgs)">
+            <summary>
+            执行
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnClear_Click(System.Object,System.EventArgs)">
+            <summary>
+            清理图形，橡皮擦轨迹
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnSave_Click(System.Object,System.EventArgs)">
+            <summary>
+            保存掩膜图
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.cbbSwitchRegionType_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            切换图形类型展示不同的颜色
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.cbbISwitchImageType_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            切换图片显示
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtn1Rate1_Click(System.Object,System.EventArgs)">
+            <summary>
+            缩放比率1比1
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.mvdRenderControl1_MVDShapeChangedEvent(VisionDesigner.Controls.MVD_SHAPE_EVENT_TYPE,VisionDesigner.MVD_SHAPE_TYPE,VisionDesigner.CMvdShape)">
+            <summary>
+            图形绘制完之后，切回到箭头，并拿出图形给_RegionList赋值
+            </summary>
+            <param name="enEventType"></param>
+            <param name="enShapeType"></param>
+            <param name="cShapeObj"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.mvdRenderControl1_MVD_MenuEvent(System.Int64,System.IntPtr)">
+            <summary>
+            渲染控件菜单事件
+            </summary>
+            <param name="nMenuId"></param>
+            <param name="pUserData"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnMouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            除ROI与箭头外其他控件的鼠标按下事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnMouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            除ROI与箭头外其他控件的鼠标进入事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnMouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            除ROI与箭头外其他控件的鼠标离开事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnROIMouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            ROI的鼠标按下事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnROIMouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            ROI的鼠标进入事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.pbBtnROIMouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            ROI的鼠标离开事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.SetGreyBtns(VisionDesigner.Controls.MVDMaskControl.CurrPointerType)">
+            <summary>
+            选中一种ROI之后，置灰其他ROI，自己置为亮
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.ChangeToArrow">
+            <summary>
+            切换鼠标为箭头，主要给其他非ROI按钮，只要点击区域在
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.MVD_SetInputImage(System.Int32,System.Int32,System.Int32,System.Int64)">
+            <summary>
+            设置输入图像，若控件中原来有，则直接替换，Com层接口，C#中请使用InputImage属性
+            </summary>
+            <param name="nWidth">图像宽</param>
+            <param name="nHeight">图像高</param>
+            <param name="nPixelFormat">像素格式</param>
+            <param name="pData">图像数据地址</param>
+            <returns>错误码</returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.MVD_GetOutputImage(System.Int32@,System.Int32@,System.Int32@,System.Int64@)">
+            <summary>
+            获取输出掩膜图像，Com层接口，C#中请使用OutputImage属性
+            </summary>
+            <param name="nWidth">图像宽</param>
+            <param name="nHeight">图像高</param>
+            <param name="nPixelFormat">像素格式</param>
+            <param name="pData">图像数据地址</param>
+            <returns>错误码</returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.MVD_SetControlLanguage(System.Int32)">
+            <summary>
+            设置控件语言类型，Com层接口，C#中请使用CurrLangType属性
+            </summary>
+            <param name="nLangType">[IN]语言类型，默认中文，0：中文，1：英文</param>
+            <remarks></remarks>
+            <returns>0表示获取成功，非0表示未成功</returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.RegisterClass(System.String)">
+            <summary>
+            Register the class as a	control	and	set	it's CodeBase entry
+            </summary>
+            <param name="key">The registry key of the control</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.UnregisterClass(System.String)">
+            <summary>
+            Called to unregister the control
+            </summary>
+            <param name="key">Tke registry key</param>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDMaskControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDMaskControl.InputImage">
+            <summary>
+            输入图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDMaskControl.OutputImage">
+            <summary>
+            掩膜图像
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDMaskControl.ControlLanguage">
+            <summary>
+            当前语言类型
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVDMaskControl.LanguageType">
+            <summary>
+            语言类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.LanguageType.DEFAULT">
+            <summary>
+            默认，中文
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.LanguageType.ZH_CN">
+            <summary>
+            简体中文
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.LanguageType.ENG">
+            <summary>
+            英文
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVDMaskControl.RegionType">
+            <summary>
+            区域类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.RegionType.ROI">
+            <summary>
+            ROI
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.RegionType.ENHANCE">
+            <summary>
+            增强区域
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.RegionType.MASK">
+            <summary>
+            屏蔽区
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVDMaskControl.CurrPointerType">
+            <summary>
+            当前鼠标指针类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.CurrPointerType.Arrow">
+            <summary>
+            箭头
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.CurrPointerType.Rectangle">
+            <summary>
+            矩形
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.CurrPointerType.Annulus">
+            <summary>
+            扇环
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.CurrPointerType.Circle">
+            <summary>
+            圆
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.CurrPointerType.Polygon">
+            <summary>
+            多边形
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDMaskControl.CurrPointerType.Eraser">
+            <summary>
+            橡皮擦
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_DATA_CHANNEL_INFO_V2">
+            <summary>
+            图像单通道数据
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_DATA_CHANNEL_INFO_V2.arrDataBytes">
+            <summary>
+            ch: 此通道数据buffer
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_DATA_CHANNEL_INFO_V2.nSize">
+            <summary>
+            ch: buffer分配大小，字节
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_DATA_CHANNEL_INFO_V2.nLen">
+            <summary>
+            ch: 实际数据长度，字节
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_DATA_CHANNEL_INFO_V2.nRowStep">
+            <summary>
+            ch: 行间距，字节
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_DATA_CHANNEL_INFO_V2.nResvered">
+            <summary>
+            ch: 保留字节
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_IMAGE_DATA_INFO_V2">
+            <summary>
+            图像数据
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_IMAGE_DATA_INFO_V2.stDataChannel">
+            <summary>
+            数据buffer
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_IMAGE_DATA_INFO_V2.nResvered">
+            <summary>
+            保留字节
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.LocalizedHelper">
+            <summary>
+            本地化工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.LocalizedHelper.GetLocalizedString(System.String,VisionDesigner.Controls.MVDMaskControl.LanguageType)">
+            <summary>
+            根据语言类型，获取本地化字符串
+            </summary>
+            <param name="key"></param>
+            <param name="langType"></param>
+            <returns></returns>
+        </member>
+        <member name="P:VisionDesigner.Controls.LocalizedHelper.LanguageDic">
+            <summary>
+            语言字典，只能通过单例Get
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.LocalizedHelper.Instance">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.check2_box_off">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.check2_box_on">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_add_单张图片">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_add_单张图片_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_add_单张图片_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_ROI_full_screen_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_ROI_full_screen_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_ROI_full_screen_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_ROI_retangle_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_ROI_retangle_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_ROI_retangle_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_加载图像_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_加载图像_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_加载图像_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_导出_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_导出_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_导出_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_掩膜类型_unfold_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_掩膜类型_unfold_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_掩膜类型_unfold_select">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_替换图片_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_替换图片_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_替换图片_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_橡皮擦_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_橡皮擦_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_橡皮擦_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_橡皮擦2_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_橡皮擦2_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_橡皮擦2_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_清空图片_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_清空图片_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_清空图片_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_生成学习模板_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_生成学习模板_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_生成学习模板_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_箭头_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_箭头_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ic_箭头_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.LanguageResources">
+             <summary>
+               查找类似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;
+            &lt;LanguageRes&gt;
+              &lt;!--控件的一些提示--&gt;
+              &lt;String key=&quot;Prompt&quot;&gt;
+                &lt;ZhCn&gt;提示&lt;/ZhCn&gt;
+                &lt;Eng&gt;Prompt&lt;/Eng&gt;
+              &lt;/String&gt;
+              &lt;String key=&quot;Warning&quot;&gt;
+                &lt;ZhCn&gt;警告&lt;/ZhCn&gt;
+                &lt;Eng&gt;Warning&lt;/Eng&gt;
+              &lt;/String&gt;
+              &lt;String key=&quot;Error&quot;&gt;
+                &lt;ZhCn&gt;错误&lt;/ZhCn&gt;
+                &lt;Eng&gt;Error&lt;/Eng&gt;
+              &lt;/String&gt;
+              &lt;String key=&quot;SystemError&quot;&gt;
+                &lt;ZhCn&gt;系统错误&lt;/ZhCn&gt;
+                &lt;Eng&gt;SystemError&lt;/Eng&gt;
+              &lt;/String&gt;
+              &lt;String key=&quot;FirstLoadImg&quot;&gt;
+                &lt;ZhCn&gt;请先加载一张图像&lt;/ZhCn&gt;
+                &lt;Eng&gt;Please load an image firstly&lt;/E [字符串的其余部分被截断]&quot;; 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_circle_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_circle_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_DoubleBox_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_DoubleBox_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_full_screen_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_full_screen_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_polygon_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_polygon_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_QuadraBox_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_QuadraBox_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_retangle_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_retangle_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_ring_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_ring_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_ring_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_圆形卡尺_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_圆形卡尺_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_圆形卡尺_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_屏蔽circle_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_屏蔽circle_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_屏蔽circle_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_屏蔽polygon_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_屏蔽polygon_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_屏蔽polygon_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_屏蔽retangle_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_屏蔽retangle_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_屏蔽retangle_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_直线卡尺_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_直线卡尺_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_直线卡尺_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ROI_选中但未绘制_bg">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.swith_off">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.swith_off_dark">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.swith_on">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.swith_on_dark">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.tool_right_ic_1比1_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.tool_right_ic_1比1_hover">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.tool_right_ic_1比1_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.tool_right_ic_full_screen_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.tool_right_ic_full_screen_hover">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.window_ROI_lock_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.window_ROI_lock_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.window_ROI_unlock_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.window_ROI_unlock_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ZoomIn">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ZoomIn_1">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ZoomOut">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.ZoomOut_1">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.标签类_ic_delete_click">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.标签类_ic_delete_disable">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.Properties.Resources.标签类_ic_delete_normal">
+            <summary>
+              查找 System.Drawing.Bitmap 类型的本地化资源。
+            </summary>
+        </member>
+    </members>
+</doc>

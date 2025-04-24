@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDImage.Net</name>
+    </assembly>
+    <members>
+        <member name="T:MVD.VMSDK.Comm.PixelFormatCommon">
+            <summary>
+            图像像素格式
+            </summary>
+        </member>
+        <member name="T:MVD.VMSDK.Comm.ImageHeadComm">
+            <summary>
+            图像头部
+            </summary>
+        </member>
+        <member name="T:MVD.VMSDK.Comm.ImageCommon">
+            <summary>
+            图像结构体
+            </summary>
+        </member>
+        <member name="T:MVD.VMSDK.Comm.COMM_DATA_VERSION_INFO">
+            <summary>
+            版本信息
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_DATA_VERSION_INFO.COMM_DATA_VERSION_440">
+            <summary>
+            CH: Vm4.4.0 | EN: Vm4.4.0
+            </summary>
+        </member>
+        <member name="T:MVD.VMSDK.Comm.COMM_DATA_SOURCE_INFO">
+            <summary>
+            数据来源
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_DATA_SOURCE_INFO.COMM_DATA_SOURCE_MVDSDK">
+            <summary>
+            CH: MvdSDK数据 | EN: MvdSDK data
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_DATA_SOURCE_INFO.COMM_DATA_SOURCE_VMSDK">
+            <summary>
+            CH: VmSDK数据 | EN: VmSDK data
+            </summary>
+        </member>
+        <member name="T:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE">
+            <summary>
+            图像图形数据类型
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_BASE_TYPE_UNDEFINED">
+            <summary>
+            CH: 无效数据 | EN: Invalid Data
+            NULL
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_BASE_TYPE_IMAGE_DATA">
+            <summary>
+            CH: 图像数据 | EN: Image data
+            ImageBaseData
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_POINT_I">
+            <summary>
+            CH: 整型点 | EN: Point_I
+            Point
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_POINT_F">
+            <summary>
+            CH: 浮点型点 | EN: Float Point
+            PointF
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_RECT_I">
+            <summary>
+            CH: 不带角度的矩形 | EN: RectI
+            RectBox
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_RECT_F">
+            <summary>
+            CH: 不带角度的矩形 | EN: RectF
+            RectBox
+            </summary>
+        </member>
+        <!-- 对于成员“F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_RECT_BOX”忽略有格式错误的 XML 注释 -->
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_CIRCLE">
+            <summary>
+            CH: 圆形 | EN: Circle
+            Circle
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_ANNULUS">
+            <summary>
+            CH: 圆弧 | EN: Annulus
+            Annulus
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_POLYGON">
+            <summary>
+            CH: 多边形 | EN: Polygon
+            Polygon
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_ELLIPSE">
+            <summary>
+            CH: 椭圆 | EN: Ellipse
+            Ellipse
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_LINE">
+            <summary>
+            CH: 直线 | EN: Line
+            Ellipse
+            </summary>
+        </member>
+        <member name="T:MVD.VMSDK.Comm.HeadCommon">
+            <summary>
+            公共数据头部
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVD_DATA_CHANNEL_INFO_INNER.arrDataBytes">
+            <summary>
+            ch: 此通道数据buffer | en: Data array of current channel
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVD_DATA_CHANNEL_INFO_INNER.nSize">
+            <summary>
+            ch: buffer分配大小，字节 | en: Size of the data array
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVD_DATA_CHANNEL_INFO_INNER.nLen">
+            <summary>
+            ch: 实际数据长度，字节 | en: Actual data length in the data array (byte)
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVD_DATA_CHANNEL_INFO_INNER.nRowStep">
+            <summary>
+            ch: 行间距，字节 | en: Step length between each row (byte)
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVD_DATA_CHANNEL_INFO_INNER.nResvered">
+            <summary>
+            ch: 保留字节 | en: Reserved bytes
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVD_DATA_CHANNEL_INFO_INNER.DataIntPtr">
+            <summary>
+            ch: 此通道数据buffer指针 | en: Data pointer of current channel
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVD_DATA_CHANNEL_INFO_INNER.DataHandle">
+            <summary>
+            ch: 此通道数据buffer句柄 | en: Data handle of current channel
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MVD_IMAGE_DATA_INFO_INNER.stDataChannel">
+            <summary>
+            ch: 数据buffer | en: Data buffer of current image
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdImage">
+            <summary>
+            Class of image definition
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.IsValidImgDataInfo(System.UInt32,System.UInt32,VisionDesigner.MVD_PIXEL_FORMAT,VisionDesigner.MVD_IMAGE_DATA_INFO)">
+            图像数据是否有效
+            <param name="nWidth">宽</param>
+            <param name="nHeight">高</param>
+            <param name="enPixelFormat">像素类型</param>
+            <param name="stImageData">图像数据</param>
+            <returns>有效返回MVD_OK，无效返回错误码 </returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.Init">
+            初始化资源
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.DeInit">
+            销毁资源
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化时调用，外部不允许调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.InitImage(VisionDesigner.CMvdImage)">
+            初始化图像
+            <param name="refCMVDImageNet"></param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.GetImageSize(VisionDesigner.MVD_PIXEL_FORMAT,System.UInt32,System.UInt32)">
+            获取图像标准大小
+            <param name="enPixelFormat">像素格式</param>
+            <param name="nWidth">宽</param>
+            <param name="nHeight">高</param>
+            <returns>图像标准大小</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.GetFileFormat(System.String)">
+            Get file format by file name
+            <param name="sFileName">full file path with name</param>
+            <returns>file format</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.InitImage(System.String)">
+            <summary>
+            Initialize the image instance from local file without changing pixel format
+            </summary>
+            <param name="pcFileName">file name with path</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.InitImage(System.String,VisionDesigner.MVD_PIXEL_FORMAT)">
+            <summary>
+            Initialize the image instance from local file
+            </summary>
+            <param name="pcFileName">file name with path</param>
+            <param name="enPixelFormat">Target pixel format to decode</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.InitImage(System.UInt32,System.UInt32,VisionDesigner.MVD_PIXEL_FORMAT)">
+            <summary>
+            Initialize the image instance with each pixel value of 0
+            </summary>
+            <param name="nWidth">width of the image</param>
+            <param name="nHeight">height of the image</param>
+            <param name="enPixelFormat">pixel format of the image</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.InitImage(System.UInt32,System.UInt32,System.Int32)">
+            <summary>
+            Initialize the image instance with each pixel value of 0
+            </summary>
+            <param name="nWidth">width of the image</param>
+            <param name="nHeight">height of the image</param>
+            <param name="nPixelFormat">pixel format of the image</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.InitImage(System.UInt32,System.UInt32,VisionDesigner.MVD_PIXEL_FORMAT,VisionDesigner.MVD_IMAGE_DATA_INFO)">
+            <summary>
+            Initialize the image instanc from data buffer (No internal copy)
+            </summary>
+            <param name="nWidth">width of the image</param>
+            <param name="nHeight">height of the image</param>
+            <param name="enPixelFormat">pixel format of the image</param>
+            <param name="stImageData">whole data buffer of the image</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.InitImage(System.Drawing.Bitmap)">
+            <summary>
+            从Bitmap初始化图像
+            </summary>
+            <param name="stBitmap"></param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.GetImageData(System.Int32)">
+            <summary>
+            Get single channel data of the image
+            </summary>
+            <param name="nIndex">Channel index number (numbered from 0)</param>
+            <returns>data information</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.GetBitmap">
+            <summary>
+            获取MvdImage转Bitmap结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.GetImageDataPtr(System.Int32)">
+            <summary>
+            Get single channel data pointer of the image
+            </summary>
+            <param name="nIndex">Channel index number (numbered from 0)</param>
+            <returns>data information</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.GetImageData">
+            <summary>
+             Get data information of the whole image
+            </summary>
+            <returns>image data information</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.Clone">
+            <summary>
+            Clone operation
+            </summary>
+            <returns>new object of CMVDImageNet</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.ConvertImagePixelFormat(VisionDesigner.MVD_PIXEL_FORMAT)">
+            <summary>
+            Convert image to the specified pixel format
+            </summary>
+            <param name="enDstPixelFormat">Target pixel format</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.SaveImage(System.String)">
+            <summary>
+            Save Image to file
+            </summary>
+            <param name="pcFileName">file name with path</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.SaveImage(System.String,VisionDesigner.MVD_FILE_FORMAT)">
+            <summary>
+            Save Image to file
+            </summary>
+            <param name="pcFileName">file name with path</param>
+            <param name="nFileFormat">Target file format</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.SaveJpeg(System.UInt32,System.String)">
+            <summary>
+            Save Image to Jpeg file
+            </summary>
+            <param name="nJpegQuality">file quality (0-100)</param>
+            <param name="pcFileName">file name with path</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.SetPixel(System.UInt32,System.UInt32,System.Byte[])">
+            <summary>
+            Update the value of the specified pixel
+            </summary>
+            <param name="nRowId">row of pixel</param>
+            <param name="nColId">column of pixel</param>
+            <param name="pcDstVal">target of pixel value</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.SetPixel(System.Int32,System.Int32,System.Collections.Generic.List{System.Byte})">
+            <summary>
+            Update the value of the specified pixel
+            </summary>
+            <param name="nX">x of pixel</param>
+            <param name="nY">y of pixel</param>
+            <param name="pixelValue">target of pixel value</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.GetPixel(System.Int32,System.Int32)">
+            <summary>
+            Get the value of the specified pixel
+            </summary>
+            <param name="nX">x of pixel</param>
+            <param name="nY">y of pixel</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.ResizeImage(System.UInt32,System.UInt32,VisionDesigner.MVD_IMG_INTERPOLATION_TYPE)">
+            <summary>
+            Scale the image to target size with specified interpolation algorithm
+            </summary>
+            <param name="nDstWidth">target image width</param>
+            <param name="nDstHeight">target image height</param>
+            <param name="enInterpolationType">type of interpolation algorithm</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.ClipImage(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            Choose rectangle to clip image
+            </summary>
+            <param name="nClipX">the left top x of the rectangle</param>
+            <param name="nClipY">the left top y of the rectangle</param>
+            <param name="nClipWidth">the width of the rectangle</param>
+            <param name="nClipHeight">the height top x of the rectangle</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.RotateImage(VisionDesigner.MVD_IMG_ROTATION_ANGLE)">
+            <summary>
+            Choose angle to rotate image
+            </summary>
+            <param name="enRotationAngle">rotation angle</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.FlipImage(VisionDesigner.MVD_IMG_FLIP_TYPE)">
+            <summary>
+            Choose flip type to flip image
+            </summary>
+            <param name="enFlipType">filp type</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.Dispose">
+            <summary>
+            资源释放
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.SetData(System.Byte[][])">
+            <summary>
+            设置图像数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdImage.GetData">
+            <summary>
+            返回图像数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdImage.PixelFormat">
+            <summary>
+            像素格式
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdImage.Height">
+            <summary>
+            图像高
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdImage.Width">
+            <summary>
+            图像宽
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdImage.ChannelNum">
+            <summary>
+            图像通道数量
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdImage.IsEmpty">
+            <summary>
+            图像是否为空.为空时返回true;否则返回false
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdImage.PrivateData">
+            <summary>
+            私有数据
+            </summary>
+        </member>
+    </members>
+</doc>

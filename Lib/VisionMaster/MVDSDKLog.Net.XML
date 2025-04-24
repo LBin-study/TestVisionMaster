@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDSDKLog.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CMvdSDKLog">
+            <summary>
+            Class of SDKLog definition
+            </summary>
+        </member>
+    </members>
+</doc>

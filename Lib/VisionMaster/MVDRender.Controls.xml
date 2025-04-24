@@ -1,0 +1,895 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDRender.Controls</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_SHAPE_EVENT_TYPE">
+            <summary>
+            图形事件类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_SHAPE_EVENT_TYPE.MvdShapeEventUndefine">
+            <summary>
+            ch: 未定义的图形事件 | en: Unspecified event
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_SHAPE_EVENT_TYPE.MvdShapeEventAdd">
+            <summary>
+            ch: 图形添加事件 | en: Event of shape added.
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_SHAPE_EVENT_TYPE.MvdShapeEventDelete">
+            <summary>
+            ch: 图形删除事件 | en: Event of shape deleted.
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_SHAPE_EVENT_TYPE.MvdShapeEventEdit">
+            <summary>
+            ch: 图形编辑事件 | en: Event of shape edited.
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_SHAPE_EVENT_TYPE.MvdShapeEventSelect">
+            <summary>
+            ch: 图形选中事件 | en: Event of shape selected.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_IMAGE_EVENT_TYPE">
+            <summary>
+            图像事件类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_IMAGE_EVENT_TYPE.MVD_IMAGE_UNDEFINED">
+            <summary>
+            ch: 未定义的图像事件 | en: Unspecified event
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_IMAGE_EVENT_TYPE.MVD_MASK_IMAGE_ADDED">
+            <summary>
+            ch: 掩膜图像添加事件 | en: Event of mask image addded
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_IMAGE_EVENT_TYPE.MVD_MASK_IMAGE_EDITED">
+            <summary>
+            ch: 掩膜图像编辑事件 | en: Event of mask image edited
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_IMAGE_EVENT_TYPE.MVD_MASK_IMAGE_DELETED">
+            <summary>
+            ch: 掩膜图像删除事件 | en: Event of mask image deleted
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_MOUSE_EVENT_TYPE">
+            <summary>
+            鼠标事件类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_MOUSE_EVENT_TYPE.MvdMouseUndefine">
+            <summary>
+            未定义鼠标事件类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_MOUSE_EVENT_TYPE.MvdMouseLButtonDown">
+            <summary>
+            鼠标左键按下
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_MOUSE_EVENT_TYPE.MvdMouseLButtonUp">
+            <summary>
+            鼠标左键抬起
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_MOUSE_EVENT_TYPE.MvdMouseRButtonDown">
+            <summary>
+            鼠标右键按下
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_MOUSE_EVENT_TYPE.MvdMouseRButtonUp">
+            <summary>
+            鼠标右键抬起
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_MOUSE_EVENT_TYPE.MvdMouseLButtonDblclk">
+            <summary>
+            鼠标左键双击，触发鼠标左键双击事件会同时触发左键按下和抬起事件
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_MOUSE_EVENT_TYPE.MvdMouseMove">
+            <summary>
+            鼠标移动
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_MOUSE_EVENT_TYPE.MvdMouseWheel">
+            <summary>
+            鼠标滚轮
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_RENDER_SAVE_TYPE">
+            <summary>
+            保存图像类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_SAVE_TYPE.MvdRenderSaveInputImage">
+            <summary>
+            保存原始图像
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_SAVE_TYPE.MvdRenderSaveRenderImage">
+            <summary>
+            保存结果图像
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_RENDER_MENU_CMD">
+            <summary>
+            菜单操作类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_CMD.MvdMenuCmdUndefine">
+            <summary>
+            未定义
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_CMD.MvdMenuCmdMin">
+            <summary>
+            菜单命令最小值
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_CMD.MvdMenuCmdSelect">
+            <summary>
+            触发菜单
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_CMD.MvdMenuCmdEnable">
+            <summary>
+             启用菜单
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_CMD.MvdMenuCmdDisable">
+            <summary>
+            禁用菜单
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_CMD.MvdMenuCmdDelete">
+            <summary>
+            删除菜单
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_CMD.MvdMenuCmdRename">
+            <summary>
+            重命名菜单，菜单名称最大长度为32个字符
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_CMD.MvdMenuCmdCheck">
+            <summary>
+            选中菜单(仅自定义菜单支持)
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_CMD.MvdMenuCmdUnCheck">
+            <summary>
+            反选中菜单(仅自定义菜单支持)
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_CMD.MvdMenuCmdMax">
+            <summary>
+            菜单命令最大值
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_IMAGE_TYPE">
+            <summary>
+            图像类型
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_RENDER_MENU_LANG_TYPE">
+            <summary>
+            默认菜单语言
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_LANG_TYPE.MvdRenderMenuLangDefault">
+            <summary>
+            默认语言
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_LANG_TYPE.MvdRenderMenuLangChinese">
+            <summary>
+            中文
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_LANG_TYPE.MvdRenderMenuLangEnglish">
+            <summary>
+            英文
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_RENDER_MASK_MODE">
+            <summary>
+            掩膜模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MASK_MODE.MvdMaskModeReverse">
+            <summary>
+            反向橡皮擦
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MASK_MODE.MvdMaskModeFront">
+            <summary>
+            正向橡皮擦
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_RENDER_MENU_TYPE">
+            <summary>
+            菜单类型 
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_TYPE.MvdMenuTypePop">
+            <summary>
+            弹出菜单
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_TYPE.MvdMenuTypeNormal">
+            <summary>
+            普通菜单
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_TYPE.MvdMenuTypeSeparator">
+            <summary>
+            分割线
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_RENDER_ADAPTIVE_MODE">
+            <summary>
+            自适应模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_ADAPTIVE_MODE.MvdAdaptiveModeNormal">
+            <summary>
+            默认自适应（大于窗口图像缩小到窗口，小于窗口大小显示为实际大小）
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_ADAPTIVE_MODE.MvdAdaptiveModeToWnd">
+            <summary>
+            自适应到窗口(所有图像均自适应到窗口大小)
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_RENDER_INTERACT_TYPE">
+            <summary>
+            界面交互类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_INTERACT_TYPE.MvdRenderInteractTypeDisabled">
+            <summary>
+            禁用交互
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_INTERACT_TYPE.MvdRenderInteractStandard">
+            <summary>
+            标准交互，渲染控件原有的交互类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_INTERACT_TYPE.MvdRenderInteractCustom">
+            <summary>
+            自定义交互，渲染控件会抛出鼠标事件，由用户响应
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_INTERACT_TYPE.MvdRenderInteractStandardAndCustom">
+            <summary>
+            标准交互和自定义交互，两者都会响应
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_RENDER_MENU_ID">
+            <summary>
+            菜单项ID
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemIDUndefine">
+            <summary>
+            未定义
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemIDMin">
+            <summary>
+            菜单索引最小值
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMainMenuItemIDMin">
+            <summary>
+             主菜单索引最小值
+            </summary>                    
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemPointer">
+            <summary>
+            指针，不可禁用/删除
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemPan">
+            <summary>
+            平移
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemZoomIn">
+            <summary>
+            放大
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemZoomOut">
+            <summary>
+            缩小
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemPaste">
+            <summary>
+            主菜单粘贴，可界面选中条件：1.处于启用状态；2.存在复制图形
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemSepar1">
+            <summary>
+            分割线1
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemSaveInputImage">
+            <summary>
+            保存原始图像
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemSaveRenderImage">
+            <summary>
+            保存结果图像
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemAddShape">
+            <summary>
+            添加图形
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemRectangle">
+            <summary>
+            矩形
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemCircle">
+            <summary>
+            圆
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemEllipse">
+            <summary>
+            椭圆
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemAnnularSector">
+            <summary>
+            扇环
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemPolygon">
+            <summary>
+            多边形
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemParallelogram">
+            <summary>
+            平行四边形
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemSepar2">
+            <summary>
+            分割线2
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemLineCaliper">
+            <summary>
+            直线卡尺
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemSectorCaliper">
+            <summary>
+            扇环卡尺
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemSepar3">
+            <summary>
+            分割线3
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemLineSegment">
+            <summary>
+            线段
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemPolylineSegment">
+            <summary>
+            折线段
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemSepar4">
+            <summary>
+            分割线4
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemText">
+            <summary>
+            文本
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemCoordinate">
+            <summary>
+            坐标系
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemCross">
+            <summary>
+            十字架
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemEraser">
+            <summary>
+            橡皮檫
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemDraw">
+            <summary>
+            绘制
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemUndo">
+            <summary>
+            撤消
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemRedo">
+            <summary>
+            重做
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemClear">
+            <summary>
+            清除
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemSepar5">
+            <summary>
+            分割线5
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemResetRisplay">
+            <summary>
+            适合画布
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemPixelCrid">
+            <summary>
+            像素网格
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemImageInfoTool">
+            <summary>
+            图像信息栏
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemMainMenuIDMax">
+            <summary>
+            主菜单索引最大值
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdShapeMenuItemIDMin">
+            <summary>
+            图形菜单索引最小值
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdShapeMenuItemDelete">
+            <summary>
+            删除
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdShapeMenuItemCopy">
+            <summary>
+            复制
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdShapeMenuItemPaste">
+            <summary>
+            图形菜单粘贴，可界面选中条件：1.处于启用状态；2.存在复制图形
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdShapeMenuItemPainter">
+            <summary>
+            画板
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdShapeMenuItemMirrorAxis">
+            <summary>
+            设置镜像轴，可界面选中条件：1.处于启用状态；2.选中线段
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdShapeMenuItemMirrorCopy">
+            <summary>
+            镜像复制，可界面选中条件：1.处于启用状态；2.存在镜像轴；3.选中点集
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdShapeShapeMenuItemIDMax">
+            <summary>
+            图形菜单索引最大值
+            </summary>  
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_MENU_ID.MvdMenuItemIDMax">
+            <summary>
+            菜单索引最大值
+            </summary>  
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_RENDER_SMOOTHING_MODE">
+            <summary>
+            渲染图形模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_SMOOTHING_MODE.MvdSmoothingModeNormal">
+            <summary>
+            快速模式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_RENDER_SMOOTHING_MODE.MvdSmoothingModeHighQuality">
+            <summary>
+            高质量模式，会影响渲染速度
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_LINE_CALIPER_INFO.enArrowDirection">
+            卡尺数量
+        </member>
+        <member name="F:VisionDesigner.Controls.MVD_SECTOR_CALIPER_INFO.enArrowDirection">
+            卡尺数量
+        </member>
+        <member name="T:VisionDesigner.Controls.MVD_RENDER_IMAGE_INFO">
+            <summary>
+            渲染控件图像结构体
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Controls.MVDRenderControl">
+            <summary>
+            Class of render activeX
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.AboutBox">
+            <summary>
+            Version information
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_LoadImageFromFile(System.String)">
+            <summary>
+            从本地文件加载图像
+            </summary>
+            <param name="pcFileName">文件名包含路径</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_LoadImageFromData(System.Byte[],System.UInt32,System.UInt32,System.UInt32,System.Int16)">
+            <summary>
+            从裸数据加载图像
+            </summary>
+            <param name="arrData">Data buffer</param>
+            <param name="nDataLen">size of the data stream (Byte)</param>
+            <param name="nWidth">Image width</param>
+            <param name="nHeight">Image height</param>
+            <param name="enPixelType">Pixel type</param>
+            <param name="bRetainShape">Retain shapes or not</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_LoadImageFromMvdImage(VisionDesigner.CMvdImage)">
+            <summary>
+            从图像组件加载图像
+            </summary>
+            <param name="cInImage">图像组件对象</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_SaveRenderImageToFile(System.String)">
+            <summary>
+            保存渲染图像到文件
+            </summary>
+            <param name="pcFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_SaveInputImageToFile(System.String)">
+            <summary>
+            保存输入图像到文件
+            </summary>
+            <param name="pcFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_SaveRenderImageToMvdImage(VisionDesigner.CMvdImage@)">
+            <summary>
+            获取渲染图
+            </summary>
+            <param name="cRenderImage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_SaveInputImageToMvdImage(VisionDesigner.CMvdImage@)">
+            <summary>
+            保存输入图
+            </summary>
+            <param name="cRenderImage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_SetBackgroundTexture(VisionDesigner.CMvdImage)">
+            <summary>
+            设置渲染控件背景纹理图像
+            </summary>
+            <param name="cInImage"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_SetImageToolColor(System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            设置图形信息栏颜色
+            </summary>
+            <param name="cBackGroundColor"></param>
+            <param name="cTextColor"></param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_ClearImage">
+            <summary>
+            清空当前显示图像
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_AddMvdShape(VisionDesigner.CMvdShape)">
+            <summary>
+            增加图形
+            </summary>
+            <param name="cMvdShape">The shape object</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_DeleteShape(VisionDesigner.CMvdShape)">
+            <summary>
+            删除图形
+            </summary>
+            <param name="cMvdShape">已添加图形对象</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_Refresh">
+            <summary>
+            刷新显示
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_UpdateMvdShape(VisionDesigner.CMvdShape@)">
+            <summary>
+            设置图形信息
+            </summary>
+            <param name="cMvdShape">图形对象</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_GetMvdShape(VisionDesigner.CMvdShape@)">
+            <summary>
+            获取图形信息
+            </summary>
+            <param name="cMvdShape">图形对象</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_ClearMask">
+            <summary>
+            清除掩膜
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_IsMaskExist">
+            <summary>
+            是否存在掩膜
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_SetMaskImageFromMvdImage(VisionDesigner.CMvdImage)">
+            <summary>
+            设置掩膜图像
+            </summary>
+            <param name="cMaskImage">掩膜图像对象</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_GetMaskImagetoMvdImage(VisionDesigner.CMvdImage)">
+            <summary>
+            获取掩模图
+            </summary>
+            <param name="cMaskImage">图像对象</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_AddSquareMask(System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            点方式增加掩膜图
+            </summary>
+            <param name="nX">图像x坐标</param>
+            <param name="nY">图像y坐标</param>
+            <param name="nWidth">掩膜宽度</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_ClearShapes">
+            <summary>
+            清除所有图形
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_SetMenuItemState(System.Int64,System.UInt32,System.String)">
+            <summary>
+            设置菜单状态
+            </summary>
+            <param name="nMenuID">菜单ID</param>
+            <param name="nMenuCmdKey">菜单命令</param>
+            <param name="sMenuCmdValue">菜单命令值</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_SelectItemMenu(System.Int64)">
+            <summary>
+            触发菜单
+            </summary>
+            <param name="nMenuID">菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_EnableMenuItem(System.Int64,System.Boolean)">
+            <summary>
+            是否启用菜单
+            </summary>
+            <param name="nMenuID">菜单ID</param>
+            <param name="bIsEnable">是否启用</param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_DeleteItemMenu(System.Int64)">
+            <summary>
+            是否启用菜单
+            </summary>
+            <param name="nMenuID"></param>
+            <param name="bIsEnable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_RenameItemMenu(System.Int64,System.String)">
+            <summary>
+            重命名菜单
+            </summary>
+            <param name="nMenuID"></param>
+            <param name="sMenuName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_CheckMenuItem(System.Int64,System.Boolean)">
+            <summary>
+            是否选中菜单
+            </summary>
+            <param name="nMenuID"></param>
+            <param name="bCheck"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_AddMenuItem(System.Int64,System.String,VisionDesigner.Controls.MVD_RENDER_MENU_TYPE,System.IntPtr,System.Int64@)">
+            <summary>
+            增加菜单
+            </summary>
+            <param name="nParentId">父菜单ID，0表示顶级菜单</param>
+            <param name="nCurId">返回当前菜单ID</param>
+            <param name="sMenuName">菜单名称</param>
+            <param name="eMenuType">菜单类型</param>
+            <param name="pUserData">自定义数据类型</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_ShowDefaultContextMenu(System.Boolean)">
+            <summary>
+            是否显示默认菜单
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_ZoomCanvas(System.Single,System.Single,System.Single)">
+            <summary>
+            缩放画布
+            </summary>
+            <param name="fX">画布x坐标</param>
+            <param name="fY">画布y坐标</param>
+            <param name="fZoomRate">缩放倍率</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_ZoomImage(System.Single,System.Single,System.Single)">
+            <summary>
+            缩放图像
+            </summary>
+            <param name="fX">图像x坐标</param>
+            <param name="fY">图像y坐标</param>
+            <param name="fZoomRate">缩放倍率</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_RestoreDisplay">
+            <summary>
+            恢复自适应显示
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_CoordCanvasToImage(System.Single,System.Single,System.Single@,System.Single@)">
+            <summary>
+            转换画布坐标到图像坐标
+            </summary>
+            <param name="fSrcX">画布坐标X值</param>
+            <param name="fSrcY">画布坐标Y值</param>
+            <param name="fDstX">图像坐标X值</param>
+            <param name="fDstY">图像坐标Y值</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_CoordImageToCanvas(System.Single,System.Single,System.Single@,System.Single@)">
+            <summary>
+            转换图像坐标到画布坐标
+            </summary>
+            <param name="fSrcX">图像坐标X值</param>
+            <param name="fSrcY">图像坐标Y值</param>
+            <param name="fDstX">画布坐标X值</param>
+            <param name="fDstY">画布坐标Y值</param>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.MVD_CropImage(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            裁切图像
+            </summary>
+            <param name="nX">起始点X值</param>
+            <param name="nY">起始点Y值</param>
+            <param name="nWidth">宽</param>
+            <param name="nHeight">高</param>
+            <returns>错误返回错误码</returns>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.FireMouseEvent(VisionDesigner.Controls.MVD_MOUSE_EVENT_TYPE,System.Int32,System.Int32,System.Int16)">
+            <summary>
+            发送鼠标事件
+            将渲染控件发送来的图形事件抛出给注册者
+            </summary>
+            <param name="enEventType"></param>
+            <param name="nPointX"></param>
+            <param name="nPointY"></param>
+            <param name="nZDelta"></param>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDRenderControl.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Controls.MVDRenderControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDRenderControl.EnableRetainShape">
+            <summary>
+            同分辨率图像切换是否保留图形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDRenderControl.BackColor">
+            <summary>
+            背景色
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDRenderControl.InteractType">
+            <summary>
+            界面交互类型
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDRenderControl.EraserColor">
+            <summary>
+            橡皮擦绘制颜色
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDRenderControl.EraserWidth">
+            <summary>
+            橡皮擦绘制半径
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDRenderControl.MaskMode">
+            <summary>
+            掩膜模式(更改模式会清空当前掩膜)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDRenderControl.SmoothingMode">
+            <summary>
+            图形抗锯齿模式
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDRenderControl.ImageInfoTool">
+            <summary>
+            是否显示图像工具栏
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDRenderControl.AdaptMode">
+            <summary>
+            图像自适应模式
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Controls.MVDRenderControl.ControlLanguage">
+            <summary>
+            默认菜单语言
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Controls.MVDRenderControl.MVD_SHAPE_INNER_EVENT_TYPE.MvdShapeEventEditdPro">
+            ch: 图形编辑事件（内部使用） | en: Event of shape edited(Internal use).
+        </member>
+    </members>
+</doc>

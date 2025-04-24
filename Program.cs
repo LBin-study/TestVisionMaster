@@ -1,9 +1,51 @@
-﻿namespace TestVisionMaster
+﻿using OpenCvSharp;
+using OpenCvSharp.Detail;
+using System.Runtime.InteropServices;
+using TestVisionMaster.TemplateMaching;
+using VisionDesigner.ContourPatMatch;
+using static TestVisionMaster.TemplateMaching.TemplateMachingTool;
+
+namespace TestVisionMaster
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            Program program = new Program();
+
+            program.TemplateMachingToolTest();
         }
+
+        public void TemplateMachingToolTest()
+        {
+            string TestImagePath = "E:\\5.bmp";
+            Mat mat = Cv2.ImRead(TestImagePath);
+            // 定义截取区域
+            int x = 1000;
+            int y = 1000;
+            int width = 1000;
+            int height = 800;
+            Rect roi = new Rect(x, y, width, height);
+            Mat croppedMat = mat[roi];
+            Mat grayMat = new Mat();
+            Cv2.CvtColor(croppedMat, grayMat, ColorConversionCodes.BGR2GRAY);
+
+            // 将灰度图转换为字节数组
+            byte[] encodedBytes;
+            Cv2.ImEncode(".jpg", grayMat, out encodedBytes);
+
+            TemplateMachingTool template = new TemplateMachingTool();
+            ContourPatternParam param = new ContourPatternParam(encodedBytes);
+
+            CContourPattern ResultPattern = new CContourPattern();
+            template.CreateContourPattern(param, out ResultPattern);
+            Dictionary<string, Mat> pairs = new Dictionary<string, Mat>();
+            pairs.Add("Test", mat);
+            template.Run(pairs, out List<CContourMatchInfo?> matchInfos, out Mat? successMat, out double? TimeCost, out string? ErrorMsg);
+            CContourMatchInfo matchInfo = matchInfos.FirstOrDefault();
+            Cv2.ImWrite("D:\\test.bmp", Tool.CreatRotaRec(successMat, new Point2f(matchInfo.MatchPoint.fX, matchInfo.MatchPoint.fY), new Size2f(matchInfo.MatchBox.Width, matchInfo.MatchBox.Height), matchInfo.MatchBox.Angle));
+            Console.ReadKey();
+        }
+
     }
 }

@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MvRenderActiveX.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.Legacy.Controls.MVD_SHAPE_EVENT_TYPE">
+            <summary>
+            Enumeration definition for event type of shape
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_SHAPE_EVENT_TYPE.MVD_SHAPE_UNDEFINE">
+            <summary>
+            ch: 未定义的图形事件 | en: Unspecified event
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_SHAPE_EVENT_TYPE.MVD_SHAPE_ADDED">
+            <summary>
+            ch: 图形添加事件 | en: Event of shape added.
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_SHAPE_EVENT_TYPE.MVD_SHAPE_DELETED">
+            <summary>
+            ch: 图形删除事件 | en: Event of shape deleted.
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_SHAPE_EVENT_TYPE.MVD_SHAPE_EDITED">
+            <summary>
+            ch: 图形编辑事件 | en: Event of shape edited.
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_SHAPE_EVENT_TYPE.MVD_SHAPE_SELECTED">
+            <summary>
+            ch: 图形选中事件 | en: Event of shape selected.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Legacy.Controls.MVD_IMAGE_EVENT_TYPE">
+            <summary>
+            Enumeration definition for event type of image
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_IMAGE_EVENT_TYPE.MVD_IMAGE_UNDEFINED">
+            <summary>
+            ch: 未定义的图像事件 | en: Unspecified event
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_IMAGE_EVENT_TYPE.MVD_MASK_IMAGE_ADDED">
+            <summary>
+            ch: 掩膜图像添加事件 | en: Event of mask image addded
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_IMAGE_EVENT_TYPE.MVD_MASK_IMAGE_EDITED">
+            <summary>
+            ch: 掩膜图像编辑事件 | en: Event of mask image edited
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_IMAGE_EVENT_TYPE.MVD_MASK_IMAGE_DELETED">
+            <summary>
+            ch: 掩膜图像删除事件 | en: Event of mask image deleted
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Legacy.Controls.MVD_REFRESH_MODE">
+            <summary>
+            Enumeration definition for refresh mode
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_REFRESH_MODE.Sync">
+            <summary>
+            ch: 同步刷新 | en: Synchronous refresh
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_REFRESH_MODE.Async">
+            <summary>
+            ch: 异步刷新 | en: Asynchronous refresh
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Legacy.Controls.MVD_SAVE_TYPE">
+            <summary>
+            Enumeration definition for save type
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Legacy.Controls.MVD_IMAGE_TYPE">
+            <summary>
+            Type of images
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Legacy.Controls.MVD_MENU_ID">
+            <summary>
+            ID of menu items
+            </summary>
+        </member>
+        <!-- 对于成员“F:VisionDesigner.Legacy.Controls.MVD_MENU_ID.MvdRedo”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“F:VisionDesigner.Legacy.Controls.MVD_MENU_ID.MvdClear”忽略有格式错误的 XML 注释 -->
+        <member name="T:VisionDesigner.Legacy.Controls.MVDRenderMenuLangType">
+            <summary>
+            Type of the menu language  
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDRenderMenuLangType.Chinese">
+            <summary>
+            中文
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDRenderMenuLangType.English">
+            <summary>
+            英文
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDRenderMenuLangType.Default">
+            <summary>
+            默认,根据当前系统语言自适应，中英文系统为对应语言，其他系统统一设置为英文
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY">
+            <summary>
+            Key of render params
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderParamKeyUndefined">
+            <summary>
+            未定义渲染参数索引
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderRetainShape">
+            <summary>
+            切换同分辨率图像是否保存图形，参数值可选true/false，默认为false
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderBackgroundColor">
+            <summary>
+            渲染控件背景色，参数值通过MVD_RGB设置,默认为CMvdColorHelper.MVD_RGB(255,255,255)
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderMenuLanguage">
+            <summary>
+            菜单语言设置，参数值通过MVD_RENDER_MENU_LANG_TYPE设置,默认为MvdRenderMenuLangDefault
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderInteractType">
+            <summary>
+            界面交互，参数值可通过MVDRenderInteractType设置，默认为MVDRenderInteractType.Standard
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderSmoothingMode">
+            <summary>
+            绘图模式，参数值可通过MVD_RENDER_SMOOTHING_MODE设置，默认为MVD_RENDER_SMOOTHING_MODE.MvSmoothingModeNormal
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderLineArrowType">
+            <summary>
+            直线箭头类型，参数值可通过MVD_LINE_ARROW_TYPE设置，默认为MVD_LINE_ARROW_NONE
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderRectangleArrow">
+            <summary>
+            矩形方向箭头，参数值可通过MVD_ARROW_DIRECTION设置，默认为MVD_ARROW_NONE，为矩形生效
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderLineCaliperArrow">
+            <summary>
+            直线卡尺方向箭头，参数值可通过MVD_ARROW_DIRECTION设置，默认为MVD_ARROW_NONE，为直线卡尺生效
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderSectorCaliperArrow">
+            <summary>
+            扇环卡尺方向箭头，参数值可通过MVD_ARROW_DIRECTION设置，默认为MVD_ARROW_NONE，为扇环卡尺生效
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderLineCaliperCount">
+            <summary>
+            直线卡尺数量,设置直线卡尺数量[1-1000]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderSectorCaliperCount">
+            <summary>
+            扇环卡尺数量,设置扇环卡尺数量[1-1000]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderEraserConfigDlgEnable">
+            <summary>
+            橡皮擦配置对话框使能标记，未使能时可通过接口设置橡皮擦属性（宽等），默认1，使能1.不使能0
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVD_RENDER_PARAM_KEY.MvdRenderEraserPixelWidth">
+            <summary>
+            橡皮擦宽度设置，1-256
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Legacy.Controls.MVD_MENU_CMD">
+            <summary>
+            Command of the menu
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Legacy.Controls.MVDMouseEventType">
+            <summary>
+            鼠标事件类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDMouseEventType.Undefined">
+            <summary>
+            未定义鼠标事件类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDMouseEventType.LButtonDown">
+            <summary>
+            鼠标左键按下
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDMouseEventType.LButtonUp">
+            <summary>
+            鼠标左键抬起
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDMouseEventType.RButtonDown">
+            <summary>
+            鼠标右键按下
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDMouseEventType.RButtonUp">
+            <summary>
+            鼠标右键抬起
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDMouseEventType.LButtonDblClk">
+            <summary>
+            鼠标左键双击，触发鼠标左键双击事件会同时触发左键按下和抬起事件
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDMouseEventType.MouseMove">
+            <summary>
+            鼠标移动
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDMouseEventType.MouseWheel">
+            <summary>
+            鼠标滚轮
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Legacy.Controls.MVDCoordTransType">
+            <summary>
+            坐标转换类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDCoordTransType.Undefined">
+            <summary>
+            未定义坐标转换类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDCoordTransType.Wnd2Img">
+            <summary>
+            窗口坐标转图像坐标
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDCoordTransType.Img2Wnd">
+            <summary>
+            图像坐标转窗口坐标
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Legacy.Controls.MVDRenderInteractType">
+            <summary>
+            界面交互类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDRenderInteractType.Disabled">
+            <summary>
+            禁用交互
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDRenderInteractType.Standard">
+            <summary>
+            标准交互，渲染控件原有的交互类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDRenderInteractType.Custom">
+            <summary>
+            自定义交互，渲染控件会抛出鼠标事件，由用户响应
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDRenderInteractType.StandardAndCustom">
+            <summary>
+            标准交互和自定义交互，两者都会响应
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.Legacy.Controls.MVD_RENDER_MENU_LANG_TYPE">
+            <summary>
+            Type of the menu language,please use MVDRenderMenuLangType after version 3.4.0
+            </summary>
+        </member>
+        <!-- 对于成员“F:VisionDesigner.Legacy.Controls.MVD_RENDER_MENU_LANG_TYPE.MvdRenderMenuLangTypeMin”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“F:VisionDesigner.Legacy.Controls.MVD_RENDER_MENU_LANG_TYPE.MvdRenderMenuLangChinese”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“F:VisionDesigner.Legacy.Controls.MVD_RENDER_MENU_LANG_TYPE.MvdRenderMenuLangEnglish”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“F:VisionDesigner.Legacy.Controls.MVD_RENDER_MENU_LANG_TYPE.MvdRenderMenuLangDefault”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“F:VisionDesigner.Legacy.Controls.MVD_RENDER_MENU_LANG_TYPE.MvdRenderMenuLangTypeMax”忽略有格式错误的 XML 注释 -->
+        <member name="T:VisionDesigner.Legacy.Controls.MVDRenderActivex">
+            <summary>
+            Class of render activeX
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.AboutBox">
+            <summary>
+            Version information
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.LoadImageFromFile(System.String)">
+            <summary>
+            Load image from local file.
+            </summary>
+            <param name="pcFileName">The file name including path.</param>
+            <param name="bRetainShape">Retain shapes or not</param>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.LoadImageFromData(System.Byte[],System.UInt32,System.UInt32,System.UInt32,System.Int16)">
+            <summary>
+            Load image from data buffer.
+            </summary>
+            <param name="arrData">Data buffer</param>
+            <param name="nDataLen">size of the data stream (Byte)</param>
+            <param name="nWidth">Image width</param>
+            <param name="nHeight">Image height</param>
+            <param name="enPixelType">Pixel type</param>
+            <param name="bRetainShape">Retain shapes or not</param>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.LoadImageFromObject(VisionDesigner.CMvdImage)">
+            <summary>
+            Load image from CMvdImage object.
+            </summary>
+            <param name="cInImage">object of CMvdImage type</param>
+            <param name="bRetainShape">Retain shapes or not</param>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.SaveImage(System.String,VisionDesigner.MVD_FILE_FORMAT,System.UInt32,VisionDesigner.Legacy.Controls.MVD_SAVE_TYPE)">
+            <summary>
+            Save image (Only BMP is supported in current version)
+            </summary>
+            <param name="pcFileName">File name including path</param>
+            <param name="enFileFormat">File format</param>
+            <param name="nJpegQuality">Compression ratio of JPEG format ((0,100]). Do not take effect for other formats.</param>
+            <param name="enSaveType">Save type(default is saving result image)</param>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.ClearImages">
+            <summary>
+            Clear images
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.AddShape(VisionDesigner.CMvdShape)">
+            <summary>
+            Add a shape.
+            </summary>
+            <param name="cMvdShape">The shape object</param>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.DeleteShape(VisionDesigner.CMvdShape)">
+            <summary>
+            Deleted a shape that has added.
+            </summary>
+            <param name="nShapeHandle">Handle of the shape to delete.</param>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.Display(VisionDesigner.Legacy.Controls.MVD_REFRESH_MODE)">
+            <summary>
+            Refresh the display region.
+            </summary>
+            <param name="enRefreshMode">Refresh mode(default is async)</param>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.UpdateShapeInfo(VisionDesigner.CMvdShape@,System.Boolean)">
+            <summary>
+            Get or Set the shape information.
+            </summary>
+            <param name="cMvdShape">Shape object</param>
+            <param name="bSaveAndValidate">Sets when true, gets when false</param>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.UpdateMaskImage(VisionDesigner.CMvdImage,System.Boolean)">
+            <summary>
+            Get or Set the region image information.
+            </summary>
+            <param name="cMaskImage">Region image object</param>
+            <param name="bSaveAndValidate">Sets when true, gets when false</param>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.ClearShapes">
+            <summary>
+            Clear shapes that has added.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.SetMenuState(System.UInt32,System.UInt32,System.String)">
+            <summary>
+            Set menu state.
+            </summary>
+            <param name="nMenuID">The menu item ID</param>
+            <param name="nMenuCmdKey">The menu command</param>
+            <param name="pcMenuCmdValue">The menu name used to rename</param>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.SetConfiguration(System.UInt32,System.Int32)">
+            <summary>
+            Set configuration.
+            </summary>
+            <param name="nParamKey">The key of the render param</param>
+            <param name="nParamValue">The value of the render param</param>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.ResetDisplayState">
+            <summary>
+            Reset display state to original state.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.TransformCoordinate(System.Single,System.Single,System.Single@,System.Single@,VisionDesigner.Legacy.Controls.MVDCoordTransType)">
+            <summary>
+            Transform coordinate.
+            </summary>
+            <param name="fSrcX">Source X coordinate</param>
+            <param name="fSrcY">Source Y coordinate</param>
+            <param name="fDstX">Destination X coordinate reference </param>
+            <param name="fDstY">Destination Y coordinate reference</param>
+            <param name="enTransType">Coordinate transformation type(MVDCoordTransType)</param>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDRenderActivex.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.Legacy.Controls.MVDRenderActivex.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Legacy.Controls.MVDRenderActivex.EnableRetainShape">
+            <summary>
+            同分辨率图像切换是否保留图形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Legacy.Controls.MVDRenderActivex.BackColor">
+            <summary>
+            背景色
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Legacy.Controls.MVDRenderActivex.MenuLanguage">
+            <summary>
+            菜单语言
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.Legacy.Controls.MVDRenderActivex.InteractType">
+            <summary>
+            界面交互类型
+            </summary>
+        </member>
+        <member name="E:VisionDesigner.Legacy.Controls.MVDRenderActivex.MVDShapeChangedEvent">
+            <summary>
+            The event that the shape is changed by an interaction on the dialog.
+            </summary>
+            <param name="enEventType">Type of the event.</param>
+            <param name="enShapeType">Type of the shape changed.</param>
+            <param name="nShapeHandle">Handle of the shape changed.</param>
+        </member>
+        <member name="F:VisionDesigner.Legacy.Controls.MVDRenderActivex.MVD_SHAPE_INNER_EVENT_TYPE.MVD_SHAPE_EDITED_PRO">
+            ch: 图形编辑事件（内部使用） | en: Event of shape edited(Internal use).
+        </member>
+    </members>
+</doc>

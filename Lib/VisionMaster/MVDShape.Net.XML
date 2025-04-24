@@ -1,0 +1,1037 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDShape.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CMvdAnnularSectorF">
+            <summary>
+            Class of annularsector definition with 'float' type
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdShape">
+            <summary>
+            Class of abstract shape definition
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.CMvdShape.m_nBorderWidth">
+            <summary>
+            Border width of this shape.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdShape.Measure(VisionDesigner.MVD_POINT_F)">
+            <summary>
+            Get the distance from the given point to this shape,only support line segment and circle.
+            </summary>
+            <param name="stPoint">the point used to measure</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdShape.Measure(VisionDesigner.CMvdShape)">
+            <summary>
+            Get the distance from the given shape to this shape,only support line segment and circle. 
+            </summary>
+            <param name="stShape">the shape used to measure</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdShape.GetBoundingRect">
+            <summary>
+            Get the bounding rectangle of the given shape,text is not supported.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdShape.ShapeType">
+            <summary>
+            Type of the shape
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdShape.ShapeName">
+            <summary>
+            Name of this shape. Return "UntitledName" if you have not specified the name.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdShape.BorderStyle">
+            <summary>
+            Border style of this shape.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdShape.BorderColor">
+            <summary>
+            Border color of the shape
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdShape.FillColor">
+            <summary>
+            Fill Color of the shape.Not supported for non-closed shapes.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdShape.Interaction">
+            <summary>
+            Whether the shape allows interaction.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdAnnularSectorF.#ctor(VisionDesigner.MVD_POINT_F,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Construct a rectangular object
+            </summary>
+            <param name="stCenter">coordinate of the center point</param>
+            <param name="fInnerRadius">inner radius</param>
+            <param name="fOuterRadius">outer radius</param>
+            <param name="fStartAngle">start angle of this annular sector(-180,180]</param>
+            <param name="fAngleRange">angle range of this annular sector(0, 360]</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdAnnularSectorF.Clone">
+            <summary>
+            Clone operation
+            </summary>
+            <returns>new object of CMvdAnnularSectorF</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdAnnularSectorF.GetBoundingRect">
+            <summary>
+            Get the bounding rectangle of the given shape,text is not supported.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdAnnularSectorF.SetData(System.Byte[])">
+            <summary>
+            设置图形数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdAnnularSectorF.GetData">
+            <summary>
+            返回图形数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdAnnularSectorF.SetRadius(System.Single,System.Single)">
+            <summary>
+            设置内外径
+            </summary>
+            <param name="InnerRadius">[IN] 扇环内半径</param>
+            <param name="OuterRadius">[IN] 扇环外半径</param>
+        </member>
+        <member name="P:VisionDesigner.CMvdAnnularSectorF.Center">
+            <summary>
+            Circle center point of annular sector
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdAnnularSectorF.InnerRadius">
+            <summary>
+            inner radius
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdAnnularSectorF.OuterRadius">
+            <summary>
+            outer radius
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdAnnularSectorF.StartAngle">
+            <summary>
+            start angle of this annular sector(-180,180]
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdAnnularSectorF.AngleRange">
+            <summary>
+            angle range of this annular sector(0, 360]
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdCircleF">
+            <summary>
+            Class of circle definition with 'float' type
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdCircleF.#ctor(VisionDesigner.MVD_POINT_F,System.Single)">
+            <summary>
+            Construct a circle object
+            </summary>
+            <param name="stCenter">coordinate of the center point</param>
+            <param name="fRadius">radius</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdCircleF.Clone">
+            <summary>
+            Clone operation
+            </summary>
+            <returns>new object of CMvdCircleF</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdCircleF.Measure(VisionDesigner.MVD_POINT_F)">
+            <summary>
+            Get the distance from the given point to this shape,only support line segment and circle.
+            </summary>
+            <param name="stPoint">the point used to measure</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdCircleF.Measure(VisionDesigner.CMvdShape)">
+            <summary>
+            Get the distance from the given shape to this shape,only support line segment and circle. 
+            </summary>
+            <param name="stShape">the shape used to measure</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdCircleF.GetBoundingRect">
+            <summary>
+            Get the bounding rectangle of the given shape,text is not supported.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdCircleF.SetData(System.Byte[])">
+            <summary>
+            设置图形数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdCircleF.GetData">
+            <summary>
+            返回图形数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdCircleF.Center">
+            <summary>
+            Center of the circle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdCircleF.Radius">
+            <summary>
+            Radius of the circle
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdCoordinateF">
+            <summary>
+            Class of rectangle definition with 'float' type
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdCoordinateF.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Construct a rectangular object
+            </summary>
+            <param name="fCenterX">Center X coordinate of this rectangle</param>
+            <param name="fCenterY">Center Y coordinate of this rectangle</param>
+            <param name="fLengthXAxis">Width of this rectangle</param>
+            <param name="fLengthYAxis">Height of this rectangle</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdCoordinateF.Clone">
+            <summary>
+            Clone operation
+            </summary>
+            <returns>new object of CMvdCoordinateF</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdCoordinateF.GetBoundingRect">
+            <summary>
+            Get the bounding rectangle of the given shape,text is not supported.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdCoordinateF.CenterX">
+            <summary>
+            Center X coordinate of this rectangle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdCoordinateF.CenterY">
+            <summary>
+            Center Y coordinate of this rectangle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdCoordinateF.LengthXAxis">
+            <summary>
+            Width of this rectangle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdCoordinateF.LengthYAxis">
+            <summary>
+            Height of this rectangle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdCoordinateF.Angle">
+            <summary>
+            Angle of this rectangle((-180,180])
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdCrossF">
+            <summary>
+            Class of cross definition with 'float' type
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdEllipseF">
+            <summary>
+            Class of ellipse definition with 'float' type
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdEllipseF.#ctor(VisionDesigner.MVD_POINT_F,System.Single,System.Single)">
+            <summary>
+            Construct a rectangular object
+            </summary>
+            <param name="stCenter">Center coordinate of this ellipse</param>
+            <param name="fMajorAxis">fMajorAxis of this ellipse</param>
+            <param name="fMinorAxis">fMinorAxis of this ellipse</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdEllipseF.Clone">
+            <summary>
+            Clone operation
+            </summary>
+            <returns>new object of CMvdEllipseF</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdEllipseF.SetData(System.Byte[])">
+            <summary>
+            设置图形数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdEllipseF.GetData">
+            <summary>
+            返回图形数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdEllipseF.Center">
+            <summary>
+            Center coordinate of this ellipse
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdEllipseF.MajorAxis">
+            <summary>
+            MajorAxis of this ellipse
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdEllipseF.MinorAxis">
+            <summary>
+            MinorAxis of this ellipse
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdEllipseF.Angle">
+            <summary>
+            Angle of this ellipse((-180,180])
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdLineCaliperF">
+            <summary>
+            Class of line caliper definition with 'float' type
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdLineCaliperF.Clone">
+            <summary>
+            Clone operation
+            </summary>
+            <returns>new object of CMvdLineCaliperF</returns>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineCaliperF.StartPoint">
+            <summary>
+            start point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineCaliperF.EndPoint">
+            <summary>
+            end point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineCaliperF.Angle">
+            <summary>
+            Angle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineCaliperF.CaliperCount">
+            <summary>
+            Caliper Count
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineCaliperF.CaliperWidth">
+            <summary>
+            Caliper Width
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineCaliperF.CaliperHeight">
+            <summary>
+            Caliper Height
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineCaliperF.CaliperCenterList">
+            <summary>
+            List of all Caliper Center.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineCaliperF.BoundingBoxCenterX">
+            <summary>
+            Center X coordinate of this Line Caliper bounding box
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineCaliperF.BoundingBoxCenterY">
+            <summary>
+            Center Y coordinate of this Line Caliper bounding box
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineCaliperF.BoundingBoxWidth">
+            <summary>
+            Width of this Line Caliper bounding box
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineCaliperF.BoundingBoxHeight">
+            <summary>
+            Height of this Line Caliper bounding box
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineCaliperF.ArrowDirection">
+            <summary>
+            卡尺框是否渲染方向(带箭头)，与渲染控件配合使用
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdLineSegmentF">
+            <summary>
+            Class of line segment definition with 'float' type
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdLineSegmentF.#ctor(VisionDesigner.MVD_POINT_F,VisionDesigner.MVD_POINT_F)">
+            <summary>
+            Construct a linesegment object
+            </summary>
+            <param name="stStartPoint">coordinate of the start point</param>
+            <param name="stEndPoint">coordinate of the end point</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdLineSegmentF.Clone">
+            <summary>
+            Clone operation
+            </summary>
+            <returns>new object of CMvdLineSegmentF</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdLineSegmentF.Measure(VisionDesigner.MVD_POINT_F)">
+            <summary>
+            Get the distance from the given point to this shape,only support line segment and circle.
+            </summary>
+            <param name="stPoint">the point used to measure</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdLineSegmentF.Measure(VisionDesigner.CMvdShape)">
+            <summary>
+            Get the distance from the given shape to this shape,only support line segment and circle. 
+            </summary>
+            <param name="stShape">the shape used to measure</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdLineSegmentF.GetBoundingRect">
+            <summary>
+            Get the bounding rectangle of the given shape,text is not supported.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdLineSegmentF.SetData(System.Byte[])">
+            <summary>
+            设置图形数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdLineSegmentF.GetData">
+            <summary>
+            返回图形数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineSegmentF.StartPoint">
+            <summary>
+            start point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineSegmentF.EndPoint">
+            <summary>
+            end point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineSegmentF.Angle">
+            <summary>
+            angle of the vector from start point to end point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineSegmentF.ArrowType">
+            <summary>
+            箭头类型
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdLineSegmentF.ThroughType">
+            <summary>
+            贯穿线类型
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdParallelogramF">
+            <summary>
+            Class of parallelogram definition with 'float' type
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdParallelogramF.#ctor(VisionDesigner.MVD_POINT_F,System.Single,System.Single,System.Single)">
+            <summary>
+             Construct a parallelogram object
+            </summary>
+            <param name="stCenter">center point</param>
+            <param name="fWSide">Side length in the width direction of this parallelogram.</param>
+            <param name="fHSide">Side length in the height direction of this parallelogram.</param>
+            <param name="fSkewAngle">Angle of this parallelogram between two sides((0,90]).</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdParallelogramF.Clone">
+            <summary>
+            Clone operation
+            </summary>
+            <returns>new object of CMvdParallelogramF</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdParallelogramF.GetBoundingRect">
+            <summary>
+            Get the bounding rectangle of the given shape,text is not supported.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdParallelogramF.Center">
+            <summary>
+            center point
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdParallelogramF.WSide">
+            <summary>
+            Side length in the width direction of this parallelogram.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdParallelogramF.HSide">
+            <summary>
+            Side length in the height direction of this parallelogram.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdParallelogramF.SkewAngle">
+            <summary>
+            Angle of this parallelogram between two sides((0,90]).
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdParallelogramF.Angle">
+            <summary>
+            Angle of this parallelogram ((-180,180]).
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdPointSetF">
+            <summary>
+            Class of point set definition with 'float' type
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdPointSetF.AddPoint(System.Single,System.Single)">
+            <summary>
+            Add a point to the polygon. Support up to 10000 points.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdPointSetF.AddPoint(System.Single,System.Single,System.Int32)">
+            <summary>
+            Add a point to the polygon.
+            </summary>
+            <remarks>The index must between 0 and NumVertices</remarks>
+            <param name="dfX">x coordinate of this point</param>
+            <param name="dfY">x coordinate of this point</param>
+            <param name="nIndex">index of the target point</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdPointSetF.GetPoint(System.Int32)">
+            <summary>
+            Get the coordinates of the specified point
+            </summary>
+            <param name="nIndex">index of the target point</param>
+            <returns>The coordinates of the specified point.</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdPointSetF.RemovePoint(System.Int32)">
+            <summary>
+            Delete specified point.
+            </summary>
+            <param name="nIndex">index of the target point</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdPointSetF.SetPoint(System.Int32,System.Single,System.Single)">
+            <summary>
+            Set the coordinates of the specified point.
+            </summary>
+            <param name="nIndex">index of the target point</param>
+            <param name="dfX">x coordinate of this point</param>
+            <param name="dfY">x coordinate of this point</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdPointSetF.Clone">
+            <summary>
+            Clone operation.
+            </summary>
+            <returns>new object of CMvdPointSetF</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdPointSetF.GetBoundingRect">
+            <summary>
+            Get the bounding rectangle of the given shape,text is not supported.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdPointSetF.PointsNum">
+            <summary>
+            The number of points of this set. Read only.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdPointSetF.PointsList">
+            <summary>
+            List of all points.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdPolygonF">
+            <summary>
+            Class of polygon definition with 'float' type
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolygonF.AddVertex(System.Single,System.Single)">
+            <summary>
+            Add a vertex to the polygon. Support up to 32 vertices.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolygonF.AddVertex(System.Single,System.Single,System.Int32)">
+            <summary>
+            Add a vertex to the polygon.
+            </summary>
+            <remarks>Index must between 0 and NumVertices</remarks>
+            <param name="dfX">x coordinate of this vertex</param>
+            <param name="dfY">x coordinate of this vertex</param>
+            <param name="nIndex">index of the target vertex</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolygonF.GetVertex(System.Int32)">
+            <summary>
+            Get the coordinates of the specified point.
+            </summary>
+            <param name="nIndex">index of the target vertex</param>
+            <returns>The coordinates of the specified point.</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolygonF.RemoveVertex(System.Int32)">
+            <summary>
+            Delete specified point.
+            </summary>
+            <param name="nIndex">index of the target vertex</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolygonF.SetVertex(System.Int32,System.Single,System.Single)">
+            <summary>
+            Set the coordinates of the specified point.
+            </summary>
+            <param name="nIndex">index of the target vertex</param>
+            <param name="dfX">x coordinate of this vertex</param>
+            <param name="dfY">x coordinate of this vertex</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolygonF.Clone">
+            <summary>
+            Clone operation.
+            </summary>
+            <returns>new object of CMvdPolygonF</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolygonF.GetBoundingRect">
+            <summary>
+            Get the bounding rectangle of the given shape,text is not supported.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolygonF.SetData(System.Byte[])">
+            <summary>
+            设置图形数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolygonF.GetData">
+            <summary>
+            返回图形数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdPolygonF.VertexNum">
+            <summary>
+            The number of vertices of this polygon. Read only.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdPolygonF.VertexList">
+            <summary>
+            List of all verteices.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdPolylineSegmentF">
+            <summary>
+            Class of polyline definition with 'float' type
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolylineSegmentF.AddVertex(System.Single,System.Single)">
+            <summary>
+            Add a vertex to the polyline. unlimited.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolylineSegmentF.AddVertex(System.Single,System.Single,System.Int32)">
+            <summary>
+            Add a vertex to the polyline.
+            </summary>
+            <remarks>Index must between 0 and NumVertices</remarks>
+            <param name="dfX">x coordinate of this vertex</param>
+            <param name="dfY">x coordinate of this vertex</param>
+            <param name="nIndex">index of the target vertex</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolylineSegmentF.GetVertex(System.Int32)">
+            <summary>
+            Get the coordinates of the specified point.
+            </summary>
+            <param name="nIndex">index of the target vertex</param>
+            <returns>The coordinates of the specified point.</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolylineSegmentF.RemoveVertex(System.Int32)">
+            <summary>
+            Delete specified point.
+            </summary>
+            <param name="nIndex">index of the target vertex</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolylineSegmentF.SetVertex(System.Int32,System.Single,System.Single)">
+            <summary>
+            Set the coordinates of the specified point.
+            </summary>
+            <param name="nIndex">index of the target vertex</param>
+            <param name="dfX">x coordinate of this vertex</param>
+            <param name="dfY">x coordinate of this vertex</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolylineSegmentF.Clone">
+            <summary>
+            Clone operation.
+            </summary>
+            <returns>new object of CMvdPolylineSegmentF</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdPolylineSegmentF.GetBoundingRect">
+            <summary>
+            Get the bounding rectangle of the given shape,text is not supported.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdPolylineSegmentF.VertexNum">
+            <summary>
+            The number of vertices of this polyline. Read only.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdPolylineSegmentF.VertexList">
+            <summary>
+            List of all verteices.
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdRectangleF">
+            <summary>
+            Class of rectangle definition with 'float' type
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdRectangleF.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Construct a rectangular object
+            </summary>
+            <param name="fCenterX">Center X coordinate of this rectangle</param>
+            <param name="fCenterY">Center Y coordinate of this rectangle</param>
+            <param name="fWidth">Width of this rectangle</param>
+            <param name="fHeight">Height of this rectangle</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdRectangleF.Clone">
+            <summary>
+            Clone operation
+            </summary>
+            <returns>new object of CMvdRectangleF</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRectangleF.GetBoundingRect">
+            <summary>
+            Get the bounding rectangle of the given shape,text is not supported.
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdRectangleF.SetData(System.Byte[])">
+            <summary>
+            设置图形数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdRectangleF.GetData">
+            <summary>
+            返回图形数据，供平台SDK调用
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRectangleF.CenterX">
+            <summary>
+            Center X coordinate of this rectangle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRectangleF.CenterY">
+            <summary>
+            Center Y coordinate of this rectangle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRectangleF.Width">
+            <summary>
+            Width of this rectangle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRectangleF.Height">
+            <summary>
+            Height of this rectangle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRectangleF.Angle">
+            <summary>
+            Angle of this rectangle((-180,180])
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRectangleF.ArrowDirection">
+            <summary>
+            箭头方向
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRectangleF.LeftTopX">
+            <summary>
+            X coordinate of the left-top vertex this rectangle (Read only)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRectangleF.LeftTopY">
+            <summary>
+            Y coordinate of the left-top vertex this rectangle (Read only)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRectangleF.MinimumX">
+            <summary>
+            Minimum X coordinate of this rectangle (Read only)
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRectangleF.MinimumY">
+            <summary>
+            Minimum Y coordinate of this rectangle (Read only)
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdSectorCaliperF">
+            <summary>
+            Class of Sector caliper definition with 'float' type
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdSectorCaliperF.Clone">
+            <summary>
+            Clone operation
+            </summary>
+            <returns>new object of CMvdSectorCaliperF</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdSectorCaliperF.GetBoundingRect">
+            <summary>
+            Get the bounding SectorCaliper of the given shape.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdSectorCaliperF.Center">
+            <summary>
+            Center
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdSectorCaliperF.Radius">
+            <summary>
+            radius
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdSectorCaliperF.StartAngle">
+            <summary>
+            start angle of this annular sector(-180,180]
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdSectorCaliperF.AngleRange">
+            <summary>
+            angle range of this annular sector(0, 360]
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdSectorCaliperF.CaliperCount">
+            <summary>
+            Caliper Count
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdSectorCaliperF.CaliperWidth">
+            <summary>
+            Caliper Width
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdSectorCaliperF.CaliperHeight">
+            <summary>
+            Caliper Height
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdSectorCaliperF.CaliperCenterList">
+            <summary>
+            List of all Caliper Center.
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdSectorCaliperF.CaliperAngleList">
+            <summary>
+            Angle
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdSectorCaliperF.ArrowDirection">
+            <summary>
+            卡尺框是否渲染方向(带箭头)，与渲染控件配合使用
+            </summary>
+        </member>
+        <member name="T:MVD.VMSDK.Comm.COMM_DATA_VERSION_INFO">
+            <summary>
+            版本信息
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_DATA_VERSION_INFO.COMM_DATA_VERSION_440">
+            <summary>
+            CH: Vm4.4.0 | EN: Vm4.4.0
+            </summary>
+        </member>
+        <member name="T:MVD.VMSDK.Comm.COMM_DATA_SOURCE_INFO">
+            <summary>
+            数据来源
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_DATA_SOURCE_INFO.COMM_DATA_SOURCE_MVDSDK">
+            <summary>
+            CH: MvdSDK数据 | EN: MvdSDK data
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_DATA_SOURCE_INFO.COMM_DATA_SOURCE_VMSDK">
+            <summary>
+            CH: VmSDK数据 | EN: VmSDK data
+            </summary>
+        </member>
+        <member name="T:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE">
+            <summary>
+            图像图形数据类型
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_BASE_TYPE_UNDEFINED">
+            <summary>
+            CH: 无效数据 | EN: Invalid Data
+            NULL
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_BASE_TYPE_IMAGE_DATA">
+            <summary>
+            CH: 图像数据 | EN: Image data
+            ImageBaseData
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_POINT_I">
+            <summary>
+            CH: 整型点 | EN: Point_I
+            Point
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_POINT_F">
+            <summary>
+            CH: 浮点型点 | EN: Float Point
+            PointF
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_RECT_I">
+            <summary>
+            CH: 不带角度的矩形 | EN: RectI
+            RectBox
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_RECT_F">
+            <summary>
+            CH: 不带角度的矩形 | EN: RectF
+            RectBox
+            </summary>
+        </member>
+        <!-- 对于成员“F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_RECT_BOX”忽略有格式错误的 XML 注释 -->
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_CIRCLE">
+            <summary>
+            CH: 圆形 | EN: Circle
+            Circle
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_ANNULUS">
+            <summary>
+            CH: 圆弧 | EN: Annulus
+            Annulus
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_POLYGON">
+            <summary>
+            CH: 多边形 | EN: Polygon
+            Polygon
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_ELLIPSE">
+            <summary>
+            CH: 椭圆 | EN: Ellipse
+            Ellipse
+            </summary>
+        </member>
+        <member name="F:MVD.VMSDK.Comm.COMM_BASE_DATA_TYPE.COMM_GRAP_TYPE_LINE">
+            <summary>
+            CH: 直线 | EN: Line
+            Ellipse
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDTextPosition">
+            <summary>
+            Class of text position
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDTextPosition.#ctor">
+            <summary>
+            Construct a text position object
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDTextPosition.#ctor(System.Single,System.Single,VisionDesigner.MVDTextPositionType)">
+            <summary>
+            Construct a text position object
+            </summary>
+            <param name="x">X coordinate of this Text</param>
+            <param name="y">Y coordinate of this Text</param>
+            <param name="type">Position type of this Text</param>
+        </member>
+        <member name="P:VisionDesigner.MVDTextPosition.X">
+            <summary>
+            X coordinate of this Text
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDTextPosition.Y">
+            <summary>
+            Y coordinate of this Text
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDTextPosition.Type">
+            <summary>
+            Position type of this Text
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdTextF">
+            <summary>
+            Class of Text definition with 'float' type
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdTextF.#ctor(System.Single,System.Single,System.String)">
+            <summary>
+            Construct a text object
+            </summary>
+            <param name="fCenterX">Center X coordinate of this Text</param>
+            <param name="fCenterY">Center Y coordinate of this Text</param>
+            <param name="strContent">Content of this Text</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdTextF.#ctor(System.Single,System.Single,VisionDesigner.MVDTextPositionType,System.String)">
+            <summary>
+            Construct a text object
+            </summary>
+            <param name="fX">X coordinate of this Text</param>
+            <param name="fY">Y coordinate of this Text</param>
+            <param name="enType">Position type of this Text</param>
+            <param name="strContent">Content of this Text</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdTextF.#ctor(VisionDesigner.CMvdShape)">
+            <summary>
+            Construct a text object
+            </summary>
+            <param name="refShape">the shape object</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdTextF.#ctor(VisionDesigner.CMvdTextF)">
+            <summary>
+            Construct a text object
+            </summary>
+            <param name="refText">the text object</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdTextF.Clone">
+            <summary>
+            Clone operation
+            </summary>
+            <returns>new object of CMvdTextF</returns>
+        </member>
+        <member name="P:VisionDesigner.CMvdTextF.CenterX">
+            <summary>
+            Center X coordinate of this Text
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdTextF.CenterY">
+            <summary>
+            Center Y coordinate of this Text
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdTextF.Position">
+            <summary>
+            Position of this Text
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdTextF.Alignment">
+            <summary>
+            文本对齐方式
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdTextF.FontWidth">
+            <summary>
+            Font width of this Text
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdTextF.Content">
+            <summary>
+            Content of this Text
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdTextF.FontFaceName">
+            <summary>
+            Font face name of this Text
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdTextF.Angle">
+            <summary>
+            Angle of this Text((-180,180])
+            </summary>
+        </member>
+    </members>
+</doc>

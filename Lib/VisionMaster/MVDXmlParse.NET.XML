@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDXmlParse.NET</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.MVDBooleanParamNode">
+            <summary>
+            布尔型算法参数节点
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDParamNodeBase">
+            <summary>
+            运行参数节点基类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDParamNodeBase.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDParamNodeBase.Name">
+            <summary>
+            参数KeyName
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDParamNodeBase.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDParamNodeBase.CurValue">
+            <summary>
+            当前值
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDBooleanParamNode.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDEnumrationEntryNode">
+            <summary>
+            枚举参数的EntryNode
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDEnumrationEntryNode.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDEnumrationEntryNode.Name">
+            <summary>
+            单个枚举值的KeyName
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDEnumrationEntryNode.Description">
+            <summary>
+            单个枚举值的描述
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDEnumrationEntryNode.IsImplemented">
+            <summary>
+            是否已实现
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDEnumrationEntryNode.Value">
+            <summary>
+            数值
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDEnumerationParamNode">
+            <summary>
+            枚举型算法参数节点
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDEnumerationParamNode.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDEnumerationParamNode.CurItem">
+            <summary>
+            当前值对应的Entry
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDEnumerationParamNode.EntryList">
+            <summary>
+            枚举值列表
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDFloatParamNode">
+            <summary>
+            浮点型算法参数节点
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDFloatParamNode.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDFloatParamNode.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDFloatParamNode.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDFloatParamNode.IncValue">
+            <summary>
+            步长值
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDIntegerParamNode">
+            <summary>
+            整型算法参数节点
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDIntegerParamNode.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDIntegerParamNode.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDIntegerParamNode.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDIntegerParamNode.IncValue">
+            <summary>
+            步长值
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MVDXmlParseToolV2">
+            <summary>
+            算法参数解析工具
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.MVDXmlParseToolV2.#ctor(System.Byte[])">
+            <summary>
+            从数据流加载
+            </summary>
+            <param name="xmlBuffer">算法参数Xml数据流</param>
+        </member>
+        <member name="M:VisionDesigner.MVDXmlParseToolV2.#ctor(System.String)">
+            <summary>
+            从本地文件加载
+            </summary>
+            <param name="xmlFilePath">算法参数Xml路径</param>
+        </member>
+        <member name="M:VisionDesigner.MVDXmlParseToolV2.Run">
+            <summary>
+            执行解析
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.MVDXmlParseToolV2.Result">
+            <summary>
+            解析结果
+            </summary>
+        </member>
+    </members>
+</doc>

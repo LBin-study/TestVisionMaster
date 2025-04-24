@@ -1,0 +1,999 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MVDRegion.Net</name>
+    </assembly>
+    <members>
+        <member name="T:VisionDesigner.CMvdRegionFeatures">
+            <summary>
+            Region特征类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.DeInit">
+            销毁资源
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.GetArea(System.UInt32)">
+            <summary>
+            获取面积，使用RegionFeatures使能计算对应特征后才可获取
+            </summary>
+            <param name="nIndex">索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.GetPerimeter(System.UInt32)">
+            <summary>
+            获取周长，使用RegionFeatures使能计算对应特征后才可获取
+            </summary>
+            <param name="nIndex">索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.GetRectangularity(System.UInt32)">
+            <summary>
+            获取矩形度，使用RegionFeatures使能计算对应特征后才可获取
+            </summary>
+            <param name="nIndex">索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.GetCentroidBoxBias(System.UInt32)">
+            <summary>
+            质心与最小外接矩形中心的偏移距离，使用RegionFeatures使能计算对应特征后才可获取
+            </summary>
+            <param name="nIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.GetCircularity(System.UInt32)">
+            <summary>
+            圆形度，使用RegionFeatures使能计算对应特征后才可获取
+            </summary>
+            <param name="nIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.GetCentroidCircleBias(System.UInt32)">
+            <summary>
+            质心与最小外接圆中心的偏移距离，使用RegionFeatures使能计算对应特征后才可获取
+            </summary>
+            <param name="nIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.GetInnerCircle(System.UInt32)">
+            <summary>
+            最小内接圆，使用RegionFeatures使能计算对应特征后才可获取
+            </summary>
+            <param name="nIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.GetOuterCircle(System.UInt32)">
+            <summary>
+            最小外接圆，使用RegionFeatures使能计算对应特征后才可获取
+            </summary>
+            <param name="nIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.GetMinAreaBoundingRect(System.UInt32)">
+            <summary>
+            最小外接矩形，使用RegionFeatures使能计算对应特征后才可获取
+            </summary>
+            <param name="nIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.GetBoundingRect(System.UInt32)">
+            <summary>
+            最小外接正矩形，使用RegionFeatures使能计算对应特征后才可获取
+            </summary>
+            <param name="nIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.GetCentroid(System.UInt32)">
+            <summary>
+            质心，使用RegionFeatures使能计算对应特征后才可获取
+            </summary>
+            <param name="nIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionFeatures.Dispose">
+            <summary>
+            资源释放
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRegionFeatures.FeaturesNum">
+            <summary>
+            获取特征个数，使用RegionFeatures使能计算对应特征后才可获取
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.CMvdRegion">
+            <summary>
+            Region类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegion.#ctor">
+            <summary>
+            初始化空Region
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegion.DeInit">
+            销毁资源
+        </member>
+        <member name="M:VisionDesigner.CMvdRegion.Clone">
+            <summary>
+            克隆
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegion.GetRegion(System.Int32)">
+            <summary>
+            获取单个Region
+            </summary>
+            <param name="nIndex">索引，0开始至RegionNum-1</param>
+            <returns>单个Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegion.RemoveRegion(System.UInt32)">
+            <summary>
+            移除单个Region
+            </summary>
+            <param name="nIndex">索引，0开始至RegionNum - 1</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegion.AddRegion(VisionDesigner.CMvdRegion)">
+            <summary>
+            增加Region
+            </summary>
+            <param name="cRegion">输入region</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegion.UpdateRegion(System.UInt32,VisionDesigner.CMvdRegion)">
+            <summary>
+            更新Region
+            </summary>
+            <param name="nIndex">索引，0开始至RegionNum - 1</param>
+            <param name="cRegion">输入region</param> 
+        </member>
+        <member name="M:VisionDesigner.CMvdRegion.ClearRegion">
+            <summary>
+            清空Region
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegion.Dispose">
+            <summary>
+            资源释放
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRegion.AllboundingRect">
+            <summary>
+            所有Region外接正矩形
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRegion.AllArea">
+            <summary>
+            Region总面积
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRegion.RegionNum">
+            <summary>
+            Region个数
+            </summary>
+        </member>
+        <member name="P:VisionDesigner.CMvdRegion.Empty">
+            <summary>
+            Region是否为空
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.EncodePointSetType">
+            <summary>
+            Region转换为点集类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.EncodePointSetType.EncodePointSetEdge">
+            <summary>
+            边缘点
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.EncodePointSetType.EncodePointSetFont">
+            <summary>
+            前景点
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.HoleFillType">
+            <summary>
+            孔洞填充类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.HoleFillType.HoleFillNone">
+            <summary>
+            填充所用孔洞
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.HoleFillType.HoleFillArea">
+            <summary>
+            根据面积填充孔洞
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.MorphShapeType">
+            <summary>
+            形态学类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MorphShapeType.MorphKernelShapeRect">
+            <summary>
+            矩形
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.MorphShapeType.MorphKernelShapeEllipse">
+            <summary>
+            椭圆
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.ConnectivityType">
+            <summary>
+            连通域类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ConnectivityType.Connectivity4">
+            <summary>
+            4连通
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.ConnectivityType.Connectivity8">
+            <summary>
+            8连通
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.SelectShapeEnableFlag">
+            <summary>
+            特征计算和特征筛选使能类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeEnableFlag.FeatureShapeEnableArea">
+            <summary>
+            面积
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeEnableFlag.FeatureShapeEnableRect">
+            <summary>
+            最小外接正矩形（包围盒）
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeEnableFlag.FeatureShapeEnableCentroid">
+            <summary>
+            质心（一阶矩）
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeEnableFlag.FeatureShapeEnablePerimeter">
+            <summary>
+            周长（与连通性设置有关）
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeEnableFlag.FeatureShapeEnableBox">
+            <summary>
+            最小外接矩形
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeEnableFlag.FeatureShapeEnableRectangularity">
+            <summary>
+            矩形度（面积/最小外接矩形面积）
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeEnableFlag.FeatureShapeEnableCentroidBoxBias">
+            <summary>
+            质心与最小外接矩形中心的偏移距离
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeEnableFlag.FeatureShapeEnableCircle">
+            <summary>
+            最小外接圆
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeEnableFlag.FeatureShapeEnableCircularity">
+            <summary>
+             圆形度（近似为面积/最小外接矩形面积）
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeEnableFlag.FeatureShapeEnableCentroidCircleBias">
+            <summary>
+            质心与最小外接圆中心的偏移距离
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeEnableFlag.FeatureShapeEnableInnerCircle">
+            <summary>
+            最小内接圆
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.SelectShapeSortType">
+            <summary>
+            排序类型
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortNone">
+            <summary>
+            不排序，排序类型数量无效
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortArea">
+            <summary>
+            面积
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortRectX">
+            <summary>
+            包围盒左上角横坐标
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortRextY">
+            <summary>
+            包围盒左上角纵坐标
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortCentroidX">
+            <summary>
+            质心横坐标
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortCentroidY">
+            <summary>
+            质心横纵标
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortPerimeter">
+            <summary>
+            周长
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortBoxShortAxis">
+            <summary>
+            最小外接矩形短轴长度
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortBoxLongAxis">
+            <summary>
+            最小外接矩形长轴长度
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortBoxAxisRatio">
+            <summary>
+            最小外接矩形轴比
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortBoxAngle">
+            <summary>
+            最小外接矩形角度
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortRectangularity">
+            <summary>
+            矩形度
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortCircleRadius">
+            <summary>
+            外接圆半径
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortType.SelectShapeSortCirCularity">
+            <summary>
+            圆形度
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.SelectShapeSortOrder">
+            <summary>
+            排序方式
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortOrder.SelectShapeSortAscend">
+            <summary>
+            升序
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeSortOrder.SelectShapeSortDescend">
+            <summary>
+            降序
+            </summary>
+        </member>
+        <member name="T:VisionDesigner.SelectShapeThreshold">
+            <summary>
+            特征筛选阈值
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdArea">
+            <summary>
+            面积 ，范围：int[0-99999]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdRectWidth">
+            <summary>
+            外接矩形宽，范围：int[0-65535]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdRectHeight">
+            <summary>
+            外接矩形高，范围：int[0-65535]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdPerimeter">
+            <summary>
+            周长，范围：int[0-99999]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdBoxShortAxis">
+            <summary>
+            短轴，范围：int[0-65535]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdBoxLongAxis">
+            <summary>
+            长轴，范围：int[0-65535]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdBoxAxisRatio">
+            <summary>
+            外接矩形轴比，范围：float[0-1.0]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdBoxAngle">
+            <summary>
+            外接矩形角度，范围：float[-90-90]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdRectAngularity">
+            <summary>
+            矩形度，范围：float[0-1.0]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdCenteroidBoxBias">
+            <summary>
+            质心到外接矩形中心距离，范围：float[0-65535]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdCircleRadius">
+            <summary>
+            外接圆半径，范围：int[0-46340]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdCircularity">
+            <summary>
+            圆形度，范围：float[0,1.0]
+            </summary>
+        </member>
+        <member name="F:VisionDesigner.SelectShapeThreshold.SelectShapeThresholdCentroidCircle">
+            <summary>
+            质心到外接圆中心，范围：int[0-65535]
+            </summary>
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionFeatures.Mvd_RegionFeatures_CreateHandle(System.IntPtr@)">
+             Return Type: int
+            ppHandle: void**
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionFeatures.Mvd_RegionFeatures_DestoryHandle(System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionFeatures.Mvd_RegionFeatures_GetArea(System.IntPtr,System.UInt32,System.Single@)">
+             Return Type: boolean
+            pHandle: void*
+            nIndex: unsigned int
+            fArea: float*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionFeatures.Mvd_RegionFeatures_GetPerimeter(System.IntPtr,System.UInt32,System.Single@)">
+             Return Type: boolean
+            pHandle: void*
+            nIndex: unsigned int
+            fPerimeter: float*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionFeatures.Mvd_RegionFeatures_GetRectangularity(System.IntPtr,System.UInt32,System.Single@)">
+             Return Type: boolean
+            pHandle: void*
+            nIndex: unsigned int
+            fRectangularity: float*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionFeatures.Mvd_RegionFeatures_GetCentroidBoxBias(System.IntPtr,System.UInt32,System.Single@)">
+            pHandle: void*
+            nIndex: unsigned int
+            fCentroidBoxBias: float*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionFeatures.Mvd_RegionFeatures_GetCircularity(System.IntPtr,System.UInt32,System.Single@)">
+            pHandle: void*
+            nIndex: unsigned int
+            fCircularity: float*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionFeatures.Mvd_RegionFeatures_GetCentroidCircleBias(System.IntPtr,System.UInt32,System.Single@)">
+            pHandle: void*
+            nIndex: unsigned int
+            fCentroidCircleBias: float*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_CreateHandle(System.IntPtr@)">
+             Return Type: int
+            ppHandle: void**
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_DestoryHandle(System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_AllBoundingRect(System.IntPtr,VisionDesigner.MVD_RECT_F@)">
+             Return Type: int
+            pHandle: void*
+            pRectF: MVD_RECT_F*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_Clone(System.IntPtr,System.IntPtr@)">
+             Return Type: int
+            ppHandle: void*
+            ppCloneHandle: void**
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_GetAllArea(System.IntPtr,System.Single@)">
+             Return Type: int
+            ppHandle: void*
+            pArea: float*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_GetRegionNum(System.IntPtr,System.Int32@)">
+             Return Type: int
+            ppHandle: void*
+            nNums: int*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_GetRegion(System.IntPtr,System.Int32,System.IntPtr)">
+             Return Type: int
+            ppHandle: void*
+            nIndex: int
+            ppRegionHandle: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_AddRegion(System.IntPtr,System.IntPtr)">
+             Return Type: int
+            ppHandle: void*
+            pRegionHandle: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_UpdateRegion(System.IntPtr,System.IntPtr,System.UInt32)">
+             Return Type: int
+            ppHandle: void*
+            pRegionHandle: void*
+            nIndex: unsigned int
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_RemoveRegion(System.IntPtr,System.UInt32)">
+             Return Type: int
+            ppHandle: void*
+            nIndex: unsigned int
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_Clear(System.IntPtr)">
+             Return Type: int
+            ppHandle: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_IsEmpty(System.IntPtr,System.Boolean@)">
+             Return Type: boolean
+            pHandle: void*
+            bIsEmpty: boolean*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_Write(System.IntPtr,System.String)">
+             Return Type: boolean
+            pHandle: void*
+            pcFileName: char*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionC.Mvd_Region_Read(System.IntPtr,System.String)">
+             Return Type: boolean
+            pHandle: void*
+            pcFileName: char*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_CreateHandle(System.IntPtr@)">
+             Return Type: int
+            ppHandle: void**
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_DestoryHandle(System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_GenRegionFromImg(System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr,System.Int32,System.Int32,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            pRoi: void*
+            pMaskRegion: void*
+            nLowThr: int
+            nHighThr: int
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_GenRegionFromShape(System.IntPtr,System.IntPtr,System.Int32,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInputShapeList: void*
+            nShapeNums: int
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_PaintRegion(System.IntPtr,System.IntPtr,System.IntPtr,System.Int32,System.Int32,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            pRoi: void*
+            nGrayFont: int
+            nGrayBack: int
+            pOutImg: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_PaintRegionToPointSet(System.IntPtr,System.IntPtr,VisionDesigner.EncodePointSetType,MVD.Internal.Comm.MVDRegionToolC.ProcessPointFunc)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            ePointType: EncodePointSetType
+            pFunc: ProcessPointFunc
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_GetRegionContour(System.IntPtr,System.IntPtr,MVD.Internal.Comm.MVDRegionToolC.ProcessCountourFunc)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            pFunc: ProcessCountourFunc
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_Connection(System.IntPtr,System.IntPtr,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_FillHole(System.IntPtr,System.IntPtr,VisionDesigner.HoleFillType,System.Int32,System.Int32,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            eType: HoleFillType
+            nFillAreaLow: int
+            nFilleAreaHigh: int
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_GetRegionContour(System.IntPtr,System.IntPtr,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            pOutContours: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_SetSelectShapeThreshold(System.IntPtr,VisionDesigner.SelectShapeThreshold,System.Single,System.Single)">
+             Return Type: int
+            pHandle: void*
+            eType: SelectShapeThreshold
+            fLowThre: float
+            fHighThre: float
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_SelectShape(System.IntPtr,System.IntPtr,VisionDesigner.SelectShapeEnableFlag,VisionDesigner.SelectShapeSortType,VisionDesigner.SelectShapeSortOrder,System.Int32,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            features: int
+            eSortType: SelectShapeSortType
+            eOrder: SelectShapeSortOrder
+            nSortNums: int
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_RegionFeatures(System.IntPtr,System.IntPtr,VisionDesigner.SelectShapeEnableFlag,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            features: int
+            pFeatures: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_Intersection(System.IntPtr,System.IntPtr,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_Intersection2(System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput1: void*
+            pInput2: void*
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_Union(System.IntPtr,System.IntPtr,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_Union2(System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput1: void*
+            pInput2: void*
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_Complement(System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            pRoi: void*
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_Difference(System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput1: void*
+            pInput2: void*
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_Clip(System.IntPtr,System.IntPtr,System.IntPtr,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            pRoi: void*
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_Dilation(System.IntPtr,System.IntPtr,VisionDesigner.MorphShapeType,System.Int32,System.Int32,System.Int32,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            eType: MorphShapeType
+            nWidth: int
+            nHeight: int
+            nIter: int
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_Erosion(System.IntPtr,System.IntPtr,VisionDesigner.MorphShapeType,System.Int32,System.Int32,System.Int32,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            eType: MorphShapeType
+            nWidth: int
+            nHeight: int
+            nIter: int
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_Opening(System.IntPtr,System.IntPtr,VisionDesigner.MorphShapeType,System.Int32,System.Int32,System.Int32,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            eType: MorphShapeType
+            nWidth: int
+            nHeight: int
+            nIter: int
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_Closing(System.IntPtr,System.IntPtr,VisionDesigner.MorphShapeType,System.Int32,System.Int32,System.Int32,System.IntPtr)">
+             Return Type: int
+            pHandle: void*
+            pInput: void*
+            eType: MorphShapeType
+            nWidth: int
+            nHeight: int
+            nIter: int
+            pOutput: void*
+        </member>
+        <member name="M:MVD.Internal.Comm.MVDRegionToolC.Mvd_RegionTool_SetConnectivityType(System.IntPtr,VisionDesigner.ConnectivityType)">
+             Return Type: int
+            pHandle: void*
+            eType: ConnectivityType
+        </member>
+        <member name="F:MVD.Internal.Comm.MVDRegionToolC.MVD_CONTOUR_S.point">
+            MVD_POINT_S*
+        </member>
+        <member name="F:MVD.Internal.Comm.MVDRegionToolC.MVD_CONTOUR_S.point_num">
+            int
+        </member>
+        <member name="T:VisionDesigner.CMvdRegionTool">
+            <summary>
+            Region工具类
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.DeInit">
+            销毁资源
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.GenEmptyRegion">
+            <summary>
+            生成空Region
+            </summary>
+            <returns>空Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.GenRegionFromImg(VisionDesigner.CMvdImage,VisionDesigner.CMvdRectangleF)">
+            <summary>
+            二值图生成Region
+            </summary>
+            <param name="cmvdImage"></param>
+            <param name="cRect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.GenRegionFromImg(VisionDesigner.CMvdImage,VisionDesigner.CMvdRectangleF,VisionDesigner.CMvdRegion,System.Int32,System.Int32)">
+            <summary>
+            图像生成Region
+            </summary>
+            <param name="cmvdImage">输入灰度图像</param>
+            <param name="cRect">矩形区域，可为null表示不使用</param>
+            <param name="cMaskRegion">Region掩膜，可为null表示不使用</param>
+            <param name="nLowThre">低阈值,范围:[1,255]</param>
+            <param name="nHighThr">高阈值,范围:[1,255]</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.RegionToBin(VisionDesigner.CMvdRegion,VisionDesigner.CMvdRectangleF,System.Int32,System.Int32)">
+            <summary>
+            绘制Region到图像
+            </summary>
+            <param name="pInput">输入Region</param>
+            <param name="cRect">绘制区域</param>
+            <param name="nGrayFront">前景值，范围[0-255]</param>
+            <param name="nGrayBack">背景值，范围[0-255]</param>
+            <returns>输出图像</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.RegionToBin(VisionDesigner.CMvdRegion,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Region转换为图像
+            </summary>
+            <param name="pInput">输入Region</param>
+            <param name="nWidth">宽</param>
+            <param name="nHeight">高</param>
+            <param name="nGrayFront">前景值，范围[0-255]</param>
+            <param name="nGrayBack">背景值，范围[0-255]</param>
+            <returns></returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.GenRegionFromShape(System.Collections.Generic.List{VisionDesigner.CMvdShape})">
+            <summary>
+            从图形列表生成Region
+            </summary>
+            <param name="listShape">图形列表，仅支持矩形、圆、多边形</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.GenRegionFromShape(VisionDesigner.CMvdShape)">
+            <summary>
+            从图形生成Region
+            </summary>
+            <param name="cmvdShape">图形，仅支持矩形、圆、多边形</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Connection(VisionDesigner.CMvdRegion)">
+            <summary>
+            连通域分割
+            </summary>
+            <param name="cmvdRegion">输入Region</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.FillUp(VisionDesigner.CMvdRegion,VisionDesigner.HoleFillType,System.Int32,System.Int32)">
+            <summary>
+            孔洞填充
+            </summary>
+            <param name="cmvdRegion">输入Region</param>
+            <param name="eType">填充类型</param>
+            <param name="nFillAreaLow">填充低阈值(按面积填充时有效,范围:[1-2147483647])</param>
+            <param name="nFillAreaHigh">填充高阈值(按面积填充时有效,范围:[1-2147483647])</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.SetSelectShapeThreshold(VisionDesigner.SelectShapeThreshold,System.Single,System.Single)">
+            <summary>
+            设置特征筛选(SelectShape)特征阈值
+            </summary>
+            <param name="eType">特征类型</param>
+            <param name="fLowThre">低阈值,范围参考SelectShapeThreshold注释</param>
+            <param name="fHighThre">高阈值,范围参考SelectShapeThreshold注释</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.SetConnectivityType(VisionDesigner.ConnectivityType)">
+            <summary>
+            设置连通域类型
+            </summary>
+            <param name="eType">连通域类型</param>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.SelectShape(VisionDesigner.CMvdRegion,VisionDesigner.SelectShapeEnableFlag,VisionDesigner.SelectShapeSortType,VisionDesigner.SelectShapeSortOrder,System.Int32)">
+            <summary>
+            特征筛选
+            </summary>
+            <param name="cmvdRegion">输入Region</param>
+            <param name="features">特征使能，来自SelectShapeEnableFlag或</param>
+            <param name="eSortType">排序方式</param>
+            <param name="eOrder">排序类型，排序开启时有效</param>
+            <param name="nSortNums">排序数量，排序开启时有效，范围:[1-100]</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Dilation(VisionDesigner.CMvdRegion,VisionDesigner.MorphShapeType,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            膨胀
+            </summary>
+            <param name="cmvdRegion">输入Retion</param>
+            <param name="eType">形态学图形类型</param>
+            <param name="nWidth">形态学核宽,范围:[1-101]</param>
+            <param name="nHeight">形态学核高，范围:[1-101]</param>
+            <param name="nIter">迭代次数，范围:[1-10]</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Erosion(VisionDesigner.CMvdRegion,VisionDesigner.MorphShapeType,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            腐蚀
+            </summary>
+            <param name="cmvdRegion">输入Retion</param>
+            <param name="eType">形态学图形类型</param>
+            <param name="nWidth">形态学核宽,范围:[1-101]</param>
+            <param name="nHeight">形态学核高，范围:[1-101]</param>
+            <param name="nIter">迭代次数，范围:[1-10]</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Opening(VisionDesigner.CMvdRegion,VisionDesigner.MorphShapeType,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            开
+            </summary>
+            <param name="cmvdRegion">输入Region</param>
+            <param name="eType">形态学图形类型</param>
+            <param name="nWidth">形态学核宽,范围:[1-101]</param>
+            <param name="nHeight">形态学核高，范围:[1-101]</param>
+            <param name="nIter">迭代次数，范围:[1-10]</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Closing(VisionDesigner.CMvdRegion,VisionDesigner.MorphShapeType,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            闭
+            </summary>
+            <param name="cmvdRegion">输入Region</param>
+            <param name="eType">形态学图形类型</param>
+            <param name="nWidth">形态学核宽,范围:[1-101]</param>
+            <param name="nHeight">形态学核高，范围:[1-101]</param>
+            <param name="nIter">迭代次数，范围:[1-10]</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Intersection(VisionDesigner.CMvdRegion)">
+            <summary>
+            交集
+            </summary>
+            <param name="cmvdRegion">输入Region</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Intersection(VisionDesigner.CMvdRegion,VisionDesigner.CMvdRegion)">
+            <summary>
+            交集
+            </summary>
+            <param name="cmvdRegion1">输入Region1</param>
+            <param name="cmvdRegion2">输入Retion2</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Union(VisionDesigner.CMvdRegion)">
+            <summary>
+            并集
+            </summary>
+            <param name="cmvdRegion">输入Region</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Union(VisionDesigner.CMvdRegion,VisionDesigner.CMvdRegion)">
+            <summary>
+            并集
+            </summary>
+            <param name="cmvdRegion1">输入Region1</param>
+            <param name="cmvdRegion2">输入Region2</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Difference(VisionDesigner.CMvdRegion,VisionDesigner.CMvdRegion)">
+            <summary>
+            差集
+            </summary>
+            <param name="cmvdRegion1">输入Region1</param>
+            <param name="cmvdRegion2">输入Region2</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Complement(VisionDesigner.CMvdRegion,VisionDesigner.CMvdRectangleF)">
+            <summary>
+            补集
+            </summary>
+            <param name="cmvdRegion">输入Region</param>
+            <param name="cRect">补集区域</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Clip(VisionDesigner.CMvdRegion,VisionDesigner.CMvdRectangleF)">
+            <summary>
+            裁剪
+            </summary>
+            <param name="cmvdRegion">输入Region</param>
+            <param name="cRect">裁剪区域</param>
+            <returns>输出Region</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.RegionFeatures(VisionDesigner.CMvdRegion,VisionDesigner.SelectShapeEnableFlag)">
+            <summary>
+            特征计算
+            </summary>
+            <param name="cmvdRegion">非空Region</param>
+            <param name="features">SelectShapeEnableFlag 特征类型，多个特征或后传递</param>
+            <returns>输出特征</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.GetRegionPoints(VisionDesigner.CMvdRegion,VisionDesigner.EncodePointSetType)">
+            <summary>
+            绘制Region到点集，仅支持Region个数为1
+            </summary>
+            <param name="cmvdRegion">输入Region</param>
+            <param name="ePointType">点集类型</param>
+            <returns>点集</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.GetRegionContour(VisionDesigner.CMvdRegion)">
+            <summary>
+            获取Region轮廓，仅支持Region个数为1
+            </summary>
+            <param name="cmvdRegion">输入Region</param>
+            <returns>轮廓点</returns>
+        </member>
+        <member name="M:VisionDesigner.CMvdRegionTool.Dispose">
+            <summary>
+            资源释放
+            </summary>
+        </member>
+    </members>
+</doc>
