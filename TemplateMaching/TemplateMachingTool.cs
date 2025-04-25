@@ -727,7 +727,7 @@ namespace TestVisionMaster.TemplateMaching
                 contourPattern.Train();
 
                 // 保存模型到本地
-                contourPattern.ExportPattern(Path.ChangeExtension("D:\\1", ".contourmxml"));
+                //contourPattern.ExportPattern(Path.ChangeExtension("D:\\1", ".contourmxml"));
                 ContourMatch.AddPattern(contourPattern);
                 return true;
             }

@@ -1,8 +1,12 @@
 ﻿using OpenCvSharp;
 using OpenCvSharp.Detail;
+using System.Net;
 using System.Runtime.InteropServices;
+using System.Threading;
 using TestVisionMaster.TemplateMaching;
+using VisionDesigner.Code2DReader;
 using VisionDesigner.ContourPatMatch;
+using static TestVisionMaster.QRCodeTool;
 using static TestVisionMaster.TemplateMaching.TemplateMachingTool;
 
 namespace TestVisionMaster
@@ -11,11 +15,37 @@ namespace TestVisionMaster
     {
         static void Main(string[] args)
         {
+            
+            
             Program program = new Program();
-
-            program.TemplateMachingToolTest();
+            program.QRCodeToolTest();
         }
+        public void QRCodeToolTest()
+        {
+            string TestImagePath = "E:\\123.jpg";
+            Mat mat = Cv2.ImRead(TestImagePath);
+            // 定义截取区域
+            int x = 500;
+            int y = 1000;
+            int width = 400;
+            int height = 400;
+            Rect roi = new Rect(x, y, width, height);
+            Mat croppedMat = mat[roi];
+            Mat grayMat = new Mat();
+            Cv2.CvtColor(croppedMat, grayMat, ColorConversionCodes.BGR2GRAY);
 
+            QRCodeTool QRCode = new QRCodeTool();
+            QRCodeParam param = new QRCodeParam(true);
+            QRCode.SetRun(param);
+            Dictionary<string, Mat> pairs = new Dictionary<string, Mat>();
+            pairs.Add("Test", grayMat);
+            grayMat.ImWrite("D:\\111.bmp");
+
+            QRCode.Run(pairs, out List<C2DCodeInfo?> matchInfos, out Mat? successMat, out double? TimeCost, out string? ErrorMsg);
+            C2DCodeInfo matchInfo = matchInfos.FirstOrDefault();
+            //Cv2.ImWrite("D:\\test.bmp", Tool.CreatRotaRec(successMat, new Point2f(matchInfo.Center.nX, matchInfo.Center.nY), new Size2f(matchInfo., matchInfo.MatchBox.Height), matchInfo.MatchBox.Angle));
+            Console.ReadKey();
+        }
         public void TemplateMachingToolTest()
         {
             string TestImagePath = "E:\\5.bmp";
