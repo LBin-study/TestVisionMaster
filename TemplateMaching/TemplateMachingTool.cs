@@ -691,7 +691,7 @@ namespace TestVisionMaster.TemplateMaching
             try
             {
                 imageTemplate = new CMvdImage();
-                bitmapTemplate = Tool.ConvertByteArrayToBitmap(contourPatternParam.ImageData, PixelFormat.Format8bppIndexed);
+                bitmapTemplate = Tool.ConvertMatToBitmap(contourPatternParam.ImageData, PixelFormat.Format8bppIndexed);
                 // 加载模板图像
                 imageTemplate.InitImage(bitmapTemplate);
 
@@ -824,9 +824,9 @@ namespace TestVisionMaster.TemplateMaching
             /// <summary>
             /// 图像数据
             /// </summary>
-            public byte[] ImageData { get; set; }
+            public Mat ImageData { get; set; }
 
-            public ContourPatternParam(byte[] imageData,
+            public ContourPatternParam(Mat imageData,
                 bool pyramidScaleFlag = true,
                 byte pyramidScaleLevel = 5,
                 byte pyramidScaleRLevel = 1,
@@ -843,7 +843,7 @@ namespace TestVisionMaster.TemplateMaching
                 if (edgeThreshold < 1) throw new ArgumentOutOfRangeException(nameof(edgeThreshold));
                 if (minChainLen < 1 || minChainLen > 1000) throw new ArgumentOutOfRangeException(nameof(minChainLen));
 
-                if (imageData == null || imageData.Length == 0) throw new ArgumentException(nameof(imageData));
+                if (imageData == null) throw new ArgumentException(nameof(imageData));
 
                 ImageData = imageData;
                 PyramidScaleFlag = pyramidScaleFlag;

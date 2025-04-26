@@ -276,12 +276,6 @@ namespace TestVisionMaster
                 QRCode.SetRunParam(nameof(WaitingTime), value.ToString());
             }
         }
-
-
-
-
-
-
         /// <summary>
         /// 运行模板匹配算法
         /// </summary>

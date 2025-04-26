@@ -18,7 +18,7 @@ namespace TestVisionMaster
             
             
             Program program = new Program();
-            program.QRCodeToolTest();
+            program.TemplateMachingToolTest();
         }
         public void QRCodeToolTest()
         {
@@ -43,7 +43,6 @@ namespace TestVisionMaster
 
             QRCode.Run(pairs, out List<C2DCodeInfo?> matchInfos, out Mat? successMat, out double? TimeCost, out string? ErrorMsg);
             C2DCodeInfo matchInfo = matchInfos.FirstOrDefault();
-            //Cv2.ImWrite("D:\\test.bmp", Tool.CreatRotaRec(successMat, new Point2f(matchInfo.Center.nX, matchInfo.Center.nY), new Size2f(matchInfo., matchInfo.MatchBox.Height), matchInfo.MatchBox.Angle));
             Console.ReadKey();
         }
         public void TemplateMachingToolTest()
@@ -60,17 +59,14 @@ namespace TestVisionMaster
             Mat grayMat = new Mat();
             Cv2.CvtColor(croppedMat, grayMat, ColorConversionCodes.BGR2GRAY);
 
-            // 将灰度图转换为字节数组
-            byte[] encodedBytes;
-            Cv2.ImEncode(".jpg", grayMat, out encodedBytes);
 
             TemplateMachingTool template = new TemplateMachingTool();
-            ContourPatternParam param = new ContourPatternParam(encodedBytes);
+            ContourPatternParam param = new ContourPatternParam(grayMat);
 
             CContourPattern ResultPattern = new CContourPattern();
             template.CreateContourPattern(param, out ResultPattern);
             Dictionary<string, Mat> pairs = new Dictionary<string, Mat>();
-            pairs.Add("Test", mat);
+            pairs.Add("Test", mat.CvtColor(ColorConversionCodes.BGR2GRAY));
             template.Run(pairs, out List<CContourMatchInfo?> matchInfos, out Mat? successMat, out double? TimeCost, out string? ErrorMsg);
             CContourMatchInfo matchInfo = matchInfos.FirstOrDefault();
             Cv2.ImWrite("D:\\test.bmp", Tool.CreatRotaRec(successMat, new Point2f(matchInfo.MatchPoint.fX, matchInfo.MatchPoint.fY), new Size2f(matchInfo.MatchBox.Width, matchInfo.MatchBox.Height), matchInfo.MatchBox.Angle));
