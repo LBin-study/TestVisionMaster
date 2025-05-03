@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using VisionDesigner;
 using VisionDesigner.ContourPatMatch;
 
-namespace TestVisionMaster.TemplateMaching
+namespace TestVisionMaster
 {
     internal class TemplateMachingTool
     {
@@ -25,7 +25,7 @@ namespace TestVisionMaster.TemplateMaching
         private Dictionary<string, CContourPattern> PatternS = new Dictionary<string, CContourPattern>();
 
         private readonly object _runLock = new object();
-        public bool CanUse { get; }=false;
+        public bool CanUse { get; } = false;
 
         public uint TemplateCount => ContourMatch.GetPatternNum();
 
@@ -553,13 +553,13 @@ namespace TestVisionMaster.TemplateMaching
             try
             {
                 ContourMatch = new CContourPatMatchTool();
-                CanUse=true;
+                CanUse = true;
             }
-            catch (MvdException )
+            catch (MvdException)
             {
-                CanUse =false;
+                CanUse = false;
             }
-            catch (Exception )
+            catch (Exception)
             {
                 CanUse = false;
             }
@@ -570,8 +570,8 @@ namespace TestVisionMaster.TemplateMaching
         /// <param name="targetMats"></param>
         /// <param name="result"></param>
         /// <returns></returns>
-        public bool Run(IReadOnlyDictionary<string, Mat> targetMats, out List<CContourMatchInfo?> matchInfo,out Mat? successMat,
-            out double? timeCost,out string? errorMsg)
+        public bool Run(IReadOnlyDictionary<string, Mat> targetMats, out List<CContourMatchInfo?> matchInfo, out Mat? successMat,
+            out double? timeCost, out string? errorMsg)
         {
             //图像处理类
             CMvdImage? imageTarget = null;
@@ -681,7 +681,7 @@ namespace TestVisionMaster.TemplateMaching
             }
         }
 
-        public bool CreateContourPattern(ContourPatternParam contourPatternParam,out CContourPattern Resultpattern)
+        public bool CreateContourPattern(ContourPatternParam contourPatternParam, out CContourPattern Resultpattern)
         {
             //模板图像
             Bitmap? bitmapTemplate = null;
@@ -711,7 +711,7 @@ namespace TestVisionMaster.TemplateMaching
 
                 #region 设置参数
 
-                contourPattern.SetRunParam(nameof(ContourPatternParam.PyramidScaleFlag),Tool.ToIntStr(contourPatternParam.PyramidScaleFlag));
+                contourPattern.SetRunParam(nameof(ContourPatternParam.PyramidScaleFlag), Tool.ToIntStr(contourPatternParam.PyramidScaleFlag));
                 contourPattern.SetRunParam(nameof(ContourPatternParam.PyramidScaleLevel), contourPatternParam.PyramidScaleLevel.ToString());
                 contourPattern.SetRunParam(nameof(ContourPatternParam.PyramidScaleRLevel), contourPatternParam.PyramidScaleRLevel.ToString());
                 contourPattern.SetRunParam(nameof(ContourPatternParam.EdgeThresholdFlag), Tool.ToIntStr(contourPatternParam.EdgeThresholdFlag));
@@ -731,11 +731,11 @@ namespace TestVisionMaster.TemplateMaching
                 ContourMatch.AddPattern(contourPattern);
                 return true;
             }
-            catch (MvdException )
+            catch (MvdException)
             {
                 return false;
             }
-            catch (Exception )
+            catch (Exception)
             {
                 return false;
             }
@@ -747,7 +747,7 @@ namespace TestVisionMaster.TemplateMaching
             }
         }
 
-        
+
 
         #endregion
 

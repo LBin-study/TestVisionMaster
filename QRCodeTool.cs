@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using VisionDesigner;
 using VisionDesigner.Code2DReader;
 using VisionDesigner.ContourPatMatch;
-using static TestVisionMaster.TemplateMaching.TemplateMachingTool;
+using static TestVisionMaster.TemplateMachingTool;
 using System.Threading;
 
 namespace TestVisionMaster
@@ -277,7 +277,7 @@ namespace TestVisionMaster
             }
         }
         /// <summary>
-        /// 运行模板匹配算法
+        /// 运行二维码识别算法
         /// </summary>
         /// <param name="targetMats"></param>
         /// <param name="result"></param>
@@ -296,18 +296,18 @@ namespace TestVisionMaster
             try
             {
                 imageTarget = new CMvdImage();
-                #region 匹配过程
+                #region 识别过程
 
                 Bitmap? bitmap = null;
                 foreach (var targetMatPair in targetMats)
                 {
                     bitmap = Tool.ConvertMatToBitmap(targetMatPair.Value, PixelFormat.Format8bppIndexed);
-                    bitmap.RotateFlip(RotateFlipType.RotateNoneFlipY);
-                    bitmap.Save("D:\\121.bmp");
+                    //bitmap.RotateFlip(RotateFlipType.RotateNoneFlipY);
+                    //bitmap.Save("D:\\121.bmp");
 
                     imageTarget.InitImage(bitmap);
 
-                    CMvdRectangleF rectangleF = new CMvdRectangleF(bitmap.Width/2, bitmap.Height/2, bitmap.Width, bitmap.Height);
+                    //CMvdRectangleF rectangleF = new CMvdRectangleF(bitmap.Width/2, bitmap.Height/2, bitmap.Width, bitmap.Height);
 
                     //限制条件：算法支持的最小图像宽度为32，最小图像高度为32，仅支持MVD_PIXEL_MONO_08的像素格式。
 
@@ -317,7 +317,7 @@ namespace TestVisionMaster
                         if (imageTarget.PixelFormat != SupportImageFormat) imageTarget.ConvertImagePixelFormat(SupportImageFormat);
 
                         QRCode.InputImage = imageTarget;
-                        QRCode.ROI= rectangleF;
+                        //QRCode.ROI= rectangleF;
                         QRCode.Run();
 
                         timeCost = QRCode.GetAlgRunTime();

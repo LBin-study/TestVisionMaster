@@ -3,11 +3,10 @@ using OpenCvSharp.Detail;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Threading;
-using TestVisionMaster.TemplateMaching;
 using VisionDesigner.Code2DReader;
 using VisionDesigner.ContourPatMatch;
 using static TestVisionMaster.QRCodeTool;
-using static TestVisionMaster.TemplateMaching.TemplateMachingTool;
+using static TestVisionMaster.TemplateMachingTool;
 
 namespace TestVisionMaster
 {
